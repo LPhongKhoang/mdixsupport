@@ -1,0 +1,35 @@
+@import '../../../theme/web/custom-variables';
+
+html,
+body{
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', -apple-system, sans-serif;
+  font-size: 14px;
+  background-color: #8c8c8c;
+}
+
+.ax-app {
+  width: 100vw !important;
+  height: 100vh !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  font-family: 'Roboto', -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  background-color: #8c8c8c !important;
+
+  .ax-full-box {
+    display: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .mx-placeholder, .mx-dataview, .mx-dataview-content {
+    display: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

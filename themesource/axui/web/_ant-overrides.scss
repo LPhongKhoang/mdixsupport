@@ -1,0 +1,276 @@
+//
+// Ant Design re-skin — component-level overrides
+// ------------------------------------------------------------------
+// Token-level theming lives in theme/web/custom-variables.scss and
+// cascades through the Atlas core mixins automatically. This file only
+// holds the pixel-level details that Atlas variables cannot express
+// (control heights, focus rings, Ant shadows, table chrome, switch shape).
+//
+// Loaded AFTER atlas_core so these rules win over the compiled core CSS.
+// Depends on the SCSS variables imported in main.scss (custom-variables).
+//
+
+// Ant Design reference values
+$ant-control-height: 32px;
+$ant-primary: $brand-primary; // #1677ff
+$ant-primary-hover: #4096ff;
+$ant-primary-active: #0958d9;
+$ant-border: $border-color-default; // #d9d9d9
+$ant-radius: $border-radius-default; // 6px
+$ant-radius-lg: 8px;
+$ant-header-bg: #fafafa; // table header / fill-alter
+$ant-row-hover: #fafafa;
+$ant-split: #f0f0f0; // colorBorderSecondary
+$ant-focus-ring: 0 0 0 2px rgba(5, 145, 255, 0.1); // controlOutline
+$ant-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02),
+    0 2px 4px 0 rgba(0, 0, 0, 0.02); // Ant boxShadowTertiary (cards)
+
+/* ==========================================================================
+   Buttons — Ant control height, padding, weight, subtle shadow
+   ========================================================================== */
+.btn,
+.mx-button {
+    height: $ant-control-height;
+    padding: 4px 15px;
+    font-weight: 400;
+    border-radius: $ant-radius;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02); // Ant default button drop shadow
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+// Default (secondary) button: text stays neutral, border + text turn primary on hover
+.btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger),
+.mx-button.btn-default {
+    color: $font-color-default;
+    border-color: $ant-border;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+        color: $ant-primary-hover;
+        border-color: $ant-primary-hover;
+        background-color: #fff;
+    }
+
+    &:active {
+        color: $ant-primary-active;
+        border-color: $ant-primary-active;
+    }
+}
+
+// Primary button states (lighter hover, darker active — the Ant way)
+.btn-primary {
+    box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+
+    &:hover {
+        background-color: $ant-primary-hover;
+        border-color: $ant-primary-hover;
+    }
+    &:active {
+        background-color: $ant-primary-active;
+        border-color: $ant-primary-active;
+    }
+}
+
+// Keyboard focus ring
+.btn:focus-visible,
+.mx-button:focus-visible {
+    outline: 0;
+    box-shadow: $ant-focus-ring;
+}
+
+// Link-style buttons
+.mx-link,
+.btn-link {
+    color: $link-color;
+    &:hover,
+    &:focus {
+        color: $ant-primary-hover;
+    }
+}
+
+/* ==========================================================================
+   Inputs — Ant control height, hover border, focus ring
+   ========================================================================== */
+.form-control {
+    min-height: $ant-control-height;
+    border-radius: $ant-radius;
+    transition: all 0.2s;
+
+    &:hover:not([disabled]):not([readonly]) {
+        border-color: $ant-primary-hover;
+    }
+}
+
+.form-control:not([readonly]) {
+    &:focus,
+    &:focus-within {
+        border-color: $ant-primary;
+        box-shadow: $ant-focus-ring;
+    }
+}
+
+/* ==========================================================================
+   Tabs — Ant active label + ink bar
+   ========================================================================== */
+.nav-tabs > li.active > a,
+.mx-tabcontainer-tab.active {
+    color: $ant-primary;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Tables — Ant header chrome and row hover (classic + Data Grid 2)
+   ========================================================================== */
+// Classic table widget
+table.mx-table > tbody > tr > th {
+    background-color: $ant-header-bg;
+    color: $font-color-default;
+    font-weight: 600;
+    border-bottom: 1px solid $ant-split;
+}
+table.mx-table > tbody > tr:hover > td {
+    background-color: $ant-row-hover;
+}
+
+// Data Grid 2 + filters live in the `datawidgets` module. They are re-skinned
+// in the dedicated "Data widgets" section below (order-independent via CSS vars).
+
+/* ==========================================================================
+   Cards / Group boxes / Modals — Ant radius + shadow
+   ========================================================================== */
+.card,
+.mx-groupbox,
+.mx-dataview {
+    border-radius: $ant-radius-lg;
+}
+
+.card {
+    box-shadow: $ant-shadow;
+    border: 1px solid $ant-split;
+}
+
+.modal-content {
+    border: 0;
+    border-radius: $ant-radius-lg;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+        0 9px 28px 8px rgba(0, 0, 0, 0.05); // Ant boxShadowSecondary
+}
+
+/* ==========================================================================
+   Switch — Ant pill shape
+   ========================================================================== */
+.widget-switch {
+    .widget-switch-btn-wrapper {
+        min-width: 44px;
+        height: 22px;
+        border-radius: 100px;
+
+        &:focus {
+            outline: 0;
+            box-shadow: $ant-focus-ring;
+        }
+    }
+    .widget-switch-btn {
+        border-radius: 100px;
+    }
+}
+
+/* ==========================================================================
+   Checkbox / Radio — Ant focus ring + primary accent
+   ========================================================================== */
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+    outline: 0;
+    box-shadow: $ant-focus-ring;
+}
+
+/* ==========================================================================
+   DATA WIDGETS — Data Grid 2, filters, dropdown-filter, gallery, tree node
+   --------------------------------------------------------------------------
+   The `datawidgets` module reads CSS custom properties (--brand-primary,
+   --grid-border-color, --grid-selected-row-background, --wdf-*), so most of it
+   already re-skins from the token change in custom-variables.scss. Here we
+   inject the Ant-specific values those widgets can't express via tokens.
+   Using CSS vars + higher-specificity selectors keeps these wins independent
+   of whether datawidgets.css loads before or after axoneui.css.
+   ========================================================================== */
+
+// Ant table tokens supplied as CSS custom properties (datawidgets only reads
+// these with a fallback, so a :root definition always wins — order-safe).
+:root {
+    --grid-selected-row-background: #e6f4ff; // Ant controlItemBgActive (selected row)
+    // Ant boxShadowSecondary — used by filter/column popovers via this var
+    --wdf-filter-box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+        0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+
+// Data Grid 2 — Ant table chrome
+.widget-datagrid {
+    --grid-border-color: #{$ant-split}; // Ant cell split color (#f0f0f0), scoped to the grid
+
+    .th {
+        background-color: $ant-header-bg; // Ant table header (#fafafa)
+        color: $font-color-default;
+        border-bottom: 1px solid $ant-split;
+    }
+
+    // Ant row hover (.tr uses display:contents, so colour the cells)
+    .tr:hover > .td {
+        background-color: $ant-row-hover;
+    }
+    // Hover on an already-selected row → Ant controlItemBgActiveHover
+    &.widget-datagrid-selection-method-click .tr.tr-selected:hover .td {
+        background-color: #bae0ff;
+    }
+}
+
+// Filter / column-selector popovers — Ant radius + shadow
+.column-selectors,
+.filter-selectors,
+.dropdown-content,
+:not(.dropdown-content) > .dropdown-list {
+    border-radius: $ant-radius-lg;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+        0 9px 28px 8px rgba(0, 0, 0, 0.05);
+}
+
+// Filter list items — Ant active/hover item colours
+.filter-selectors .filter-listitem.filter-selected,
+.filter-selectors li.filter-selected,
+.dropdown-list li.filter-selected {
+    background-color: #e6f4ff;
+    color: $brand-primary;
+}
+
+// Dropdown filter widget (variant select / combobox / tag picker)
+.widget-dropdown-filter {
+    --wdf-bd-radius: #{$ant-radius-lg}; // popover radius 8px
+    --wdf-selected-bg-color: #e6f4ff; // Ant active item
+    --wdf-highlighted-bg-color: #{$ant-row-hover}; // Ant hovered item (#fafafa)
+
+    // Tag-picker chips → Ant tag look (square-ish, light primary)
+    &.variant-tag-picker .widget-dropdown-filter-selected-item {
+        border-radius: $ant-radius;
+        background-color: #e6f4ff;
+        color: $brand-primary;
+    }
+}
+
+// Three-state checkbox already uses --brand-primary / --form-input-border-color
+// (now Ant blue / #d9d9d9). Nudge the corner radius to Ant's checkbox value.
+input[type="checkbox"].three-state-checkbox:before {
+    border-radius: 4px;
+}
+
+// Pagination bar — Ant primary on the active/hover control (vars already Ant)
+.pagination-bar .pagination-button:focus-visible {
+    outline: 0;
+    box-shadow: $ant-focus-ring;
+}
+
+// Gallery — Ant focus ring + selected item accent
+.widget-gallery .widget-gallery-clickable:focus-visible {
+    outline: 0;
+    box-shadow: $ant-focus-ring;
+}
