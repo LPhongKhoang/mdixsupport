@@ -21,15 +21,57 @@ body{
   font-size: 14px !important;
   background-color: #8c8c8c !important;
 
-  .ax-full-box {
-    display: relative !important;
+  > .mx-placeholder,
+  > .mx-dataview {
     width: 100% !important;
     height: 100% !important;
+    > .mx-dataview-content {
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 
-  .mx-placeholder, .mx-dataview, .mx-dataview-content {
+  .ax-page {
     display: relative !important;
     width: 100% !important;
     height: 100% !important;
+    overflow: auto;
+
+    > .mx-placeholder,
+    > .mx-dataview {
+      width: 100% !important;
+      height: 100% !important;
+      > .mx-dataview-content {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+
+  .ax-full-box {
+    width: 100% !important;
+    height: 100% !important;
+
+    > .mx-placeholder,
+    > .mx-dataview {
+      width: 100% !important;
+      height: 100% !important;
+      > .mx-dataview-content {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+
+  .ax-scrollable {
+    overflow: auto;
+  }
+  .ax-scrollable-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .ax-scrollable-y {
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
