@@ -1,27 +1,15 @@
 @charset "UTF-8";
 @import url("resources/fonts/open-sans/open-sans.css");
 @font-face {
-  font-family: "AxUI$AxIcons";
-  src: url("./fonts/AxUI$AxIcons.ttf") format("truetype");
+  font-family: "AxUI$AxIcon";
+  src: url("./fonts/AxUI$AxIcon.ttf") format("truetype");
 }
 .ax-icon {
   display: inline-block;
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-  font-family: "AxUI$AxIcons";
-}
-
-.ax-icon.ax-icon-d::before {
-  content: "\d";
-}
-
-.ax-icon.ax-icon-_20::before {
-  content: " ";
-}
-
-.ax-icon.ax-icon-_2e::before {
-  content: ".";
+  font-family: "AxUI$AxIcon";
 }
 
 .ax-icon.ax-icon-_30::before {
@@ -62,110 +50,6 @@
 
 .ax-icon.ax-icon-_39::before {
   content: "9";
-}
-
-.ax-icon.ax-icon-_41::before {
-  content: "A";
-}
-
-.ax-icon.ax-icon-_42::before {
-  content: "B";
-}
-
-.ax-icon.ax-icon-_43::before {
-  content: "C";
-}
-
-.ax-icon.ax-icon-_44::before {
-  content: "D";
-}
-
-.ax-icon.ax-icon-_45::before {
-  content: "E";
-}
-
-.ax-icon.ax-icon-_46::before {
-  content: "F";
-}
-
-.ax-icon.ax-icon-_47::before {
-  content: "G";
-}
-
-.ax-icon.ax-icon-_48::before {
-  content: "H";
-}
-
-.ax-icon.ax-icon-_49::before {
-  content: "I";
-}
-
-.ax-icon.ax-icon-_4a::before {
-  content: "J";
-}
-
-.ax-icon.ax-icon-_4b::before {
-  content: "K";
-}
-
-.ax-icon.ax-icon-_4c::before {
-  content: "L";
-}
-
-.ax-icon.ax-icon-_4d::before {
-  content: "M";
-}
-
-.ax-icon.ax-icon-_4e::before {
-  content: "N";
-}
-
-.ax-icon.ax-icon-_4f::before {
-  content: "O";
-}
-
-.ax-icon.ax-icon-_50::before {
-  content: "P";
-}
-
-.ax-icon.ax-icon-_51::before {
-  content: "Q";
-}
-
-.ax-icon.ax-icon-_52::before {
-  content: "R";
-}
-
-.ax-icon.ax-icon-_53::before {
-  content: "S";
-}
-
-.ax-icon.ax-icon-_54::before {
-  content: "T";
-}
-
-.ax-icon.ax-icon-_55::before {
-  content: "U";
-}
-
-.ax-icon.ax-icon-_56::before {
-  content: "V";
-}
-
-.ax-icon.ax-icon-_57::before {
-  content: "W";
-}
-
-.ax-icon.ax-icon-_58::before {
-  content: "X";
-}
-
-.ax-icon.ax-icon-_59::before {
-  content: "Y";
-}
-
-.ax-icon.ax-icon-_5a::before {
-  content: "Z";
 }
 
 .ax-icon.ax-icon-_5f::before {
@@ -276,10 +160,6 @@
   content: "z";
 }
 
-.ax-icon.ax-icon-a0::before {
-  content: " ";
-}
-
 .ax-icon.ax-icon-e000::before {
   content: "\e000";
 }
@@ -328,10 +208,6 @@
   content: "\e011";
 }
 
-.ax-icon.ax-icon-e013::before {
-  content: "\e013";
-}
-
 .ax-icon.ax-icon-e014::before {
   content: "\e014";
 }
@@ -340,24 +216,8 @@
   content: "\e015";
 }
 
-.ax-icon.ax-icon-e016::before {
-  content: "\e016";
-}
-
-.ax-icon.ax-icon-e017::before {
-  content: "\e017";
-}
-
-.ax-icon.ax-icon-e018::before {
-  content: "\e018";
-}
-
 .ax-icon.ax-icon-e019::before {
   content: "\e019";
-}
-
-.ax-icon.ax-icon-e01a::before {
-  content: "\e01a";
 }
 
 .ax-icon.ax-icon-e01b::before {
@@ -388,28 +248,12 @@
   content: "\e021";
 }
 
-.ax-icon.ax-icon-e022::before {
-  content: "\e022";
-}
-
 .ax-icon.ax-icon-e023::before {
   content: "\e023";
 }
 
 .ax-icon.ax-icon-e024::before {
   content: "\e024";
-}
-
-.ax-icon.ax-icon-e025::before {
-  content: "\e025";
-}
-
-.ax-icon.ax-icon-e026::before {
-  content: "\e026";
-}
-
-.ax-icon.ax-icon-e027::before {
-  content: "\e027";
 }
 
 .ax-icon.ax-icon-e028::before {
@@ -432,10 +276,6 @@
   content: "\e02c";
 }
 
-.ax-icon.ax-icon-e02d::before {
-  content: "\e02d";
-}
-
 .ax-icon.ax-icon-e02e::before {
   content: "\e02e";
 }
@@ -450,10 +290,6 @@
 
 .ax-icon.ax-icon-e031::before {
   content: "\e031";
-}
-
-.ax-icon.ax-icon-e032::before {
-  content: "\e032";
 }
 
 .ax-icon.ax-icon-e033::before {
@@ -724,90 +560,6 @@
   content: "\e089";
 }
 
-.ax-icon.ax-icon-e08e::before {
-  content: "\e08e";
-}
-
-.ax-icon.ax-icon-e091::before {
-  content: "\e091";
-}
-
-.ax-icon.ax-icon-e093::before {
-  content: "\e093";
-}
-
-.ax-icon.ax-icon-e094::before {
-  content: "\e094";
-}
-
-.ax-icon.ax-icon-e097::before {
-  content: "\e097";
-}
-
-.ax-icon.ax-icon-e098::before {
-  content: "\e098";
-}
-
-.ax-icon.ax-icon-e099::before {
-  content: "\e099";
-}
-
-.ax-icon.ax-icon-e09c::before {
-  content: "\e09c";
-}
-
-.ax-icon.ax-icon-e09e::before {
-  content: "\e09e";
-}
-
-.ax-icon.ax-icon-e09f::before {
-  content: "\e09f";
-}
-
-.ax-icon.ax-icon-e0a0::before {
-  content: "\e0a0";
-}
-
-.ax-icon.ax-icon-e0a1::before {
-  content: "\e0a1";
-}
-
-.ax-icon.ax-icon-e0a5::before {
-  content: "\e0a5";
-}
-
-.ax-icon.ax-icon-e0a6::before {
-  content: "\e0a6";
-}
-
-.ax-icon.ax-icon-e0a7::before {
-  content: "\e0a7";
-}
-
-.ax-icon.ax-icon-e0a8::before {
-  content: "\e0a8";
-}
-
-.ax-icon.ax-icon-e0a9::before {
-  content: "\e0a9";
-}
-
-.ax-icon.ax-icon-e0aa::before {
-  content: "\e0aa";
-}
-
-.ax-icon.ax-icon-e0ac::before {
-  content: "\e0ac";
-}
-
-.ax-icon.ax-icon-e0ad::before {
-  content: "\e0ad";
-}
-
-.ax-icon.ax-icon-e0ae::before {
-  content: "\e0ae";
-}
-
 .ax-icon.ax-icon-e0af::before {
   content: "\e0af";
 }
@@ -870,14 +622,6 @@
 
 .ax-icon.ax-icon-e0bf::before {
   content: "\e0bf";
-}
-
-.ax-icon.ax-icon-e0c1::before {
-  content: "\e0c1";
-}
-
-.ax-icon.ax-icon-e0c2::before {
-  content: "\e0c2";
 }
 
 .ax-icon.ax-icon-e0c3::before {
@@ -1060,180 +804,12 @@
   content: "\e0f0";
 }
 
-.ax-icon.ax-icon-e0f1::before {
-  content: "\e0f1";
-}
-
-.ax-icon.ax-icon-e0f3::before {
-  content: "\e0f3";
-}
-
-.ax-icon.ax-icon-e0f4::before {
-  content: "\e0f4";
-}
-
-.ax-icon.ax-icon-e0f6::before {
-  content: "\e0f6";
-}
-
-.ax-icon.ax-icon-e0fb::before {
-  content: "\e0fb";
-}
-
-.ax-icon.ax-icon-e0fc::before {
-  content: "\e0fc";
-}
-
-.ax-icon.ax-icon-e0fe::before {
-  content: "\e0fe";
-}
-
-.ax-icon.ax-icon-e103::before {
-  content: "\e103";
-}
-
-.ax-icon.ax-icon-e104::before {
-  content: "\e104";
-}
-
-.ax-icon.ax-icon-e105::before {
-  content: "\e105";
-}
-
-.ax-icon.ax-icon-e106::before {
-  content: "\e106";
-}
-
-.ax-icon.ax-icon-e10b::before {
-  content: "\e10b";
-}
-
-.ax-icon.ax-icon-e10c::before {
-  content: "\e10c";
-}
-
-.ax-icon.ax-icon-e10d::before {
-  content: "\e10d";
-}
-
-.ax-icon.ax-icon-e10e::before {
-  content: "\e10e";
-}
-
-.ax-icon.ax-icon-e110::before {
-  content: "\e110";
-}
-
-.ax-icon.ax-icon-e114::before {
-  content: "\e114";
-}
-
-.ax-icon.ax-icon-e115::before {
-  content: "\e115";
-}
-
-.ax-icon.ax-icon-e116::before {
-  content: "\e116";
-}
-
-.ax-icon.ax-icon-e118::before {
-  content: "\e118";
-}
-
-.ax-icon.ax-icon-e119::before {
-  content: "\e119";
-}
-
-.ax-icon.ax-icon-e11d::before {
-  content: "\e11d";
-}
-
-.ax-icon.ax-icon-e11e::before {
-  content: "\e11e";
-}
-
-.ax-icon.ax-icon-e11f::before {
-  content: "\e11f";
-}
-
-.ax-icon.ax-icon-e120::before {
-  content: "\e120";
-}
-
-.ax-icon.ax-icon-e121::before {
-  content: "\e121";
-}
-
-.ax-icon.ax-icon-e122::before {
-  content: "\e122";
-}
-
-.ax-icon.ax-icon-e123::before {
-  content: "\e123";
-}
-
-.ax-icon.ax-icon-e124::before {
-  content: "\e124";
-}
-
-.ax-icon.ax-icon-e125::before {
-  content: "\e125";
-}
-
-.ax-icon.ax-icon-e127::before {
-  content: "\e127";
-}
-
-.ax-icon.ax-icon-e128::before {
-  content: "\e128";
-}
-
-.ax-icon.ax-icon-e12d::before {
-  content: "\e12d";
-}
-
-.ax-icon.ax-icon-e131::before {
-  content: "\e131";
-}
-
-.ax-icon.ax-icon-e132::before {
-  content: "\e132";
-}
-
-.ax-icon.ax-icon-e133::before {
-  content: "\e133";
-}
-
-.ax-icon.ax-icon-e137::before {
-  content: "\e137";
-}
-
 .ax-icon.ax-icon-e138::before {
   content: "\e138";
 }
 
-.ax-icon.ax-icon-e139::before {
-  content: "\e139";
-}
-
-.ax-icon.ax-icon-e13b::before {
-  content: "\e13b";
-}
-
-.ax-icon.ax-icon-e13c::before {
-  content: "\e13c";
-}
-
-.ax-icon.ax-icon-e13d::before {
-  content: "\e13d";
-}
-
 .ax-icon.ax-icon-e13e::before {
   content: "\e13e";
-}
-
-.ax-icon.ax-icon-e13f::before {
-  content: "\e13f";
 }
 
 .ax-icon.ax-icon-e145::before {
@@ -1448,10 +1024,6 @@
   content: "\e179";
 }
 
-.ax-icon.ax-icon-e188::before {
-  content: "\e188";
-}
-
 .ax-icon.ax-icon-e190::before {
   content: "\e190";
 }
@@ -1486,10 +1058,6 @@
 
 .ax-icon.ax-icon-e19e::before {
   content: "\e19e";
-}
-
-.ax-icon.ax-icon-e19f::before {
-  content: "\e19f";
 }
 
 .ax-icon.ax-icon-e1a0::before {
@@ -1712,18 +1280,6 @@
   content: "\e1db";
 }
 
-.ax-icon.ax-icon-e1dc::before {
-  content: "\e1dc";
-}
-
-.ax-icon.ax-icon-e1dd::before {
-  content: "\e1dd";
-}
-
-.ax-icon.ax-icon-e1de::before {
-  content: "\e1de";
-}
-
 .ax-icon.ax-icon-e1e0::before {
   content: "\e1e0";
 }
@@ -1736,48 +1292,8 @@
   content: "\e1e2";
 }
 
-.ax-icon.ax-icon-e1e6::before {
-  content: "\e1e6";
-}
-
-.ax-icon.ax-icon-e1e7::before {
-  content: "\e1e7";
-}
-
-.ax-icon.ax-icon-e1e8::before {
-  content: "\e1e8";
-}
-
-.ax-icon.ax-icon-e1e9::before {
-  content: "\e1e9";
-}
-
-.ax-icon.ax-icon-e1ea::before {
-  content: "\e1ea";
-}
-
 .ax-icon.ax-icon-e1eb::before {
   content: "\e1eb";
-}
-
-.ax-icon.ax-icon-e1f2::before {
-  content: "\e1f2";
-}
-
-.ax-icon.ax-icon-e1f3::before {
-  content: "\e1f3";
-}
-
-.ax-icon.ax-icon-e1f4::before {
-  content: "\e1f4";
-}
-
-.ax-icon.ax-icon-e1f7::before {
-  content: "\e1f7";
-}
-
-.ax-icon.ax-icon-e1f9::before {
-  content: "\e1f9";
 }
 
 .ax-icon.ax-icon-e1fe::before {
@@ -1798,62 +1314,6 @@
 
 .ax-icon.ax-icon-e202::before {
   content: "\e202";
-}
-
-.ax-icon.ax-icon-e203::before {
-  content: "\e203";
-}
-
-.ax-icon.ax-icon-e204::before {
-  content: "\e204";
-}
-
-.ax-icon.ax-icon-e205::before {
-  content: "\e205";
-}
-
-.ax-icon.ax-icon-e206::before {
-  content: "\e206";
-}
-
-.ax-icon.ax-icon-e209::before {
-  content: "\e209";
-}
-
-.ax-icon.ax-icon-e20c::before {
-  content: "\e20c";
-}
-
-.ax-icon.ax-icon-e210::before {
-  content: "\e210";
-}
-
-.ax-icon.ax-icon-e213::before {
-  content: "\e213";
-}
-
-.ax-icon.ax-icon-e214::before {
-  content: "\e214";
-}
-
-.ax-icon.ax-icon-e21c::before {
-  content: "\e21c";
-}
-
-.ax-icon.ax-icon-e21d::before {
-  content: "\e21d";
-}
-
-.ax-icon.ax-icon-e21e::before {
-  content: "\e21e";
-}
-
-.ax-icon.ax-icon-e223::before {
-  content: "\e223";
-}
-
-.ax-icon.ax-icon-e224::before {
-  content: "\e224";
 }
 
 .ax-icon.ax-icon-e226::before {
@@ -2140,144 +1600,8 @@
   content: "\e26c";
 }
 
-.ax-icon.ax-icon-e273::before {
-  content: "\e273";
-}
-
-.ax-icon.ax-icon-e276::before {
-  content: "\e276";
-}
-
-.ax-icon.ax-icon-e277::before {
-  content: "\e277";
-}
-
-.ax-icon.ax-icon-e278::before {
-  content: "\e278";
-}
-
-.ax-icon.ax-icon-e27c::before {
-  content: "\e27c";
-}
-
-.ax-icon.ax-icon-e27e::before {
-  content: "\e27e";
-}
-
-.ax-icon.ax-icon-e282::before {
-  content: "\e282";
-}
-
-.ax-icon.ax-icon-e283::before {
-  content: "\e283";
-}
-
-.ax-icon.ax-icon-e284::before {
-  content: "\e284";
-}
-
-.ax-icon.ax-icon-e285::before {
-  content: "\e285";
-}
-
 .ax-icon.ax-icon-e286::before {
   content: "\e286";
-}
-
-.ax-icon.ax-icon-e28a::before {
-  content: "\e28a";
-}
-
-.ax-icon.ax-icon-e28b::before {
-  content: "\e28b";
-}
-
-.ax-icon.ax-icon-e28c::before {
-  content: "\e28c";
-}
-
-.ax-icon.ax-icon-e28d::before {
-  content: "\e28d";
-}
-
-.ax-icon.ax-icon-e28e::before {
-  content: "\e28e";
-}
-
-.ax-icon.ax-icon-e291::before {
-  content: "\e291";
-}
-
-.ax-icon.ax-icon-e293::before {
-  content: "\e293";
-}
-
-.ax-icon.ax-icon-e295::before {
-  content: "\e295";
-}
-
-.ax-icon.ax-icon-e296::before {
-  content: "\e296";
-}
-
-.ax-icon.ax-icon-e29a::before {
-  content: "\e29a";
-}
-
-.ax-icon.ax-icon-e29c::before {
-  content: "\e29c";
-}
-
-.ax-icon.ax-icon-e29f::before {
-  content: "\e29f";
-}
-
-.ax-icon.ax-icon-e2a7::before {
-  content: "\e2a7";
-}
-
-.ax-icon.ax-icon-e2a8::before {
-  content: "\e2a8";
-}
-
-.ax-icon.ax-icon-e2aa::before {
-  content: "\e2aa";
-}
-
-.ax-icon.ax-icon-e2ab::before {
-  content: "\e2ab";
-}
-
-.ax-icon.ax-icon-e2ac::before {
-  content: "\e2ac";
-}
-
-.ax-icon.ax-icon-e2ae::before {
-  content: "\e2ae";
-}
-
-.ax-icon.ax-icon-e2af::before {
-  content: "\e2af";
-}
-
-.ax-icon.ax-icon-e2b4::before {
-  content: "\e2b4";
-}
-
-.ax-icon.ax-icon-e2b6::before {
-  content: "\e2b6";
-}
-
-.ax-icon.ax-icon-e2b9::before {
-  content: "\e2b9";
-}
-
-.ax-icon.ax-icon-e2ba::before {
-  content: "\e2ba";
-}
-
-.ax-icon.ax-icon-e2bb::before {
-  content: "\e2bb";
 }
 
 .ax-icon.ax-icon-e2bc::before {
@@ -2316,10 +1640,6 @@
   content: "\e2c4";
 }
 
-.ax-icon.ax-icon-e2c5::before {
-  content: "\e2c5";
-}
-
 .ax-icon.ax-icon-e2c6::before {
   content: "\e2c6";
 }
@@ -2336,32 +1656,12 @@
   content: "\e2c9";
 }
 
-.ax-icon.ax-icon-e2ca::before {
-  content: "\e2ca";
-}
-
-.ax-icon.ax-icon-e2cb::before {
-  content: "\e2cb";
-}
-
 .ax-icon.ax-icon-e2cc::before {
   content: "\e2cc";
 }
 
-.ax-icon.ax-icon-e2cd::before {
-  content: "\e2cd";
-}
-
 .ax-icon.ax-icon-e2db::before {
   content: "\e2db";
-}
-
-.ax-icon.ax-icon-e2dc::before {
-  content: "\e2dc";
-}
-
-.ax-icon.ax-icon-e2dd::before {
-  content: "\e2dd";
 }
 
 .ax-icon.ax-icon-e2e6::before {
@@ -2582,22 +1882,6 @@
 
 .ax-icon.ax-icon-e33a::before {
   content: "\e33a";
-}
-
-.ax-icon.ax-icon-e349::before {
-  content: "\e349";
-}
-
-.ax-icon.ax-icon-e356::before {
-  content: "\e356";
-}
-
-.ax-icon.ax-icon-e384::before {
-  content: "\e384";
-}
-
-.ax-icon.ax-icon-e394::before {
-  content: "\e394";
 }
 
 .ax-icon.ax-icon-e399::before {
@@ -2876,10 +2160,6 @@
   content: "\e3e0";
 }
 
-.ax-icon.ax-icon-e3e1::before {
-  content: "\e3e1";
-}
-
 .ax-icon.ax-icon-e3e2::before {
   content: "\e3e2";
 }
@@ -2930,10 +2210,6 @@
 
 .ax-icon.ax-icon-e3ee::before {
   content: "\e3ee";
-}
-
-.ax-icon.ax-icon-e3ef::before {
-  content: "\e3ef";
 }
 
 .ax-icon.ax-icon-e3f1::before {
@@ -3248,72 +2524,12 @@
   content: "\e440";
 }
 
-.ax-icon.ax-icon-e46e::before {
-  content: "\e46e";
-}
-
-.ax-icon.ax-icon-e473::before {
-  content: "\e473";
-}
-
-.ax-icon.ax-icon-e47b::before {
-  content: "\e47b";
-}
-
-.ax-icon.ax-icon-e483::before {
-  content: "\e483";
-}
-
-.ax-icon.ax-icon-e489::before {
-  content: "\e489";
-}
-
-.ax-icon.ax-icon-e48d::before {
-  content: "\e48d";
-}
-
-.ax-icon.ax-icon-e48f::before {
-  content: "\e48f";
-}
-
-.ax-icon.ax-icon-e49b::before {
-  content: "\e49b";
-}
-
-.ax-icon.ax-icon-e4a0::before {
-  content: "\e4a0";
-}
-
-.ax-icon.ax-icon-e4a7::before {
-  content: "\e4a7";
-}
-
-.ax-icon.ax-icon-e4b9::before {
-  content: "\e4b9";
-}
-
-.ax-icon.ax-icon-e4c8::before {
-  content: "\e4c8";
-}
-
 .ax-icon.ax-icon-e4ca::before {
   content: "\e4ca";
 }
 
-.ax-icon.ax-icon-e4cb::before {
-  content: "\e4cb";
-}
-
-.ax-icon.ax-icon-e4d0::before {
-  content: "\e4d0";
-}
-
 .ax-icon.ax-icon-e4d9::before {
   content: "\e4d9";
-}
-
-.ax-icon.ax-icon-e4de::before {
-  content: "\e4de";
 }
 
 .ax-icon.ax-icon-e4eb::before {
@@ -3388,12 +2604,8 @@
   content: "\e503";
 }
 
-.ax-icon.ax-icon-e505::before {
-  content: "\e505";
-}
-
-.ax-icon.ax-icon-e506::before {
-  content: "\e506";
+.ax-icon.ax-icon-e508::before {
+  content: "\e508";
 }
 
 .ax-icon.ax-icon-e509::before {
@@ -3452,10 +2664,6 @@
   content: "\e518";
 }
 
-.ax-icon.ax-icon-e51a::before {
-  content: "\e51a";
-}
-
 .ax-icon.ax-icon-e51c::before {
   content: "\e51c";
 }
@@ -3480,12 +2688,12 @@
   content: "\e521";
 }
 
-.ax-icon.ax-icon-e525::before {
-  content: "\e525";
+.ax-icon.ax-icon-e524::before {
+  content: "\e524";
 }
 
-.ax-icon.ax-icon-e527::before {
-  content: "\e527";
+.ax-icon.ax-icon-e525::before {
+  content: "\e525";
 }
 
 .ax-icon.ax-icon-e52d::before {
@@ -3526,10 +2734,6 @@
 
 .ax-icon.ax-icon-e536::before {
   content: "\e536";
-}
-
-.ax-icon.ax-icon-e538::before {
-  content: "\e538";
 }
 
 .ax-icon.ax-icon-e539::before {
@@ -3868,14 +3072,6 @@
   content: "\e591";
 }
 
-.ax-icon.ax-icon-e593::before {
-  content: "\e593";
-}
-
-.ax-icon.ax-icon-e594::before {
-  content: "\e594";
-}
-
 .ax-icon.ax-icon-e595::before {
   content: "\e595";
 }
@@ -4016,28 +3212,8 @@
   content: "\e5e1";
 }
 
-.ax-icon.ax-icon-e5f2::before {
-  content: "\e5f2";
-}
-
-.ax-icon.ax-icon-e5f3::before {
-  content: "\e5f3";
-}
-
-.ax-icon.ax-icon-e5f7::before {
-  content: "\e5f7";
-}
-
 .ax-icon.ax-icon-e5fa::before {
   content: "\e5fa";
-}
-
-.ax-icon.ax-icon-e600::before {
-  content: "\e600";
-}
-
-.ax-icon.ax-icon-e602::before {
-  content: "\e602";
 }
 
 .ax-icon.ax-icon-e609::before {
@@ -4276,42 +3452,6 @@
   content: "\e649";
 }
 
-.ax-icon.ax-icon-e64c::before {
-  content: "\e64c";
-}
-
-.ax-icon.ax-icon-e64e::before {
-  content: "\e64e";
-}
-
-.ax-icon.ax-icon-e650::before {
-  content: "\e650";
-}
-
-.ax-icon.ax-icon-e651::before {
-  content: "\e651";
-}
-
-.ax-icon.ax-icon-e653::before {
-  content: "\e653";
-}
-
-.ax-icon.ax-icon-e656::before {
-  content: "\e656";
-}
-
-.ax-icon.ax-icon-e659::before {
-  content: "\e659";
-}
-
-.ax-icon.ax-icon-e65a::before {
-  content: "\e65a";
-}
-
-.ax-icon.ax-icon-e65b::before {
-  content: "\e65b";
-}
-
 .ax-icon.ax-icon-e65c::before {
   content: "\e65c";
 }
@@ -4326,10 +3466,6 @@
 
 .ax-icon.ax-icon-e661::before {
   content: "\e661";
-}
-
-.ax-icon.ax-icon-e662::before {
-  content: "\e662";
 }
 
 .ax-icon.ax-icon-e663::before {
@@ -4348,112 +3484,12 @@
   content: "\e666";
 }
 
-.ax-icon.ax-icon-e667::before {
-  content: "\e667";
-}
-
-.ax-icon.ax-icon-e669::before {
-  content: "\e669";
-}
-
 .ax-icon.ax-icon-e66b::before {
   content: "\e66b";
 }
 
-.ax-icon.ax-icon-e66d::before {
-  content: "\e66d";
-}
-
 .ax-icon.ax-icon-e675::before {
   content: "\e675";
-}
-
-.ax-icon.ax-icon-e678::before {
-  content: "\e678";
-}
-
-.ax-icon.ax-icon-e686::before {
-  content: "\e686";
-}
-
-.ax-icon.ax-icon-e68e::before {
-  content: "\e68e";
-}
-
-.ax-icon.ax-icon-e68f::before {
-  content: "\e68f";
-}
-
-.ax-icon.ax-icon-e692::before {
-  content: "\e692";
-}
-
-.ax-icon.ax-icon-e694::before {
-  content: "\e694";
-}
-
-.ax-icon.ax-icon-e695::before {
-  content: "\e695";
-}
-
-.ax-icon.ax-icon-e696::before {
-  content: "\e696";
-}
-
-.ax-icon.ax-icon-e697::before {
-  content: "\e697";
-}
-
-.ax-icon.ax-icon-e698::before {
-  content: "\e698";
-}
-
-.ax-icon.ax-icon-e699::before {
-  content: "\e699";
-}
-
-.ax-icon.ax-icon-e69a::before {
-  content: "\e69a";
-}
-
-.ax-icon.ax-icon-e69b::before {
-  content: "\e69b";
-}
-
-.ax-icon.ax-icon-e69c::before {
-  content: "\e69c";
-}
-
-.ax-icon.ax-icon-e69d::before {
-  content: "\e69d";
-}
-
-.ax-icon.ax-icon-e69e::before {
-  content: "\e69e";
-}
-
-.ax-icon.ax-icon-e69f::before {
-  content: "\e69f";
-}
-
-.ax-icon.ax-icon-e6a2::before {
-  content: "\e6a2";
-}
-
-.ax-icon.ax-icon-e6a5::before {
-  content: "\e6a5";
-}
-
-.ax-icon.ax-icon-e6a7::before {
-  content: "\e6a7";
-}
-
-.ax-icon.ax-icon-e6aa::before {
-  content: "\e6aa";
-}
-
-.ax-icon.ax-icon-e6ac::before {
-  content: "\e6ac";
 }
 
 .ax-icon.ax-icon-e6b1::before {
@@ -4464,24 +3500,8 @@
   content: "\e6b3";
 }
 
-.ax-icon.ax-icon-e6b7::before {
-  content: "\e6b7";
-}
-
 .ax-icon.ax-icon-e6b8::before {
   content: "\e6b8";
-}
-
-.ax-icon.ax-icon-e6bf::before {
-  content: "\e6bf";
-}
-
-.ax-icon.ax-icon-e6c2::before {
-  content: "\e6c2";
-}
-
-.ax-icon.ax-icon-e6c3::before {
-  content: "\e6c3";
 }
 
 .ax-icon.ax-icon-e6c4::before {
@@ -4492,60 +3512,12 @@
   content: "\e6c5";
 }
 
-.ax-icon.ax-icon-e6c6::before {
-  content: "\e6c6";
-}
-
-.ax-icon.ax-icon-e6c7::before {
-  content: "\e6c7";
-}
-
-.ax-icon.ax-icon-e6c9::before {
-  content: "\e6c9";
-}
-
-.ax-icon.ax-icon-e6ca::before {
-  content: "\e6ca";
-}
-
-.ax-icon.ax-icon-e6cf::before {
-  content: "\e6cf";
-}
-
-.ax-icon.ax-icon-e6d0::before {
-  content: "\e6d0";
-}
-
-.ax-icon.ax-icon-e6d1::before {
-  content: "\e6d1";
-}
-
-.ax-icon.ax-icon-e6d2::before {
-  content: "\e6d2";
-}
-
-.ax-icon.ax-icon-e6d3::before {
-  content: "\e6d3";
-}
-
-.ax-icon.ax-icon-e6d4::before {
-  content: "\e6d4";
-}
-
-.ax-icon.ax-icon-e6d6::before {
-  content: "\e6d6";
-}
-
 .ax-icon.ax-icon-e6da::before {
   content: "\e6da";
 }
 
 .ax-icon.ax-icon-e6dd::before {
   content: "\e6dd";
-}
-
-.ax-icon.ax-icon-e6de::before {
-  content: "\e6de";
 }
 
 .ax-icon.ax-icon-e6df::before {
@@ -4556,164 +3528,12 @@
   content: "\e6e1";
 }
 
-.ax-icon.ax-icon-e6e8::before {
-  content: "\e6e8";
-}
-
-.ax-icon.ax-icon-e6e9::before {
-  content: "\e6e9";
-}
-
-.ax-icon.ax-icon-e6ee::before {
-  content: "\e6ee";
-}
-
-.ax-icon.ax-icon-e6f8::before {
-  content: "\e6f8";
-}
-
-.ax-icon.ax-icon-e6f9::before {
-  content: "\e6f9";
-}
-
-.ax-icon.ax-icon-e6fa::before {
-  content: "\e6fa";
-}
-
-.ax-icon.ax-icon-e6fb::before {
-  content: "\e6fb";
-}
-
-.ax-icon.ax-icon-e701::before {
-  content: "\e701";
-}
-
-.ax-icon.ax-icon-e702::before {
-  content: "\e702";
-}
-
-.ax-icon.ax-icon-e703::before {
-  content: "\e703";
-}
-
-.ax-icon.ax-icon-e705::before {
-  content: "\e705";
-}
-
-.ax-icon.ax-icon-e706::before {
-  content: "\e706";
-}
-
-.ax-icon.ax-icon-e707::before {
-  content: "\e707";
-}
-
-.ax-icon.ax-icon-e708::before {
-  content: "\e708";
-}
-
-.ax-icon.ax-icon-e70b::before {
-  content: "\e70b";
-}
-
-.ax-icon.ax-icon-e70c::before {
-  content: "\e70c";
-}
-
-.ax-icon.ax-icon-e70d::before {
-  content: "\e70d";
-}
-
-.ax-icon.ax-icon-e70e::before {
-  content: "\e70e";
-}
-
-.ax-icon.ax-icon-e710::before {
-  content: "\e710";
-}
-
-.ax-icon.ax-icon-e714::before {
-  content: "\e714";
-}
-
-.ax-icon.ax-icon-e715::before {
-  content: "\e715";
-}
-
-.ax-icon.ax-icon-e717::before {
-  content: "\e717";
-}
-
-.ax-icon.ax-icon-e719::before {
-  content: "\e719";
-}
-
-.ax-icon.ax-icon-e71a::before {
-  content: "\e71a";
-}
-
-.ax-icon.ax-icon-e71b::before {
-  content: "\e71b";
-}
-
 .ax-icon.ax-icon-e71c::before {
   content: "\e71c";
 }
 
-.ax-icon.ax-icon-e71e::before {
-  content: "\e71e";
-}
-
-.ax-icon.ax-icon-e720::before {
-  content: "\e720";
-}
-
-.ax-icon.ax-icon-e726::before {
-  content: "\e726";
-}
-
-.ax-icon.ax-icon-e728::before {
-  content: "\e728";
-}
-
 .ax-icon.ax-icon-e729::before {
   content: "\e729";
-}
-
-.ax-icon.ax-icon-e72a::before {
-  content: "\e72a";
-}
-
-.ax-icon.ax-icon-e72d::before {
-  content: "\e72d";
-}
-
-.ax-icon.ax-icon-e72e::before {
-  content: "\e72e";
-}
-
-.ax-icon.ax-icon-e72f::before {
-  content: "\e72f";
-}
-
-.ax-icon.ax-icon-e730::before {
-  content: "\e730";
-}
-
-.ax-icon.ax-icon-e731::before {
-  content: "\e731";
-}
-
-.ax-icon.ax-icon-e732::before {
-  content: "\e732";
-}
-
-.ax-icon.ax-icon-e733::before {
-  content: "\e733";
-}
-
-.ax-icon.ax-icon-e734::before {
-  content: "\e734";
 }
 
 .ax-icon.ax-icon-e73a::before {
@@ -4722,22 +3542,6 @@
 
 .ax-icon.ax-icon-e73c::before {
   content: "\e73c";
-}
-
-.ax-icon.ax-icon-e73d::before {
-  content: "\e73d";
-}
-
-.ax-icon.ax-icon-e73e::before {
-  content: "\e73e";
-}
-
-.ax-icon.ax-icon-e740::before {
-  content: "\e740";
-}
-
-.ax-icon.ax-icon-e741::before {
-  content: "\e741";
 }
 
 .ax-icon.ax-icon-e742::before {
@@ -4820,74 +3624,6 @@
   content: "\e770";
 }
 
-.ax-icon.ax-icon-e77a::before {
-  content: "\e77a";
-}
-
-.ax-icon.ax-icon-e77b::before {
-  content: "\e77b";
-}
-
-.ax-icon.ax-icon-e77c::before {
-  content: "\e77c";
-}
-
-.ax-icon.ax-icon-e77e::before {
-  content: "\e77e";
-}
-
-.ax-icon.ax-icon-e781::before {
-  content: "\e781";
-}
-
-.ax-icon.ax-icon-e783::before {
-  content: "\e783";
-}
-
-.ax-icon.ax-icon-e784::before {
-  content: "\e784";
-}
-
-.ax-icon.ax-icon-e785::before {
-  content: "\e785";
-}
-
-.ax-icon.ax-icon-e786::before {
-  content: "\e786";
-}
-
-.ax-icon.ax-icon-e788::before {
-  content: "\e788";
-}
-
-.ax-icon.ax-icon-e789::before {
-  content: "\e789";
-}
-
-.ax-icon.ax-icon-e78a::before {
-  content: "\e78a";
-}
-
-.ax-icon.ax-icon-e78c::before {
-  content: "\e78c";
-}
-
-.ax-icon.ax-icon-e78d::before {
-  content: "\e78d";
-}
-
-.ax-icon.ax-icon-e78e::before {
-  content: "\e78e";
-}
-
-.ax-icon.ax-icon-e78f::before {
-  content: "\e78f";
-}
-
-.ax-icon.ax-icon-e792::before {
-  content: "\e792";
-}
-
 .ax-icon.ax-icon-e798::before {
   content: "\e798";
 }
@@ -4928,14 +3664,6 @@
   content: "\e7b0";
 }
 
-.ax-icon.ax-icon-e7b3::before {
-  content: "\e7b3";
-}
-
-.ax-icon.ax-icon-e7ba::before {
-  content: "\e7ba";
-}
-
 .ax-icon.ax-icon-e7c8::before {
   content: "\e7c8";
 }
@@ -4972,16 +3700,8 @@
   content: "\e7d0";
 }
 
-.ax-icon.ax-icon-e7d1::before {
-  content: "\e7d1";
-}
-
 .ax-icon.ax-icon-e7d3::before {
   content: "\e7d3";
-}
-
-.ax-icon.ax-icon-e7d8::before {
-  content: "\e7d8";
 }
 
 .ax-icon.ax-icon-e7e1::before {
@@ -4990,10 +3710,6 @@
 
 .ax-icon.ax-icon-e7e2::before {
   content: "\e7e2";
-}
-
-.ax-icon.ax-icon-e7e3::before {
-  content: "\e7e3";
 }
 
 .ax-icon.ax-icon-e7e4::before {
@@ -5010,18 +3726,6 @@
 
 .ax-icon.ax-icon-e7e9::before {
   content: "\e7e9";
-}
-
-.ax-icon.ax-icon-e7ea::before {
-  content: "\e7ea";
-}
-
-.ax-icon.ax-icon-e7ec::before {
-  content: "\e7ec";
-}
-
-.ax-icon.ax-icon-e7ed::before {
-  content: "\e7ed";
 }
 
 .ax-icon.ax-icon-e7ee::before {
@@ -5168,44 +3872,8 @@
   content: "\e81a";
 }
 
-.ax-icon.ax-icon-e824::before {
-  content: "\e824";
-}
-
-.ax-icon.ax-icon-e828::before {
-  content: "\e828";
-}
-
-.ax-icon.ax-icon-e829::before {
-  content: "\e829";
-}
-
-.ax-icon.ax-icon-e82a::before {
-  content: "\e82a";
-}
-
-.ax-icon.ax-icon-e82c::before {
-  content: "\e82c";
-}
-
-.ax-icon.ax-icon-e82d::before {
-  content: "\e82d";
-}
-
-.ax-icon.ax-icon-e82e::before {
-  content: "\e82e";
-}
-
-.ax-icon.ax-icon-e830::before {
-  content: "\e830";
-}
-
-.ax-icon.ax-icon-e832::before {
-  content: "\e832";
-}
-
-.ax-icon.ax-icon-e833::before {
-  content: "\e833";
+.ax-icon.ax-icon-e82b::before {
+  content: "\e82b";
 }
 
 .ax-icon.ax-icon-e834::before {
@@ -5240,56 +3908,8 @@
   content: "\e83b";
 }
 
-.ax-icon.ax-icon-e83c::before {
-  content: "\e83c";
-}
-
-.ax-icon.ax-icon-e83d::before {
-  content: "\e83d";
-}
-
-.ax-icon.ax-icon-e83e::before {
-  content: "\e83e";
-}
-
-.ax-icon.ax-icon-e83f::before {
-  content: "\e83f";
-}
-
-.ax-icon.ax-icon-e840::before {
-  content: "\e840";
-}
-
-.ax-icon.ax-icon-e841::before {
-  content: "\e841";
-}
-
 .ax-icon.ax-icon-e842::before {
   content: "\e842";
-}
-
-.ax-icon.ax-icon-e843::before {
-  content: "\e843";
-}
-
-.ax-icon.ax-icon-e844::before {
-  content: "\e844";
-}
-
-.ax-icon.ax-icon-e846::before {
-  content: "\e846";
-}
-
-.ax-icon.ax-icon-e847::before {
-  content: "\e847";
-}
-
-.ax-icon.ax-icon-e849::before {
-  content: "\e849";
-}
-
-.ax-icon.ax-icon-e84c::before {
-  content: "\e84c";
 }
 
 .ax-icon.ax-icon-e84d::before {
@@ -5310,10 +3930,6 @@
 
 .ax-icon.ax-icon-e851::before {
   content: "\e851";
-}
-
-.ax-icon.ax-icon-e852::before {
-  content: "\e852";
 }
 
 .ax-icon.ax-icon-e853::before {
@@ -5448,10 +4064,6 @@
   content: "\e873";
 }
 
-.ax-icon.ax-icon-e874::before {
-  content: "\e874";
-}
-
 .ax-icon.ax-icon-e875::before {
   content: "\e875";
 }
@@ -5554,6 +4166,10 @@
 
 .ax-icon.ax-icon-e88e::before {
   content: "\e88e";
+}
+
+.ax-icon.ax-icon-e88f::before {
+  content: "\e88f";
 }
 
 .ax-icon.ax-icon-e890::before {
@@ -5712,10 +4328,6 @@
   content: "\e8b6";
 }
 
-.ax-icon.ax-icon-e8b7::before {
-  content: "\e8b7";
-}
-
 .ax-icon.ax-icon-e8b8::before {
   content: "\e8b8";
 }
@@ -5806,10 +4418,6 @@
 
 .ax-icon.ax-icon-e8ce::before {
   content: "\e8ce";
-}
-
-.ax-icon.ax-icon-e8cf::before {
-  content: "\e8cf";
 }
 
 .ax-icon.ax-icon-e8d0::before {
@@ -6026,10 +4634,6 @@
 
 .ax-icon.ax-icon-e906::before {
   content: "\e906";
-}
-
-.ax-icon.ax-icon-e907::before {
-  content: "\e907";
 }
 
 .ax-icon.ax-icon-e908::before {
@@ -6268,16 +4872,8 @@
   content: "\e943";
 }
 
-.ax-icon.ax-icon-e944::before {
-  content: "\e944";
-}
-
 .ax-icon.ax-icon-e945::before {
   content: "\e945";
-}
-
-.ax-icon.ax-icon-e946::before {
-  content: "\e946";
 }
 
 .ax-icon.ax-icon-e947::before {
@@ -6500,40 +5096,12 @@
   content: "\e97d";
 }
 
-.ax-icon.ax-icon-e97e::before {
-  content: "\e97e";
-}
-
 .ax-icon.ax-icon-e97f::before {
   content: "\e97f";
 }
 
-.ax-icon.ax-icon-e981::before {
-  content: "\e981";
-}
-
 .ax-icon.ax-icon-e982::before {
   content: "\e982";
-}
-
-.ax-icon.ax-icon-e983::before {
-  content: "\e983";
-}
-
-.ax-icon.ax-icon-e984::before {
-  content: "\e984";
-}
-
-.ax-icon.ax-icon-e985::before {
-  content: "\e985";
-}
-
-.ax-icon.ax-icon-e986::before {
-  content: "\e986";
-}
-
-.ax-icon.ax-icon-e987::before {
-  content: "\e987";
 }
 
 .ax-icon.ax-icon-e988::before {
@@ -6544,64 +5112,28 @@
   content: "\e989";
 }
 
-.ax-icon.ax-icon-e98a::before {
-  content: "\e98a";
-}
-
 .ax-icon.ax-icon-e98b::before {
   content: "\e98b";
-}
-
-.ax-icon.ax-icon-e98c::before {
-  content: "\e98c";
-}
-
-.ax-icon.ax-icon-e98d::before {
-  content: "\e98d";
-}
-
-.ax-icon.ax-icon-e98e::before {
-  content: "\e98e";
 }
 
 .ax-icon.ax-icon-e98f::before {
   content: "\e98f";
 }
 
-.ax-icon.ax-icon-e991::before {
-  content: "\e991";
-}
-
 .ax-icon.ax-icon-e992::before {
   content: "\e992";
-}
-
-.ax-icon.ax-icon-e993::before {
-  content: "\e993";
 }
 
 .ax-icon.ax-icon-e994::before {
   content: "\e994";
 }
 
-.ax-icon.ax-icon-e995::before {
-  content: "\e995";
-}
-
 .ax-icon.ax-icon-e996::before {
   content: "\e996";
 }
 
-.ax-icon.ax-icon-e997::before {
-  content: "\e997";
-}
-
 .ax-icon.ax-icon-e998::before {
   content: "\e998";
-}
-
-.ax-icon.ax-icon-e999::before {
-  content: "\e999";
 }
 
 .ax-icon.ax-icon-e99a::before {
@@ -6612,24 +5144,8 @@
   content: "\e99b";
 }
 
-.ax-icon.ax-icon-e99c::before {
-  content: "\e99c";
-}
-
 .ax-icon.ax-icon-e99d::before {
   content: "\e99d";
-}
-
-.ax-icon.ax-icon-e99e::before {
-  content: "\e99e";
-}
-
-.ax-icon.ax-icon-e99f::before {
-  content: "\e99f";
-}
-
-.ax-icon.ax-icon-e9a0::before {
-  content: "\e9a0";
 }
 
 .ax-icon.ax-icon-e9a1::before {
@@ -6644,16 +5160,8 @@
   content: "\e9a3";
 }
 
-.ax-icon.ax-icon-e9a4::before {
-  content: "\e9a4";
-}
-
 .ax-icon.ax-icon-e9a5::before {
   content: "\e9a5";
-}
-
-.ax-icon.ax-icon-e9a6::before {
-  content: "\e9a6";
 }
 
 .ax-icon.ax-icon-e9a7::before {
@@ -6664,20 +5172,8 @@
   content: "\e9a8";
 }
 
-.ax-icon.ax-icon-e9a9::before {
-  content: "\e9a9";
-}
-
 .ax-icon.ax-icon-e9aa::before {
   content: "\e9aa";
-}
-
-.ax-icon.ax-icon-e9ab::before {
-  content: "\e9ab";
-}
-
-.ax-icon.ax-icon-e9ac::before {
-  content: "\e9ac";
 }
 
 .ax-icon.ax-icon-e9ad::before {
@@ -6700,24 +5196,12 @@
   content: "\e9b4";
 }
 
-.ax-icon.ax-icon-e9b5::before {
-  content: "\e9b5";
-}
-
 .ax-icon.ax-icon-e9b6::before {
   content: "\e9b6";
 }
 
 .ax-icon.ax-icon-e9b7::before {
   content: "\e9b7";
-}
-
-.ax-icon.ax-icon-e9b8::before {
-  content: "\e9b8";
-}
-
-.ax-icon.ax-icon-e9b9::before {
-  content: "\e9b9";
 }
 
 .ax-icon.ax-icon-e9ba::before {
@@ -6736,14 +5220,6 @@
   content: "\e9bd";
 }
 
-.ax-icon.ax-icon-e9be::before {
-  content: "\e9be";
-}
-
-.ax-icon.ax-icon-e9bf::before {
-  content: "\e9bf";
-}
-
 .ax-icon.ax-icon-e9c0::before {
   content: "\e9c0";
 }
@@ -6760,16 +5236,8 @@
   content: "\e9c3";
 }
 
-.ax-icon.ax-icon-e9c4::before {
-  content: "\e9c4";
-}
-
 .ax-icon.ax-icon-e9c5::before {
   content: "\e9c5";
-}
-
-.ax-icon.ax-icon-e9c7::before {
-  content: "\e9c7";
 }
 
 .ax-icon.ax-icon-e9c8::before {
@@ -6778,6 +5246,10 @@
 
 .ax-icon.ax-icon-e9c9::before {
   content: "\e9c9";
+}
+
+.ax-icon.ax-icon-e9ca::before {
+  content: "\e9ca";
 }
 
 .ax-icon.ax-icon-e9cb::before {
@@ -6800,10 +5272,6 @@
   content: "\e9cf";
 }
 
-.ax-icon.ax-icon-e9d0::before {
-  content: "\e9d0";
-}
-
 .ax-icon.ax-icon-e9d1::before {
   content: "\e9d1";
 }
@@ -6818,10 +5286,6 @@
 
 .ax-icon.ax-icon-e9d4::before {
   content: "\e9d4";
-}
-
-.ax-icon.ax-icon-e9d5::before {
-  content: "\e9d5";
 }
 
 .ax-icon.ax-icon-e9d6::before {
@@ -6840,24 +5304,8 @@
   content: "\e9d9";
 }
 
-.ax-icon.ax-icon-e9da::before {
-  content: "\e9da";
-}
-
-.ax-icon.ax-icon-e9db::before {
-  content: "\e9db";
-}
-
-.ax-icon.ax-icon-e9dc::before {
-  content: "\e9dc";
-}
-
 .ax-icon.ax-icon-e9dd::before {
   content: "\e9dd";
-}
-
-.ax-icon.ax-icon-e9df::before {
-  content: "\e9df";
 }
 
 .ax-icon.ax-icon-e9e0::before {
@@ -6868,14 +5316,6 @@
   content: "\e9e1";
 }
 
-.ax-icon.ax-icon-e9e2::before {
-  content: "\e9e2";
-}
-
-.ax-icon.ax-icon-e9e3::before {
-  content: "\e9e3";
-}
-
 .ax-icon.ax-icon-e9e4::before {
   content: "\e9e4";
 }
@@ -6884,20 +5324,8 @@
   content: "\e9e6";
 }
 
-.ax-icon.ax-icon-e9e7::before {
-  content: "\e9e7";
-}
-
-.ax-icon.ax-icon-e9e8::before {
-  content: "\e9e8";
-}
-
 .ax-icon.ax-icon-e9e9::before {
   content: "\e9e9";
-}
-
-.ax-icon.ax-icon-e9ea::before {
-  content: "\e9ea";
 }
 
 .ax-icon.ax-icon-e9ec::before {
@@ -6908,16 +5336,8 @@
   content: "\e9ed";
 }
 
-.ax-icon.ax-icon-e9ee::before {
-  content: "\e9ee";
-}
-
 .ax-icon.ax-icon-e9ef::before {
   content: "\e9ef";
-}
-
-.ax-icon.ax-icon-e9f1::before {
-  content: "\e9f1";
 }
 
 .ax-icon.ax-icon-e9f2::before {
@@ -6940,24 +5360,8 @@
   content: "\e9f6";
 }
 
-.ax-icon.ax-icon-e9f7::before {
-  content: "\e9f7";
-}
-
-.ax-icon.ax-icon-e9f8::before {
-  content: "\e9f8";
-}
-
 .ax-icon.ax-icon-e9f9::before {
   content: "\e9f9";
-}
-
-.ax-icon.ax-icon-e9fa::before {
-  content: "\e9fa";
-}
-
-.ax-icon.ax-icon-e9fb::before {
-  content: "\e9fb";
 }
 
 .ax-icon.ax-icon-e9fc::before {
@@ -6976,16 +5380,8 @@
   content: "\ea01";
 }
 
-.ax-icon.ax-icon-ea03::before {
-  content: "\ea03";
-}
-
-.ax-icon.ax-icon-ea04::before {
-  content: "\ea04";
-}
-
-.ax-icon.ax-icon-ea08::before {
-  content: "\ea08";
+.ax-icon.ax-icon-ea02::before {
+  content: "\ea02";
 }
 
 .ax-icon.ax-icon-ea09::before {
@@ -7002,6 +5398,10 @@
 
 .ax-icon.ax-icon-ea0c::before {
   content: "\ea0c";
+}
+
+.ax-icon.ax-icon-ea0d::before {
+  content: "\ea0d";
 }
 
 .ax-icon.ax-icon-ea0e::before {
@@ -7372,6 +5772,22 @@
   content: "\ea69";
 }
 
+.ax-icon.ax-icon-ea6b::before {
+  content: "\ea6b";
+}
+
+.ax-icon.ax-icon-ea6c::before {
+  content: "\ea6c";
+}
+
+.ax-icon.ax-icon-ea6d::before {
+  content: "\ea6d";
+}
+
+.ax-icon.ax-icon-ea6e::before {
+  content: "\ea6e";
+}
+
 .ax-icon.ax-icon-ea70::before {
   content: "\ea70";
 }
@@ -7412,20 +5828,36 @@
   content: "\ea79";
 }
 
-.ax-icon.ax-icon-ea7d::before {
-  content: "\ea7d";
+.ax-icon.ax-icon-ea7e::before {
+  content: "\ea7e";
 }
 
-.ax-icon.ax-icon-ea85::before {
-  content: "\ea85";
+.ax-icon.ax-icon-ea80::before {
+  content: "\ea80";
+}
+
+.ax-icon.ax-icon-ea81::before {
+  content: "\ea81";
 }
 
 .ax-icon.ax-icon-ea87::before {
   content: "\ea87";
 }
 
+.ax-icon.ax-icon-ea8d::before {
+  content: "\ea8d";
+}
+
 .ax-icon.ax-icon-ea8e::before {
   content: "\ea8e";
+}
+
+.ax-icon.ax-icon-ea96::before {
+  content: "\ea96";
+}
+
+.ax-icon.ax-icon-ea98::before {
+  content: "\ea98";
 }
 
 .ax-icon.ax-icon-ea99::before {
@@ -7440,8 +5872,24 @@
   content: "\ea9b";
 }
 
+.ax-icon.ax-icon-ea9d::before {
+  content: "\ea9d";
+}
+
+.ax-icon.ax-icon-ea9f::before {
+  content: "\ea9f";
+}
+
+.ax-icon.ax-icon-eaa0::before {
+  content: "\eaa0";
+}
+
 .ax-icon.ax-icon-eaa2::before {
   content: "\eaa2";
+}
+
+.ax-icon.ax-icon-eaa3::before {
+  content: "\eaa3";
 }
 
 .ax-icon.ax-icon-eaa6::before {
@@ -7498,10 +5946,6 @@
 
 .ax-icon.ax-icon-eab3::before {
   content: "\eab3";
-}
-
-.ax-icon.ax-icon-eabd::before {
-  content: "\eabd";
 }
 
 .ax-icon.ax-icon-eac2::before {
@@ -7600,6 +6044,14 @@
   content: "\eade";
 }
 
+.ax-icon.ax-icon-eadf::before {
+  content: "\eadf";
+}
+
+.ax-icon.ax-icon-eae0::before {
+  content: "\eae0";
+}
+
 .ax-icon.ax-icon-eae2::before {
   content: "\eae2";
 }
@@ -7610,10 +6062,6 @@
 
 .ax-icon.ax-icon-eae4::before {
   content: "\eae4";
-}
-
-.ax-icon.ax-icon-eae5::before {
-  content: "\eae5";
 }
 
 .ax-icon.ax-icon-eae6::before {
@@ -7642,10 +6090,6 @@
 
 .ax-icon.ax-icon-eaec::before {
   content: "\eaec";
-}
-
-.ax-icon.ax-icon-eaed::before {
-  content: "\eaed";
 }
 
 .ax-icon.ax-icon-eaee::before {
@@ -7704,102 +6148,6 @@
   content: "\eafb";
 }
 
-.ax-icon.ax-icon-eb00::before {
-  content: "\eb00";
-}
-
-.ax-icon.ax-icon-eb01::before {
-  content: "\eb01";
-}
-
-.ax-icon.ax-icon-eb02::before {
-  content: "\eb02";
-}
-
-.ax-icon.ax-icon-eb03::before {
-  content: "\eb03";
-}
-
-.ax-icon.ax-icon-eb04::before {
-  content: "\eb04";
-}
-
-.ax-icon.ax-icon-eb05::before {
-  content: "\eb05";
-}
-
-.ax-icon.ax-icon-eb08::before {
-  content: "\eb08";
-}
-
-.ax-icon.ax-icon-eb09::before {
-  content: "\eb09";
-}
-
-.ax-icon.ax-icon-eb0a::before {
-  content: "\eb0a";
-}
-
-.ax-icon.ax-icon-eb0b::before {
-  content: "\eb0b";
-}
-
-.ax-icon.ax-icon-eb0c::before {
-  content: "\eb0c";
-}
-
-.ax-icon.ax-icon-eb0d::before {
-  content: "\eb0d";
-}
-
-.ax-icon.ax-icon-eb0e::before {
-  content: "\eb0e";
-}
-
-.ax-icon.ax-icon-eb0f::before {
-  content: "\eb0f";
-}
-
-.ax-icon.ax-icon-eb10::before {
-  content: "\eb10";
-}
-
-.ax-icon.ax-icon-eb12::before {
-  content: "\eb12";
-}
-
-.ax-icon.ax-icon-eb13::before {
-  content: "\eb13";
-}
-
-.ax-icon.ax-icon-eb14::before {
-  content: "\eb14";
-}
-
-.ax-icon.ax-icon-eb15::before {
-  content: "\eb15";
-}
-
-.ax-icon.ax-icon-eb16::before {
-  content: "\eb16";
-}
-
-.ax-icon.ax-icon-eb17::before {
-  content: "\eb17";
-}
-
-.ax-icon.ax-icon-eb18::before {
-  content: "\eb18";
-}
-
-.ax-icon.ax-icon-eb19::before {
-  content: "\eb19";
-}
-
-.ax-icon.ax-icon-eb1a::before {
-  content: "\eb1a";
-}
-
 .ax-icon.ax-icon-eb1b::before {
   content: "\eb1b";
 }
@@ -7820,28 +6168,12 @@
   content: "\eb1f";
 }
 
-.ax-icon.ax-icon-eb26::before {
-  content: "\eb26";
-}
-
-.ax-icon.ax-icon-eb27::before {
-  content: "\eb27";
-}
-
 .ax-icon.ax-icon-eb28::before {
   content: "\eb28";
 }
 
 .ax-icon.ax-icon-eb29::before {
   content: "\eb29";
-}
-
-.ax-icon.ax-icon-eb2a::before {
-  content: "\eb2a";
-}
-
-.ax-icon.ax-icon-eb2b::before {
-  content: "\eb2b";
 }
 
 .ax-icon.ax-icon-eb2c::before {
@@ -7976,10 +6308,6 @@
   content: "\eb4c";
 }
 
-.ax-icon.ax-icon-eb4d::before {
-  content: "\eb4d";
-}
-
 .ax-icon.ax-icon-eb4e::before {
   content: "\eb4e";
 }
@@ -8028,10 +6356,6 @@
   content: "\eb5a";
 }
 
-.ax-icon.ax-icon-eb5e::before {
-  content: "\eb5e";
-}
-
 .ax-icon.ax-icon-eb5f::before {
   content: "\eb5f";
 }
@@ -8046,10 +6370,6 @@
 
 .ax-icon.ax-icon-eb62::before {
   content: "\eb62";
-}
-
-.ax-icon.ax-icon-eb63::before {
-  content: "\eb63";
 }
 
 .ax-icon.ax-icon-eb64::before {
@@ -8082,10 +6402,6 @@
 
 .ax-icon.ax-icon-eb6b::before {
   content: "\eb6b";
-}
-
-.ax-icon.ax-icon-eb6d::before {
-  content: "\eb6d";
 }
 
 .ax-icon.ax-icon-eb6f::before {
@@ -8324,16 +6640,8 @@
   content: "\ebac";
 }
 
-.ax-icon.ax-icon-ebb2::before {
-  content: "\ebb2";
-}
-
 .ax-icon.ax-icon-ebb6::before {
   content: "\ebb6";
-}
-
-.ax-icon.ax-icon-ebb7::before {
-  content: "\ebb7";
 }
 
 .ax-icon.ax-icon-ebb8::before {
@@ -8364,10 +6672,6 @@
   content: "\ebbe";
 }
 
-.ax-icon.ax-icon-ebbf::before {
-  content: "\ebbf";
-}
-
 .ax-icon.ax-icon-ebc4::before {
   content: "\ebc4";
 }
@@ -8380,12 +6684,12 @@
   content: "\ebc6";
 }
 
-.ax-icon.ax-icon-ebc7::before {
-  content: "\ebc7";
-}
-
 .ax-icon.ax-icon-ebc8::before {
   content: "\ebc8";
+}
+
+.ax-icon.ax-icon-ebc9::before {
+  content: "\ebc9";
 }
 
 .ax-icon.ax-icon-ebca::before {
@@ -8580,10 +6884,6 @@
   content: "\ebfe";
 }
 
-.ax-icon.ax-icon-ebff::before {
-  content: "\ebff";
-}
-
 .ax-icon.ax-icon-ec08::before {
   content: "\ec08";
 }
@@ -8688,458 +6988,6 @@
   content: "\ec31";
 }
 
-.ax-icon.ax-icon-ec45::before {
-  content: "\ec45";
-}
-
-.ax-icon.ax-icon-ec72::before {
-  content: "\ec72";
-}
-
-.ax-icon.ax-icon-ec73::before {
-  content: "\ec73";
-}
-
-.ax-icon.ax-icon-ecb3::before {
-  content: "\ecb3";
-}
-
-.ax-icon.ax-icon-ed38::before {
-  content: "\ed38";
-}
-
-.ax-icon.ax-icon-ed3e::before {
-  content: "\ed3e";
-}
-
-.ax-icon.ax-icon-ed5b::before {
-  content: "\ed5b";
-}
-
-.ax-icon.ax-icon-eeac::before {
-  content: "\eeac";
-}
-
-.ax-icon.ax-icon-eead::before {
-  content: "\eead";
-}
-
-.ax-icon.ax-icon-eeae::before {
-  content: "\eeae";
-}
-
-.ax-icon.ax-icon-eeaf::before {
-  content: "\eeaf";
-}
-
-.ax-icon.ax-icon-eeb0::before {
-  content: "\eeb0";
-}
-
-.ax-icon.ax-icon-eeb1::before {
-  content: "\eeb1";
-}
-
-.ax-icon.ax-icon-eeb2::before {
-  content: "\eeb2";
-}
-
-.ax-icon.ax-icon-eeb3::before {
-  content: "\eeb3";
-}
-
-.ax-icon.ax-icon-eeb4::before {
-  content: "\eeb4";
-}
-
-.ax-icon.ax-icon-eeb7::before {
-  content: "\eeb7";
-}
-
-.ax-icon.ax-icon-eeba::before {
-  content: "\eeba";
-}
-
-.ax-icon.ax-icon-eebd::before {
-  content: "\eebd";
-}
-
-.ax-icon.ax-icon-eebe::before {
-  content: "\eebe";
-}
-
-.ax-icon.ax-icon-eebf::before {
-  content: "\eebf";
-}
-
-.ax-icon.ax-icon-eec0::before {
-  content: "\eec0";
-}
-
-.ax-icon.ax-icon-eec1::before {
-  content: "\eec1";
-}
-
-.ax-icon.ax-icon-eec2::before {
-  content: "\eec2";
-}
-
-.ax-icon.ax-icon-eec3::before {
-  content: "\eec3";
-}
-
-.ax-icon.ax-icon-eec4::before {
-  content: "\eec4";
-}
-
-.ax-icon.ax-icon-eec5::before {
-  content: "\eec5";
-}
-
-.ax-icon.ax-icon-eec6::before {
-  content: "\eec6";
-}
-
-.ax-icon.ax-icon-eec7::before {
-  content: "\eec7";
-}
-
-.ax-icon.ax-icon-eec8::before {
-  content: "\eec8";
-}
-
-.ax-icon.ax-icon-eec9::before {
-  content: "\eec9";
-}
-
-.ax-icon.ax-icon-eeca::before {
-  content: "\eeca";
-}
-
-.ax-icon.ax-icon-eecb::before {
-  content: "\eecb";
-}
-
-.ax-icon.ax-icon-eecc::before {
-  content: "\eecc";
-}
-
-.ax-icon.ax-icon-eecd::before {
-  content: "\eecd";
-}
-
-.ax-icon.ax-icon-eece::before {
-  content: "\eece";
-}
-
-.ax-icon.ax-icon-eecf::before {
-  content: "\eecf";
-}
-
-.ax-icon.ax-icon-eed0::before {
-  content: "\eed0";
-}
-
-.ax-icon.ax-icon-eed1::before {
-  content: "\eed1";
-}
-
-.ax-icon.ax-icon-eed2::before {
-  content: "\eed2";
-}
-
-.ax-icon.ax-icon-eed3::before {
-  content: "\eed3";
-}
-
-.ax-icon.ax-icon-eed4::before {
-  content: "\eed4";
-}
-
-.ax-icon.ax-icon-eed5::before {
-  content: "\eed5";
-}
-
-.ax-icon.ax-icon-eed6::before {
-  content: "\eed6";
-}
-
-.ax-icon.ax-icon-eed7::before {
-  content: "\eed7";
-}
-
-.ax-icon.ax-icon-eed8::before {
-  content: "\eed8";
-}
-
-.ax-icon.ax-icon-eed9::before {
-  content: "\eed9";
-}
-
-.ax-icon.ax-icon-eeda::before {
-  content: "\eeda";
-}
-
-.ax-icon.ax-icon-eedb::before {
-  content: "\eedb";
-}
-
-.ax-icon.ax-icon-eedc::before {
-  content: "\eedc";
-}
-
-.ax-icon.ax-icon-eedd::before {
-  content: "\eedd";
-}
-
-.ax-icon.ax-icon-eede::before {
-  content: "\eede";
-}
-
-.ax-icon.ax-icon-eedf::before {
-  content: "\eedf";
-}
-
-.ax-icon.ax-icon-eee0::before {
-  content: "\eee0";
-}
-
-.ax-icon.ax-icon-eee1::before {
-  content: "\eee1";
-}
-
-.ax-icon.ax-icon-eee2::before {
-  content: "\eee2";
-}
-
-.ax-icon.ax-icon-eee3::before {
-  content: "\eee3";
-}
-
-.ax-icon.ax-icon-eee4::before {
-  content: "\eee4";
-}
-
-.ax-icon.ax-icon-eee8::before {
-  content: "\eee8";
-}
-
-.ax-icon.ax-icon-eee9::before {
-  content: "\eee9";
-}
-
-.ax-icon.ax-icon-eeea::before {
-  content: "\eeea";
-}
-
-.ax-icon.ax-icon-eeec::before {
-  content: "\eeec";
-}
-
-.ax-icon.ax-icon-eeed::before {
-  content: "\eeed";
-}
-
-.ax-icon.ax-icon-eeee::before {
-  content: "\eeee";
-}
-
-.ax-icon.ax-icon-eeef::before {
-  content: "\eeef";
-}
-
-.ax-icon.ax-icon-eef1::before {
-  content: "\eef1";
-}
-
-.ax-icon.ax-icon-eef2::before {
-  content: "\eef2";
-}
-
-.ax-icon.ax-icon-eef4::before {
-  content: "\eef4";
-}
-
-.ax-icon.ax-icon-eef6::before {
-  content: "\eef6";
-}
-
-.ax-icon.ax-icon-eef7::before {
-  content: "\eef7";
-}
-
-.ax-icon.ax-icon-eef8::before {
-  content: "\eef8";
-}
-
-.ax-icon.ax-icon-eefa::before {
-  content: "\eefa";
-}
-
-.ax-icon.ax-icon-eefb::before {
-  content: "\eefb";
-}
-
-.ax-icon.ax-icon-eefc::before {
-  content: "\eefc";
-}
-
-.ax-icon.ax-icon-ef02::before {
-  content: "\ef02";
-}
-
-.ax-icon.ax-icon-ef03::before {
-  content: "\ef03";
-}
-
-.ax-icon.ax-icon-ef04::before {
-  content: "\ef04";
-}
-
-.ax-icon.ax-icon-ef05::before {
-  content: "\ef05";
-}
-
-.ax-icon.ax-icon-ef06::before {
-  content: "\ef06";
-}
-
-.ax-icon.ax-icon-ef07::before {
-  content: "\ef07";
-}
-
-.ax-icon.ax-icon-ef08::before {
-  content: "\ef08";
-}
-
-.ax-icon.ax-icon-ef09::before {
-  content: "\ef09";
-}
-
-.ax-icon.ax-icon-ef0a::before {
-  content: "\ef0a";
-}
-
-.ax-icon.ax-icon-ef0b::before {
-  content: "\ef0b";
-}
-
-.ax-icon.ax-icon-ef0c::before {
-  content: "\ef0c";
-}
-
-.ax-icon.ax-icon-ef0d::before {
-  content: "\ef0d";
-}
-
-.ax-icon.ax-icon-ef0e::before {
-  content: "\ef0e";
-}
-
-.ax-icon.ax-icon-ef0f::before {
-  content: "\ef0f";
-}
-
-.ax-icon.ax-icon-ef10::before {
-  content: "\ef10";
-}
-
-.ax-icon.ax-icon-ef11::before {
-  content: "\ef11";
-}
-
-.ax-icon.ax-icon-ef12::before {
-  content: "\ef12";
-}
-
-.ax-icon.ax-icon-ef13::before {
-  content: "\ef13";
-}
-
-.ax-icon.ax-icon-ef14::before {
-  content: "\ef14";
-}
-
-.ax-icon.ax-icon-ef15::before {
-  content: "\ef15";
-}
-
-.ax-icon.ax-icon-ef16::before {
-  content: "\ef16";
-}
-
-.ax-icon.ax-icon-ef17::before {
-  content: "\ef17";
-}
-
-.ax-icon.ax-icon-ef18::before {
-  content: "\ef18";
-}
-
-.ax-icon.ax-icon-ef19::before {
-  content: "\ef19";
-}
-
-.ax-icon.ax-icon-ef1a::before {
-  content: "\ef1a";
-}
-
-.ax-icon.ax-icon-ef1b::before {
-  content: "\ef1b";
-}
-
-.ax-icon.ax-icon-ef2a::before {
-  content: "\ef2a";
-}
-
-.ax-icon.ax-icon-ef2c::before {
-  content: "\ef2c";
-}
-
-.ax-icon.ax-icon-ef2d::before {
-  content: "\ef2d";
-}
-
-.ax-icon.ax-icon-ef2e::before {
-  content: "\ef2e";
-}
-
-.ax-icon.ax-icon-ef2f::before {
-  content: "\ef2f";
-}
-
-.ax-icon.ax-icon-ef30::before {
-  content: "\ef30";
-}
-
-.ax-icon.ax-icon-ef31::before {
-  content: "\ef31";
-}
-
-.ax-icon.ax-icon-ef32::before {
-  content: "\ef32";
-}
-
-.ax-icon.ax-icon-ef33::before {
-  content: "\ef33";
-}
-
-.ax-icon.ax-icon-ef34::before {
-  content: "\ef34";
-}
-
-.ax-icon.ax-icon-ef35::before {
-  content: "\ef35";
-}
-
-.ax-icon.ax-icon-ef36::before {
-  content: "\ef36";
-}
-
-.ax-icon.ax-icon-ef37::before {
-  content: "\ef37";
-}
-
 .ax-icon.ax-icon-ef38::before {
   content: "\ef38";
 }
@@ -9194,6 +7042,10 @@
 
 .ax-icon.ax-icon-ef45::before {
   content: "\ef45";
+}
+
+.ax-icon.ax-icon-ef46::before {
+  content: "\ef46";
 }
 
 .ax-icon.ax-icon-ef47::before {
@@ -9296,6 +7148,18 @@
   content: "\ef5f";
 }
 
+.ax-icon.ax-icon-ef60::before {
+  content: "\ef60";
+}
+
+.ax-icon.ax-icon-ef61::before {
+  content: "\ef61";
+}
+
+.ax-icon.ax-icon-ef62::before {
+  content: "\ef62";
+}
+
 .ax-icon.ax-icon-ef63::before {
   content: "\ef63";
 }
@@ -9304,8 +7168,16 @@
   content: "\ef64";
 }
 
+.ax-icon.ax-icon-ef65::before {
+  content: "\ef65";
+}
+
 .ax-icon.ax-icon-ef66::before {
   content: "\ef66";
+}
+
+.ax-icon.ax-icon-ef67::before {
+  content: "\ef67";
 }
 
 .ax-icon.ax-icon-ef68::before {
@@ -9376,192 +7248,8 @@
   content: "\ef78";
 }
 
-.ax-icon.ax-icon-ef7b::before {
-  content: "\ef7b";
-}
-
-.ax-icon.ax-icon-ef7c::before {
-  content: "\ef7c";
-}
-
-.ax-icon.ax-icon-ef7d::before {
-  content: "\ef7d";
-}
-
-.ax-icon.ax-icon-ef7f::before {
-  content: "\ef7f";
-}
-
-.ax-icon.ax-icon-ef81::before {
-  content: "\ef81";
-}
-
-.ax-icon.ax-icon-ef82::before {
-  content: "\ef82";
-}
-
-.ax-icon.ax-icon-ef83::before {
-  content: "\ef83";
-}
-
-.ax-icon.ax-icon-ef84::before {
-  content: "\ef84";
-}
-
-.ax-icon.ax-icon-ef85::before {
-  content: "\ef85";
-}
-
-.ax-icon.ax-icon-ef86::before {
-  content: "\ef86";
-}
-
-.ax-icon.ax-icon-ef8f::before {
-  content: "\ef8f";
-}
-
-.ax-icon.ax-icon-ef90::before {
-  content: "\ef90";
-}
-
-.ax-icon.ax-icon-ef91::before {
-  content: "\ef91";
-}
-
-.ax-icon.ax-icon-ef92::before {
-  content: "\ef92";
-}
-
-.ax-icon.ax-icon-ef93::before {
-  content: "\ef93";
-}
-
-.ax-icon.ax-icon-ef97::before {
-  content: "\ef97";
-}
-
-.ax-icon.ax-icon-ef9c::before {
-  content: "\ef9c";
-}
-
-.ax-icon.ax-icon-ef9d::before {
-  content: "\ef9d";
-}
-
-.ax-icon.ax-icon-ef9e::before {
-  content: "\ef9e";
-}
-
-.ax-icon.ax-icon-ef9f::before {
-  content: "\ef9f";
-}
-
-.ax-icon.ax-icon-efa0::before {
-  content: "\efa0";
-}
-
-.ax-icon.ax-icon-efa1::before {
-  content: "\efa1";
-}
-
-.ax-icon.ax-icon-efa2::before {
-  content: "\efa2";
-}
-
-.ax-icon.ax-icon-efa3::before {
-  content: "\efa3";
-}
-
-.ax-icon.ax-icon-efa4::before {
-  content: "\efa4";
-}
-
 .ax-icon.ax-icon-efa7::before {
   content: "\efa7";
-}
-
-.ax-icon.ax-icon-efa9::before {
-  content: "\efa9";
-}
-
-.ax-icon.ax-icon-efab::before {
-  content: "\efab";
-}
-
-.ax-icon.ax-icon-efac::before {
-  content: "\efac";
-}
-
-.ax-icon.ax-icon-efad::before {
-  content: "\efad";
-}
-
-.ax-icon.ax-icon-efae::before {
-  content: "\efae";
-}
-
-.ax-icon.ax-icon-efaf::before {
-  content: "\efaf";
-}
-
-.ax-icon.ax-icon-efb1::before {
-  content: "\efb1";
-}
-
-.ax-icon.ax-icon-efb2::before {
-  content: "\efb2";
-}
-
-.ax-icon.ax-icon-efb6::before {
-  content: "\efb6";
-}
-
-.ax-icon.ax-icon-efb7::before {
-  content: "\efb7";
-}
-
-.ax-icon.ax-icon-efb8::before {
-  content: "\efb8";
-}
-
-.ax-icon.ax-icon-efbf::before {
-  content: "\efbf";
-}
-
-.ax-icon.ax-icon-efc0::before {
-  content: "\efc0";
-}
-
-.ax-icon.ax-icon-efc1::before {
-  content: "\efc1";
-}
-
-.ax-icon.ax-icon-efc2::before {
-  content: "\efc2";
-}
-
-.ax-icon.ax-icon-efc3::before {
-  content: "\efc3";
-}
-
-.ax-icon.ax-icon-efc5::before {
-  content: "\efc5";
-}
-
-.ax-icon.ax-icon-efc6::before {
-  content: "\efc6";
-}
-
-.ax-icon.ax-icon-efc9::before {
-  content: "\efc9";
-}
-
-.ax-icon.ax-icon-efca::before {
-  content: "\efca";
-}
-
-.ax-icon.ax-icon-efcb::before {
-  content: "\efcb";
 }
 
 .ax-icon.ax-icon-efcd::before {
@@ -9602,10 +7290,6 @@
 
 .ax-icon.ax-icon-efd6::before {
   content: "\efd6";
-}
-
-.ax-icon.ax-icon-efd7::before {
-  content: "\efd7";
 }
 
 .ax-icon.ax-icon-efd8::before {
@@ -9800,10 +7484,6 @@
   content: "\f007";
 }
 
-.ax-icon.ax-icon-f008::before {
-  content: "\f008";
-}
-
 .ax-icon.ax-icon-f009::before {
   content: "\f009";
 }
@@ -9918,10 +7598,6 @@
 
 .ax-icon.ax-icon-f025::before {
   content: "\f025";
-}
-
-.ax-icon.ax-icon-f026::before {
-  content: "\f026";
 }
 
 .ax-icon.ax-icon-f028::before {
@@ -10168,6 +7844,10 @@
   content: "\f065";
 }
 
+.ax-icon.ax-icon-f066::before {
+  content: "\f066";
+}
+
 .ax-icon.ax-icon-f067::before {
   content: "\f067";
 }
@@ -10236,14 +7916,6 @@
   content: "\f077";
 }
 
-.ax-icon.ax-icon-f078::before {
-  content: "\f078";
-}
-
-.ax-icon.ax-icon-f079::before {
-  content: "\f079";
-}
-
 .ax-icon.ax-icon-f07a::before {
   content: "\f07a";
 }
@@ -10292,6 +7964,10 @@
   content: "\f085";
 }
 
+.ax-icon.ax-icon-f086::before {
+  content: "\f086";
+}
+
 .ax-icon.ax-icon-f087::before {
   content: "\f087";
 }
@@ -10302,10 +7978,6 @@
 
 .ax-icon.ax-icon-f089::before {
   content: "\f089";
-}
-
-.ax-icon.ax-icon-f08b::before {
-  content: "\f08b";
 }
 
 .ax-icon.ax-icon-f08c::before {
@@ -10352,68 +8024,8 @@
   content: "\f09b";
 }
 
-.ax-icon.ax-icon-f09c::before {
-  content: "\f09c";
-}
-
-.ax-icon.ax-icon-f09d::before {
-  content: "\f09d";
-}
-
-.ax-icon.ax-icon-f09e::before {
-  content: "\f09e";
-}
-
-.ax-icon.ax-icon-f09f::before {
-  content: "\f09f";
-}
-
-.ax-icon.ax-icon-f0a0::before {
-  content: "\f0a0";
-}
-
-.ax-icon.ax-icon-f0a1::before {
-  content: "\f0a1";
-}
-
-.ax-icon.ax-icon-f0a2::before {
-  content: "\f0a2";
-}
-
-.ax-icon.ax-icon-f0a3::before {
-  content: "\f0a3";
-}
-
-.ax-icon.ax-icon-f0a4::before {
-  content: "\f0a4";
-}
-
-.ax-icon.ax-icon-f0a5::before {
-  content: "\f0a5";
-}
-
-.ax-icon.ax-icon-f0a6::before {
-  content: "\f0a6";
-}
-
-.ax-icon.ax-icon-f0a7::before {
-  content: "\f0a7";
-}
-
 .ax-icon.ax-icon-f0a8::before {
   content: "\f0a8";
-}
-
-.ax-icon.ax-icon-f0a9::before {
-  content: "\f0a9";
-}
-
-.ax-icon.ax-icon-f0aa::before {
-  content: "\f0aa";
-}
-
-.ax-icon.ax-icon-f0ab::before {
-  content: "\f0ab";
 }
 
 .ax-icon.ax-icon-f0ac::before {
@@ -10424,80 +8036,12 @@
   content: "\f0b0";
 }
 
-.ax-icon.ax-icon-f0b7::before {
-  content: "\f0b7";
-}
-
-.ax-icon.ax-icon-f0ba::before {
-  content: "\f0ba";
-}
-
-.ax-icon.ax-icon-f0bb::before {
-  content: "\f0bb";
-}
-
-.ax-icon.ax-icon-f0bc::before {
-  content: "\f0bc";
-}
-
-.ax-icon.ax-icon-f0bd::before {
-  content: "\f0bd";
-}
-
-.ax-icon.ax-icon-f0be::before {
-  content: "\f0be";
-}
-
-.ax-icon.ax-icon-f0bf::before {
-  content: "\f0bf";
-}
-
-.ax-icon.ax-icon-f0c0::before {
-  content: "\f0c0";
-}
-
-.ax-icon.ax-icon-f0c1::before {
-  content: "\f0c1";
-}
-
-.ax-icon.ax-icon-f0c2::before {
-  content: "\f0c2";
-}
-
-.ax-icon.ax-icon-f0c3::before {
-  content: "\f0c3";
-}
-
 .ax-icon.ax-icon-f0c5::before {
   content: "\f0c5";
 }
 
-.ax-icon.ax-icon-f0c6::before {
-  content: "\f0c6";
-}
-
-.ax-icon.ax-icon-f0c7::before {
-  content: "\f0c7";
-}
-
-.ax-icon.ax-icon-f0c8::before {
-  content: "\f0c8";
-}
-
-.ax-icon.ax-icon-f0cc::before {
-  content: "\f0cc";
-}
-
-.ax-icon.ax-icon-f0ce::before {
-  content: "\f0ce";
-}
-
 .ax-icon.ax-icon-f0cf::before {
   content: "\f0cf";
-}
-
-.ax-icon.ax-icon-f0d0::before {
-  content: "\f0d0";
 }
 
 .ax-icon.ax-icon-f0d1::before {
@@ -10508,44 +8052,12 @@
   content: "\f0d2";
 }
 
-.ax-icon.ax-icon-f0d3::before {
-  content: "\f0d3";
-}
-
-.ax-icon.ax-icon-f0d4::before {
-  content: "\f0d4";
-}
-
-.ax-icon.ax-icon-f0d9::before {
-  content: "\f0d9";
-}
-
-.ax-icon.ax-icon-f0da::before {
-  content: "\f0da";
-}
-
 .ax-icon.ax-icon-f0dc::before {
   content: "\f0dc";
 }
 
-.ax-icon.ax-icon-f0dd::before {
-  content: "\f0dd";
-}
-
 .ax-icon.ax-icon-f0e2::before {
   content: "\f0e2";
-}
-
-.ax-icon.ax-icon-f0e3::before {
-  content: "\f0e3";
-}
-
-.ax-icon.ax-icon-f0e4::before {
-  content: "\f0e4";
-}
-
-.ax-icon.ax-icon-f0e7::before {
-  content: "\f0e7";
 }
 
 .ax-icon.ax-icon-f0eb::before {
@@ -10556,20 +8068,8 @@
   content: "\f0ec";
 }
 
-.ax-icon.ax-icon-f0ef::before {
-  content: "\f0ef";
-}
-
-.ax-icon.ax-icon-f0f3::before {
-  content: "\f0f3";
-}
-
 .ax-icon.ax-icon-f0f5::before {
   content: "\f0f5";
-}
-
-.ax-icon.ax-icon-f0f6::before {
-  content: "\f0f6";
 }
 
 .ax-icon.ax-icon-f0fa::before {
@@ -10636,6 +8136,10 @@
   content: "\f10b";
 }
 
+.ax-icon.ax-icon-f10c::before {
+  content: "\f10c";
+}
+
 .ax-icon.ax-icon-f10d::before {
   content: "\f10d";
 }
@@ -10664,268 +8168,8 @@
   content: "\f116";
 }
 
-.ax-icon.ax-icon-f119::before {
-  content: "\f119";
-}
-
-.ax-icon.ax-icon-f11a::before {
-  content: "\f11a";
-}
-
 .ax-icon.ax-icon-f11b::before {
   content: "\f11b";
-}
-
-.ax-icon.ax-icon-f11c::before {
-  content: "\f11c";
-}
-
-.ax-icon.ax-icon-f11d::before {
-  content: "\f11d";
-}
-
-.ax-icon.ax-icon-f11e::before {
-  content: "\f11e";
-}
-
-.ax-icon.ax-icon-f11f::before {
-  content: "\f11f";
-}
-
-.ax-icon.ax-icon-f120::before {
-  content: "\f120";
-}
-
-.ax-icon.ax-icon-f121::before {
-  content: "\f121";
-}
-
-.ax-icon.ax-icon-f122::before {
-  content: "\f122";
-}
-
-.ax-icon.ax-icon-f123::before {
-  content: "\f123";
-}
-
-.ax-icon.ax-icon-f124::before {
-  content: "\f124";
-}
-
-.ax-icon.ax-icon-f125::before {
-  content: "\f125";
-}
-
-.ax-icon.ax-icon-f126::before {
-  content: "\f126";
-}
-
-.ax-icon.ax-icon-f127::before {
-  content: "\f127";
-}
-
-.ax-icon.ax-icon-f129::before {
-  content: "\f129";
-}
-
-.ax-icon.ax-icon-f12a::before {
-  content: "\f12a";
-}
-
-.ax-icon.ax-icon-f12b::before {
-  content: "\f12b";
-}
-
-.ax-icon.ax-icon-f12c::before {
-  content: "\f12c";
-}
-
-.ax-icon.ax-icon-f12d::before {
-  content: "\f12d";
-}
-
-.ax-icon.ax-icon-f12e::before {
-  content: "\f12e";
-}
-
-.ax-icon.ax-icon-f12f::before {
-  content: "\f12f";
-}
-
-.ax-icon.ax-icon-f130::before {
-  content: "\f130";
-}
-
-.ax-icon.ax-icon-f131::before {
-  content: "\f131";
-}
-
-.ax-icon.ax-icon-f132::before {
-  content: "\f132";
-}
-
-.ax-icon.ax-icon-f133::before {
-  content: "\f133";
-}
-
-.ax-icon.ax-icon-f134::before {
-  content: "\f134";
-}
-
-.ax-icon.ax-icon-f135::before {
-  content: "\f135";
-}
-
-.ax-icon.ax-icon-f136::before {
-  content: "\f136";
-}
-
-.ax-icon.ax-icon-f137::before {
-  content: "\f137";
-}
-
-.ax-icon.ax-icon-f13b::before {
-  content: "\f13b";
-}
-
-.ax-icon.ax-icon-f143::before {
-  content: "\f143";
-}
-
-.ax-icon.ax-icon-f147::before {
-  content: "\f147";
-}
-
-.ax-icon.ax-icon-f148::before {
-  content: "\f148";
-}
-
-.ax-icon.ax-icon-f149::before {
-  content: "\f149";
-}
-
-.ax-icon.ax-icon-f14a::before {
-  content: "\f14a";
-}
-
-.ax-icon.ax-icon-f14b::before {
-  content: "\f14b";
-}
-
-.ax-icon.ax-icon-f14d::before {
-  content: "\f14d";
-}
-
-.ax-icon.ax-icon-f14f::before {
-  content: "\f14f";
-}
-
-.ax-icon.ax-icon-f150::before {
-  content: "\f150";
-}
-
-.ax-icon.ax-icon-f152::before {
-  content: "\f152";
-}
-
-.ax-icon.ax-icon-f154::before {
-  content: "\f154";
-}
-
-.ax-icon.ax-icon-f155::before {
-  content: "\f155";
-}
-
-.ax-icon.ax-icon-f156::before {
-  content: "\f156";
-}
-
-.ax-icon.ax-icon-f157::before {
-  content: "\f157";
-}
-
-.ax-icon.ax-icon-f159::before {
-  content: "\f159";
-}
-
-.ax-icon.ax-icon-f15b::before {
-  content: "\f15b";
-}
-
-.ax-icon.ax-icon-f15c::before {
-  content: "\f15c";
-}
-
-.ax-icon.ax-icon-f15d::before {
-  content: "\f15d";
-}
-
-.ax-icon.ax-icon-f15f::before {
-  content: "\f15f";
-}
-
-.ax-icon.ax-icon-f161::before {
-  content: "\f161";
-}
-
-.ax-icon.ax-icon-f163::before {
-  content: "\f163";
-}
-
-.ax-icon.ax-icon-f164::before {
-  content: "\f164";
-}
-
-.ax-icon.ax-icon-f165::before {
-  content: "\f165";
-}
-
-.ax-icon.ax-icon-f166::before {
-  content: "\f166";
-}
-
-.ax-icon.ax-icon-f167::before {
-  content: "\f167";
-}
-
-.ax-icon.ax-icon-f168::before {
-  content: "\f168";
-}
-
-.ax-icon.ax-icon-f16a::before {
-  content: "\f16a";
-}
-
-.ax-icon.ax-icon-f16b::before {
-  content: "\f16b";
-}
-
-.ax-icon.ax-icon-f16d::before {
-  content: "\f16d";
-}
-
-.ax-icon.ax-icon-f16f::before {
-  content: "\f16f";
-}
-
-.ax-icon.ax-icon-f172::before {
-  content: "\f172";
-}
-
-.ax-icon.ax-icon-f174::before {
-  content: "\f174";
-}
-
-.ax-icon.ax-icon-f176::before {
-  content: "\f176";
-}
-
-.ax-icon.ax-icon-f178::before {
-  content: "\f178";
-}
-
-.ax-icon.ax-icon-f17b::before {
-  content: "\f17b";
 }
 
 .ax-icon.ax-icon-f17d::before {
@@ -10934,10 +8178,6 @@
 
 .ax-icon.ax-icon-f17e::before {
   content: "\f17e";
-}
-
-.ax-icon.ax-icon-f17f::before {
-  content: "\f17f";
 }
 
 .ax-icon.ax-icon-f181::before {
@@ -10956,10 +8196,6 @@
   content: "\f187";
 }
 
-.ax-icon.ax-icon-f188::before {
-  content: "\f188";
-}
-
 .ax-icon.ax-icon-f189::before {
   content: "\f189";
 }
@@ -10974,30 +8210,6 @@
 
 .ax-icon.ax-icon-f18c::before {
   content: "\f18c";
-}
-
-.ax-icon.ax-icon-f190::before {
-  content: "\f190";
-}
-
-.ax-icon.ax-icon-f191::before {
-  content: "\f191";
-}
-
-.ax-icon.ax-icon-f194::before {
-  content: "\f194";
-}
-
-.ax-icon.ax-icon-f196::before {
-  content: "\f196";
-}
-
-.ax-icon.ax-icon-f197::before {
-  content: "\f197";
-}
-
-.ax-icon.ax-icon-f199::before {
-  content: "\f199";
 }
 
 .ax-icon.ax-icon-f19b::before {
@@ -11034,6 +8246,10 @@
 
 .ax-icon.ax-icon-f1a3::before {
   content: "\f1a3";
+}
+
+.ax-icon.ax-icon-f1a4::before {
+  content: "\f1a4";
 }
 
 .ax-icon.ax-icon-f1a5::before {
@@ -11122,10 +8338,6 @@
 
 .ax-icon.ax-icon-f1bb::before {
   content: "\f1bb";
-}
-
-.ax-icon.ax-icon-f1bc::before {
-  content: "\f1bc";
 }
 
 .ax-icon.ax-icon-f1be::before {
@@ -11220,20 +8432,8 @@
   content: "\f1d6";
 }
 
-.ax-icon.ax-icon-f1d7::before {
-  content: "\f1d7";
-}
-
 .ax-icon.ax-icon-f1d8::before {
   content: "\f1d8";
-}
-
-.ax-icon.ax-icon-f1d9::before {
-  content: "\f1d9";
-}
-
-.ax-icon.ax-icon-f1da::before {
-  content: "\f1da";
 }
 
 .ax-icon.ax-icon-f1db::before {
@@ -11242,14 +8442,6 @@
 
 .ax-icon.ax-icon-f1dc::before {
   content: "\f1dc";
-}
-
-.ax-icon.ax-icon-f1dd::before {
-  content: "\f1dd";
-}
-
-.ax-icon.ax-icon-f1de::before {
-  content: "\f1de";
 }
 
 .ax-icon.ax-icon-f1df::before {
@@ -11284,10 +8476,6 @@
   content: "\f1e6";
 }
 
-.ax-icon.ax-icon-f1e7::before {
-  content: "\f1e7";
-}
-
 .ax-icon.ax-icon-f1e8::before {
   content: "\f1e8";
 }
@@ -11302,10 +8490,6 @@
 
 .ax-icon.ax-icon-f1ef::before {
   content: "\f1ef";
-}
-
-.ax-icon.ax-icon-f1f0::before {
-  content: "\f1f0";
 }
 
 .ax-icon.ax-icon-f1f1::before {
@@ -11340,28 +8524,8 @@
   content: "\f1f8";
 }
 
-.ax-icon.ax-icon-f1f9::before {
-  content: "\f1f9";
-}
-
-.ax-icon.ax-icon-f1fa::before {
-  content: "\f1fa";
-}
-
-.ax-icon.ax-icon-f1fb::before {
-  content: "\f1fb";
-}
-
 .ax-icon.ax-icon-f1fc::before {
   content: "\f1fc";
-}
-
-.ax-icon.ax-icon-f1fe::before {
-  content: "\f1fe";
-}
-
-.ax-icon.ax-icon-f1ff::before {
-  content: "\f1ff";
 }
 
 .ax-icon.ax-icon-f200::before {
@@ -11392,32 +8556,8 @@
   content: "\f206";
 }
 
-.ax-icon.ax-icon-f20a::before {
-  content: "\f20a";
-}
-
-.ax-icon.ax-icon-f20b::before {
-  content: "\f20b";
-}
-
 .ax-icon.ax-icon-f20c::before {
   content: "\f20c";
-}
-
-.ax-icon.ax-icon-f20e::before {
-  content: "\f20e";
-}
-
-.ax-icon.ax-icon-f211::before {
-  content: "\f211";
-}
-
-.ax-icon.ax-icon-f212::before {
-  content: "\f212";
-}
-
-.ax-icon.ax-icon-f216::before {
-  content: "\f216";
 }
 
 .ax-icon.ax-icon-f217::before {
@@ -11428,12 +8568,12 @@
   content: "\f218";
 }
 
-.ax-icon.ax-icon-f219::before {
-  content: "\f219";
-}
-
 .ax-icon.ax-icon-f21a::before {
   content: "\f21a";
+}
+
+.ax-icon.ax-icon-f21b::before {
+  content: "\f21b";
 }
 
 .ax-icon.ax-icon-f21c::before {
@@ -11468,16 +8608,16 @@
   content: "\f223";
 }
 
-.ax-icon.ax-icon-f225::before {
-  content: "\f225";
-}
-
 .ax-icon.ax-icon-f227::before {
   content: "\f227";
 }
 
-.ax-icon.ax-icon-f22a::before {
-  content: "\f22a";
+.ax-icon.ax-icon-f228::before {
+  content: "\f228";
+}
+
+.ax-icon.ax-icon-f229::before {
+  content: "\f229";
 }
 
 .ax-icon.ax-icon-f22b::before {
@@ -11488,16 +8628,8 @@
   content: "\f22c";
 }
 
-.ax-icon.ax-icon-f22d::before {
-  content: "\f22d";
-}
-
 .ax-icon.ax-icon-f22e::before {
   content: "\f22e";
-}
-
-.ax-icon.ax-icon-f22f::before {
-  content: "\f22f";
 }
 
 .ax-icon.ax-icon-f230::before {
@@ -11512,6 +8644,10 @@
   content: "\f233";
 }
 
+.ax-icon.ax-icon-f234::before {
+  content: "\f234";
+}
+
 .ax-icon.ax-icon-f235::before {
   content: "\f235";
 }
@@ -11524,14 +8660,6 @@
   content: "\f237";
 }
 
-.ax-icon.ax-icon-f238::before {
-  content: "\f238";
-}
-
-.ax-icon.ax-icon-f239::before {
-  content: "\f239";
-}
-
 .ax-icon.ax-icon-f23a::before {
   content: "\f23a";
 }
@@ -11540,4700 +8668,12 @@
   content: "\f23b";
 }
 
-.ax-icon.ax-icon-f23c::before {
-  content: "\f23c";
-}
-
-.ax-icon.ax-icon-f23d::before {
-  content: "\f23d";
-}
-
-.ax-icon.ax-icon-f23e::before {
-  content: "\f23e";
-}
-
-.ax-icon.ax-icon-f23f::before {
-  content: "\f23f";
-}
-
-.ax-icon.ax-icon-f240::before {
-  content: "\f240";
-}
-
-.ax-icon.ax-icon-f241::before {
-  content: "\f241";
-}
-
-.ax-icon.ax-icon-f242::before {
-  content: "\f242";
-}
-
-.ax-icon.ax-icon-f243::before {
-  content: "\f243";
-}
-
-.ax-icon.ax-icon-f244::before {
-  content: "\f244";
-}
-
-.ax-icon.ax-icon-f245::before {
-  content: "\f245";
-}
-
-.ax-icon.ax-icon-f246::before {
-  content: "\f246";
-}
-
-.ax-icon.ax-icon-f247::before {
-  content: "\f247";
-}
-
-.ax-icon.ax-icon-f248::before {
-  content: "\f248";
-}
-
-.ax-icon.ax-icon-f249::before {
-  content: "\f249";
-}
-
-.ax-icon.ax-icon-f24b::before {
-  content: "\f24b";
-}
-
-.ax-icon.ax-icon-f24c::before {
-  content: "\f24c";
-}
-
-.ax-icon.ax-icon-f24d::before {
-  content: "\f24d";
-}
-
-.ax-icon.ax-icon-f24e::before {
-  content: "\f24e";
-}
-
-.ax-icon.ax-icon-f24f::before {
-  content: "\f24f";
-}
-
-.ax-icon.ax-icon-f250::before {
-  content: "\f250";
-}
-
-.ax-icon.ax-icon-f251::before {
-  content: "\f251";
-}
-
-.ax-icon.ax-icon-f252::before {
-  content: "\f252";
-}
-
-.ax-icon.ax-icon-f253::before {
-  content: "\f253";
-}
-
-.ax-icon.ax-icon-f254::before {
-  content: "\f254";
-}
-
-.ax-icon.ax-icon-f255::before {
-  content: "\f255";
-}
-
-.ax-icon.ax-icon-f256::before {
-  content: "\f256";
-}
-
-.ax-icon.ax-icon-f257::before {
-  content: "\f257";
-}
-
-.ax-icon.ax-icon-f258::before {
-  content: "\f258";
-}
-
-.ax-icon.ax-icon-f259::before {
-  content: "\f259";
-}
-
-.ax-icon.ax-icon-f25a::before {
-  content: "\f25a";
-}
-
-.ax-icon.ax-icon-f25b::before {
-  content: "\f25b";
-}
-
-.ax-icon.ax-icon-f25c::before {
-  content: "\f25c";
-}
-
-.ax-icon.ax-icon-f25d::before {
-  content: "\f25d";
-}
-
-.ax-icon.ax-icon-f25e::before {
-  content: "\f25e";
-}
-
-.ax-icon.ax-icon-f25f::before {
-  content: "\f25f";
-}
-
-.ax-icon.ax-icon-f260::before {
-  content: "\f260";
-}
-
-.ax-icon.ax-icon-f261::before {
-  content: "\f261";
-}
-
-.ax-icon.ax-icon-f262::before {
-  content: "\f262";
-}
-
-.ax-icon.ax-icon-f263::before {
-  content: "\f263";
-}
-
-.ax-icon.ax-icon-f264::before {
-  content: "\f264";
-}
-
-.ax-icon.ax-icon-f265::before {
-  content: "\f265";
-}
-
-.ax-icon.ax-icon-f266::before {
-  content: "\f266";
-}
-
-.ax-icon.ax-icon-f267::before {
-  content: "\f267";
-}
-
-.ax-icon.ax-icon-f277::before {
-  content: "\f277";
-}
-
-.ax-icon.ax-icon-f278::before {
-  content: "\f278";
-}
-
-.ax-icon.ax-icon-f279::before {
-  content: "\f279";
-}
-
-.ax-icon.ax-icon-f27a::before {
-  content: "\f27a";
-}
-
-.ax-icon.ax-icon-f27b::before {
-  content: "\f27b";
-}
-
-.ax-icon.ax-icon-f27c::before {
-  content: "\f27c";
-}
-
-.ax-icon.ax-icon-f27d::before {
-  content: "\f27d";
-}
-
-.ax-icon.ax-icon-f27e::before {
-  content: "\f27e";
-}
-
-.ax-icon.ax-icon-f27f::before {
-  content: "\f27f";
-}
-
-.ax-icon.ax-icon-f280::before {
-  content: "\f280";
-}
-
-.ax-icon.ax-icon-f281::before {
-  content: "\f281";
-}
-
-.ax-icon.ax-icon-f282::before {
-  content: "\f282";
-}
-
-.ax-icon.ax-icon-f283::before {
-  content: "\f283";
-}
-
-.ax-icon.ax-icon-f284::before {
-  content: "\f284";
-}
-
-.ax-icon.ax-icon-f285::before {
-  content: "\f285";
-}
-
-.ax-icon.ax-icon-f286::before {
-  content: "\f286";
-}
-
-.ax-icon.ax-icon-f287::before {
-  content: "\f287";
-}
-
-.ax-icon.ax-icon-f288::before {
-  content: "\f288";
-}
-
-.ax-icon.ax-icon-f289::before {
-  content: "\f289";
-}
-
-.ax-icon.ax-icon-f28a::before {
-  content: "\f28a";
-}
-
-.ax-icon.ax-icon-f28b::before {
-  content: "\f28b";
-}
-
-.ax-icon.ax-icon-f28c::before {
-  content: "\f28c";
-}
-
-.ax-icon.ax-icon-f28d::before {
-  content: "\f28d";
-}
-
-.ax-icon.ax-icon-f28e::before {
-  content: "\f28e";
-}
-
-.ax-icon.ax-icon-f28f::before {
-  content: "\f28f";
-}
-
-.ax-icon.ax-icon-f290::before {
-  content: "\f290";
-}
-
-.ax-icon.ax-icon-f291::before {
-  content: "\f291";
-}
-
-.ax-icon.ax-icon-f292::before {
-  content: "\f292";
-}
-
-.ax-icon.ax-icon-f293::before {
-  content: "\f293";
-}
-
-.ax-icon.ax-icon-f294::before {
-  content: "\f294";
-}
-
-.ax-icon.ax-icon-f295::before {
-  content: "\f295";
-}
-
-.ax-icon.ax-icon-f296::before {
-  content: "\f296";
-}
-
-.ax-icon.ax-icon-f297::before {
-  content: "\f297";
-}
-
-.ax-icon.ax-icon-f298::before {
-  content: "\f298";
-}
-
-.ax-icon.ax-icon-f299::before {
-  content: "\f299";
-}
-
-.ax-icon.ax-icon-f29a::before {
-  content: "\f29a";
-}
-
-.ax-icon.ax-icon-f29b::before {
-  content: "\f29b";
-}
-
-.ax-icon.ax-icon-f29c::before {
-  content: "\f29c";
-}
-
-.ax-icon.ax-icon-f29d::before {
-  content: "\f29d";
-}
-
-.ax-icon.ax-icon-f29e::before {
-  content: "\f29e";
-}
-
-.ax-icon.ax-icon-f29f::before {
-  content: "\f29f";
-}
-
-.ax-icon.ax-icon-f2a0::before {
-  content: "\f2a0";
-}
-
-.ax-icon.ax-icon-f2a1::before {
-  content: "\f2a1";
-}
-
-.ax-icon.ax-icon-f2a3::before {
-  content: "\f2a3";
-}
-
-.ax-icon.ax-icon-f2a6::before {
-  content: "\f2a6";
-}
-
-.ax-icon.ax-icon-f2a7::before {
-  content: "\f2a7";
-}
-
-.ax-icon.ax-icon-f2a8::before {
-  content: "\f2a8";
-}
-
-.ax-icon.ax-icon-f2a9::before {
-  content: "\f2a9";
-}
-
-.ax-icon.ax-icon-f2ac::before {
-  content: "\f2ac";
-}
-
-.ax-icon.ax-icon-f2ad::before {
-  content: "\f2ad";
-}
-
-.ax-icon.ax-icon-f2ae::before {
-  content: "\f2ae";
-}
-
-.ax-icon.ax-icon-f2af::before {
-  content: "\f2af";
-}
-
-.ax-icon.ax-icon-f2b0::before {
-  content: "\f2b0";
-}
-
-.ax-icon.ax-icon-f2b2::before {
-  content: "\f2b2";
-}
-
-.ax-icon.ax-icon-f2b3::before {
-  content: "\f2b3";
-}
-
-.ax-icon.ax-icon-f2b4::before {
-  content: "\f2b4";
-}
-
-.ax-icon.ax-icon-f2b9::before {
-  content: "\f2b9";
-}
-
-.ax-icon.ax-icon-f2be::before {
-  content: "\f2be";
-}
-
-.ax-icon.ax-icon-f2bf::before {
-  content: "\f2bf";
-}
-
-.ax-icon.ax-icon-f2c0::before {
-  content: "\f2c0";
-}
-
-.ax-icon.ax-icon-f2c1::before {
-  content: "\f2c1";
-}
-
-.ax-icon.ax-icon-f2c2::before {
-  content: "\f2c2";
-}
-
-.ax-icon.ax-icon-f2c3::before {
-  content: "\f2c3";
-}
-
-.ax-icon.ax-icon-f2c4::before {
-  content: "\f2c4";
-}
-
-.ax-icon.ax-icon-f2c5::before {
-  content: "\f2c5";
-}
-
-.ax-icon.ax-icon-f2c7::before {
-  content: "\f2c7";
-}
-
-.ax-icon.ax-icon-f2c8::before {
-  content: "\f2c8";
-}
-
-.ax-icon.ax-icon-f2c9::before {
-  content: "\f2c9";
-}
-
-.ax-icon.ax-icon-f2ca::before {
-  content: "\f2ca";
-}
-
-.ax-icon.ax-icon-f2cb::before {
-  content: "\f2cb";
-}
-
-.ax-icon.ax-icon-f2cc::before {
-  content: "\f2cc";
-}
-
-.ax-icon.ax-icon-f2cd::before {
-  content: "\f2cd";
-}
-
-.ax-icon.ax-icon-f2ce::before {
-  content: "\f2ce";
-}
-
-.ax-icon.ax-icon-f2cf::before {
-  content: "\f2cf";
-}
-
-.ax-icon.ax-icon-f2d0::before {
-  content: "\f2d0";
-}
-
-.ax-icon.ax-icon-f2d1::before {
-  content: "\f2d1";
-}
-
-.ax-icon.ax-icon-f2d2::before {
-  content: "\f2d2";
-}
-
-.ax-icon.ax-icon-f2d3::before {
-  content: "\f2d3";
-}
-
-.ax-icon.ax-icon-f2d5::before {
-  content: "\f2d5";
-}
-
-.ax-icon.ax-icon-f2d6::before {
-  content: "\f2d6";
-}
-
-.ax-icon.ax-icon-f2d8::before {
-  content: "\f2d8";
-}
-
-.ax-icon.ax-icon-f2d9::before {
-  content: "\f2d9";
-}
-
-.ax-icon.ax-icon-f2da::before {
-  content: "\f2da";
-}
-
-.ax-icon.ax-icon-f2db::before {
-  content: "\f2db";
-}
-
-.ax-icon.ax-icon-f2dc::before {
-  content: "\f2dc";
-}
-
-.ax-icon.ax-icon-f2de::before {
-  content: "\f2de";
-}
-
-.ax-icon.ax-icon-f2df::before {
-  content: "\f2df";
-}
-
-.ax-icon.ax-icon-f2e0::before {
-  content: "\f2e0";
-}
-
-.ax-icon.ax-icon-f2e1::before {
-  content: "\f2e1";
-}
-
-.ax-icon.ax-icon-f2e2::before {
-  content: "\f2e2";
-}
-
-.ax-icon.ax-icon-f2e3::before {
-  content: "\f2e3";
-}
-
-.ax-icon.ax-icon-f2e4::before {
-  content: "\f2e4";
-}
-
-.ax-icon.ax-icon-f2e5::before {
-  content: "\f2e5";
-}
-
-.ax-icon.ax-icon-f2e6::before {
-  content: "\f2e6";
-}
-
-.ax-icon.ax-icon-f2e8::before {
-  content: "\f2e8";
-}
-
-.ax-icon.ax-icon-f2e9::before {
-  content: "\f2e9";
-}
-
-.ax-icon.ax-icon-f2ea::before {
-  content: "\f2ea";
-}
-
-.ax-icon.ax-icon-f2eb::before {
-  content: "\f2eb";
-}
-
-.ax-icon.ax-icon-f2ec::before {
-  content: "\f2ec";
-}
-
-.ax-icon.ax-icon-f2ed::before {
-  content: "\f2ed";
-}
-
-.ax-icon.ax-icon-f2ee::before {
-  content: "\f2ee";
-}
-
-.ax-icon.ax-icon-f2ef::before {
-  content: "\f2ef";
-}
-
-.ax-icon.ax-icon-f2f2::before {
-  content: "\f2f2";
-}
-
-.ax-icon.ax-icon-f2f3::before {
-  content: "\f2f3";
-}
-
-.ax-icon.ax-icon-f2f4::before {
-  content: "\f2f4";
-}
-
-.ax-icon.ax-icon-f2f5::before {
-  content: "\f2f5";
-}
-
-.ax-icon.ax-icon-f2f6::before {
-  content: "\f2f6";
-}
-
-.ax-icon.ax-icon-f2f7::before {
-  content: "\f2f7";
-}
-
-.ax-icon.ax-icon-f2fc::before {
-  content: "\f2fc";
-}
-
-.ax-icon.ax-icon-f2fd::before {
-  content: "\f2fd";
-}
-
-.ax-icon.ax-icon-f2fe::before {
-  content: "\f2fe";
-}
-
-.ax-icon.ax-icon-f2ff::before {
-  content: "\f2ff";
-}
-
-.ax-icon.ax-icon-f300::before {
-  content: "\f300";
-}
-
-.ax-icon.ax-icon-f301::before {
-  content: "\f301";
-}
-
-.ax-icon.ax-icon-f302::before {
-  content: "\f302";
-}
-
-.ax-icon.ax-icon-f303::before {
-  content: "\f303";
-}
-
-.ax-icon.ax-icon-f304::before {
-  content: "\f304";
-}
-
-.ax-icon.ax-icon-f305::before {
-  content: "\f305";
-}
-
-.ax-icon.ax-icon-f306::before {
-  content: "\f306";
-}
-
-.ax-icon.ax-icon-f307::before {
-  content: "\f307";
-}
-
-.ax-icon.ax-icon-f308::before {
-  content: "\f308";
-}
-
-.ax-icon.ax-icon-f309::before {
-  content: "\f309";
-}
-
-.ax-icon.ax-icon-f30a::before {
-  content: "\f30a";
-}
-
-.ax-icon.ax-icon-f30b::before {
-  content: "\f30b";
-}
-
-.ax-icon.ax-icon-f30c::before {
-  content: "\f30c";
-}
-
-.ax-icon.ax-icon-f30d::before {
-  content: "\f30d";
-}
-
-.ax-icon.ax-icon-f30e::before {
-  content: "\f30e";
-}
-
-.ax-icon.ax-icon-f30f::before {
-  content: "\f30f";
-}
-
-.ax-icon.ax-icon-f310::before {
-  content: "\f310";
-}
-
-.ax-icon.ax-icon-f312::before {
-  content: "\f312";
-}
-
-.ax-icon.ax-icon-f313::before {
-  content: "\f313";
-}
-
-.ax-icon.ax-icon-f314::before {
-  content: "\f314";
-}
-
-.ax-icon.ax-icon-f317::before {
-  content: "\f317";
-}
-
-.ax-icon.ax-icon-f318::before {
-  content: "\f318";
-}
-
-.ax-icon.ax-icon-f31c::before {
-  content: "\f31c";
-}
-
-.ax-icon.ax-icon-f31d::before {
-  content: "\f31d";
-}
-
-.ax-icon.ax-icon-f31e::before {
-  content: "\f31e";
-}
-
-.ax-icon.ax-icon-f31f::before {
-  content: "\f31f";
-}
-
-.ax-icon.ax-icon-f320::before {
-  content: "\f320";
-}
-
-.ax-icon.ax-icon-f321::before {
-  content: "\f321";
-}
-
-.ax-icon.ax-icon-f322::before {
-  content: "\f322";
-}
-
-.ax-icon.ax-icon-f323::before {
-  content: "\f323";
-}
-
-.ax-icon.ax-icon-f324::before {
-  content: "\f324";
-}
-
-.ax-icon.ax-icon-f325::before {
-  content: "\f325";
-}
-
-.ax-icon.ax-icon-f326::before {
-  content: "\f326";
-}
-
-.ax-icon.ax-icon-f327::before {
-  content: "\f327";
-}
-
-.ax-icon.ax-icon-f328::before {
-  content: "\f328";
-}
-
-.ax-icon.ax-icon-f329::before {
-  content: "\f329";
-}
-
-.ax-icon.ax-icon-f32a::before {
-  content: "\f32a";
-}
-
-.ax-icon.ax-icon-f32b::before {
-  content: "\f32b";
-}
-
-.ax-icon.ax-icon-f32c::before {
-  content: "\f32c";
-}
-
-.ax-icon.ax-icon-f32d::before {
-  content: "\f32d";
-}
-
-.ax-icon.ax-icon-f32e::before {
-  content: "\f32e";
-}
-
-.ax-icon.ax-icon-f32f::before {
-  content: "\f32f";
-}
-
-.ax-icon.ax-icon-f330::before {
-  content: "\f330";
-}
-
-.ax-icon.ax-icon-f331::before {
-  content: "\f331";
-}
-
-.ax-icon.ax-icon-f332::before {
-  content: "\f332";
-}
-
-.ax-icon.ax-icon-f333::before {
-  content: "\f333";
-}
-
-.ax-icon.ax-icon-f334::before {
-  content: "\f334";
-}
-
-.ax-icon.ax-icon-f335::before {
-  content: "\f335";
-}
-
-.ax-icon.ax-icon-f336::before {
-  content: "\f336";
-}
-
-.ax-icon.ax-icon-f337::before {
-  content: "\f337";
-}
-
-.ax-icon.ax-icon-f338::before {
-  content: "\f338";
-}
-
-.ax-icon.ax-icon-f339::before {
-  content: "\f339";
-}
-
-.ax-icon.ax-icon-f33a::before {
-  content: "\f33a";
-}
-
-.ax-icon.ax-icon-f33b::before {
-  content: "\f33b";
-}
-
-.ax-icon.ax-icon-f33c::before {
-  content: "\f33c";
-}
-
-.ax-icon.ax-icon-f33d::before {
-  content: "\f33d";
-}
-
-.ax-icon.ax-icon-f33e::before {
-  content: "\f33e";
-}
-
-.ax-icon.ax-icon-f33f::before {
-  content: "\f33f";
-}
-
-.ax-icon.ax-icon-f340::before {
-  content: "\f340";
-}
-
-.ax-icon.ax-icon-f341::before {
-  content: "\f341";
-}
-
-.ax-icon.ax-icon-f342::before {
-  content: "\f342";
-}
-
-.ax-icon.ax-icon-f343::before {
-  content: "\f343";
-}
-
-.ax-icon.ax-icon-f344::before {
-  content: "\f344";
-}
-
-.ax-icon.ax-icon-f345::before {
-  content: "\f345";
-}
-
-.ax-icon.ax-icon-f346::before {
-  content: "\f346";
-}
-
-.ax-icon.ax-icon-f34d::before {
-  content: "\f34d";
-}
-
-.ax-icon.ax-icon-f34e::before {
-  content: "\f34e";
-}
-
-.ax-icon.ax-icon-f34f::before {
-  content: "\f34f";
-}
-
-.ax-icon.ax-icon-f350::before {
-  content: "\f350";
-}
-
-.ax-icon.ax-icon-f351::before {
-  content: "\f351";
-}
-
-.ax-icon.ax-icon-f352::before {
-  content: "\f352";
-}
-
-.ax-icon.ax-icon-f353::before {
-  content: "\f353";
-}
-
-.ax-icon.ax-icon-f355::before {
-  content: "\f355";
-}
-
-.ax-icon.ax-icon-f356::before {
-  content: "\f356";
-}
-
-.ax-icon.ax-icon-f357::before {
-  content: "\f357";
-}
-
-.ax-icon.ax-icon-f359::before {
-  content: "\f359";
-}
-
-.ax-icon.ax-icon-f35a::before {
-  content: "\f35a";
-}
-
-.ax-icon.ax-icon-f35b::before {
-  content: "\f35b";
-}
-
-.ax-icon.ax-icon-f35c::before {
-  content: "\f35c";
-}
-
-.ax-icon.ax-icon-f35d::before {
-  content: "\f35d";
-}
-
-.ax-icon.ax-icon-f35e::before {
-  content: "\f35e";
-}
-
-.ax-icon.ax-icon-f360::before {
-  content: "\f360";
-}
-
-.ax-icon.ax-icon-f361::before {
-  content: "\f361";
-}
-
-.ax-icon.ax-icon-f362::before {
-  content: "\f362";
-}
-
-.ax-icon.ax-icon-f363::before {
-  content: "\f363";
-}
-
-.ax-icon.ax-icon-f364::before {
-  content: "\f364";
-}
-
-.ax-icon.ax-icon-f365::before {
-  content: "\f365";
-}
-
-.ax-icon.ax-icon-f366::before {
-  content: "\f366";
-}
-
-.ax-icon.ax-icon-f367::before {
-  content: "\f367";
-}
-
-.ax-icon.ax-icon-f368::before {
-  content: "\f368";
-}
-
-.ax-icon.ax-icon-f369::before {
-  content: "\f369";
-}
-
-.ax-icon.ax-icon-f36b::before {
-  content: "\f36b";
-}
-
-.ax-icon.ax-icon-f36c::before {
-  content: "\f36c";
-}
-
-.ax-icon.ax-icon-f36d::before {
-  content: "\f36d";
-}
-
-.ax-icon.ax-icon-f36f::before {
-  content: "\f36f";
-}
-
-.ax-icon.ax-icon-f370::before {
-  content: "\f370";
-}
-
-.ax-icon.ax-icon-f371::before {
-  content: "\f371";
-}
-
-.ax-icon.ax-icon-f374::before {
-  content: "\f374";
-}
-
-.ax-icon.ax-icon-f375::before {
-  content: "\f375";
-}
-
-.ax-icon.ax-icon-f376::before {
-  content: "\f376";
-}
-
-.ax-icon.ax-icon-f377::before {
-  content: "\f377";
-}
-
-.ax-icon.ax-icon-f378::before {
-  content: "\f378";
-}
-
-.ax-icon.ax-icon-f379::before {
-  content: "\f379";
-}
-
-.ax-icon.ax-icon-f37a::before {
-  content: "\f37a";
-}
-
-.ax-icon.ax-icon-f37b::before {
-  content: "\f37b";
-}
-
-.ax-icon.ax-icon-f37c::before {
-  content: "\f37c";
-}
-
-.ax-icon.ax-icon-f37d::before {
-  content: "\f37d";
-}
-
-.ax-icon.ax-icon-f37e::before {
-  content: "\f37e";
-}
-
-.ax-icon.ax-icon-f37f::before {
-  content: "\f37f";
-}
-
-.ax-icon.ax-icon-f380::before {
-  content: "\f380";
-}
-
-.ax-icon.ax-icon-f381::before {
-  content: "\f381";
-}
-
-.ax-icon.ax-icon-f382::before {
-  content: "\f382";
-}
-
-.ax-icon.ax-icon-f383::before {
-  content: "\f383";
-}
-
-.ax-icon.ax-icon-f384::before {
-  content: "\f384";
-}
-
-.ax-icon.ax-icon-f385::before {
-  content: "\f385";
-}
-
-.ax-icon.ax-icon-f386::before {
-  content: "\f386";
-}
-
-.ax-icon.ax-icon-f387::before {
-  content: "\f387";
-}
-
-.ax-icon.ax-icon-f388::before {
-  content: "\f388";
-}
-
-.ax-icon.ax-icon-f389::before {
-  content: "\f389";
-}
-
-.ax-icon.ax-icon-f38a::before {
-  content: "\f38a";
-}
-
-.ax-icon.ax-icon-f38b::before {
-  content: "\f38b";
-}
-
-.ax-icon.ax-icon-f38c::before {
-  content: "\f38c";
-}
-
-.ax-icon.ax-icon-f38d::before {
-  content: "\f38d";
-}
-
-.ax-icon.ax-icon-f38e::before {
-  content: "\f38e";
-}
-
-.ax-icon.ax-icon-f38f::before {
-  content: "\f38f";
-}
-
-.ax-icon.ax-icon-f390::before {
-  content: "\f390";
-}
-
-.ax-icon.ax-icon-f391::before {
-  content: "\f391";
-}
-
-.ax-icon.ax-icon-f392::before {
-  content: "\f392";
-}
-
-.ax-icon.ax-icon-f393::before {
-  content: "\f393";
-}
-
-.ax-icon.ax-icon-f394::before {
-  content: "\f394";
-}
-
-.ax-icon.ax-icon-f395::before {
-  content: "\f395";
-}
-
-.ax-icon.ax-icon-f396::before {
-  content: "\f396";
-}
-
-.ax-icon.ax-icon-f397::before {
-  content: "\f397";
-}
-
-.ax-icon.ax-icon-f398::before {
-  content: "\f398";
-}
-
-.ax-icon.ax-icon-f399::before {
-  content: "\f399";
-}
-
-.ax-icon.ax-icon-f39a::before {
-  content: "\f39a";
-}
-
-.ax-icon.ax-icon-f39b::before {
-  content: "\f39b";
-}
-
-.ax-icon.ax-icon-f39c::before {
-  content: "\f39c";
-}
-
-.ax-icon.ax-icon-f39d::before {
-  content: "\f39d";
-}
-
-.ax-icon.ax-icon-f39e::before {
-  content: "\f39e";
-}
-
-.ax-icon.ax-icon-f39f::before {
-  content: "\f39f";
-}
-
-.ax-icon.ax-icon-f3a0::before {
-  content: "\f3a0";
-}
-
-.ax-icon.ax-icon-f3a1::before {
-  content: "\f3a1";
-}
-
-.ax-icon.ax-icon-f3a2::before {
-  content: "\f3a2";
-}
-
-.ax-icon.ax-icon-f3a4::before {
-  content: "\f3a4";
-}
-
-.ax-icon.ax-icon-f3a5::before {
-  content: "\f3a5";
-}
-
-.ax-icon.ax-icon-f3a6::before {
-  content: "\f3a6";
-}
-
-.ax-icon.ax-icon-f3a7::before {
-  content: "\f3a7";
-}
-
-.ax-icon.ax-icon-f3aa::before {
-  content: "\f3aa";
-}
-
-.ax-icon.ax-icon-f3ab::before {
-  content: "\f3ab";
-}
-
-.ax-icon.ax-icon-f3ac::before {
-  content: "\f3ac";
-}
-
-.ax-icon.ax-icon-f3b0::before {
-  content: "\f3b0";
-}
-
-.ax-icon.ax-icon-f3b2::before {
-  content: "\f3b2";
-}
-
-.ax-icon.ax-icon-f3b3::before {
-  content: "\f3b3";
-}
-
-.ax-icon.ax-icon-f3b4::before {
-  content: "\f3b4";
-}
-
-.ax-icon.ax-icon-f3b5::before {
-  content: "\f3b5";
-}
-
-.ax-icon.ax-icon-f3b6::before {
-  content: "\f3b6";
-}
-
-.ax-icon.ax-icon-f3b8::before {
-  content: "\f3b8";
-}
-
-.ax-icon.ax-icon-f3b9::before {
-  content: "\f3b9";
-}
-
-.ax-icon.ax-icon-f3ba::before {
-  content: "\f3ba";
-}
-
-.ax-icon.ax-icon-f3bb::before {
-  content: "\f3bb";
-}
-
-.ax-icon.ax-icon-f3bc::before {
-  content: "\f3bc";
-}
-
-.ax-icon.ax-icon-f3bd::before {
-  content: "\f3bd";
-}
-
-.ax-icon.ax-icon-f3be::before {
-  content: "\f3be";
-}
-
-.ax-icon.ax-icon-f3bf::before {
-  content: "\f3bf";
-}
-
-.ax-icon.ax-icon-f3c1::before {
-  content: "\f3c1";
-}
-
-.ax-icon.ax-icon-f3c2::before {
-  content: "\f3c2";
-}
-
-.ax-icon.ax-icon-f3c3::before {
-  content: "\f3c3";
-}
-
-.ax-icon.ax-icon-f3c4::before {
-  content: "\f3c4";
-}
-
-.ax-icon.ax-icon-f3c5::before {
-  content: "\f3c5";
-}
-
-.ax-icon.ax-icon-f3c6::before {
-  content: "\f3c6";
-}
-
-.ax-icon.ax-icon-f3c7::before {
-  content: "\f3c7";
-}
-
-.ax-icon.ax-icon-f3c8::before {
-  content: "\f3c8";
-}
-
-.ax-icon.ax-icon-f3c9::before {
-  content: "\f3c9";
-}
-
-.ax-icon.ax-icon-f3ca::before {
-  content: "\f3ca";
-}
-
-.ax-icon.ax-icon-f3cb::before {
-  content: "\f3cb";
-}
-
-.ax-icon.ax-icon-f3cc::before {
-  content: "\f3cc";
-}
-
-.ax-icon.ax-icon-f3cd::before {
-  content: "\f3cd";
-}
-
-.ax-icon.ax-icon-f3ce::before {
-  content: "\f3ce";
-}
-
-.ax-icon.ax-icon-f3cf::before {
-  content: "\f3cf";
-}
-
-.ax-icon.ax-icon-f3d0::before {
-  content: "\f3d0";
-}
-
-.ax-icon.ax-icon-f3d1::before {
-  content: "\f3d1";
-}
-
-.ax-icon.ax-icon-f3d2::before {
-  content: "\f3d2";
-}
-
-.ax-icon.ax-icon-f3d3::before {
-  content: "\f3d3";
-}
-
-.ax-icon.ax-icon-f3d4::before {
-  content: "\f3d4";
-}
-
-.ax-icon.ax-icon-f3d5::before {
-  content: "\f3d5";
-}
-
-.ax-icon.ax-icon-f3d6::before {
-  content: "\f3d6";
-}
-
-.ax-icon.ax-icon-f3d7::before {
-  content: "\f3d7";
-}
-
-.ax-icon.ax-icon-f3d8::before {
-  content: "\f3d8";
-}
-
-.ax-icon.ax-icon-f3d9::before {
-  content: "\f3d9";
-}
-
-.ax-icon.ax-icon-f3da::before {
-  content: "\f3da";
-}
-
-.ax-icon.ax-icon-f3db::before {
-  content: "\f3db";
-}
-
-.ax-icon.ax-icon-f3dc::before {
-  content: "\f3dc";
-}
-
-.ax-icon.ax-icon-f3dd::before {
-  content: "\f3dd";
-}
-
-.ax-icon.ax-icon-f3de::before {
-  content: "\f3de";
-}
-
-.ax-icon.ax-icon-f3df::before {
-  content: "\f3df";
-}
-
-.ax-icon.ax-icon-f3e1::before {
-  content: "\f3e1";
-}
-
-.ax-icon.ax-icon-f3e2::before {
-  content: "\f3e2";
-}
-
-.ax-icon.ax-icon-f3e3::before {
-  content: "\f3e3";
-}
-
-.ax-icon.ax-icon-f3e4::before {
-  content: "\f3e4";
-}
-
-.ax-icon.ax-icon-f3e5::before {
-  content: "\f3e5";
-}
-
-.ax-icon.ax-icon-f3e6::before {
-  content: "\f3e6";
-}
-
-.ax-icon.ax-icon-f3e7::before {
-  content: "\f3e7";
-}
-
-.ax-icon.ax-icon-f3ea::before {
-  content: "\f3ea";
-}
-
-.ax-icon.ax-icon-f3eb::before {
-  content: "\f3eb";
-}
-
-.ax-icon.ax-icon-f3ec::before {
-  content: "\f3ec";
-}
-
-.ax-icon.ax-icon-f3ed::before {
-  content: "\f3ed";
-}
-
-.ax-icon.ax-icon-f3ee::before {
-  content: "\f3ee";
-}
-
-.ax-icon.ax-icon-f3f1::before {
-  content: "\f3f1";
-}
-
-.ax-icon.ax-icon-f3f2::before {
-  content: "\f3f2";
-}
-
-.ax-icon.ax-icon-f3f3::before {
-  content: "\f3f3";
-}
-
-.ax-icon.ax-icon-f3f4::before {
-  content: "\f3f4";
-}
-
-.ax-icon.ax-icon-f3f5::before {
-  content: "\f3f5";
-}
-
-.ax-icon.ax-icon-f3f8::before {
-  content: "\f3f8";
-}
-
-.ax-icon.ax-icon-f3f9::before {
-  content: "\f3f9";
-}
-
-.ax-icon.ax-icon-f3fa::before {
-  content: "\f3fa";
-}
-
-.ax-icon.ax-icon-f3fb::before {
-  content: "\f3fb";
-}
-
-.ax-icon.ax-icon-f3fc::before {
-  content: "\f3fc";
-}
-
-.ax-icon.ax-icon-f3fd::before {
-  content: "\f3fd";
-}
-
-.ax-icon.ax-icon-f3fe::before {
-  content: "\f3fe";
-}
-
-.ax-icon.ax-icon-f3ff::before {
-  content: "\f3ff";
-}
-
-.ax-icon.ax-icon-f400::before {
-  content: "\f400";
-}
-
-.ax-icon.ax-icon-f401::before {
-  content: "\f401";
-}
-
-.ax-icon.ax-icon-f402::before {
-  content: "\f402";
-}
-
-.ax-icon.ax-icon-f406::before {
-  content: "\f406";
-}
-
-.ax-icon.ax-icon-f407::before {
-  content: "\f407";
-}
-
-.ax-icon.ax-icon-f408::before {
-  content: "\f408";
-}
-
-.ax-icon.ax-icon-f409::before {
-  content: "\f409";
-}
-
-.ax-icon.ax-icon-f40a::before {
-  content: "\f40a";
-}
-
-.ax-icon.ax-icon-f40b::before {
-  content: "\f40b";
-}
-
-.ax-icon.ax-icon-f40c::before {
-  content: "\f40c";
-}
-
-.ax-icon.ax-icon-f40d::before {
-  content: "\f40d";
-}
-
-.ax-icon.ax-icon-f40e::before {
-  content: "\f40e";
-}
-
-.ax-icon.ax-icon-f40f::before {
-  content: "\f40f";
-}
-
-.ax-icon.ax-icon-f410::before {
-  content: "\f410";
-}
-
-.ax-icon.ax-icon-f411::before {
-  content: "\f411";
-}
-
-.ax-icon.ax-icon-f413::before {
-  content: "\f413";
-}
-
-.ax-icon.ax-icon-f414::before {
-  content: "\f414";
-}
-
-.ax-icon.ax-icon-f417::before {
-  content: "\f417";
-}
-
-.ax-icon.ax-icon-f418::before {
-  content: "\f418";
-}
-
-.ax-icon.ax-icon-f41a::before {
-  content: "\f41a";
-}
-
-.ax-icon.ax-icon-f41b::before {
-  content: "\f41b";
-}
-
-.ax-icon.ax-icon-f41c::before {
-  content: "\f41c";
-}
-
-.ax-icon.ax-icon-f41d::before {
-  content: "\f41d";
-}
-
-.ax-icon.ax-icon-f41e::before {
-  content: "\f41e";
-}
-
-.ax-icon.ax-icon-f41f::before {
-  content: "\f41f";
-}
-
-.ax-icon.ax-icon-f420::before {
-  content: "\f420";
-}
-
-.ax-icon.ax-icon-f421::before {
-  content: "\f421";
-}
-
-.ax-icon.ax-icon-f422::before {
-  content: "\f422";
-}
-
-.ax-icon.ax-icon-f423::before {
-  content: "\f423";
-}
-
-.ax-icon.ax-icon-f424::before {
-  content: "\f424";
-}
-
-.ax-icon.ax-icon-f425::before {
-  content: "\f425";
-}
-
-.ax-icon.ax-icon-f426::before {
-  content: "\f426";
-}
-
-.ax-icon.ax-icon-f427::before {
-  content: "\f427";
-}
-
-.ax-icon.ax-icon-f428::before {
-  content: "\f428";
-}
-
-.ax-icon.ax-icon-f429::before {
-  content: "\f429";
-}
-
-.ax-icon.ax-icon-f42a::before {
-  content: "\f42a";
-}
-
-.ax-icon.ax-icon-f42b::before {
-  content: "\f42b";
-}
-
-.ax-icon.ax-icon-f42c::before {
-  content: "\f42c";
-}
-
-.ax-icon.ax-icon-f42d::before {
-  content: "\f42d";
-}
-
-.ax-icon.ax-icon-f432::before {
-  content: "\f432";
-}
-
-.ax-icon.ax-icon-f437::before {
-  content: "\f437";
-}
-
-.ax-icon.ax-icon-f438::before {
-  content: "\f438";
-}
-
-.ax-icon.ax-icon-f439::before {
-  content: "\f439";
-}
-
-.ax-icon.ax-icon-f43a::before {
-  content: "\f43a";
-}
-
-.ax-icon.ax-icon-f43b::before {
-  content: "\f43b";
-}
-
-.ax-icon.ax-icon-f44a::before {
-  content: "\f44a";
-}
-
-.ax-icon.ax-icon-f44b::before {
-  content: "\f44b";
-}
-
-.ax-icon.ax-icon-f44c::before {
-  content: "\f44c";
-}
-
-.ax-icon.ax-icon-f44d::before {
-  content: "\f44d";
-}
-
-.ax-icon.ax-icon-f44e::before {
-  content: "\f44e";
-}
-
-.ax-icon.ax-icon-f44f::before {
-  content: "\f44f";
-}
-
-.ax-icon.ax-icon-f450::before {
-  content: "\f450";
-}
-
-.ax-icon.ax-icon-f451::before {
-  content: "\f451";
-}
-
-.ax-icon.ax-icon-f454::before {
-  content: "\f454";
-}
-
-.ax-icon.ax-icon-f455::before {
-  content: "\f455";
-}
-
-.ax-icon.ax-icon-f456::before {
-  content: "\f456";
-}
-
-.ax-icon.ax-icon-f457::before {
-  content: "\f457";
-}
-
-.ax-icon.ax-icon-f458::before {
-  content: "\f458";
-}
-
-.ax-icon.ax-icon-f459::before {
-  content: "\f459";
-}
-
-.ax-icon.ax-icon-f45a::before {
-  content: "\f45a";
-}
-
-.ax-icon.ax-icon-f45b::before {
-  content: "\f45b";
-}
-
-.ax-icon.ax-icon-f45c::before {
-  content: "\f45c";
-}
-
-.ax-icon.ax-icon-f45d::before {
-  content: "\f45d";
-}
-
-.ax-icon.ax-icon-f45e::before {
-  content: "\f45e";
-}
-
-.ax-icon.ax-icon-f45f::before {
-  content: "\f45f";
-}
-
-.ax-icon.ax-icon-f460::before {
-  content: "\f460";
-}
-
-.ax-icon.ax-icon-f461::before {
-  content: "\f461";
-}
-
-.ax-icon.ax-icon-f462::before {
-  content: "\f462";
-}
-
-.ax-icon.ax-icon-f463::before {
-  content: "\f463";
-}
-
-.ax-icon.ax-icon-f464::before {
-  content: "\f464";
-}
-
-.ax-icon.ax-icon-f466::before {
-  content: "\f466";
-}
-
-.ax-icon.ax-icon-f467::before {
-  content: "\f467";
-}
-
-.ax-icon.ax-icon-f468::before {
-  content: "\f468";
-}
-
-.ax-icon.ax-icon-f469::before {
-  content: "\f469";
-}
-
-.ax-icon.ax-icon-f46a::before {
-  content: "\f46a";
-}
-
-.ax-icon.ax-icon-f46b::before {
-  content: "\f46b";
-}
-
-.ax-icon.ax-icon-f46c::before {
-  content: "\f46c";
-}
-
-.ax-icon.ax-icon-f46d::before {
-  content: "\f46d";
-}
-
-.ax-icon.ax-icon-f46e::before {
-  content: "\f46e";
-}
-
-.ax-icon.ax-icon-f46f::before {
-  content: "\f46f";
-}
-
-.ax-icon.ax-icon-f470::before {
-  content: "\f470";
-}
-
-.ax-icon.ax-icon-f471::before {
-  content: "\f471";
-}
-
-.ax-icon.ax-icon-f472::before {
-  content: "\f472";
-}
-
-.ax-icon.ax-icon-f473::before {
-  content: "\f473";
-}
-
-.ax-icon.ax-icon-f474::before {
-  content: "\f474";
-}
-
-.ax-icon.ax-icon-f475::before {
-  content: "\f475";
-}
-
-.ax-icon.ax-icon-f476::before {
-  content: "\f476";
-}
-
-.ax-icon.ax-icon-f477::before {
-  content: "\f477";
-}
-
-.ax-icon.ax-icon-f478::before {
-  content: "\f478";
-}
-
-.ax-icon.ax-icon-f479::before {
-  content: "\f479";
-}
-
-.ax-icon.ax-icon-f47a::before {
-  content: "\f47a";
-}
-
-.ax-icon.ax-icon-f47b::before {
-  content: "\f47b";
-}
-
-.ax-icon.ax-icon-f47c::before {
-  content: "\f47c";
-}
-
-.ax-icon.ax-icon-f47d::before {
-  content: "\f47d";
-}
-
-.ax-icon.ax-icon-f47e::before {
-  content: "\f47e";
-}
-
-.ax-icon.ax-icon-f47f::before {
-  content: "\f47f";
-}
-
-.ax-icon.ax-icon-f480::before {
-  content: "\f480";
-}
-
-.ax-icon.ax-icon-f481::before {
-  content: "\f481";
-}
-
-.ax-icon.ax-icon-f482::before {
-  content: "\f482";
-}
-
-.ax-icon.ax-icon-f483::before {
-  content: "\f483";
-}
-
-.ax-icon.ax-icon-f485::before {
-  content: "\f485";
-}
-
-.ax-icon.ax-icon-f486::before {
-  content: "\f486";
-}
-
-.ax-icon.ax-icon-f488::before {
-  content: "\f488";
-}
-
-.ax-icon.ax-icon-f489::before {
-  content: "\f489";
-}
-
-.ax-icon.ax-icon-f48a::before {
-  content: "\f48a";
-}
-
-.ax-icon.ax-icon-f48b::before {
-  content: "\f48b";
-}
-
-.ax-icon.ax-icon-f48e::before {
-  content: "\f48e";
-}
-
-.ax-icon.ax-icon-f48f::before {
-  content: "\f48f";
-}
-
-.ax-icon.ax-icon-f490::before {
-  content: "\f490";
-}
-
-.ax-icon.ax-icon-f491::before {
-  content: "\f491";
-}
-
-.ax-icon.ax-icon-f492::before {
-  content: "\f492";
-}
-
-.ax-icon.ax-icon-f493::before {
-  content: "\f493";
-}
-
-.ax-icon.ax-icon-f494::before {
-  content: "\f494";
-}
-
-.ax-icon.ax-icon-f495::before {
-  content: "\f495";
-}
-
-.ax-icon.ax-icon-f496::before {
-  content: "\f496";
-}
-
-.ax-icon.ax-icon-f497::before {
-  content: "\f497";
-}
-
-.ax-icon.ax-icon-f498::before {
-  content: "\f498";
-}
-
-.ax-icon.ax-icon-f499::before {
-  content: "\f499";
-}
-
-.ax-icon.ax-icon-f49a::before {
-  content: "\f49a";
-}
-
-.ax-icon.ax-icon-f49b::before {
-  content: "\f49b";
-}
-
-.ax-icon.ax-icon-f49c::before {
-  content: "\f49c";
-}
-
-.ax-icon.ax-icon-f49d::before {
-  content: "\f49d";
-}
-
-.ax-icon.ax-icon-f49e::before {
-  content: "\f49e";
-}
-
-.ax-icon.ax-icon-f49f::before {
-  content: "\f49f";
-}
-
-.ax-icon.ax-icon-f4a0::before {
-  content: "\f4a0";
-}
-
-.ax-icon.ax-icon-f4a5::before {
-  content: "\f4a5";
-}
-
-.ax-icon.ax-icon-f4a6::before {
-  content: "\f4a6";
-}
-
-.ax-icon.ax-icon-f4a8::before {
-  content: "\f4a8";
-}
-
-.ax-icon.ax-icon-f4a9::before {
-  content: "\f4a9";
-}
-
-.ax-icon.ax-icon-f4aa::before {
-  content: "\f4aa";
-}
-
-.ax-icon.ax-icon-f4ab::before {
-  content: "\f4ab";
-}
-
-.ax-icon.ax-icon-f4ac::before {
-  content: "\f4ac";
-}
-
-.ax-icon.ax-icon-f4ae::before {
-  content: "\f4ae";
-}
-
-.ax-icon.ax-icon-f4af::before {
-  content: "\f4af";
-}
-
-.ax-icon.ax-icon-f4b0::before {
-  content: "\f4b0";
-}
-
-.ax-icon.ax-icon-f4b1::before {
-  content: "\f4b1";
-}
-
-.ax-icon.ax-icon-f4b2::before {
-  content: "\f4b2";
-}
-
-.ax-icon.ax-icon-f4b4::before {
-  content: "\f4b4";
-}
-
-.ax-icon.ax-icon-f4b5::before {
-  content: "\f4b5";
-}
-
-.ax-icon.ax-icon-f4b6::before {
-  content: "\f4b6";
-}
-
-.ax-icon.ax-icon-f4b7::before {
-  content: "\f4b7";
-}
-
-.ax-icon.ax-icon-f4b8::before {
-  content: "\f4b8";
-}
-
-.ax-icon.ax-icon-f4b9::before {
-  content: "\f4b9";
-}
-
-.ax-icon.ax-icon-f4ba::before {
-  content: "\f4ba";
-}
-
-.ax-icon.ax-icon-f4bb::before {
-  content: "\f4bb";
-}
-
-.ax-icon.ax-icon-f4bc::before {
-  content: "\f4bc";
-}
-
-.ax-icon.ax-icon-f4c0::before {
-  content: "\f4c0";
-}
-
-.ax-icon.ax-icon-f4c1::before {
-  content: "\f4c1";
-}
-
-.ax-icon.ax-icon-f4c2::before {
-  content: "\f4c2";
-}
-
-.ax-icon.ax-icon-f4c3::before {
-  content: "\f4c3";
-}
-
-.ax-icon.ax-icon-f4c4::before {
-  content: "\f4c4";
-}
-
-.ax-icon.ax-icon-f4c5::before {
-  content: "\f4c5";
-}
-
-.ax-icon.ax-icon-f4c6::before {
-  content: "\f4c6";
-}
-
-.ax-icon.ax-icon-f4c7::before {
-  content: "\f4c7";
-}
-
-.ax-icon.ax-icon-f4c8::before {
-  content: "\f4c8";
-}
-
-.ax-icon.ax-icon-f4c9::before {
-  content: "\f4c9";
-}
-
-.ax-icon.ax-icon-f4ca::before {
-  content: "\f4ca";
-}
-
-.ax-icon.ax-icon-f4cb::before {
-  content: "\f4cb";
-}
-
-.ax-icon.ax-icon-f4cc::before {
-  content: "\f4cc";
-}
-
-.ax-icon.ax-icon-f4cd::before {
-  content: "\f4cd";
-}
-
-.ax-icon.ax-icon-f4cf::before {
-  content: "\f4cf";
-}
-
-.ax-icon.ax-icon-f4d0::before {
-  content: "\f4d0";
-}
-
-.ax-icon.ax-icon-f4d1::before {
-  content: "\f4d1";
-}
-
-.ax-icon.ax-icon-f4d2::before {
-  content: "\f4d2";
-}
-
-.ax-icon.ax-icon-f4d3::before {
-  content: "\f4d3";
-}
-
-.ax-icon.ax-icon-f4d4::before {
-  content: "\f4d4";
-}
-
-.ax-icon.ax-icon-f4d5::before {
-  content: "\f4d5";
-}
-
-.ax-icon.ax-icon-f4d6::before {
-  content: "\f4d6";
-}
-
-.ax-icon.ax-icon-f4d8::before {
-  content: "\f4d8";
-}
-
-.ax-icon.ax-icon-f4d9::before {
-  content: "\f4d9";
-}
-
-.ax-icon.ax-icon-f4da::before {
-  content: "\f4da";
-}
-
-.ax-icon.ax-icon-f4e0::before {
-  content: "\f4e0";
-}
-
-.ax-icon.ax-icon-f4e1::before {
-  content: "\f4e1";
-}
-
-.ax-icon.ax-icon-f4e2::before {
-  content: "\f4e2";
-}
-
-.ax-icon.ax-icon-f4e3::before {
-  content: "\f4e3";
-}
-
-.ax-icon.ax-icon-f4e4::before {
-  content: "\f4e4";
-}
-
-.ax-icon.ax-icon-f4e5::before {
-  content: "\f4e5";
-}
-
-.ax-icon.ax-icon-f4e6::before {
-  content: "\f4e6";
-}
-
-.ax-icon.ax-icon-f4eb::before {
-  content: "\f4eb";
-}
-
-.ax-icon.ax-icon-f4ef::before {
-  content: "\f4ef";
-}
-
-.ax-icon.ax-icon-f4f1::before {
-  content: "\f4f1";
-}
-
-.ax-icon.ax-icon-f4f2::before {
-  content: "\f4f2";
-}
-
-.ax-icon.ax-icon-f4f3::before {
-  content: "\f4f3";
-}
-
-.ax-icon.ax-icon-f4f6::before {
-  content: "\f4f6";
-}
-
-.ax-icon.ax-icon-f4f7::before {
-  content: "\f4f7";
-}
-
-.ax-icon.ax-icon-f4f9::before {
-  content: "\f4f9";
-}
-
-.ax-icon.ax-icon-f4fa::before {
-  content: "\f4fa";
-}
-
-.ax-icon.ax-icon-f4fc::before {
-  content: "\f4fc";
-}
-
-.ax-icon.ax-icon-f4fd::before {
-  content: "\f4fd";
-}
-
-.ax-icon.ax-icon-f4fe::before {
-  content: "\f4fe";
-}
-
-.ax-icon.ax-icon-f500::before {
-  content: "\f500";
-}
-
-.ax-icon.ax-icon-f501::before {
-  content: "\f501";
-}
-
-.ax-icon.ax-icon-f502::before {
-  content: "\f502";
-}
-
-.ax-icon.ax-icon-f503::before {
-  content: "\f503";
-}
-
-.ax-icon.ax-icon-f506::before {
-  content: "\f506";
-}
-
-.ax-icon.ax-icon-f507::before {
-  content: "\f507";
-}
-
-.ax-icon.ax-icon-f508::before {
-  content: "\f508";
-}
-
-.ax-icon.ax-icon-f509::before {
-  content: "\f509";
-}
-
-.ax-icon.ax-icon-f50a::before {
-  content: "\f50a";
-}
-
-.ax-icon.ax-icon-f50b::before {
-  content: "\f50b";
-}
-
-.ax-icon.ax-icon-f50c::before {
-  content: "\f50c";
-}
-
-.ax-icon.ax-icon-f50d::before {
-  content: "\f50d";
-}
-
-.ax-icon.ax-icon-f50e::before {
-  content: "\f50e";
-}
-
-.ax-icon.ax-icon-f510::before {
-  content: "\f510";
-}
-
-.ax-icon.ax-icon-f511::before {
-  content: "\f511";
-}
-
-.ax-icon.ax-icon-f512::before {
-  content: "\f512";
-}
-
-.ax-icon.ax-icon-f513::before {
-  content: "\f513";
-}
-
-.ax-icon.ax-icon-f514::before {
-  content: "\f514";
-}
-
-.ax-icon.ax-icon-f515::before {
-  content: "\f515";
-}
-
-.ax-icon.ax-icon-f517::before {
-  content: "\f517";
-}
-
-.ax-icon.ax-icon-f518::before {
-  content: "\f518";
-}
-
-.ax-icon.ax-icon-f51a::before {
-  content: "\f51a";
-}
-
-.ax-icon.ax-icon-f51b::before {
-  content: "\f51b";
-}
-
-.ax-icon.ax-icon-f51c::before {
-  content: "\f51c";
-}
-
-.ax-icon.ax-icon-f51d::before {
-  content: "\f51d";
-}
-
-.ax-icon.ax-icon-f51e::before {
-  content: "\f51e";
-}
-
-.ax-icon.ax-icon-f51f::before {
-  content: "\f51f";
-}
-
-.ax-icon.ax-icon-f521::before {
-  content: "\f521";
-}
-
-.ax-icon.ax-icon-f522::before {
-  content: "\f522";
-}
-
-.ax-icon.ax-icon-f523::before {
-  content: "\f523";
-}
-
-.ax-icon.ax-icon-f524::before {
-  content: "\f524";
-}
-
-.ax-icon.ax-icon-f525::before {
-  content: "\f525";
-}
-
-.ax-icon.ax-icon-f526::before {
-  content: "\f526";
-}
-
-.ax-icon.ax-icon-f527::before {
-  content: "\f527";
-}
-
-.ax-icon.ax-icon-f528::before {
-  content: "\f528";
-}
-
-.ax-icon.ax-icon-f529::before {
-  content: "\f529";
-}
-
-.ax-icon.ax-icon-f52a::before {
-  content: "\f52a";
-}
-
-.ax-icon.ax-icon-f52b::before {
-  content: "\f52b";
-}
-
-.ax-icon.ax-icon-f52c::before {
-  content: "\f52c";
-}
-
-.ax-icon.ax-icon-f52d::before {
-  content: "\f52d";
-}
-
-.ax-icon.ax-icon-f52f::before {
-  content: "\f52f";
-}
-
-.ax-icon.ax-icon-f530::before {
-  content: "\f530";
-}
-
-.ax-icon.ax-icon-f532::before {
-  content: "\f532";
-}
-
-.ax-icon.ax-icon-f535::before {
-  content: "\f535";
-}
-
-.ax-icon.ax-icon-f537::before {
-  content: "\f537";
-}
-
-.ax-icon.ax-icon-f539::before {
-  content: "\f539";
-}
-
-.ax-icon.ax-icon-f53b::before {
-  content: "\f53b";
-}
-
-.ax-icon.ax-icon-f53c::before {
-  content: "\f53c";
-}
-
-.ax-icon.ax-icon-f53d::before {
-  content: "\f53d";
-}
-
-.ax-icon.ax-icon-f53e::before {
-  content: "\f53e";
-}
-
-.ax-icon.ax-icon-f53f::before {
-  content: "\f53f";
-}
-
-.ax-icon.ax-icon-f540::before {
-  content: "\f540";
-}
-
-.ax-icon.ax-icon-f542::before {
-  content: "\f542";
-}
-
-.ax-icon.ax-icon-f543::before {
-  content: "\f543";
-}
-
-.ax-icon.ax-icon-f544::before {
-  content: "\f544";
-}
-
-.ax-icon.ax-icon-f545::before {
-  content: "\f545";
-}
-
-.ax-icon.ax-icon-f547::before {
-  content: "\f547";
-}
-
-.ax-icon.ax-icon-f549::before {
-  content: "\f549";
-}
-
-.ax-icon.ax-icon-f54a::before {
-  content: "\f54a";
-}
-
-.ax-icon.ax-icon-f54b::before {
-  content: "\f54b";
-}
-
-.ax-icon.ax-icon-f54d::before {
-  content: "\f54d";
-}
-
-.ax-icon.ax-icon-f54e::before {
-  content: "\f54e";
-}
-
-.ax-icon.ax-icon-f54f::before {
-  content: "\f54f";
-}
-
-.ax-icon.ax-icon-f550::before {
-  content: "\f550";
-}
-
-.ax-icon.ax-icon-f552::before {
-  content: "\f552";
-}
-
-.ax-icon.ax-icon-f553::before {
-  content: "\f553";
-}
-
-.ax-icon.ax-icon-f554::before {
-  content: "\f554";
-}
-
-.ax-icon.ax-icon-f555::before {
-  content: "\f555";
-}
-
-.ax-icon.ax-icon-f556::before {
-  content: "\f556";
-}
-
-.ax-icon.ax-icon-f557::before {
-  content: "\f557";
-}
-
-.ax-icon.ax-icon-f558::before {
-  content: "\f558";
-}
-
-.ax-icon.ax-icon-f559::before {
-  content: "\f559";
-}
-
-.ax-icon.ax-icon-f55a::before {
-  content: "\f55a";
-}
-
-.ax-icon.ax-icon-f55b::before {
-  content: "\f55b";
-}
-
-.ax-icon.ax-icon-f560::before {
-  content: "\f560";
-}
-
-.ax-icon.ax-icon-f561::before {
-  content: "\f561";
-}
-
-.ax-icon.ax-icon-f562::before {
-  content: "\f562";
-}
-
-.ax-icon.ax-icon-f563::before {
-  content: "\f563";
-}
-
-.ax-icon.ax-icon-f564::before {
-  content: "\f564";
-}
-
-.ax-icon.ax-icon-f565::before {
-  content: "\f565";
-}
-
-.ax-icon.ax-icon-f566::before {
-  content: "\f566";
-}
-
-.ax-icon.ax-icon-f567::before {
-  content: "\f567";
-}
-
-.ax-icon.ax-icon-f568::before {
-  content: "\f568";
-}
-
-.ax-icon.ax-icon-f569::before {
-  content: "\f569";
-}
-
-.ax-icon.ax-icon-f56a::before {
-  content: "\f56a";
-}
-
-.ax-icon.ax-icon-f56b::before {
-  content: "\f56b";
-}
-
-.ax-icon.ax-icon-f56c::before {
-  content: "\f56c";
-}
-
-.ax-icon.ax-icon-f56d::before {
-  content: "\f56d";
-}
-
-.ax-icon.ax-icon-f56e::before {
-  content: "\f56e";
-}
-
-.ax-icon.ax-icon-f56f::before {
-  content: "\f56f";
-}
-
-.ax-icon.ax-icon-f570::before {
-  content: "\f570";
-}
-
-.ax-icon.ax-icon-f571::before {
-  content: "\f571";
-}
-
-.ax-icon.ax-icon-f577::before {
-  content: "\f577";
-}
-
-.ax-icon.ax-icon-f578::before {
-  content: "\f578";
-}
-
-.ax-icon.ax-icon-f579::before {
-  content: "\f579";
-}
-
-.ax-icon.ax-icon-f57a::before {
-  content: "\f57a";
-}
-
-.ax-icon.ax-icon-f57b::before {
-  content: "\f57b";
-}
-
-.ax-icon.ax-icon-f57c::before {
-  content: "\f57c";
-}
-
-.ax-icon.ax-icon-f57d::before {
-  content: "\f57d";
-}
-
-.ax-icon.ax-icon-f57e::before {
-  content: "\f57e";
-}
-
-.ax-icon.ax-icon-f57f::before {
-  content: "\f57f";
-}
-
-.ax-icon.ax-icon-f580::before {
-  content: "\f580";
-}
-
-.ax-icon.ax-icon-f581::before {
-  content: "\f581";
-}
-
-.ax-icon.ax-icon-f582::before {
-  content: "\f582";
-}
-
-.ax-icon.ax-icon-f583::before {
-  content: "\f583";
-}
-
-.ax-icon.ax-icon-f584::before {
-  content: "\f584";
-}
-
-.ax-icon.ax-icon-f585::before {
-  content: "\f585";
-}
-
-.ax-icon.ax-icon-f586::before {
-  content: "\f586";
-}
-
-.ax-icon.ax-icon-f587::before {
-  content: "\f587";
-}
-
-.ax-icon.ax-icon-f588::before {
-  content: "\f588";
-}
-
-.ax-icon.ax-icon-f58a::before {
-  content: "\f58a";
-}
-
-.ax-icon.ax-icon-f58b::before {
-  content: "\f58b";
-}
-
-.ax-icon.ax-icon-f58c::before {
-  content: "\f58c";
-}
-
-.ax-icon.ax-icon-f58d::before {
-  content: "\f58d";
-}
-
-.ax-icon.ax-icon-f58e::before {
-  content: "\f58e";
-}
-
-.ax-icon.ax-icon-f58f::before {
-  content: "\f58f";
-}
-
-.ax-icon.ax-icon-f591::before {
-  content: "\f591";
-}
-
-.ax-icon.ax-icon-f592::before {
-  content: "\f592";
-}
-
-.ax-icon.ax-icon-f59a::before {
-  content: "\f59a";
-}
-
-.ax-icon.ax-icon-f59b::before {
-  content: "\f59b";
-}
-
-.ax-icon.ax-icon-f59d::before {
-  content: "\f59d";
-}
-
-.ax-icon.ax-icon-f59e::before {
-  content: "\f59e";
-}
-
-.ax-icon.ax-icon-f5a0::before {
-  content: "\f5a0";
-}
-
-.ax-icon.ax-icon-f5a1::before {
-  content: "\f5a1";
-}
-
-.ax-icon.ax-icon-f5a2::before {
-  content: "\f5a2";
-}
-
-.ax-icon.ax-icon-f5a3::before {
-  content: "\f5a3";
-}
-
-.ax-icon.ax-icon-f5a4::before {
-  content: "\f5a4";
-}
-
-.ax-icon.ax-icon-f5a5::before {
-  content: "\f5a5";
-}
-
-.ax-icon.ax-icon-f5a6::before {
-  content: "\f5a6";
-}
-
-.ax-icon.ax-icon-f5a7::before {
-  content: "\f5a7";
-}
-
-.ax-icon.ax-icon-f5cf::before {
-  content: "\f5cf";
-}
-
-.ax-icon.ax-icon-f5d0::before {
-  content: "\f5d0";
-}
-
-.ax-icon.ax-icon-f5d1::before {
-  content: "\f5d1";
-}
-
-.ax-icon.ax-icon-f5d2::before {
-  content: "\f5d2";
-}
-
-.ax-icon.ax-icon-f5d3::before {
-  content: "\f5d3";
-}
-
-.ax-icon.ax-icon-f5d6::before {
-  content: "\f5d6";
-}
-
-.ax-icon.ax-icon-f5d7::before {
-  content: "\f5d7";
-}
-
-.ax-icon.ax-icon-f5d8::before {
-  content: "\f5d8";
-}
-
-.ax-icon.ax-icon-f5d9::before {
-  content: "\f5d9";
-}
-
-.ax-icon.ax-icon-f5db::before {
-  content: "\f5db";
-}
-
-.ax-icon.ax-icon-f5dc::before {
-  content: "\f5dc";
-}
-
-.ax-icon.ax-icon-f5dd::before {
-  content: "\f5dd";
-}
-
-.ax-icon.ax-icon-f5de::before {
-  content: "\f5de";
-}
-
-.ax-icon.ax-icon-f5df::before {
-  content: "\f5df";
-}
-
-.ax-icon.ax-icon-f5e1::before {
-  content: "\f5e1";
-}
-
-.ax-icon.ax-icon-f5e2::before {
-  content: "\f5e2";
-}
-
-.ax-icon.ax-icon-f5e3::before {
-  content: "\f5e3";
-}
-
-.ax-icon.ax-icon-f5e4::before {
-  content: "\f5e4";
-}
-
-.ax-icon.ax-icon-f5e5::before {
-  content: "\f5e5";
-}
-
-.ax-icon.ax-icon-f5e7::before {
-  content: "\f5e7";
-}
-
-.ax-icon.ax-icon-f5e8::before {
-  content: "\f5e8";
-}
-
-.ax-icon.ax-icon-f5e9::before {
-  content: "\f5e9";
-}
-
-.ax-icon.ax-icon-f5ed::before {
-  content: "\f5ed";
-}
-
-.ax-icon.ax-icon-f5ee::before {
-  content: "\f5ee";
-}
-
-.ax-icon.ax-icon-f5ef::before {
-  content: "\f5ef";
-}
-
-.ax-icon.ax-icon-f5f0::before {
-  content: "\f5f0";
-}
-
-.ax-icon.ax-icon-f5f1::before {
-  content: "\f5f1";
-}
-
-.ax-icon.ax-icon-f5f2::before {
-  content: "\f5f2";
-}
-
-.ax-icon.ax-icon-f5f3::before {
-  content: "\f5f3";
-}
-
-.ax-icon.ax-icon-f5f4::before {
-  content: "\f5f4";
-}
-
-.ax-icon.ax-icon-f5f5::before {
-  content: "\f5f5";
-}
-
-.ax-icon.ax-icon-f5f6::before {
-  content: "\f5f6";
-}
-
-.ax-icon.ax-icon-f5f7::before {
-  content: "\f5f7";
-}
-
-.ax-icon.ax-icon-f5f8::before {
-  content: "\f5f8";
-}
-
-.ax-icon.ax-icon-f603::before {
-  content: "\f603";
-}
-
-.ax-icon.ax-icon-f604::before {
-  content: "\f604";
-}
-
-.ax-icon.ax-icon-f607::before {
-  content: "\f607";
-}
-
-.ax-icon.ax-icon-f608::before {
-  content: "\f608";
-}
-
-.ax-icon.ax-icon-f609::before {
-  content: "\f609";
-}
-
-.ax-icon.ax-icon-f60a::before {
-  content: "\f60a";
-}
-
-.ax-icon.ax-icon-f60b::before {
-  content: "\f60b";
-}
-
-.ax-icon.ax-icon-f60c::before {
-  content: "\f60c";
-}
-
-.ax-icon.ax-icon-f60d::before {
-  content: "\f60d";
-}
-
-.ax-icon.ax-icon-f60e::before {
-  content: "\f60e";
-}
-
-.ax-icon.ax-icon-f612::before {
-  content: "\f612";
-}
-
-.ax-icon.ax-icon-f613::before {
-  content: "\f613";
-}
-
-.ax-icon.ax-icon-f614::before {
-  content: "\f614";
-}
-
-.ax-icon.ax-icon-f615::before {
-  content: "\f615";
-}
-
-.ax-icon.ax-icon-f616::before {
-  content: "\f616";
-}
-
-.ax-icon.ax-icon-f617::before {
-  content: "\f617";
-}
-
-.ax-icon.ax-icon-f618::before {
-  content: "\f618";
-}
-
-.ax-icon.ax-icon-f61b::before {
-  content: "\f61b";
-}
-
-.ax-icon.ax-icon-f61c::before {
-  content: "\f61c";
-}
-
-.ax-icon.ax-icon-f61d::before {
-  content: "\f61d";
-}
-
-.ax-icon.ax-icon-f61e::before {
-  content: "\f61e";
-}
-
-.ax-icon.ax-icon-f61f::before {
-  content: "\f61f";
-}
-
-.ax-icon.ax-icon-f621::before {
-  content: "\f621";
-}
-
-.ax-icon.ax-icon-f622::before {
-  content: "\f622";
-}
-
-.ax-icon.ax-icon-f623::before {
-  content: "\f623";
-}
-
-.ax-icon.ax-icon-f624::before {
-  content: "\f624";
-}
-
-.ax-icon.ax-icon-f625::before {
-  content: "\f625";
-}
-
-.ax-icon.ax-icon-f64c::before {
-  content: "\f64c";
-}
-
-.ax-icon.ax-icon-f64d::before {
-  content: "\f64d";
-}
-
-.ax-icon.ax-icon-f64e::before {
-  content: "\f64e";
-}
-
-.ax-icon.ax-icon-f64f::before {
-  content: "\f64f";
-}
-
-.ax-icon.ax-icon-f650::before {
-  content: "\f650";
-}
-
-.ax-icon.ax-icon-f651::before {
-  content: "\f651";
-}
-
-.ax-icon.ax-icon-f652::before {
-  content: "\f652";
-}
-
-.ax-icon.ax-icon-f653::before {
-  content: "\f653";
-}
-
-.ax-icon.ax-icon-f654::before {
-  content: "\f654";
-}
-
-.ax-icon.ax-icon-f655::before {
-  content: "\f655";
-}
-
-.ax-icon.ax-icon-f656::before {
-  content: "\f656";
-}
-
-.ax-icon.ax-icon-f657::before {
-  content: "\f657";
-}
-
-.ax-icon.ax-icon-f658::before {
-  content: "\f658";
-}
-
-.ax-icon.ax-icon-f670::before {
-  content: "\f670";
-}
-
-.ax-icon.ax-icon-f671::before {
-  content: "\f671";
-}
-
-.ax-icon.ax-icon-f672::before {
-  content: "\f672";
-}
-
-.ax-icon.ax-icon-f673::before {
-  content: "\f673";
-}
-
-.ax-icon.ax-icon-f674::before {
-  content: "\f674";
-}
-
-.ax-icon.ax-icon-f675::before {
-  content: "\f675";
-}
-
-.ax-icon.ax-icon-f676::before {
-  content: "\f676";
-}
-
-.ax-icon.ax-icon-f677::before {
-  content: "\f677";
-}
-
-.ax-icon.ax-icon-f678::before {
-  content: "\f678";
-}
-
-.ax-icon.ax-icon-f679::before {
-  content: "\f679";
-}
-
-.ax-icon.ax-icon-f67a::before {
-  content: "\f67a";
-}
-
-.ax-icon.ax-icon-f67b::before {
-  content: "\f67b";
-}
-
-.ax-icon.ax-icon-f67c::before {
-  content: "\f67c";
-}
-
-.ax-icon.ax-icon-f67d::before {
-  content: "\f67d";
-}
-
-.ax-icon.ax-icon-f67e::before {
-  content: "\f67e";
-}
-
-.ax-icon.ax-icon-f67f::before {
-  content: "\f67f";
-}
-
-.ax-icon.ax-icon-f681::before {
-  content: "\f681";
-}
-
-.ax-icon.ax-icon-f682::before {
-  content: "\f682";
-}
-
-.ax-icon.ax-icon-f683::before {
-  content: "\f683";
-}
-
-.ax-icon.ax-icon-f684::before {
-  content: "\f684";
-}
-
-.ax-icon.ax-icon-f685::before {
-  content: "\f685";
-}
-
-.ax-icon.ax-icon-f686::before {
-  content: "\f686";
-}
-
-.ax-icon.ax-icon-f687::before {
-  content: "\f687";
-}
-
-.ax-icon.ax-icon-f697::before {
-  content: "\f697";
-}
-
-.ax-icon.ax-icon-f69b::before {
-  content: "\f69b";
-}
-
-.ax-icon.ax-icon-f69c::before {
-  content: "\f69c";
-}
-
-.ax-icon.ax-icon-f69d::before {
-  content: "\f69d";
-}
-
-.ax-icon.ax-icon-f69e::before {
-  content: "\f69e";
-}
-
-.ax-icon.ax-icon-f69f::before {
-  content: "\f69f";
-}
-
-.ax-icon.ax-icon-f6a0::before {
-  content: "\f6a0";
-}
-
-.ax-icon.ax-icon-f6a1::before {
-  content: "\f6a1";
-}
-
-.ax-icon.ax-icon-f6a2::before {
-  content: "\f6a2";
-}
-
-.ax-icon.ax-icon-f6a3::before {
-  content: "\f6a3";
-}
-
-.ax-icon.ax-icon-f6a4::before {
-  content: "\f6a4";
-}
-
-.ax-icon.ax-icon-f6a5::before {
-  content: "\f6a5";
-}
-
-.ax-icon.ax-icon-f6a6::before {
-  content: "\f6a6";
-}
-
-.ax-icon.ax-icon-f6a7::before {
-  content: "\f6a7";
-}
-
-.ax-icon.ax-icon-f6a8::before {
-  content: "\f6a8";
-}
-
-.ax-icon.ax-icon-f6a9::before {
-  content: "\f6a9";
-}
-
-.ax-icon.ax-icon-f6aa::before {
-  content: "\f6aa";
-}
-
-.ax-icon.ax-icon-f6ab::before {
-  content: "\f6ab";
-}
-
-.ax-icon.ax-icon-f6ac::before {
-  content: "\f6ac";
-}
-
-.ax-icon.ax-icon-f6ad::before {
-  content: "\f6ad";
-}
-
-.ax-icon.ax-icon-f6ae::before {
-  content: "\f6ae";
-}
-
-.ax-icon.ax-icon-f6af::before {
-  content: "\f6af";
-}
-
-.ax-icon.ax-icon-f6b0::before {
-  content: "\f6b0";
-}
-
-.ax-icon.ax-icon-f6b4::before {
-  content: "\f6b4";
-}
-
-.ax-icon.ax-icon-f6b5::before {
-  content: "\f6b5";
-}
-
-.ax-icon.ax-icon-f6b6::before {
-  content: "\f6b6";
-}
-
-.ax-icon.ax-icon-f6b7::before {
-  content: "\f6b7";
-}
-
-.ax-icon.ax-icon-f6b8::before {
-  content: "\f6b8";
-}
-
-.ax-icon.ax-icon-f6b9::before {
-  content: "\f6b9";
-}
-
-.ax-icon.ax-icon-f6ba::before {
-  content: "\f6ba";
-}
-
-.ax-icon.ax-icon-f6bb::before {
-  content: "\f6bb";
-}
-
-.ax-icon.ax-icon-f6bd::before {
-  content: "\f6bd";
-}
-
-.ax-icon.ax-icon-f6be::before {
-  content: "\f6be";
-}
-
-.ax-icon.ax-icon-f6bf::before {
-  content: "\f6bf";
-}
-
-.ax-icon.ax-icon-f6c0::before {
-  content: "\f6c0";
-}
-
-.ax-icon.ax-icon-f6c1::before {
-  content: "\f6c1";
-}
-
-.ax-icon.ax-icon-f6c2::before {
-  content: "\f6c2";
-}
-
-.ax-icon.ax-icon-f6c3::before {
-  content: "\f6c3";
-}
-
-.ax-icon.ax-icon-f6c4::before {
-  content: "\f6c4";
-}
-
-.ax-icon.ax-icon-f6cb::before {
-  content: "\f6cb";
-}
-
-.ax-icon.ax-icon-f6cc::before {
-  content: "\f6cc";
-}
-
-.ax-icon.ax-icon-f6cf::before {
-  content: "\f6cf";
-}
-
-.ax-icon.ax-icon-f6d4::before {
-  content: "\f6d4";
-}
-
-.ax-icon.ax-icon-f6d5::before {
-  content: "\f6d5";
-}
-
-.ax-icon.ax-icon-f6d6::before {
-  content: "\f6d6";
-}
-
-.ax-icon.ax-icon-f6d7::before {
-  content: "\f6d7";
-}
-
-.ax-icon.ax-icon-f6d8::before {
-  content: "\f6d8";
-}
-
-.ax-icon.ax-icon-f6d9::before {
-  content: "\f6d9";
-}
-
-.ax-icon.ax-icon-f6da::before {
-  content: "\f6da";
-}
-
-.ax-icon.ax-icon-f6db::before {
-  content: "\f6db";
-}
-
-.ax-icon.ax-icon-f6dc::before {
-  content: "\f6dc";
-}
-
-.ax-icon.ax-icon-f6dd::before {
-  content: "\f6dd";
-}
-
-.ax-icon.ax-icon-f6de::before {
-  content: "\f6de";
-}
-
-.ax-icon.ax-icon-f6df::before {
-  content: "\f6df";
-}
-
-.ax-icon.ax-icon-f6e0::before {
-  content: "\f6e0";
-}
-
-.ax-icon.ax-icon-f6e1::before {
-  content: "\f6e1";
-}
-
-.ax-icon.ax-icon-f6e2::before {
-  content: "\f6e2";
-}
-
-.ax-icon.ax-icon-f6e3::before {
-  content: "\f6e3";
-}
-
-.ax-icon.ax-icon-f6e4::before {
-  content: "\f6e4";
-}
-
-.ax-icon.ax-icon-f6e5::before {
-  content: "\f6e5";
-}
-
-.ax-icon.ax-icon-f6e6::before {
-  content: "\f6e6";
-}
-
-.ax-icon.ax-icon-f6e7::before {
-  content: "\f6e7";
-}
-
-.ax-icon.ax-icon-f6e8::before {
-  content: "\f6e8";
-}
-
-.ax-icon.ax-icon-f6e9::before {
-  content: "\f6e9";
-}
-
-.ax-icon.ax-icon-f6ea::before {
-  content: "\f6ea";
-}
-
-.ax-icon.ax-icon-f6eb::before {
-  content: "\f6eb";
-}
-
-.ax-icon.ax-icon-f6ec::before {
-  content: "\f6ec";
-}
-
-.ax-icon.ax-icon-f6ee::before {
-  content: "\f6ee";
-}
-
-.ax-icon.ax-icon-f6ef::before {
-  content: "\f6ef";
-}
-
-.ax-icon.ax-icon-f6f0::before {
-  content: "\f6f0";
-}
-
-.ax-icon.ax-icon-f6f1::before {
-  content: "\f6f1";
-}
-
-.ax-icon.ax-icon-f6f2::before {
-  content: "\f6f2";
-}
-
-.ax-icon.ax-icon-f6f3::before {
-  content: "\f6f3";
-}
-
-.ax-icon.ax-icon-f6f4::before {
-  content: "\f6f4";
-}
-
-.ax-icon.ax-icon-f6f5::before {
-  content: "\f6f5";
-}
-
-.ax-icon.ax-icon-f6f6::before {
-  content: "\f6f6";
-}
-
-.ax-icon.ax-icon-f6f7::before {
-  content: "\f6f7";
-}
-
-.ax-icon.ax-icon-f6f8::before {
-  content: "\f6f8";
-}
-
-.ax-icon.ax-icon-f6f9::before {
-  content: "\f6f9";
-}
-
-.ax-icon.ax-icon-f6fa::before {
-  content: "\f6fa";
-}
-
-.ax-icon.ax-icon-f6fb::before {
-  content: "\f6fb";
-}
-
-.ax-icon.ax-icon-f6fd::before {
-  content: "\f6fd";
-}
-
-.ax-icon.ax-icon-f6fe::before {
-  content: "\f6fe";
-}
-
-.ax-icon.ax-icon-f6ff::before {
-  content: "\f6ff";
-}
-
-.ax-icon.ax-icon-f700::before {
-  content: "\f700";
-}
-
-.ax-icon.ax-icon-f701::before {
-  content: "\f701";
-}
-
-.ax-icon.ax-icon-f702::before {
-  content: "\f702";
-}
-
-.ax-icon.ax-icon-f703::before {
-  content: "\f703";
-}
-
-.ax-icon.ax-icon-f704::before {
-  content: "\f704";
-}
-
-.ax-icon.ax-icon-f705::before {
-  content: "\f705";
-}
-
-.ax-icon.ax-icon-f706::before {
-  content: "\f706";
-}
-
-.ax-icon.ax-icon-f707::before {
-  content: "\f707";
-}
-
-.ax-icon.ax-icon-f708::before {
-  content: "\f708";
-}
-
-.ax-icon.ax-icon-f709::before {
-  content: "\f709";
-}
-
-.ax-icon.ax-icon-f70a::before {
-  content: "\f70a";
-}
-
-.ax-icon.ax-icon-f70b::before {
-  content: "\f70b";
-}
-
-.ax-icon.ax-icon-f70c::before {
-  content: "\f70c";
-}
-
-.ax-icon.ax-icon-f70d::before {
-  content: "\f70d";
-}
-
-.ax-icon.ax-icon-f70e::before {
-  content: "\f70e";
-}
-
-.ax-icon.ax-icon-f70f::before {
-  content: "\f70f";
-}
-
-.ax-icon.ax-icon-f710::before {
-  content: "\f710";
-}
-
-.ax-icon.ax-icon-f711::before {
-  content: "\f711";
-}
-
-.ax-icon.ax-icon-f712::before {
-  content: "\f712";
-}
-
-.ax-icon.ax-icon-f713::before {
-  content: "\f713";
-}
-
-.ax-icon.ax-icon-f714::before {
-  content: "\f714";
-}
-
-.ax-icon.ax-icon-f715::before {
-  content: "\f715";
-}
-
-.ax-icon.ax-icon-f716::before {
-  content: "\f716";
-}
-
-.ax-icon.ax-icon-f717::before {
-  content: "\f717";
-}
-
-.ax-icon.ax-icon-f718::before {
-  content: "\f718";
-}
-
-.ax-icon.ax-icon-f719::before {
-  content: "\f719";
-}
-
-.ax-icon.ax-icon-f71a::before {
-  content: "\f71a";
-}
-
-.ax-icon.ax-icon-f71b::before {
-  content: "\f71b";
-}
-
-.ax-icon.ax-icon-f71c::before {
-  content: "\f71c";
-}
-
-.ax-icon.ax-icon-f71d::before {
-  content: "\f71d";
-}
-
-.ax-icon.ax-icon-f71e::before {
-  content: "\f71e";
-}
-
-.ax-icon.ax-icon-f71f::before {
-  content: "\f71f";
-}
-
-.ax-icon.ax-icon-f720::before {
-  content: "\f720";
-}
-
-.ax-icon.ax-icon-f721::before {
-  content: "\f721";
-}
-
-.ax-icon.ax-icon-f722::before {
-  content: "\f722";
-}
-
-.ax-icon.ax-icon-f723::before {
-  content: "\f723";
-}
-
-.ax-icon.ax-icon-f724::before {
-  content: "\f724";
-}
-
-.ax-icon.ax-icon-f725::before {
-  content: "\f725";
-}
-
-.ax-icon.ax-icon-f726::before {
-  content: "\f726";
-}
-
-.ax-icon.ax-icon-f727::before {
-  content: "\f727";
-}
-
-.ax-icon.ax-icon-f728::before {
-  content: "\f728";
-}
-
-.ax-icon.ax-icon-f729::before {
-  content: "\f729";
-}
-
-.ax-icon.ax-icon-f72a::before {
-  content: "\f72a";
-}
-
-.ax-icon.ax-icon-f72b::before {
-  content: "\f72b";
-}
-
-.ax-icon.ax-icon-f72c::before {
-  content: "\f72c";
-}
-
-.ax-icon.ax-icon-f72d::before {
-  content: "\f72d";
-}
-
-.ax-icon.ax-icon-f72e::before {
-  content: "\f72e";
-}
-
-.ax-icon.ax-icon-f72f::before {
-  content: "\f72f";
-}
-
-.ax-icon.ax-icon-f730::before {
-  content: "\f730";
-}
-
-.ax-icon.ax-icon-f731::before {
-  content: "\f731";
-}
-
-.ax-icon.ax-icon-f732::before {
-  content: "\f732";
-}
-
-.ax-icon.ax-icon-f733::before {
-  content: "\f733";
-}
-
-.ax-icon.ax-icon-f734::before {
-  content: "\f734";
-}
-
-.ax-icon.ax-icon-f735::before {
-  content: "\f735";
-}
-
-.ax-icon.ax-icon-f736::before {
-  content: "\f736";
-}
-
-.ax-icon.ax-icon-f737::before {
-  content: "\f737";
-}
-
-.ax-icon.ax-icon-f738::before {
-  content: "\f738";
-}
-
-.ax-icon.ax-icon-f739::before {
-  content: "\f739";
-}
-
-.ax-icon.ax-icon-f73a::before {
-  content: "\f73a";
-}
-
-.ax-icon.ax-icon-f73b::before {
-  content: "\f73b";
-}
-
-.ax-icon.ax-icon-f73c::before {
-  content: "\f73c";
-}
-
-.ax-icon.ax-icon-f73d::before {
-  content: "\f73d";
-}
-
-.ax-icon.ax-icon-f73e::before {
-  content: "\f73e";
-}
-
-.ax-icon.ax-icon-f73f::before {
-  content: "\f73f";
-}
-
-.ax-icon.ax-icon-f740::before {
-  content: "\f740";
-}
-
-.ax-icon.ax-icon-f741::before {
-  content: "\f741";
-}
-
-.ax-icon.ax-icon-f742::before {
-  content: "\f742";
-}
-
-.ax-icon.ax-icon-f743::before {
-  content: "\f743";
-}
-
-.ax-icon.ax-icon-f744::before {
-  content: "\f744";
-}
-
-.ax-icon.ax-icon-f745::before {
-  content: "\f745";
-}
-
-.ax-icon.ax-icon-f746::before {
-  content: "\f746";
-}
-
-.ax-icon.ax-icon-f747::before {
-  content: "\f747";
-}
-
-.ax-icon.ax-icon-f748::before {
-  content: "\f748";
-}
-
-.ax-icon.ax-icon-f749::before {
-  content: "\f749";
-}
-
-.ax-icon.ax-icon-f74a::before {
-  content: "\f74a";
-}
-
-.ax-icon.ax-icon-f74b::before {
-  content: "\f74b";
-}
-
-.ax-icon.ax-icon-f74c::before {
-  content: "\f74c";
-}
-
-.ax-icon.ax-icon-f74d::before {
-  content: "\f74d";
-}
-
-.ax-icon.ax-icon-f74e::before {
-  content: "\f74e";
-}
-
-.ax-icon.ax-icon-f74f::before {
-  content: "\f74f";
-}
-
-.ax-icon.ax-icon-f750::before {
-  content: "\f750";
-}
-
-.ax-icon.ax-icon-f751::before {
-  content: "\f751";
-}
-
-.ax-icon.ax-icon-f752::before {
-  content: "\f752";
-}
-
-.ax-icon.ax-icon-f753::before {
-  content: "\f753";
-}
-
-.ax-icon.ax-icon-f754::before {
-  content: "\f754";
-}
-
-.ax-icon.ax-icon-f755::before {
-  content: "\f755";
-}
-
-.ax-icon.ax-icon-f756::before {
-  content: "\f756";
-}
-
-.ax-icon.ax-icon-f757::before {
-  content: "\f757";
-}
-
-.ax-icon.ax-icon-f758::before {
-  content: "\f758";
-}
-
-.ax-icon.ax-icon-f759::before {
-  content: "\f759";
-}
-
-.ax-icon.ax-icon-f75a::before {
-  content: "\f75a";
-}
-
-.ax-icon.ax-icon-f75b::before {
-  content: "\f75b";
-}
-
-.ax-icon.ax-icon-f75c::before {
-  content: "\f75c";
-}
-
-.ax-icon.ax-icon-f75d::before {
-  content: "\f75d";
-}
-
-.ax-icon.ax-icon-f75e::before {
-  content: "\f75e";
-}
-
-.ax-icon.ax-icon-f75f::before {
-  content: "\f75f";
-}
-
-.ax-icon.ax-icon-f760::before {
-  content: "\f760";
-}
-
-.ax-icon.ax-icon-f761::before {
-  content: "\f761";
-}
-
-.ax-icon.ax-icon-f762::before {
-  content: "\f762";
-}
-
-.ax-icon.ax-icon-f763::before {
-  content: "\f763";
-}
-
-.ax-icon.ax-icon-f764::before {
-  content: "\f764";
-}
-
-.ax-icon.ax-icon-f765::before {
-  content: "\f765";
-}
-
-.ax-icon.ax-icon-f766::before {
-  content: "\f766";
-}
-
-.ax-icon.ax-icon-f767::before {
-  content: "\f767";
-}
-
-.ax-icon.ax-icon-f768::before {
-  content: "\f768";
-}
-
-.ax-icon.ax-icon-f769::before {
-  content: "\f769";
-}
-
-.ax-icon.ax-icon-f76a::before {
-  content: "\f76a";
-}
-
-.ax-icon.ax-icon-f76b::before {
-  content: "\f76b";
-}
-
-.ax-icon.ax-icon-f76c::before {
-  content: "\f76c";
-}
-
-.ax-icon.ax-icon-f76d::before {
-  content: "\f76d";
-}
-
-.ax-icon.ax-icon-f76e::before {
-  content: "\f76e";
-}
-
-.ax-icon.ax-icon-f76f::before {
-  content: "\f76f";
-}
-
-.ax-icon.ax-icon-f770::before {
-  content: "\f770";
-}
-
-.ax-icon.ax-icon-f771::before {
-  content: "\f771";
-}
-
-.ax-icon.ax-icon-f772::before {
-  content: "\f772";
-}
-
-.ax-icon.ax-icon-f773::before {
-  content: "\f773";
-}
-
-.ax-icon.ax-icon-f774::before {
-  content: "\f774";
-}
-
-.ax-icon.ax-icon-f775::before {
-  content: "\f775";
-}
-
-.ax-icon.ax-icon-f776::before {
-  content: "\f776";
-}
-
-.ax-icon.ax-icon-f777::before {
-  content: "\f777";
-}
-
-.ax-icon.ax-icon-f778::before {
-  content: "\f778";
-}
-
-.ax-icon.ax-icon-f779::before {
-  content: "\f779";
-}
-
-.ax-icon.ax-icon-f77a::before {
-  content: "\f77a";
-}
-
-.ax-icon.ax-icon-f77b::before {
-  content: "\f77b";
-}
-
-.ax-icon.ax-icon-f77c::before {
-  content: "\f77c";
-}
-
-.ax-icon.ax-icon-f77d::before {
-  content: "\f77d";
-}
-
-.ax-icon.ax-icon-f77e::before {
-  content: "\f77e";
-}
-
-.ax-icon.ax-icon-f77f::before {
-  content: "\f77f";
-}
-
-.ax-icon.ax-icon-f780::before {
-  content: "\f780";
-}
-
-.ax-icon.ax-icon-f781::before {
-  content: "\f781";
-}
-
-.ax-icon.ax-icon-f782::before {
-  content: "\f782";
-}
-
-.ax-icon.ax-icon-f783::before {
-  content: "\f783";
-}
-
-.ax-icon.ax-icon-f784::before {
-  content: "\f784";
-}
-
-.ax-icon.ax-icon-f785::before {
-  content: "\f785";
-}
-
-.ax-icon.ax-icon-f786::before {
-  content: "\f786";
-}
-
-.ax-icon.ax-icon-f787::before {
-  content: "\f787";
-}
-
-.ax-icon.ax-icon-f788::before {
-  content: "\f788";
-}
-
-.ax-icon.ax-icon-f789::before {
-  content: "\f789";
-}
-
-.ax-icon.ax-icon-f78a::before {
-  content: "\f78a";
-}
-
-.ax-icon.ax-icon-f78b::before {
-  content: "\f78b";
-}
-
-.ax-icon.ax-icon-f78c::before {
-  content: "\f78c";
-}
-
-.ax-icon.ax-icon-f78d::before {
-  content: "\f78d";
-}
-
-.ax-icon.ax-icon-f78e::before {
-  content: "\f78e";
-}
-
-.ax-icon.ax-icon-f78f::before {
-  content: "\f78f";
-}
-
-.ax-icon.ax-icon-f790::before {
-  content: "\f790";
-}
-
-.ax-icon.ax-icon-f791::before {
-  content: "\f791";
-}
-
-.ax-icon.ax-icon-f792::before {
-  content: "\f792";
-}
-
-.ax-icon.ax-icon-f793::before {
-  content: "\f793";
-}
-
-.ax-icon.ax-icon-f794::before {
-  content: "\f794";
-}
-
-.ax-icon.ax-icon-f795::before {
-  content: "\f795";
-}
-
-.ax-icon.ax-icon-f796::before {
-  content: "\f796";
-}
-
-.ax-icon.ax-icon-f797::before {
-  content: "\f797";
-}
-
-.ax-icon.ax-icon-f798::before {
-  content: "\f798";
-}
-
-.ax-icon.ax-icon-f799::before {
-  content: "\f799";
-}
-
-.ax-icon.ax-icon-f79a::before {
-  content: "\f79a";
-}
-
-.ax-icon.ax-icon-f79b::before {
-  content: "\f79b";
-}
-
-.ax-icon.ax-icon-f79c::before {
-  content: "\f79c";
-}
-
-.ax-icon.ax-icon-f79d::before {
-  content: "\f79d";
-}
-
-.ax-icon.ax-icon-f79e::before {
-  content: "\f79e";
-}
-
-.ax-icon.ax-icon-f79f::before {
-  content: "\f79f";
-}
-
-.ax-icon.ax-icon-f7a0::before {
-  content: "\f7a0";
-}
-
-.ax-icon.ax-icon-f7a1::before {
-  content: "\f7a1";
-}
-
-.ax-icon.ax-icon-f7a2::before {
-  content: "\f7a2";
-}
-
-.ax-icon.ax-icon-f7a3::before {
-  content: "\f7a3";
-}
-
-.ax-icon.ax-icon-f7a4::before {
-  content: "\f7a4";
-}
-
-.ax-icon.ax-icon-f7a5::before {
-  content: "\f7a5";
-}
-
-.ax-icon.ax-icon-f7a6::before {
-  content: "\f7a6";
-}
-
-.ax-icon.ax-icon-f7a7::before {
-  content: "\f7a7";
-}
-
-.ax-icon.ax-icon-f7a8::before {
-  content: "\f7a8";
-}
-
-.ax-icon.ax-icon-f7a9::before {
-  content: "\f7a9";
-}
-
-.ax-icon.ax-icon-f7aa::before {
-  content: "\f7aa";
-}
-
-.ax-icon.ax-icon-f7ab::before {
-  content: "\f7ab";
-}
-
-.ax-icon.ax-icon-f7ac::before {
-  content: "\f7ac";
-}
-
-.ax-icon.ax-icon-f7ad::before {
-  content: "\f7ad";
-}
-
-.ax-icon.ax-icon-f7ae::before {
-  content: "\f7ae";
-}
-
-.ax-icon.ax-icon-f7af::before {
-  content: "\f7af";
-}
-
-.ax-icon.ax-icon-f7b0::before {
-  content: "\f7b0";
-}
-
-.ax-icon.ax-icon-f7b1::before {
-  content: "\f7b1";
-}
-
-.ax-icon.ax-icon-f7b2::before {
-  content: "\f7b2";
-}
-
-.ax-icon.ax-icon-f7b3::before {
-  content: "\f7b3";
-}
-
-.ax-icon.ax-icon-f7b4::before {
-  content: "\f7b4";
-}
-
-.ax-icon.ax-icon-f7cf::before {
-  content: "\f7cf";
-}
-
-.ax-icon.ax-icon-f7d0::before {
-  content: "\f7d0";
-}
-
-.ax-icon.ax-icon-f7d1::before {
-  content: "\f7d1";
-}
-
-.ax-icon.ax-icon-f7d2::before {
-  content: "\f7d2";
-}
-
-.ax-icon.ax-icon-f7d3::before {
-  content: "\f7d3";
-}
-
-.ax-icon.ax-icon-f7d4::before {
-  content: "\f7d4";
-}
-
-.ax-icon.ax-icon-f7d5::before {
-  content: "\f7d5";
-}
-
-.ax-icon.ax-icon-f7d6::before {
-  content: "\f7d6";
-}
-
-.ax-icon.ax-icon-f7d7::before {
-  content: "\f7d7";
-}
-
-.ax-icon.ax-icon-f7d8::before {
-  content: "\f7d8";
-}
-
-.ax-icon.ax-icon-f7d9::before {
-  content: "\f7d9";
-}
-
-.ax-icon.ax-icon-f7da::before {
-  content: "\f7da";
-}
-
-.ax-icon.ax-icon-f7db::before {
-  content: "\f7db";
-}
-
-.ax-icon.ax-icon-f7dc::before {
-  content: "\f7dc";
-}
-
-.ax-icon.ax-icon-f7dd::before {
-  content: "\f7dd";
-}
-
-.ax-icon.ax-icon-f7de::before {
-  content: "\f7de";
-}
-
-.ax-icon.ax-icon-f7df::before {
-  content: "\f7df";
-}
-
-.ax-icon.ax-icon-f7e0::before {
-  content: "\f7e0";
-}
-
-.ax-icon.ax-icon-f7e1::before {
-  content: "\f7e1";
-}
-
-.ax-icon.ax-icon-f7e2::before {
-  content: "\f7e2";
-}
-
-.ax-icon.ax-icon-f7e3::before {
-  content: "\f7e3";
-}
-
-.ax-icon.ax-icon-f7e4::before {
-  content: "\f7e4";
-}
-
-.ax-icon.ax-icon-f7e5::before {
-  content: "\f7e5";
-}
-
-.ax-icon.ax-icon-f7e6::before {
-  content: "\f7e6";
-}
-
-.ax-icon.ax-icon-f7e7::before {
-  content: "\f7e7";
-}
-
-.ax-icon.ax-icon-f7e8::before {
-  content: "\f7e8";
-}
-
-.ax-icon.ax-icon-f7e9::before {
-  content: "\f7e9";
-}
-
-.ax-icon.ax-icon-f7ea::before {
-  content: "\f7ea";
-}
-
-.ax-icon.ax-icon-f7eb::before {
-  content: "\f7eb";
-}
-
-.ax-icon.ax-icon-f7ec::before {
-  content: "\f7ec";
-}
-
-.ax-icon.ax-icon-f7ed::before {
-  content: "\f7ed";
-}
-
-.ax-icon.ax-icon-f7ee::before {
-  content: "\f7ee";
-}
-
-.ax-icon.ax-icon-f7ef::before {
-  content: "\f7ef";
-}
-
-.ax-icon.ax-icon-f7f0::before {
-  content: "\f7f0";
-}
-
-.ax-icon.ax-icon-f7f1::before {
-  content: "\f7f1";
-}
-
-.ax-icon.ax-icon-f7f2::before {
-  content: "\f7f2";
-}
-
-.ax-icon.ax-icon-f7f3::before {
-  content: "\f7f3";
-}
-
-.ax-icon.ax-icon-f7f4::before {
-  content: "\f7f4";
-}
-
-.ax-icon.ax-icon-f7f5::before {
-  content: "\f7f5";
-}
-
-.ax-icon.ax-icon-f7f6::before {
-  content: "\f7f6";
-}
-
-.ax-icon.ax-icon-f7f7::before {
-  content: "\f7f7";
-}
-
-.ax-icon.ax-icon-f7f8::before {
-  content: "\f7f8";
-}
-
-.ax-icon.ax-icon-f7f9::before {
-  content: "\f7f9";
-}
-
-.ax-icon.ax-icon-f7fa::before {
-  content: "\f7fa";
-}
-
-.ax-icon.ax-icon-f7fb::before {
-  content: "\f7fb";
-}
-
-.ax-icon.ax-icon-f7fc::before {
-  content: "\f7fc";
-}
-
-.ax-icon.ax-icon-f7fd::before {
-  content: "\f7fd";
-}
-
-.ax-icon.ax-icon-f7fe::before {
-  content: "\f7fe";
-}
-
-.ax-icon.ax-icon-f7ff::before {
-  content: "\f7ff";
-}
-
-.ax-icon.ax-icon-f800::before {
-  content: "\f800";
-}
-
-.ax-icon.ax-icon-f801::before {
-  content: "\f801";
-}
-
-.ax-icon.ax-icon-f802::before {
-  content: "\f802";
-}
-
-.ax-icon.ax-icon-f803::before {
-  content: "\f803";
-}
-
-.ax-icon.ax-icon-f804::before {
-  content: "\f804";
-}
-
-.ax-icon.ax-icon-f805::before {
-  content: "\f805";
-}
-
-.ax-icon.ax-icon-f806::before {
-  content: "\f806";
-}
-
-.ax-icon.ax-icon-f807::before {
-  content: "\f807";
-}
-
-.ax-icon.ax-icon-f808::before {
-  content: "\f808";
-}
-
-.ax-icon.ax-icon-f809::before {
-  content: "\f809";
-}
-
-.ax-icon.ax-icon-f80a::before {
-  content: "\f80a";
-}
-
-.ax-icon.ax-icon-f80b::before {
-  content: "\f80b";
-}
-
-.ax-icon.ax-icon-f80c::before {
-  content: "\f80c";
-}
-
-.ax-icon.ax-icon-f80d::before {
-  content: "\f80d";
-}
-
-.ax-icon.ax-icon-f80e::before {
-  content: "\f80e";
-}
-
-.ax-icon.ax-icon-f80f::before {
-  content: "\f80f";
-}
-
-.ax-icon.ax-icon-f810::before {
-  content: "\f810";
-}
-
-.ax-icon.ax-icon-f811::before {
-  content: "\f811";
-}
-
-.ax-icon.ax-icon-f812::before {
-  content: "\f812";
-}
-
-.ax-icon.ax-icon-f813::before {
-  content: "\f813";
-}
-
-.ax-icon.ax-icon-f814::before {
-  content: "\f814";
-}
-
-.ax-icon.ax-icon-f815::before {
-  content: "\f815";
-}
-
-.ax-icon.ax-icon-f816::before {
-  content: "\f816";
-}
-
-.ax-icon.ax-icon-f817::before {
-  content: "\f817";
-}
-
-.ax-icon.ax-icon-f818::before {
-  content: "\f818";
-}
-
-.ax-icon.ax-icon-f819::before {
-  content: "\f819";
-}
-
-.ax-icon.ax-icon-f81a::before {
-  content: "\f81a";
-}
-
-.ax-icon.ax-icon-f81b::before {
-  content: "\f81b";
-}
-
-.ax-icon.ax-icon-f81c::before {
-  content: "\f81c";
-}
-
-.ax-icon.ax-icon-f81d::before {
-  content: "\f81d";
-}
-
-.ax-icon.ax-icon-f81f::before {
-  content: "\f81f";
-}
-
-.ax-icon.ax-icon-f820::before {
-  content: "\f820";
-}
-
-.ax-icon.ax-icon-f821::before {
-  content: "\f821";
-}
-
-.ax-icon.ax-icon-f822::before {
-  content: "\f822";
-}
-
-.ax-icon.ax-icon-f823::before {
-  content: "\f823";
-}
-
-.ax-icon.ax-icon-f824::before {
-  content: "\f824";
-}
-
-.ax-icon.ax-icon-f825::before {
-  content: "\f825";
-}
-
-.ax-icon.ax-icon-f826::before {
-  content: "\f826";
-}
-
-.ax-icon.ax-icon-f827::before {
-  content: "\f827";
-}
-
-.ax-icon.ax-icon-f828::before {
-  content: "\f828";
-}
-
-.ax-icon.ax-icon-f829::before {
-  content: "\f829";
-}
-
-.ax-icon.ax-icon-f82a::before {
-  content: "\f82a";
-}
-
-.ax-icon.ax-icon-f82b::before {
-  content: "\f82b";
-}
-
-.ax-icon.ax-icon-f82c::before {
-  content: "\f82c";
-}
-
-.ax-icon.ax-icon-f82d::before {
-  content: "\f82d";
-}
-
-.ax-icon.ax-icon-f82e::before {
-  content: "\f82e";
-}
-
-.ax-icon.ax-icon-f82f::before {
-  content: "\f82f";
-}
-
-.ax-icon.ax-icon-f830::before {
-  content: "\f830";
-}
-
-.ax-icon.ax-icon-f831::before {
-  content: "\f831";
-}
-
-.ax-icon.ax-icon-f832::before {
-  content: "\f832";
-}
-
-.ax-icon.ax-icon-f833::before {
-  content: "\f833";
-}
-
-.ax-icon.ax-icon-f834::before {
-  content: "\f834";
-}
-
-.ax-icon.ax-icon-f835::before {
-  content: "\f835";
-}
-
-.ax-icon.ax-icon-f837::before {
-  content: "\f837";
-}
-
-.ax-icon.ax-icon-f838::before {
-  content: "\f838";
-}
-
-.ax-icon.ax-icon-f83b::before {
-  content: "\f83b";
-}
-
-.ax-icon.ax-icon-f83c::before {
-  content: "\f83c";
-}
-
-.ax-icon.ax-icon-f83d::before {
-  content: "\f83d";
-}
-
-.ax-icon.ax-icon-f83e::before {
-  content: "\f83e";
-}
-
-.ax-icon.ax-icon-f83f::before {
-  content: "\f83f";
-}
-
 .ax-icon.ax-icon-f840::before {
   content: "\f840";
 }
 
-.ax-icon.ax-icon-f841::before {
-  content: "\f841";
-}
-
-.ax-icon.ax-icon-f842::before {
-  content: "\f842";
-}
-
-.ax-icon.ax-icon-f844::before {
-  content: "\f844";
-}
-
-.ax-icon.ax-icon-f845::before {
-  content: "\f845";
-}
-
 .ax-icon.ax-icon-f846::before {
   content: "\f846";
-}
-
-.ax-icon.ax-icon-f847::before {
-  content: "\f847";
 }
 
 .ax-icon.ax-icon-f848::before {
@@ -16244,120 +8684,8 @@
   content: "\f849";
 }
 
-.ax-icon.ax-icon-f84a::before {
-  content: "\f84a";
-}
-
-.ax-icon.ax-icon-f84b::before {
-  content: "\f84b";
-}
-
-.ax-icon.ax-icon-f84c::before {
-  content: "\f84c";
-}
-
-.ax-icon.ax-icon-f84d::before {
-  content: "\f84d";
-}
-
-.ax-icon.ax-icon-f84e::before {
-  content: "\f84e";
-}
-
-.ax-icon.ax-icon-f84f::before {
-  content: "\f84f";
-}
-
-.ax-icon.ax-icon-f850::before {
-  content: "\f850";
-}
-
-.ax-icon.ax-icon-f851::before {
-  content: "\f851";
-}
-
-.ax-icon.ax-icon-f852::before {
-  content: "\f852";
-}
-
-.ax-icon.ax-icon-f853::before {
-  content: "\f853";
-}
-
-.ax-icon.ax-icon-f854::before {
-  content: "\f854";
-}
-
-.ax-icon.ax-icon-f855::before {
-  content: "\f855";
-}
-
-.ax-icon.ax-icon-f856::before {
-  content: "\f856";
-}
-
-.ax-icon.ax-icon-f857::before {
-  content: "\f857";
-}
-
-.ax-icon.ax-icon-f858::before {
-  content: "\f858";
-}
-
-.ax-icon.ax-icon-f859::before {
-  content: "\f859";
-}
-
-.ax-icon.ax-icon-f85a::before {
-  content: "\f85a";
-}
-
-.ax-icon.ax-icon-f85b::before {
-  content: "\f85b";
-}
-
 .ax-icon.ax-icon-f85c::before {
   content: "\f85c";
-}
-
-.ax-icon.ax-icon-f85d::before {
-  content: "\f85d";
-}
-
-.ax-icon.ax-icon-f85e::before {
-  content: "\f85e";
-}
-
-.ax-icon.ax-icon-f85f::before {
-  content: "\f85f";
-}
-
-.ax-icon.ax-icon-f860::before {
-  content: "\f860";
-}
-
-.ax-icon.ax-icon-f861::before {
-  content: "\f861";
-}
-
-.ax-icon.ax-icon-f862::before {
-  content: "\f862";
-}
-
-.ax-icon.ax-icon-f863::before {
-  content: "\f863";
-}
-
-.ax-icon.ax-icon-f864::before {
-  content: "\f864";
-}
-
-.ax-icon.ax-icon-f865::before {
-  content: "\f865";
-}
-
-.ax-icon.ax-icon-f866::before {
-  content: "\f866";
 }
 
 .ax-icon.ax-icon-f867::before {
@@ -16380,132 +8708,16 @@
   content: "\f86b";
 }
 
-.ax-icon.ax-icon-f86c::before {
-  content: "\f86c";
-}
-
-.ax-icon.ax-icon-f86d::before {
-  content: "\f86d";
-}
-
 .ax-icon.ax-icon-f86e::before {
   content: "\f86e";
-}
-
-.ax-icon.ax-icon-f86f::before {
-  content: "\f86f";
-}
-
-.ax-icon.ax-icon-f870::before {
-  content: "\f870";
-}
-
-.ax-icon.ax-icon-f871::before {
-  content: "\f871";
-}
-
-.ax-icon.ax-icon-f872::before {
-  content: "\f872";
-}
-
-.ax-icon.ax-icon-f873::before {
-  content: "\f873";
-}
-
-.ax-icon.ax-icon-f874::before {
-  content: "\f874";
-}
-
-.ax-icon.ax-icon-f875::before {
-  content: "\f875";
-}
-
-.ax-icon.ax-icon-f876::before {
-  content: "\f876";
-}
-
-.ax-icon.ax-icon-f877::before {
-  content: "\f877";
-}
-
-.ax-icon.ax-icon-f878::before {
-  content: "\f878";
 }
 
 .ax-icon.ax-icon-f879::before {
   content: "\f879";
 }
 
-.ax-icon.ax-icon-f87a::before {
-  content: "\f87a";
-}
-
-.ax-icon.ax-icon-f87b::before {
-  content: "\f87b";
-}
-
-.ax-icon.ax-icon-f87c::before {
-  content: "\f87c";
-}
-
-.ax-icon.ax-icon-f87d::before {
-  content: "\f87d";
-}
-
-.ax-icon.ax-icon-f87e::before {
-  content: "\f87e";
-}
-
-.ax-icon.ax-icon-f87f::before {
-  content: "\f87f";
-}
-
-.ax-icon.ax-icon-f880::before {
-  content: "\f880";
-}
-
-.ax-icon.ax-icon-f881::before {
-  content: "\f881";
-}
-
-.ax-icon.ax-icon-f882::before {
-  content: "\f882";
-}
-
-.ax-icon.ax-icon-f883::before {
-  content: "\f883";
-}
-
-.ax-icon.ax-icon-f884::before {
-  content: "\f884";
-}
-
-.ax-icon.ax-icon-f885::before {
-  content: "\f885";
-}
-
 .ax-icon.ax-icon-f886::before {
   content: "\f886";
-}
-
-.ax-icon.ax-icon-f887::before {
-  content: "\f887";
-}
-
-.ax-icon.ax-icon-f888::before {
-  content: "\f888";
-}
-
-.ax-icon.ax-icon-f889::before {
-  content: "\f889";
-}
-
-.ax-icon.ax-icon-f88a::before {
-  content: "\f88a";
-}
-
-.ax-icon.ax-icon-f88b::before {
-  content: "\f88b";
 }
 
 .ax-icon.ax-icon-f88c::before {
@@ -16516,252 +8728,8 @@
   content: "\f88d";
 }
 
-.ax-icon.ax-icon-f88e::before {
-  content: "\f88e";
-}
-
-.ax-icon.ax-icon-f88f::before {
-  content: "\f88f";
-}
-
-.ax-icon.ax-icon-f891::before {
-  content: "\f891";
-}
-
-.ax-icon.ax-icon-f892::before {
-  content: "\f892";
-}
-
-.ax-icon.ax-icon-f893::before {
-  content: "\f893";
-}
-
-.ax-icon.ax-icon-f894::before {
-  content: "\f894";
-}
-
-.ax-icon.ax-icon-f895::before {
-  content: "\f895";
-}
-
-.ax-icon.ax-icon-f896::before {
-  content: "\f896";
-}
-
-.ax-icon.ax-icon-f897::before {
-  content: "\f897";
-}
-
-.ax-icon.ax-icon-f898::before {
-  content: "\f898";
-}
-
-.ax-icon.ax-icon-f899::before {
-  content: "\f899";
-}
-
-.ax-icon.ax-icon-f89a::before {
-  content: "\f89a";
-}
-
-.ax-icon.ax-icon-f89b::before {
-  content: "\f89b";
-}
-
-.ax-icon.ax-icon-f89c::before {
-  content: "\f89c";
-}
-
-.ax-icon.ax-icon-f89d::before {
-  content: "\f89d";
-}
-
-.ax-icon.ax-icon-f89e::before {
-  content: "\f89e";
-}
-
-.ax-icon.ax-icon-f89f::before {
-  content: "\f89f";
-}
-
 .ax-icon.ax-icon-f8a0::before {
   content: "\f8a0";
-}
-
-.ax-icon.ax-icon-f8a2::before {
-  content: "\f8a2";
-}
-
-.ax-icon.ax-icon-f8a3::before {
-  content: "\f8a3";
-}
-
-.ax-icon.ax-icon-f8a4::before {
-  content: "\f8a4";
-}
-
-.ax-icon.ax-icon-f8a5::before {
-  content: "\f8a5";
-}
-
-.ax-icon.ax-icon-f8a6::before {
-  content: "\f8a6";
-}
-
-.ax-icon.ax-icon-f8a7::before {
-  content: "\f8a7";
-}
-
-.ax-icon.ax-icon-f8a8::before {
-  content: "\f8a8";
-}
-
-.ax-icon.ax-icon-f8a9::before {
-  content: "\f8a9";
-}
-
-.ax-icon.ax-icon-f8aa::before {
-  content: "\f8aa";
-}
-
-.ax-icon.ax-icon-f8ab::before {
-  content: "\f8ab";
-}
-
-.ax-icon.ax-icon-f8ac::before {
-  content: "\f8ac";
-}
-
-.ax-icon.ax-icon-f8ad::before {
-  content: "\f8ad";
-}
-
-.ax-icon.ax-icon-f8ae::before {
-  content: "\f8ae";
-}
-
-.ax-icon.ax-icon-f8af::before {
-  content: "\f8af";
-}
-
-.ax-icon.ax-icon-f8b0::before {
-  content: "\f8b0";
-}
-
-.ax-icon.ax-icon-f8b1::before {
-  content: "\f8b1";
-}
-
-.ax-icon.ax-icon-f8b2::before {
-  content: "\f8b2";
-}
-
-.ax-icon.ax-icon-f8b3::before {
-  content: "\f8b3";
-}
-
-.ax-icon.ax-icon-f8b4::before {
-  content: "\f8b4";
-}
-
-.ax-icon.ax-icon-f8b5::before {
-  content: "\f8b5";
-}
-
-.ax-icon.ax-icon-f8b6::before {
-  content: "\f8b6";
-}
-
-.ax-icon.ax-icon-f8b7::before {
-  content: "\f8b7";
-}
-
-.ax-icon.ax-icon-f8b8::before {
-  content: "\f8b8";
-}
-
-.ax-icon.ax-icon-f8b9::before {
-  content: "\f8b9";
-}
-
-.ax-icon.ax-icon-f8ba::before {
-  content: "\f8ba";
-}
-
-.ax-icon.ax-icon-f8bb::before {
-  content: "\f8bb";
-}
-
-.ax-icon.ax-icon-f8bc::before {
-  content: "\f8bc";
-}
-
-.ax-icon.ax-icon-f8bd::before {
-  content: "\f8bd";
-}
-
-.ax-icon.ax-icon-f8be::before {
-  content: "\f8be";
-}
-
-.ax-icon.ax-icon-f8bf::before {
-  content: "\f8bf";
-}
-
-.ax-icon.ax-icon-f8c0::before {
-  content: "\f8c0";
-}
-
-.ax-icon.ax-icon-f8c1::before {
-  content: "\f8c1";
-}
-
-.ax-icon.ax-icon-f8c2::before {
-  content: "\f8c2";
-}
-
-.ax-icon.ax-icon-f8c3::before {
-  content: "\f8c3";
-}
-
-.ax-icon.ax-icon-f8c4::before {
-  content: "\f8c4";
-}
-
-.ax-icon.ax-icon-f8c5::before {
-  content: "\f8c5";
-}
-
-.ax-icon.ax-icon-f8c6::before {
-  content: "\f8c6";
-}
-
-.ax-icon.ax-icon-f8c7::before {
-  content: "\f8c7";
-}
-
-.ax-icon.ax-icon-f8c8::before {
-  content: "\f8c8";
-}
-
-.ax-icon.ax-icon-f8c9::before {
-  content: "\f8c9";
-}
-
-.ax-icon.ax-icon-f8ca::before {
-  content: "\f8ca";
-}
-
-.ax-icon.ax-icon-f8cb::before {
-  content: "\f8cb";
-}
-
-.ax-icon.ax-icon-f8cc::before {
-  content: "\f8cc";
-}
-
-.ax-icon.ax-icon-f8cd::before {
-  content: "\f8cd";
 }
 
 .ax-icon.ax-icon-f8ce::before {
@@ -16896,6 +8864,10 @@
   content: "\f8f0";
 }
 
+.ax-icon.ax-icon-f8f1::before {
+  content: "\f8f1";
+}
+
 .ax-icon.ax-icon-f8f2::before {
   content: "\f8f2";
 }
@@ -16940,376 +8912,8 @@
   content: "\f8ff";
 }
 
-.ax-icon.ax-icon-fff00::before {
-  content: "\fff00";
-}
-
-.ax-icon.ax-icon-fff01::before {
-  content: "\fff01";
-}
-
-.ax-icon.ax-icon-fff03::before {
-  content: "\fff03";
-}
-
-.ax-icon.ax-icon-fff0a::before {
-  content: "\fff0a";
-}
-
-.ax-icon.ax-icon-fff0b::before {
-  content: "\fff0b";
-}
-
-.ax-icon.ax-icon-fff0c::before {
-  content: "\fff0c";
-}
-
-.ax-icon.ax-icon-fff0d::before {
-  content: "\fff0d";
-}
-
-.ax-icon.ax-icon-fff0e::before {
-  content: "\fff0e";
-}
-
-.ax-icon.ax-icon-fff0f::before {
-  content: "\fff0f";
-}
-
-.ax-icon.ax-icon-fff14::before {
-  content: "\fff14";
-}
-
-.ax-icon.ax-icon-fff17::before {
-  content: "\fff17";
-}
-
-.ax-icon.ax-icon-fff18::before {
-  content: "\fff18";
-}
-
-.ax-icon.ax-icon-fff1f::before {
-  content: "\fff1f";
-}
-
-.ax-icon.ax-icon-fff20::before {
-  content: "\fff20";
-}
-
-.ax-icon.ax-icon-fff25::before {
-  content: "\fff25";
-}
-
-.ax-icon.ax-icon-fff26::before {
-  content: "\fff26";
-}
-
-.ax-icon.ax-icon-fff2d::before {
-  content: "\fff2d";
-}
-
-.ax-icon.ax-icon-fff2e::before {
-  content: "\fff2e";
-}
-
-.ax-icon.ax-icon-fff2f::before {
-  content: "\fff2f";
-}
-
-.ax-icon.ax-icon-fff30::before {
-  content: "\fff30";
-}
-
-.ax-icon.ax-icon-fff33::before {
-  content: "\fff33";
-}
-
-.ax-icon.ax-icon-fff34::before {
-  content: "\fff34";
-}
-
-.ax-icon.ax-icon-fff35::before {
-  content: "\fff35";
-}
-
-.ax-icon.ax-icon-fff36::before {
-  content: "\fff36";
-}
-
-.ax-icon.ax-icon-fff37::before {
-  content: "\fff37";
-}
-
-.ax-icon.ax-icon-fff38::before {
-  content: "\fff38";
-}
-
-.ax-icon.ax-icon-fff39::before {
-  content: "\fff39";
-}
-
-.ax-icon.ax-icon-fff3a::before {
-  content: "\fff3a";
-}
-
-.ax-icon.ax-icon-fff3b::before {
-  content: "\fff3b";
-}
-
-.ax-icon.ax-icon-fff3c::before {
-  content: "\fff3c";
-}
-
-.ax-icon.ax-icon-fff3d::before {
-  content: "\fff3d";
-}
-
-.ax-icon.ax-icon-fff3e::before {
-  content: "\fff3e";
-}
-
-.ax-icon.ax-icon-fff40::before {
-  content: "\fff40";
-}
-
-.ax-icon.ax-icon-fff6a::before {
-  content: "\fff6a";
-}
-
-.ax-icon.ax-icon-fff6d::before {
-  content: "\fff6d";
-}
-
-.ax-icon.ax-icon-fff6e::before {
-  content: "\fff6e";
-}
-
-.ax-icon.ax-icon-fff6f::before {
-  content: "\fff6f";
-}
-
-.ax-icon.ax-icon-fff70::before {
-  content: "\fff70";
-}
-
-.ax-icon.ax-icon-fff71::before {
-  content: "\fff71";
-}
-
-.ax-icon.ax-icon-fff72::before {
-  content: "\fff72";
-}
-
-.ax-icon.ax-icon-fff73::before {
-  content: "\fff73";
-}
-
-.ax-icon.ax-icon-fff74::before {
-  content: "\fff74";
-}
-
-.ax-icon.ax-icon-fff75::before {
-  content: "\fff75";
-}
-
-.ax-icon.ax-icon-fff76::before {
-  content: "\fff76";
-}
-
-.ax-icon.ax-icon-fff77::before {
-  content: "\fff77";
-}
-
-.ax-icon.ax-icon-fff78::before {
-  content: "\fff78";
-}
-
-.ax-icon.ax-icon-fff79::before {
-  content: "\fff79";
-}
-
-.ax-icon.ax-icon-fff7b::before {
-  content: "\fff7b";
-}
-
-.ax-icon.ax-icon-fff7d::before {
-  content: "\fff7d";
-}
-
-.ax-icon.ax-icon-fff7e::before {
-  content: "\fff7e";
-}
-
-.ax-icon.ax-icon-fff85::before {
-  content: "\fff85";
-}
-
-.ax-icon.ax-icon-fff8a::before {
-  content: "\fff8a";
-}
-
-.ax-icon.ax-icon-fff8b::before {
-  content: "\fff8b";
-}
-
-.ax-icon.ax-icon-fff8c::before {
-  content: "\fff8c";
-}
-
-.ax-icon.ax-icon-fff8d::before {
-  content: "\fff8d";
-}
-
-.ax-icon.ax-icon-fff8e::before {
-  content: "\fff8e";
-}
-
-.ax-icon.ax-icon-fff92::before {
-  content: "\fff92";
-}
-
-.ax-icon.ax-icon-fff93::before {
-  content: "\fff93";
-}
-
-.ax-icon.ax-icon-fff94::before {
-  content: "\fff94";
-}
-
-.ax-icon.ax-icon-fff95::before {
-  content: "\fff95";
-}
-
-.ax-icon.ax-icon-fff97::before {
-  content: "\fff97";
-}
-
-.ax-icon.ax-icon-fff98::before {
-  content: "\fff98";
-}
-
-.ax-icon.ax-icon-fff99::before {
-  content: "\fff99";
-}
-
-.ax-icon.ax-icon-fff9a::before {
-  content: "\fff9a";
-}
-
-.ax-icon.ax-icon-fff9b::before {
-  content: "\fff9b";
-}
-
-.ax-icon.ax-icon-fff9c::before {
-  content: "\fff9c";
-}
-
-.ax-icon.ax-icon-fff9d::before {
-  content: "\fff9d";
-}
-
-.ax-icon.ax-icon-fffa2::before {
-  content: "\fffa2";
-}
-
-.ax-icon.ax-icon-fffa3::before {
-  content: "\fffa3";
-}
-
-.ax-icon.ax-icon-fffa4::before {
-  content: "\fffa4";
-}
-
-.ax-icon.ax-icon-fffa5::before {
-  content: "\fffa5";
-}
-
-.ax-icon.ax-icon-fffa6::before {
-  content: "\fffa6";
-}
-
-.ax-icon.ax-icon-fffa7::before {
-  content: "\fffa7";
-}
-
-.ax-icon.ax-icon-fffa8::before {
-  content: "\fffa8";
-}
-
-.ax-icon.ax-icon-fffb3::before {
-  content: "\fffb3";
-}
-
-.ax-icon.ax-icon-fffb4::before {
-  content: "\fffb4";
-}
-
-.ax-icon.ax-icon-fffb5::before {
-  content: "\fffb5";
-}
-
-.ax-icon.ax-icon-fffb6::before {
-  content: "\fffb6";
-}
-
-.ax-icon.ax-icon-fffb7::before {
-  content: "\fffb7";
-}
-
-.ax-icon.ax-icon-fffba::before {
-  content: "\fffba";
-}
-
-.ax-icon.ax-icon-fffbb::before {
-  content: "\fffbb";
-}
-
-.ax-icon.ax-icon-fffcf::before {
-  content: "\fffcf";
-}
-
-.ax-icon.ax-icon-fffd0::before {
-  content: "\fffd0";
-}
-
-.ax-icon.ax-icon-fffd1::before {
-  content: "\fffd1";
-}
-
-.ax-icon.ax-icon-fffd2::before {
-  content: "\fffd2";
-}
-
-.ax-icon.ax-icon-fffd3::before {
-  content: "\fffd3";
-}
-
-.ax-icon.ax-icon-fffd6::before {
-  content: "\fffd6";
-}
-
-.ax-icon.ax-icon-fffd7::before {
-  content: "\fffd7";
-}
-
-.ax-icon.ax-icon-fffd8::before {
-  content: "\fffd8";
-}
-
-.ax-icon.ax-icon-fffec::before {
-  content: "\fffec";
-}
-
-.ax-icon.ax-icon-fffed::before {
-  content: "\fffed";
-}
-
-.ax-icon.ax-icon-ffffb::before {
-  content: "\ffffb";
-}
-
-.ax-icon.ax-icon-ffffd::before {
-  content: "\ffffd";
+.ax-icon.ax-icon-_10fffd::before {
+  content: "\10fffd";
 }
 
 @font-face {
