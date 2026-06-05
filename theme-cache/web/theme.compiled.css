@@ -43416,218 +43416,313 @@ html div.dj_ios .widget-switch.auto .widget-switch-btn-wrapper.checked.widget-sw
   opacity: 0.6;
 }
 
-/* ==========================================================================
-   Buttons — Ant control height, padding, weight, subtle shadow
-   ========================================================================== */
-.btn,
-.mx-button {
-  height: 32px;
-  padding: 4px 15px;
+.ax-app,
+.ax-modal,
+.ax-popup {
+  /* ==========================================================================
+  Buttons — Ant control height, padding, weight, subtle shadow
+  ========================================================================== */
+  /* ==========================================================================
+  Inputs — Ant control height, hover border, focus ring
+  ========================================================================== */
+  /* ==========================================================================
+  Tabs — Ant active label + ink bar
+  ========================================================================== */
+  /* ==========================================================================
+  Tables — Ant header chrome and row hover (classic + Data Grid 2)
+  ========================================================================== */
+  /* ==========================================================================
+  Cards / Group boxes / Modals — Ant radius + shadow
+  ========================================================================== */
+  /* ==========================================================================
+  Switch — Ant pill shape
+  ========================================================================== */
+  /* ==========================================================================
+  Checkbox / Radio — Ant focus ring + primary accent
+  ========================================================================== */
+  /* ==========================================================================
+  DATA WIDGETS — Data Grid 2, filters, dropdown-filter, gallery, tree node
+  --------------------------------------------------------------------------
+  The `datawidgets` module reads CSS custom properties (--brand-primary,
+  --grid-border-color, --grid-selected-row-background, --wdf-*), so most of it
+  already re-skins from the token change in custom-variables.scss. Here we
+  inject the Ant-specific values those widgets can't express via tokens.
+  Using CSS vars + higher-specificity selectors keeps these wins independent
+  of whether datawidgets.css loads before or after axoneui.css.
+  ========================================================================== */
+}
+.ax-app .btn,
+.ax-app .mx-button,
+.ax-modal .btn,
+.ax-modal .mx-button,
+.ax-popup .btn,
+.ax-popup .mx-button {
+  height: 28px;
+  padding: 3px 8px;
   font-weight: 400;
   border-radius: 4px;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-
-.btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger),
-.mx-button.btn-default {
+.ax-app .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger),
+.ax-app .mx-button.btn-default,
+.ax-modal .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger),
+.ax-modal .mx-button.btn-default,
+.ax-popup .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger),
+.ax-popup .mx-button.btn-default {
   color: #0a1325;
   border-color: #ced0d3;
   background-color: #fff;
 }
-.btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):hover, .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):focus,
-.mx-button.btn-default:hover,
-.mx-button.btn-default:focus {
-  color: #4096ff;
-  border-color: #4096ff;
+.ax-app .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):hover, .ax-app .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):focus,
+.ax-app .mx-button.btn-default:hover,
+.ax-app .mx-button.btn-default:focus,
+.ax-modal .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):hover,
+.ax-modal .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):focus,
+.ax-modal .mx-button.btn-default:hover,
+.ax-modal .mx-button.btn-default:focus,
+.ax-popup .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):hover,
+.ax-popup .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):focus,
+.ax-popup .mx-button.btn-default:hover,
+.ax-popup .mx-button.btn-default:focus {
+  color: #391085;
+  border-color: #391085;
   background-color: #fff;
 }
-.btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):active,
-.mx-button.btn-default:active {
-  color: #0958d9;
-  border-color: #0958d9;
+.ax-app .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):active,
+.ax-app .mx-button.btn-default:active,
+.ax-modal .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):active,
+.ax-modal .mx-button.btn-default:active,
+.ax-popup .btn-default:not(.btn-primary):not(.btn-success):not(.btn-warning):not(.btn-danger):active,
+.ax-popup .mx-button.btn-default:active {
+  color: #3f51b5;
+  border-color: #3f51b5;
 }
-
-.btn-primary {
+.ax-app .btn-primary,
+.ax-modal .btn-primary,
+.ax-popup .btn-primary {
   box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
 }
-.btn-primary:hover {
-  background-color: #4096ff;
-  border-color: #4096ff;
+.ax-app .btn-primary:hover,
+.ax-modal .btn-primary:hover,
+.ax-popup .btn-primary:hover {
+  background-color: #391085;
+  border-color: #391085;
 }
-.btn-primary:active {
-  background-color: #0958d9;
-  border-color: #0958d9;
+.ax-app .btn-primary:active,
+.ax-modal .btn-primary:active,
+.ax-popup .btn-primary:active {
+  background-color: #3f51b5;
+  border-color: #3f51b5;
 }
-
-.btn:focus-visible,
-.mx-button:focus-visible {
+.ax-app .btn:focus-visible,
+.ax-app .mx-button:focus-visible,
+.ax-modal .btn:focus-visible,
+.ax-modal .mx-button:focus-visible,
+.ax-popup .btn:focus-visible,
+.ax-popup .mx-button:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
 }
-
-.mx-link,
-.btn-link {
+.ax-app .mx-link,
+.ax-app .btn-link,
+.ax-modal .mx-link,
+.ax-modal .btn-link,
+.ax-popup .mx-link,
+.ax-popup .btn-link {
   color: #264ae5;
 }
-.mx-link:hover, .mx-link:focus,
-.btn-link:hover,
-.btn-link:focus {
-  color: #4096ff;
+.ax-app .mx-link:hover, .ax-app .mx-link:focus,
+.ax-app .btn-link:hover,
+.ax-app .btn-link:focus,
+.ax-modal .mx-link:hover,
+.ax-modal .mx-link:focus,
+.ax-modal .btn-link:hover,
+.ax-modal .btn-link:focus,
+.ax-popup .mx-link:hover,
+.ax-popup .mx-link:focus,
+.ax-popup .btn-link:hover,
+.ax-popup .btn-link:focus {
+  color: #391085;
 }
-
-/* ==========================================================================
-   Inputs — Ant control height, hover border, focus ring
-   ========================================================================== */
-.form-control {
-  min-height: 32px;
+.ax-app .form-control,
+.ax-modal .form-control,
+.ax-popup .form-control {
+  min-height: 28px;
   border-radius: 4px;
   transition: all 0.2s;
+  padding: 4px 8px;
 }
-.form-control:hover:not([disabled]):not([readonly]) {
-  border-color: #4096ff;
+.ax-app .form-control:hover:not([disabled]):not([readonly]),
+.ax-modal .form-control:hover:not([disabled]):not([readonly]),
+.ax-popup .form-control:hover:not([disabled]):not([readonly]) {
+  border-color: #391085;
 }
-
-.form-control:not([readonly]):focus, .form-control:not([readonly]):focus-within {
+.ax-app .form-control:not([readonly]):focus, .ax-app .form-control:not([readonly]):focus-within,
+.ax-modal .form-control:not([readonly]):focus,
+.ax-modal .form-control:not([readonly]):focus-within,
+.ax-popup .form-control:not([readonly]):focus,
+.ax-popup .form-control:not([readonly]):focus-within {
   border-color: #264ae5;
   box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
 }
-
-/* ==========================================================================
-   Tabs — Ant active label + ink bar
-   ========================================================================== */
-.nav-tabs > li.active > a,
-.mx-tabcontainer-tab.active {
+.ax-app .nav-tabs > li.active > a,
+.ax-app .mx-tabcontainer-tab.active,
+.ax-modal .nav-tabs > li.active > a,
+.ax-modal .mx-tabcontainer-tab.active,
+.ax-popup .nav-tabs > li.active > a,
+.ax-popup .mx-tabcontainer-tab.active {
   color: #264ae5;
   font-weight: 500;
 }
-
-/* ==========================================================================
-   Tables — Ant header chrome and row hover (classic + Data Grid 2)
-   ========================================================================== */
-table.mx-table > tbody > tr > th {
+.ax-app table.mx-table > tbody > tr > th,
+.ax-modal table.mx-table > tbody > tr > th,
+.ax-popup table.mx-table > tbody > tr > th {
   background-color: #fafafa;
   color: #0a1325;
   font-weight: 600;
   border-bottom: 1px solid #f0f0f0;
 }
-
-table.mx-table > tbody > tr:hover > td {
+.ax-app table.mx-table > tbody > tr:hover > td,
+.ax-modal table.mx-table > tbody > tr:hover > td,
+.ax-popup table.mx-table > tbody > tr:hover > td {
   background-color: #fafafa;
 }
-
-/* ==========================================================================
-   Cards / Group boxes / Modals — Ant radius + shadow
-   ========================================================================== */
-.card,
-.mx-groupbox,
-.mx-dataview {
+.ax-app .card,
+.ax-app .mx-groupbox,
+.ax-app .mx-dataview,
+.ax-modal .card,
+.ax-modal .mx-groupbox,
+.ax-modal .mx-dataview,
+.ax-popup .card,
+.ax-popup .mx-groupbox,
+.ax-popup .mx-dataview {
   border-radius: 8px;
 }
-
-.card {
+.ax-app .card,
+.ax-modal .card,
+.ax-popup .card {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
   border: 1px solid #f0f0f0;
 }
-
-.modal-content {
+.ax-app .modal-content,
+.ax-modal .modal-content,
+.ax-popup .modal-content {
   border: 0;
   border-radius: 8px;
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 }
-
-/* ==========================================================================
-   Switch — Ant pill shape
-   ========================================================================== */
-.widget-switch .widget-switch-btn-wrapper {
+.ax-app .widget-switch .widget-switch-btn-wrapper,
+.ax-modal .widget-switch .widget-switch-btn-wrapper,
+.ax-popup .widget-switch .widget-switch-btn-wrapper {
   min-width: 44px;
   height: 22px;
   border-radius: 100px;
 }
-.widget-switch .widget-switch-btn-wrapper:focus {
+.ax-app .widget-switch .widget-switch-btn-wrapper:focus,
+.ax-modal .widget-switch .widget-switch-btn-wrapper:focus,
+.ax-popup .widget-switch .widget-switch-btn-wrapper:focus {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
 }
-.widget-switch .widget-switch-btn {
+.ax-app .widget-switch .widget-switch-btn,
+.ax-modal .widget-switch .widget-switch-btn,
+.ax-popup .widget-switch .widget-switch-btn {
   border-radius: 100px;
 }
-
-/* ==========================================================================
-   Checkbox / Radio — Ant focus ring + primary accent
-   ========================================================================== */
-input[type=checkbox]:focus-visible,
-input[type=radio]:focus-visible {
+.ax-app input[type=checkbox]:focus-visible,
+.ax-app input[type=radio]:focus-visible,
+.ax-modal input[type=checkbox]:focus-visible,
+.ax-modal input[type=radio]:focus-visible,
+.ax-popup input[type=checkbox]:focus-visible,
+.ax-popup input[type=radio]:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
 }
-
-/* ==========================================================================
-   DATA WIDGETS — Data Grid 2, filters, dropdown-filter, gallery, tree node
-   --------------------------------------------------------------------------
-   The `datawidgets` module reads CSS custom properties (--brand-primary,
-   --grid-border-color, --grid-selected-row-background, --wdf-*), so most of it
-   already re-skins from the token change in custom-variables.scss. Here we
-   inject the Ant-specific values those widgets can't express via tokens.
-   Using CSS vars + higher-specificity selectors keeps these wins independent
-   of whether datawidgets.css loads before or after axoneui.css.
-   ========================================================================== */
-:root {
+.ax-app :root,
+.ax-modal :root,
+.ax-popup :root {
   --grid-selected-row-background: #e6f4ff;
-  --wdf-filter-box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12),
-      0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  --wdf-filter-box-shadow:
+      0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 }
-
-.widget-datagrid {
+.ax-app .widget-datagrid,
+.ax-modal .widget-datagrid,
+.ax-popup .widget-datagrid {
   --grid-border-color: #f0f0f0;
 }
-.widget-datagrid .th {
+.ax-app .widget-datagrid .th,
+.ax-modal .widget-datagrid .th,
+.ax-popup .widget-datagrid .th {
   background-color: #fafafa;
   color: #0a1325;
   border-bottom: 1px solid #f0f0f0;
 }
-.widget-datagrid .tr:hover > .td {
+.ax-app .widget-datagrid .tr:hover > .td,
+.ax-modal .widget-datagrid .tr:hover > .td,
+.ax-popup .widget-datagrid .tr:hover > .td {
   background-color: #fafafa;
 }
-.widget-datagrid.widget-datagrid-selection-method-click .tr.tr-selected:hover .td {
+.ax-app .widget-datagrid.widget-datagrid-selection-method-click .tr.tr-selected:hover .td,
+.ax-modal .widget-datagrid.widget-datagrid-selection-method-click .tr.tr-selected:hover .td,
+.ax-popup .widget-datagrid.widget-datagrid-selection-method-click .tr.tr-selected:hover .td {
   background-color: #bae0ff;
 }
-
-.column-selectors,
-.filter-selectors,
-.dropdown-content,
-:not(.dropdown-content) > .dropdown-list {
+.ax-app .column-selectors,
+.ax-app .filter-selectors,
+.ax-app .dropdown-content,
+.ax-app :not(.dropdown-content) > .dropdown-list,
+.ax-modal .column-selectors,
+.ax-modal .filter-selectors,
+.ax-modal .dropdown-content,
+.ax-modal :not(.dropdown-content) > .dropdown-list,
+.ax-popup .column-selectors,
+.ax-popup .filter-selectors,
+.ax-popup .dropdown-content,
+.ax-popup :not(.dropdown-content) > .dropdown-list {
   border-radius: 8px;
   box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 }
-
-.filter-selectors .filter-listitem.filter-selected,
-.filter-selectors li.filter-selected,
-.dropdown-list li.filter-selected {
+.ax-app .filter-selectors .filter-listitem.filter-selected,
+.ax-app .filter-selectors li.filter-selected,
+.ax-app .dropdown-list li.filter-selected,
+.ax-modal .filter-selectors .filter-listitem.filter-selected,
+.ax-modal .filter-selectors li.filter-selected,
+.ax-modal .dropdown-list li.filter-selected,
+.ax-popup .filter-selectors .filter-listitem.filter-selected,
+.ax-popup .filter-selectors li.filter-selected,
+.ax-popup .dropdown-list li.filter-selected {
   background-color: #e6f4ff;
   color: #264ae5;
 }
-
-.widget-dropdown-filter {
+.ax-app .widget-dropdown-filter,
+.ax-modal .widget-dropdown-filter,
+.ax-popup .widget-dropdown-filter {
   --wdf-bd-radius: 8px;
   --wdf-selected-bg-color: #e6f4ff;
   --wdf-highlighted-bg-color: #fafafa;
 }
-.widget-dropdown-filter.variant-tag-picker .widget-dropdown-filter-selected-item {
+.ax-app .widget-dropdown-filter.variant-tag-picker .widget-dropdown-filter-selected-item,
+.ax-modal .widget-dropdown-filter.variant-tag-picker .widget-dropdown-filter-selected-item,
+.ax-popup .widget-dropdown-filter.variant-tag-picker .widget-dropdown-filter-selected-item {
   border-radius: 4px;
   background-color: #e6f4ff;
   color: #264ae5;
 }
-
-input[type=checkbox].three-state-checkbox:before {
+.ax-app input[type=checkbox].three-state-checkbox:before,
+.ax-modal input[type=checkbox].three-state-checkbox:before,
+.ax-popup input[type=checkbox].three-state-checkbox:before {
   border-radius: 4px;
 }
-
-.pagination-bar .pagination-button:focus-visible {
+.ax-app .pagination-bar .pagination-button:focus-visible,
+.ax-modal .pagination-bar .pagination-button:focus-visible,
+.ax-popup .pagination-bar .pagination-button:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
 }
-
-.widget-gallery .widget-gallery-clickable:focus-visible {
+.ax-app .widget-gallery .widget-gallery-clickable:focus-visible,
+.ax-modal .widget-gallery .widget-gallery-clickable:focus-visible,
+.ax-popup .widget-gallery .widget-gallery-clickable:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 2px rgba(5, 145, 255, 0.1);
 }
@@ -43864,6 +43959,11 @@ body {
   background-color: #8c8c8c;
 }
 
+.ax-spacer {
+  display: inline-block;
+  width: 8px;
+}
+
 .ax-app {
   width: 100vw !important;
   height: 100vh !important;
@@ -43953,6 +44053,75 @@ body {
 .ax-modal .modal-body .mx-placeholder {
   width: 100%;
   height: 100%;
+}
+.ax-modal .ax-modal-content {
+  padding: 8px;
+  max-height: 100%;
+  height: calc(100% - 45px);
+  overflow-y: auto;
+}
+.ax-modal .ax-modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  padding: 8px;
+  border-top: solid 1px #ced0d3;
+}
+
+.ax-info-table {
+  border-collapse: separate;
+  /* Required for border-radius */
+  border-spacing: 0;
+  /* Removes space between cells */
+  border-radius: 4px;
+  /* Round top-left corner (typically the first header cell) */
+  /* Round top-right corner (typically the last header cell) */
+  /* Round bottom-left corner */
+  /* Round bottom-right corner */
+}
+.ax-info-table tr th {
+  padding: 0px 8px !important;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #f0f0f0;
+}
+.ax-info-table tr th label {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  list-style: 1;
+  font-weight: 600;
+  color: #595959;
+}
+.ax-info-table tr td {
+  padding: 0px 8px !important;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid #f0f0f0;
+}
+.ax-info-table tr td .form-group {
+  margin-bottom: 0;
+}
+.ax-info-table tr:first-child th:first-child,
+.ax-info-table tr:first-child td:first-child {
+  border-top-left-radius: 4px !important;
+}
+.ax-info-table tr:first-child th:last-child,
+.ax-info-table tr:first-child td:last-child {
+  border-top-right-radius: 4px !important;
+}
+.ax-info-table tr:last-child th:first-child,
+.ax-info-table tr:last-child td:first-child {
+  border-bottom-left-radius: 4px !important;
+}
+.ax-info-table tr:last-child th:last-child,
+.ax-info-table tr:last-child td:last-child {
+  border-bottom-right-radius: 4px !important;
 }
 
 .pagination-bar {
