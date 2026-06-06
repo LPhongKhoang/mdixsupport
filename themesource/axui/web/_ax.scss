@@ -32,14 +32,21 @@ body {
   font-size: 14px !important;
   background-color: #8c8c8c !important;
 
-  > .mx-placeholder,
-  > .mx-dataview {
+  .mx-placeholder,
+  .mx-dataview {
     width: 100% !important;
     height: 100% !important;
-    > .mx-dataview-content {
+    .mx-dataview-content {
       width: 100% !important;
       height: 100% !important;
     }
+  }
+
+  .reset-full-w {
+    width: auto !important;
+  }
+  .reset-full-h {
+    height: auto !important;
   }
 
   .ax-page {
@@ -70,6 +77,15 @@ body {
       > .mx-dataview-content {
         width: 100% !important;
         height: 100% !important;
+      }
+    }
+
+    > .row {
+      height: 100% !important;
+      > .col {
+        height: 100% !important;
+        padding-right: 2px;
+        padding-left: 2px;
       }
     }
   }
@@ -139,7 +155,7 @@ body {
 
 .ax-info-table {
   border-collapse: separate; /* Required for border-radius */
-  border-spacing: 0;         /* Removes space between cells */
+  border-spacing: 0; /* Removes space between cells */
   border-radius: 4px;
 
   tr {
@@ -156,7 +172,7 @@ body {
         margin: 0;
         font-size: 14px;
         list-style: 1;
-        font-weight: 600;
+        font-weight: 500;
         color: #595959;
       }
     }
