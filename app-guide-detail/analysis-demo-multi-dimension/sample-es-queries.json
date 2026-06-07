@@ -1,0 +1,351 @@
+{
+  "_comment": "Sample ES Queries cho Sales OLAP - Copy từng query để test qua curl hoặc Postman",
+
+  "01_basic_overview": {
+    "description": "Tổng quan: tổng doanh thu, số lượng, số giao dịch",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "total_revenue": { "sum": { "field": "total_amount" } },
+        "total_quantity": { "sum": { "field": "quantity" } },
+        "avg_order_value": { "avg": { "field": "total_amount" } },
+        "min_sale": { "min": { "field": "total_amount" } },
+        "max_sale": { "max": { "field": "total_amount" } }
+      }
+    }
+  },
+
+  "02_slice_by_category": {
+    "description": "Slice: Lọc chỉ category Electronics",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "query": {
+        "term": { "category_name": "Electronics" }
+      },
+      "aggs": {
+        "total_revenue": { "sum": { "field": "total_amount" } },
+        "total_quantity": { "sum": { "field": "quantity" } }
+      }
+    }
+  },
+
+  "03_dice_multi_filter": {
+    "description": "Dice: Electronics + 2024 + Vietnam",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "query": {
+        "bool": {
+          "filter": [
+            { "term": { "category_name": "Electronics" } },
+            { "term": { "year": 2024 } },
+            { "term": { "country_name": "Vietnam" } }
+          ]
+        }
+      },
+      "aggs": {
+        "total_revenue": { "sum": { "field": "total_amount" } },
+        "total_quantity": { "sum": { "field": "quantity" } }
+      }
+    }
+  },
+
+  "04_drilldown_product_level0": {
+    "description": "Drill-down Product Level 0: Doanh thu theo Category",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "by_dimension": {
+          "terms": { "field": "category_name", "size": 20, "order": { "total_revenue": "desc" } },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } },
+            "avg_order": { "avg": { "field": "total_amount" } }
+          }
+        }
+      }
+    }
+  },
+
+  "05_drilldown_product_level1": {
+    "description": "Drill-down Product Level 1: Drill vào Electronics → xem theo Product",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "query": {
+        "term": { "category_name": "Electronics" }
+      },
+      "aggs": {
+        "by_dimension": {
+          "terms": { "field": "product_name.keyword", "size": 50, "order": { "total_revenue": "desc" } },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } },
+            "avg_order": { "avg": { "field": "total_amount" } }
+          }
+        }
+      }
+    }
+  },
+
+  "06_drilldown_product_level2": {
+    "description": "Drill-down Product Level 2: Drill vào iPhone 15 Pro → xem theo Variant SKU",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "query": {
+        "bool": {
+          "filter": [
+            { "term": { "category_name": "Electronics" } },
+            { "term": { "product_name": "iPhone 15 Pro" } }
+          ]
+        }
+      },
+      "aggs": {
+        "by_dimension": {
+          "terms": { "field": "variant_sku", "size": 50, "order": { "total_revenue": "desc" } },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } },
+            "avg_order": { "avg": { "field": "total_amount" } }
+          }
+        }
+      }
+    }
+  },
+
+  "07_drilldown_time_level0": {
+    "description": "Drill-down Time Level 0: Doanh thu theo Year",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "by_dimension": {
+          "terms": { "field": "year", "size": 10, "order": { "_key": "asc" } },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } },
+            "avg_order": { "avg": { "field": "total_amount" } }
+          }
+        }
+      }
+    }
+  },
+
+  "08_drilldown_time_level1": {
+    "description": "Drill-down Time Level 1: Drill vào 2024 → xem theo Quarter",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "query": {
+        "term": { "year": 2024 }
+      },
+      "aggs": {
+        "by_dimension": {
+          "terms": { "field": "quarter", "size": 4, "order": { "_key": "asc" } },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } },
+            "avg_order": { "avg": { "field": "total_amount" } }
+          }
+        }
+      }
+    }
+  },
+
+  "09_drilldown_time_level2": {
+    "description": "Drill-down Time Level 2: Drill vào 2024-Q1 → xem theo Month",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "query": {
+        "bool": {
+          "filter": [
+            { "term": { "year": 2024 } },
+            { "term": { "quarter": 1 } }
+          ]
+        }
+      },
+      "aggs": {
+        "by_dimension": {
+          "terms": { "field": "month", "size": 12, "order": { "_key": "asc" } },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } }
+          }
+        }
+      }
+    }
+  },
+
+  "10_drilldown_customer_level0": {
+    "description": "Drill-down Customer Level 0: Doanh thu theo Segment",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "by_dimension": {
+          "terms": { "field": "customer_segment", "size": 10, "order": { "total_revenue": "desc" } },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } },
+            "avg_order": { "avg": { "field": "total_amount" } }
+          }
+        }
+      }
+    }
+  },
+
+  "11_drilldown_geography_level0": {
+    "description": "Drill-down Geography Level 0: Doanh thu theo Country",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "by_dimension": {
+          "terms": { "field": "country_name", "size": 20, "order": { "total_revenue": "desc" } },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } },
+            "avg_order": { "avg": { "field": "total_amount" } }
+          }
+        }
+      }
+    }
+  },
+
+  "12_crosstab_category_quarter": {
+    "description": "Cross-tab: Revenue by Category × Quarter (pivot matrix)",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "by_category": {
+          "terms": { "field": "category_name", "size": 20 },
+          "aggs": {
+            "by_quarter": {
+              "terms": { "field": "quarter", "size": 4, "order": { "_key": "asc" } },
+              "aggs": {
+                "revenue": { "sum": { "field": "total_amount" } }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "13_top10_products": {
+    "description": "Top 10 Products by Revenue",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "by_dimension": {
+          "terms": { "field": "product_name.keyword", "size": 10, "order": { "total_revenue": "desc" } },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } }
+          }
+        }
+      }
+    }
+  },
+
+  "14_monthly_trend": {
+    "description": "Monthly Revenue Trend (3 years)",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "by_dimension": {
+          "date_histogram": {
+            "field": "sale_date",
+            "calendar_interval": "month",
+            "format": "yyyy-MM",
+            "min_doc_count": 0
+          },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } }
+          }
+        }
+      }
+    }
+  },
+
+  "15_combined_drilldown_with_filter": {
+    "description": "Combined: Filter Vietnam + Drill-down Product by Category",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "query": {
+        "bool": {
+          "filter": [
+            { "term": { "country_name": "Vietnam" } },
+            { "term": { "year": 2024 } }
+          ]
+        }
+      },
+      "aggs": {
+        "by_dimension": {
+          "terms": { "field": "category_name", "size": 20, "order": { "total_revenue": "desc" } },
+          "aggs": {
+            "total_revenue": { "sum": { "field": "total_amount" } },
+            "total_qty": { "sum": { "field": "quantity" } }
+          }
+        }
+      }
+    }
+  },
+
+  "16_filter_options_category": {
+    "description": "Get dropdown options: All category values (for UI filter)",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "categories": {
+          "terms": { "field": "category_name", "size": 100 }
+        }
+      }
+    }
+  },
+
+  "17_filter_options_countries": {
+    "description": "Get dropdown options: All country values",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "countries": {
+          "terms": { "field": "country_name", "size": 100 }
+        }
+      }
+    }
+  },
+
+  "18_yoy_comparison": {
+    "description": "Year-over-Year: Revenue comparison by category across years",
+    "endpoint": "POST /sales_olap/_search",
+    "query": {
+      "size": 0,
+      "aggs": {
+        "by_year": {
+          "terms": { "field": "year", "size": 10, "order": { "_key": "asc" } },
+          "aggs": {
+            "by_category": {
+              "terms": { "field": "category_name", "size": 20, "order": { "total_revenue": "desc" } },
+              "aggs": {
+                "total_revenue": { "sum": { "field": "total_amount" } }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

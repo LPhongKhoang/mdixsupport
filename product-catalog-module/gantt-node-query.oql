@@ -1,0 +1,61 @@
+-- ============================================================================
+-- OQL Query: Populate GanttNodeDTO for Gantt Chart
+-- Module: ProductCatalogModule
+-- Target Entity: GanttNodeDTO (non-persistent)
+--
+-- Hierarchy:
+--   Category  (root nodes, ParentId = 0)
+--     └─ Product  (children of Category)
+--          └─ ProductVariant  (children of Product, with actual date ranges)
+--
+-- Note: Mendix OQL does NOT support subqueries in JOINs.
+--       Category/Product EndDate is NULL (Gantt chart renders them as group headers).
+--       Only ProductVariant leaf nodes have actual date range bars.
+-- ============================================================================
+
+-- Level 1: Categories (root / group nodes)
+SELECT
+    C.id          AS NodeID,
+    0             AS ParentId,
+    C.Name        AS Name,
+    'Category'    AS NodeType,
+    NULL          AS StartDate,
+    NULL          AS EndDate,
+    C.Description AS Note,
+    ''            AS SKU
+FROM ProductCatalogModule.Category AS C
+WHERE C.IsActive = 'true'
+
+UNION ALL
+
+-- Level 2: Products (sub-group nodes)
+SELECT
+    P.id            AS NodeID,
+    C.id            AS ParentId,
+    P.Name          AS Name,
+    'Product'       AS NodeType,
+    P.CreatedDateAt AS StartDate,
+    NULL            AS EndDate,
+    P.Description   AS Note,
+    P.Code          AS SKU
+FROM ProductCatalogModule.Product AS P
+    JOIN P/ProductCatalogModule.Product_Category/ProductCatalogModule.Category AS C
+WHERE P.IsActive = 'true'
+
+UNION ALL
+
+-- Level 3: Product Variants (leaf nodes with actual date bars)
+SELECT
+    PV.id            AS NodeID,
+    P.id             AS ParentId,
+    PV.SKU           AS Name,
+    'Variant'        AS NodeType,
+    PV.StartDate     AS StartDate,
+    PV.EndDate       AS EndDate,
+    PV.Note          AS Note,
+    PV.SKU           AS SKU
+FROM ProductCatalogModule.ProductVariant AS PV
+    JOIN PV/ProductCatalogModule.ProductVariant_Product/ProductCatalogModule.Product AS P
+WHERE PV.IsActive = 'true'
+
+ORDER BY NodeType, NodeID
