@@ -168,16 +168,47 @@ PRODUCTS = {
     ],
 }
 
-# Flatten into a pick-friendly list: (category, product, sku, variant_label, price)
+# Derive product_code from product_name (abbreviated)
+def _make_product_code(name):
+    """Generate a short product code from product name."""
+    words = name.replace("&", "").split()
+    return "-".join(w[:3].upper() for w in words[:2]) if len(words) >= 2 else words[0][:6].upper()
+
+
+# Derive variant_color and variant_size from variant_label
+def _parse_variant_label(label):
+    """Try to extract color and size from variant label like '256GB Black' or 'Large'."""
+    color = ""
+    size = ""
+    known_colors = ["Black", "White", "Silver", "Blue", "Red", "Green", "Gold",
+                    "Graphite", "Midnight", "Pink", "Natural"]
+    label_words = label.split()
+    for word in label_words:
+        if word in known_colors:
+            color = word
+        else:
+            size = word if not size else size + " " + word
+    if not color:
+        color = "Default"
+    if not size:
+        size = label  # fallback: use full label as size
+    return color, size
+
+
+# Flatten into a pick-friendly list with design-compliant field names
 FLAT_VARIANTS = []
 for category, products in PRODUCTS.items():
     for product_name, variants in products:
+        product_code = _make_product_code(product_name)
         for sku, variant_label, price in variants:
+            v_color, v_size = _parse_variant_label(variant_label)
             FLAT_VARIANTS.append({
-                "category":       category,
+                "category_name":  category,
                 "product_name":   product_name,
-                "sku":            sku,
-                "variant_label":  variant_label,
+                "product_code":   product_code,
+                "variant_sku":    sku,
+                "variant_color":  v_color,
+                "variant_size":   v_size,
                 "unit_price":     price,
             })
 
@@ -275,40 +306,56 @@ print(f"Customer dimension: {len(ALL_CUSTOMERS)} customers across "
 
 GEOGRAPHY = {
     "Vietnam": {
-        "Ho Chi Minh": ["HCM Downtown Store",    "HCM District 7 Mall"],
-        "Ha Noi":      ["Ha Noi Old Quarter Store", "Ha Noi Mall Store"],
-        "Da Nang":     ["Da Nang Beach Store",    "Da Nang City Center"],
+        "region": "Southeast Asia",
+        "cities": {
+            "Ho Chi Minh": ["HCM Downtown Store",    "HCM District 7 Mall"],
+            "Ha Noi":      ["Ha Noi Old Quarter Store", "Ha Noi Mall Store"],
+            "Da Nang":     ["Da Nang Beach Store",    "Da Nang City Center"],
+        },
     },
     "Thailand": {
-        "Bangkok":     ["Bangkok Sukhumvit Store", "Bangkok Siam Mall"],
-        "Chiang Mai":  ["Chiang Mai Night Bazaar Store", "Chiang Mai Central Mall"],
-        "Phuket":      ["Phuket Patong Store",    "Phuket Jungceylon Mall"],
+        "region": "Southeast Asia",
+        "cities": {
+            "Bangkok":     ["Bangkok Sukhumvit Store", "Bangkok Siam Mall"],
+            "Chiang Mai":  ["Chiang Mai Night Bazaar Store", "Chiang Mai Central Mall"],
+            "Phuket":      ["Phuket Patong Store",    "Phuket Jungceylon Mall"],
+        },
     },
     "Singapore": {
-        "Singapore City": ["SG Orchard Store",    "SG Marina Bay Store"],
-        "Jurong":         ["SG Jurong East Store", "SG Westgate Mall"],
+        "region": "Southeast Asia",
+        "cities": {
+            "Singapore City": ["SG Orchard Store",    "SG Marina Bay Store"],
+            "Jurong":         ["SG Jurong East Store", "SG Westgate Mall"],
+        },
     },
     "Indonesia": {
-        "Jakarta":     ["Jakarta Sudirman Store", "Jakarta Grand Indonesia"],
-        "Bali":        ["Bali Kuta Store",        "Bali Seminyak Store"],
-        "Surabaya":    ["Surabaya Tunjungan Store", "Surabaya Galaxy Mall"],
+        "region": "Southeast Asia",
+        "cities": {
+            "Jakarta":     ["Jakarta Sudirman Store", "Jakarta Grand Indonesia"],
+            "Bali":        ["Bali Kuta Store",        "Bali Seminyak Store"],
+            "Surabaya":    ["Surabaya Tunjungan Store", "Surabaya Galaxy Mall"],
+        },
     },
     "Malaysia": {
-        "Kuala Lumpur": ["KL Pavilion Store",     "KL Mid Valley Mall"],
-        "Penang":        ["Penang Gurney Store",   "Penang Queensbay Mall"],
-        "Johor Bahru":   ["JB City Square Store",  "JB Paradigm Mall"],
+        "region": "Southeast Asia",
+        "cities": {
+            "Kuala Lumpur": ["KL Pavilion Store",     "KL Mid Valley Mall"],
+            "Penang":        ["Penang Gurney Store",   "Penang Queensbay Mall"],
+            "Johor Bahru":   ["JB City Square Store",  "JB Paradigm Mall"],
+        },
     },
 }
 
-# Flatten: list of (country, city, store)
+# Flatten: list with design-compliant field names
 FLAT_GEO = []
-for country, cities in GEOGRAPHY.items():
-    for city, stores in cities.items():
+for country, data in GEOGRAPHY.items():
+    for city, stores in data["cities"].items():
         for store in stores:
             FLAT_GEO.append({
-                "country": country,
-                "city":    city,
-                "store":   store,
+                "country_name":   country,
+                "country_region": data["region"],
+                "city_name":      city,
+                "store_name":     store,
             })
 
 # Count totals
@@ -337,14 +384,12 @@ DAY_NAMES = [
 def compute_time_fields(sale_date):
     """Derive denormalized time dimension fields from a date object."""
     return {
-        "date":         sale_date.isoformat(),              # "2023-07-15"
+        "sale_date":    sale_date.isoformat(),              # "2023-07-15"
         "year":         sale_date.year,                     # 2023
         "quarter":      (sale_date.month - 1) // 3 + 1,    # 3
         "month":        sale_date.month,                    # 7
         "month_name":   MONTH_NAMES[sale_date.month],       # "July"
-        "day":          sale_date.day,                      # 15
-        "day_of_week":  DAY_NAMES[sale_date.weekday()],     # "Saturday"
-        "is_weekend":   sale_date.weekday() >= 5,           # True
+        "day_of_week":  sale_date.weekday() + 1,            # 1=Mon, 7=Sun (integer)
     }
 
 
@@ -464,7 +509,7 @@ def generate_transactions(num_transactions=20000):
         # --- Time fields ---
         time_fields = compute_time_fields(sale_date)
 
-        # --- Assemble flat document ---
+        # --- Assemble flat document (design-compliant field names) ---
         doc = {
             # Sale identifiers
             "sale_id": f"S{i+1:05d}",
@@ -473,25 +518,26 @@ def generate_transactions(num_transactions=20000):
             **time_fields,
 
             # Product dimension (denormalized)
-            "category":       variant["category"],
+            "category_name":  variant["category_name"],
             "product_name":   variant["product_name"],
-            "variant_label":  variant["variant_label"],
-            "sku":            variant["sku"],
+            "product_code":   variant["product_code"],
+            "variant_sku":    variant["variant_sku"],
+            "variant_color":  variant["variant_color"],
+            "variant_size":   variant["variant_size"],
 
             # Customer dimension (denormalized)
-            "customer_id":    customer["customer_id"],
-            "customer_name":  customer["customer_name"],
-            "segment":        customer["segment"],
+            "customer_name":   customer["customer_name"],
+            "customer_segment": customer["segment"],
 
             # Geography dimension (denormalized)
-            "country":        geo["country"],
-            "city":           geo["city"],
-            "store":          geo["store"],
+            "country_name":   geo["country_name"],
+            "country_region": geo["country_region"],
+            "city_name":      geo["city_name"],
+            "store_name":     geo["store_name"],
 
             # Fact measures
             "quantity":        quantity,
             "unit_price":      unit_price,
-            "gross_amount":    gross_amount,
             "discount_amount": discount_amount,
             "total_amount":    total_amount,
         }
@@ -557,35 +603,38 @@ def load_to_elasticsearch(bulk_file, es_host="http://localhost:9200"):
         print(f"  Index 'sales_olap' already exists.")
     except HTTPError as e:
         if e.code == 404:
-            # Index does not exist — create with mapping
+            # Index does not exist — create with mapping matching our design
             mapping = {
+                "settings": {
+                    "number_of_shards": 1,
+                    "number_of_replicas": 0
+                },
                 "mappings": {
                     "properties": {
-                        "sale_id":         {"type": "keyword"},
-                        "order_number":    {"type": "keyword"},
-                        "date":            {"type": "date", "format": "yyyy-MM-dd"},
-                        "year":            {"type": "integer"},
-                        "quarter":         {"type": "integer"},
-                        "month":           {"type": "integer"},
-                        "month_name":      {"type": "keyword"},
-                        "day":             {"type": "integer"},
-                        "day_of_week":     {"type": "keyword"},
-                        "is_weekend":      {"type": "boolean"},
-                        "category":        {"type": "keyword"},
-                        "product_name":    {"type": "keyword"},
-                        "variant_label":   {"type": "keyword"},
-                        "sku":             {"type": "keyword"},
-                        "customer_id":     {"type": "keyword"},
-                        "customer_name":   {"type": "keyword"},
-                        "segment":         {"type": "keyword"},
-                        "country":         {"type": "keyword"},
-                        "city":            {"type": "keyword"},
-                        "store":           {"type": "keyword"},
-                        "quantity":        {"type": "integer"},
-                        "unit_price":      {"type": "long"},
-                        "gross_amount":    {"type": "long"},
-                        "discount_amount": {"type": "long"},
-                        "total_amount":    {"type": "long"},
+                        "sale_id":           {"type": "keyword"},
+                        "order_number":      {"type": "keyword"},
+                        "sale_date":         {"type": "date", "format": "yyyy-MM-dd"},
+                        "year":              {"type": "integer"},
+                        "quarter":           {"type": "integer"},
+                        "month":             {"type": "integer"},
+                        "month_name":        {"type": "keyword"},
+                        "day_of_week":       {"type": "integer"},
+                        "customer_name":     {"type": "text", "fields": {"keyword": {"type": "keyword"}}},
+                        "customer_segment":  {"type": "keyword"},
+                        "country_name":      {"type": "keyword"},
+                        "country_region":    {"type": "keyword"},
+                        "city_name":         {"type": "keyword"},
+                        "store_name":        {"type": "text", "fields": {"keyword": {"type": "keyword"}}},
+                        "category_name":     {"type": "keyword"},
+                        "product_name":      {"type": "text", "fields": {"keyword": {"type": "keyword"}}},
+                        "product_code":      {"type": "keyword"},
+                        "variant_sku":       {"type": "keyword"},
+                        "variant_color":     {"type": "keyword"},
+                        "variant_size":      {"type": "keyword"},
+                        "quantity":          {"type": "integer"},
+                        "unit_price":        {"type": "double"},
+                        "discount_amount":   {"type": "double"},
+                        "total_amount":      {"type": "double"},
                     }
                 }
             }
@@ -622,7 +671,7 @@ def load_to_elasticsearch(bulk_file, es_host="http://localhost:9200"):
             for fail in failures[:5]:
                 print(f"    {fail['index']['_id']}: {fail['index']['error']}")
         else:
-            print(f"  Successfully loaded all {len(transactions):,} records.")
+            print(f"  Successfully loaded all records.")
     except HTTPError as e:
         print(f"  ERROR: ES returned {e.code}: {e.read().decode('utf-8')[:500]}")
         sys.exit(1)
@@ -636,17 +685,15 @@ def print_stats(transactions):
 
     # --- Basic stats ---
     print(f"\n  Total records:     {len(transactions):,}")
-    dates = [tx["date"] for tx in transactions]
+    dates = [tx["sale_date"] for tx in transactions]
     print(f"  Date range:        {min(dates)} to {max(dates)}")
 
     # --- Revenue ---
     total_revenue = sum(tx["total_amount"] for tx in transactions)
-    total_gross = sum(tx["gross_amount"] for tx in transactions)
     total_discount = sum(tx["discount_amount"] for tx in transactions)
     avg_order = total_revenue / len(transactions)
     print(f"\n  Revenue Stats (VND):")
     print(f"    Total Revenue:   {total_revenue:>20,} VND")
-    print(f"    Total Gross:     {total_gross:>20,} VND")
     print(f"    Total Discount:  {total_discount:>20,} VND")
     print(f"    Avg Order Value: {avg_order:>20,.0f} VND")
 
@@ -666,7 +713,7 @@ def print_stats(transactions):
     print(f"\n  By Segment:")
     by_segment = defaultdict(lambda: {"count": 0, "revenue": 0})
     for tx in transactions:
-        s = tx["segment"]
+        s = tx["customer_segment"]
         by_segment[s]["count"] += 1
         by_segment[s]["revenue"] += tx["total_amount"]
     for seg in ["B2B", "B2C", "VIP", "Retail"]:
@@ -678,7 +725,7 @@ def print_stats(transactions):
     print(f"\n  By Category:")
     by_cat = defaultdict(lambda: {"count": 0, "revenue": 0})
     for tx in transactions:
-        c = tx["category"]
+        c = tx["category_name"]
         by_cat[c]["count"] += 1
         by_cat[c]["revenue"] += tx["total_amount"]
     for cat in sorted(by_cat, key=lambda x: by_cat[x]["revenue"], reverse=True):
@@ -690,7 +737,7 @@ def print_stats(transactions):
     print(f"\n  By Country:")
     by_country = defaultdict(lambda: {"count": 0, "revenue": 0})
     for tx in transactions:
-        c = tx["country"]
+        c = tx["country_name"]
         by_country[c]["count"] += 1
         by_country[c]["revenue"] += tx["total_amount"]
     for country in sorted(by_country, key=lambda x: by_country[x]["revenue"],
