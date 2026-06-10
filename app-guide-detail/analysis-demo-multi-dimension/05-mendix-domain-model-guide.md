@@ -72,13 +72,15 @@ Click double vao entity `OlapFilter` de mo dialog, sau do click **New** de them 
 | 6 | `monthFilter` | Integer | (rong) | Tuy chon |
 | 7 | `categoryFilter` | String | (rong) | Tuy chon |
 | 8 | `productFilter` | String | (rong) | Tuy chon |
-| 9 | `customerFilter` | String | (rong) | Tuy chon |
-| 10 | `segmentFilter` | String | (rong) | Tuy chon |
-| 11 | `countryFilter` | String | (rong) | Tuy chon |
-| 12 | `cityFilter` | String | (rong) | Tuy chon |
-| 13 | `storeFilter` | String | (rong) | Tuy chon |
-| 14 | `dateFrom` | DateTime | (rong) | Tuy chon |
-| 15 | `dateTo` | DateTime | (rong) | Tuy chon |
+| 9 | `variantSkuFilter` | String | (rong) | Tuy chon - Product drill-down Level 2 (category_name -> product_name -> variant_sku) |
+| 10 | `customerFilter` | String | (rong) | Tuy chon |
+| 11 | `segmentFilter` | String | (rong) | Tuy chon |
+| 12 | `countryFilter` | String | (rong) | Tuy chon |
+| 13 | `regionFilter` | String | (rong) | Tuy chon - Geography drill-down Level 1 (country_name -> country_region -> city_name) |
+| 14 | `cityFilter` | String | (rong) | Tuy chon |
+| 15 | `storeFilter` | String | (rong) | Tuy chon |
+| 16 | `dateFrom` | DateTime | (rong) | Tuy chon |
+| 17 | `dateTo` | DateTime | (rong) | Tuy chon |
 
 **Chi tiet tung attribute:**
 
@@ -110,28 +112,46 @@ Click double vao entity `OlapFilter` de mo dialog, sau do click **New** de them 
 4. Default value: (de trong)
 5. Click **OK**
 
-**Attribute 7-10: categoryFilter, productFilter, customerFilter, segmentFilter**
+**Attribute 7-8: categoryFilter, productFilter**
 1. Click **New**
-2. Name: `categoryFilter` (lan luot lam tuong tu cho `productFilter`, `customerFilter`, `segmentFilter`)
+2. Name: `categoryFilter` (lam tuong tu cho `productFilter`)
 3. Type: chon **String**
 4. Default value: (de trong)
 5. Click **OK**
 
-**Attribute 11-13: countryFilter, cityFilter, storeFilter**
+**Attribute 9: variantSkuFilter**
 1. Click **New**
-2. Name: `countryFilter` (lan luot lam tuong tu cho `cityFilter`, `storeFilter`)
+2. Name: `variantSkuFilter`
 3. Type: chon **String**
 4. Default value: (de trong)
 5. Click **OK**
 
-**Attribute 14: dateFrom**
+> **Ghi chu**: `variantSkuFilter` duoc su dung cho Product drill-down Level 2. Duong dan drill-down cua Product la: `category_name` -> `product_name` -> `variant_sku`. Khi user drill-down tu product_name, `variantSkuFilter` se luu gia tri variant_sku de filter.
+
+**Attribute 10-11: customerFilter, segmentFilter**
+1. Click **New**
+2. Name: `customerFilter` (lam tuong tu cho `segmentFilter`)
+3. Type: chon **String**
+4. Default value: (de trong)
+5. Click **OK**
+
+**Attribute 12-15: countryFilter, regionFilter, cityFilter, storeFilter**
+1. Click **New**
+2. Name: `countryFilter` (lan luot lam tuong tu cho `regionFilter`, `cityFilter`, `storeFilter`)
+3. Type: chon **String**
+4. Default value: (de trong)
+5. Click **OK**
+
+> **Luu y**: `regionFilter` dung cho Geography drill-down Level 1→2, tuong ung voi ES field `country_region`. Thu tu drill-down la: country_name (Level 0) → country_region (Level 1) → city_name (Level 2).
+
+**Attribute 16: dateFrom**
 1. Click **New**
 2. Name: `dateFrom`
 3. Type: chon **DateTime**
 4. Default value: (de trong)
 5. Click **OK**
 
-**Attribute 15: dateTo**
+**Attribute 17: dateTo**
 1. Click **New**
 2. Name: `dateTo`
 3. Type: chon **DateTime**
@@ -140,7 +160,7 @@ Click double vao entity `OlapFilter` de mo dialog, sau do click **New** de them 
 
 Sau khi them xong tat ca attributes, click **OK** de dong dialog.
 
-> **Screenshot**: Entity `OlapFilter` se hien thi tren working area voi danh sach tat ca 15 attributes. Entity co bieu tuong NPE (khong co dau hieu database) de chi day la Non-Persistent Entity.
+> **Screenshot**: Entity `OlapFilter` se hien thi tren working area voi danh sach tat ca 17 attributes. Entity co bieu tuong NPE (khong co dau hieu database) de chi day la Non-Persistent Entity.
 
 ---
 
@@ -308,7 +328,8 @@ Entity `EsAggBucket` map mot aggregation bucket trong Elasticsearch response (mo
 | 2 | `keyAsString` | String | (rong) | Cho date buckets |
 | 3 | `docCount` | Integer | 0 | So document trong bucket |
 | 4 | `amountSum` | Decimal | 0 | Tu sub-aggregation |
-| 5 | `quantitySum` | Integer | 0 | Tu sub-aggregation |
+| 5 | `quantitySum` | Decimal | 0 | Tu sub-aggregation (ES sum tra ve Number, co the la decimal nhu 200.0) |
+| 6 | `avgOrderValue` | Decimal | 0 | Tu sub-aggregation `avg_order` |
 
 **Attribute 1: key**
 1. Click **New**
@@ -345,9 +366,41 @@ Entity `EsAggBucket` map mot aggregation bucket trong Elasticsearch response (mo
 4. Default value: `0`
 5. Click **OK**
 
+**Attribute 6: avgOrderValue**
+1. Click **New**
+2. Name: `avgOrderValue`
+3. Type: chon **Decimal**
+4. Default value: `0`
+5. Click **OK**
+
 Sau khi them xong, click **OK** de dong dialog.
 
 > **Luu y**: Entity `EsAggBucket` se co 2 associations: (1) voi `EsResponseWrapper` va (2) voi `EsAggregationWrapper`.
+
+### Buoc 5.3: JSON-to-Entity Mapping Reference (EsAggBucket)
+
+Bang duoi day chi ra duong dan JSON chinh xac tu ES response toi tung attribute cua `EsAggBucket`. Tham chieu nay rat quan trong khi tao **Import Mapping** trong Mendix.
+
+| ES Response JSON Path | EsAggBucket Attribute | Type | Ghi chu |
+|-----------------------|-----------------------|------|---------|
+| `aggregations.by_dimension.buckets[].key` | `key` | String | Bucket key (dimension value) |
+| `aggregations.by_dimension.buckets[].doc_count` | `docCount` | Integer | So document trong bucket |
+| `aggregations.by_dimension.buckets[].total_revenue.value` | `amountSum` | Decimal | Tu sub-aggregation `total_revenue` |
+| `aggregations.by_dimension.buckets[].total_qty.value` | `quantitySum` | Decimal | Tu sub-aggregation `total_qty` |
+| `aggregations.by_dimension.buckets[].avg_order.value` | `avgOrderValue` | Decimal | Tu sub-aggregation `avg_order` (NEW) |
+
+> **Vi du JSON bucket**:
+> ```json
+> {
+>   "key": "Electronics",
+>   "doc_count": 1250,
+>   "total_revenue": { "value": 187500.50 },
+>   "total_qty": { "value": 3420 },
+>   "avg_order": { "value": 150.00 }
+> }
+> ```
+>
+> Khi tao Import Mapping trong Mendix, cac duong dan tren se duoc map tuong ung vao cac attribute cua entity `EsAggBucket`.
 
 ---
 
@@ -431,6 +484,24 @@ Sau khi them xong, click **OK** de dong dialog.
 
 > **Screenshot**: Entity `OlapConfig` hien thi voi 3 attributes co san default values.
 
+### Ghi chu: dimensionField Resolution (Khong luu tru trong OlapConfig)
+
+> **Quan trong**: Ten truong dimension Elasticsearch (VD: `category_name`, `product_name`, `year`, `quarter`, `country_name`, v.v.) **KHONG** duoc luu nhu mot attribute rieng trong entity `OlapConfig`. Thay vao do, ten truong dimension duoc **giai quyet tai runtime** boi Java Action hoac microflow expression dua tren:
+>
+> - `OlapFilter.drillDimension` - Xac dinh nhom dimension (product, time, customer, geography)
+> - `OlapFilter.drillLevel` - Xac dinh cap do drill (0=summary, 1/2/3=chi tiet hon)
+>
+> **Vi du logic resolution**:
+> - `drillDimension = "product"` + `drillLevel = 1` -> ES field: `category_name` (terms aggregation)
+> - `drillDimension = "product"` + `drillLevel = 2` -> ES field: `product_name` (terms aggregation)
+> - `drillDimension = "product"` + `drillLevel = 3` -> ES field: `variant_sku` (terms aggregation)
+> - `drillDimension = "time"` + `drillLevel = 1` -> ES field: `year` (terms aggregation)
+> - `drillDimension = "time"` + `drillLevel = 2` -> ES field: `quarter` (terms aggregation)
+> - `drillDimension = "customer"` + `drillLevel = 1` -> ES field: `segment` (terms aggregation)
+> - `drillDimension = "geography"` + `drillLevel = 1` -> ES field: `country_name` (terms aggregation)
+>
+> Logic nay duoc trien khai trong microflow **ACT_BuildEsQuery** (xem huong dan microflow tai document 07-mendix-microflow-guide.md).
+
 ---
 
 ## 8. Tao Associations giua cac Entities
@@ -447,8 +518,9 @@ Association dinh nghia moi quan he giua cac entities trong domain model.
    - **Child**: `SalesOLAP.EsAggBucket` (side co dau `1`)
    - Hoac double-click association de mo dialog, chon **Multiplicity**: `1  ----  *`
 4. Dat ten association (neu can): `EsResponseWrapper_EsAggBucket`
+5. **Owner**: Dat **EsAggBucket** lam owner cua association nay. Trong Mendix, click vao association, trong panel Properties chon **Owner** = `EsAggBucket` (child side). Day la vi `EsAggBucket` la entity duoc tao moi khi parse ES response va can quan ly lifecycle cua association.
 
-> **Ve sau**: Dau `*` nam o phia `EsAggBucket`, dau `1` nam o phia `EsResponseWrapper`.
+> **Ve sau**: Dau `*` nam o phia `EsAggBucket`, dau `1` nam o phia `EsResponseWrapper`. Owner = `EsAggBucket` (child owns the association).
 
 ### Buoc 8.2: EsAggregationWrapper -> EsAggBucket (1-to-many)
 
@@ -458,15 +530,31 @@ Association dinh nghia moi quan he giua cac entities trong domain model.
    - **Type**: chon **Reference Set** (1-to-many)
    - **Multiplicity**: `1  ----  *` (EsAggregationWrapper la phia `1`, EsAggBucket la phia `*`)
 4. Dat ten association: `EsAggregationWrapper_EsAggBucket`
+5. **Owner**: Dat **EsAggBucket** lam owner cua association nay. Trong panel Properties chon **Owner** = `EsAggBucket` (child side). Tuong tu nhu buoc 8.1, bucket la entity quan ly lifecycle khi parse aggregation data.
+
+### Buoc 8.3: EsResponseWrapper -> EsAggregationWrapper (1-to-1)
+
+1. Click nut **Association** tren toolbar
+2. Click va keo tu entity **EsResponseWrapper** den entity **EsAggregationWrapper**
+3. Trong panel **Properties**:
+   - **Type**: chon **Reference** (1-to-1)
+   - **Parent**: `SalesOLAP.EsResponseWrapper` (phia `1`)
+   - **Child**: `SalesOLAP.EsAggregationWrapper` (phia `1`)
+4. Dat ten association: `EsResponseWrapper_EsAggregationWrapper`
+5. **Owner**: Dat **EsAggregationWrapper** lam owner cua association nay. Trong panel Properties chon **Owner** = `EsAggregationWrapper` (child side). Wrapper quan ly lifecycle cua association nay vi no duoc tao va lien ket khi parse `aggregations` object.
+
+> **Luu y**: Association nay la bat buoc de Import Mapping co the map `aggregations` object tu ES response vao `EsAggregationWrapper` entity. Khong co association nay, Import Mapping se khong the ket noi duoc wrapper voi aggregation. Owner = `EsAggregationWrapper`.
 
 ### Bang tong hop Associations
 
-| Association | Parent (1) | Child (*) | Type | Ghi chu |
-|------------|-----------|----------|------|---------|
-| `EsResponseWrapper_EsAggBucket` | EsResponseWrapper | EsAggBucket | Reference Set | ES response chua nhieu buckets |
-| `EsAggregationWrapper_EsAggBucket` | EsAggregationWrapper | EsAggBucket | Reference Set | Moi aggregation co nhieu buckets |
+| Association | Parent (1) | Child (*) | Type | Owner | Ghi chu |
+|------------|-----------|----------|------|-------|---------|
+| `EsResponseWrapper_EsAggBucket` | EsResponseWrapper | EsAggBucket | Reference Set (1-*) | **EsAggBucket** (child owns) | ES response chua nhieu buckets |
+| `EsAggregationWrapper_EsAggBucket` | EsAggregationWrapper | EsAggBucket | Reference Set (1-*) | **EsAggBucket** (child owns) | Moi aggregation co nhieu buckets |
+| `EsResponseWrapper_EsAggregationWrapper` | EsResponseWrapper | EsAggregationWrapper | Reference (1-1) | **EsAggregationWrapper** (child owns) | Link response toi aggregation wrapper (bat buoc cho Import Mapping) |
+| `OlapFilter_Results` | OlapFilter | SalesAggregateResult | Reference Set (1-*) | **SalesAggregateResult** (child owns) | **Bat buoc cho UI**: Data Grid 2 dung association nay lam data source (Listen-to-widget). Microflow `OLAP_GetSalesData` se populate association nay khi goi ES API. |
 
-> **Screenshot**: Working area se hien thi 6 entities voi 2 association lines noi chung. Cac association co dau `1` va `*` o hai dau.
+> **Screenshot**: Working area se hien thi 6 entities voi 3 association lines noi chung. Cac association co dau `1` va `*` o hai dau. Owner luon nam o phia child (EsAggBucket hoac EsAggregationWrapper).
 
 ---
 
@@ -566,13 +654,13 @@ Sau khi hoan thanh tat ca cac buoc, Domain Model cua module `SalesOLAP` se bao g
 
 | Entity | So Attributes | Loai | Nhom |
 |--------|--------------|------|------|
-| OlapFilter | 15 | NPE | Filter & Config |
+| OlapFilter | 16 | NPE | Filter & Config |
 | SalesAggregateResult | 9 | NPE | UI Display |
 | EsResponseWrapper | 2 | NPE | ES Response |
-| EsAggBucket | 5 | NPE | ES Response |
+| EsAggBucket | 6 | NPE | ES Response |
 | EsAggregationWrapper | 1 | NPE | ES Response |
 | OlapConfig | 3 | NPE | Filter & Config |
 
-**Tong cong**: 6 entities, 35 attributes, 2 associations
+**Tong cong**: 6 entities, 37 attributes, 3 associations
 
 > **Buoc tiep theo**: Sau khi tao xong Domain Model, tiep tuc tao **REST Call Microflows** de goi Elasticsearch API va **Import Mapping** de map JSON response vao cac ES entities.

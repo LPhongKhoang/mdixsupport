@@ -30,7 +30,8 @@ EsResponseWrapper (NPE)
 │       ├── keyAsString: String
 │       ├── docCount: Integer
 │       ├── amountSum: Decimal
-│       └── quantitySum: Integer
+│       ├── quantitySum: Decimal
+│       └── avgOrderValue: Decimal
 ```
 
 ---
@@ -90,6 +91,9 @@ Trong tab **JSON Schema** của JSON Structure editor, paste nội dung sau:
                   "key": {
                     "type": "string"
                   },
+                  "key_as_string": {
+                    "type": "string"
+                  },
                   "doc_count": {
                     "type": "integer"
                   },
@@ -132,9 +136,10 @@ Sau khi paste schema:
    - `hits` → `total` → `value` (Integer)
    - `aggregations` → `by_dimension` → `buckets` (Array)
      - `key` (String)
+     - `key_as_string` (String)
      - `doc_count` (Integer)
      - `total_revenue` → `value` (Number)
-     - `total_qty` → `value` (Integer)
+     - `total_qty` → `value` (Number)
 3. Nhấn **Save** (Ctrl+S)
 
 ---
@@ -206,15 +211,21 @@ Map từng trường trong bucket item:
 | JSON Path | Entity | Attribute | Kiểu dữ liệu |
 |---|---|---|---|
 | `buckets[].key` | EsAggBucket | `key` | String |
+| `buckets[].key_as_string` | EsAggBucket | `keyAsString` | String |
 | `buckets[].doc_count` | EsAggBucket | `docCount` | Integer |
 | `buckets[].total_revenue.value` | EsAggBucket | `amountSum` | Decimal |
-| `buckets[].total_qty.value` | EsAggBucket | `quantitySum` | Integer |
+| `buckets[].total_qty.value` | EsAggBucket | `quantitySum` | Decimal |
+| `buckets[].avg_order.value` | EsAggBucket | `avgOrderValue` | Decimal |
 
 Chi tiết từng mapping:
 
 **`buckets[].key` → EsAggBucket.key:**
 1. Click vào `key` (con của bucket item)
 2. Chọn attribute: `key`
+
+**`buckets[].key_as_string` → EsAggBucket.keyAsString:**
+1. Click vào `key_as_string` (con của bucket item)
+2. Chọn attribute: `keyAsString`
 
 **`buckets[].doc_count` → EsAggBucket.docCount:**
 1. Click vào `doc_count`
@@ -229,6 +240,13 @@ Chi tiết từng mapping:
 1. Click vào `total_qty` → chọn **Do not map** cho object wrapper
 2. Click vào `total_qty` → `value`
 3. Chọn attribute: `quantitySum`
+
+> **Lưu ý về kiểu dữ liệu của `quantitySum`:** Elasticsearch `sum` aggregation trả về kiểu `number`, có thể là giá trị thập phân (ví dụ `200.0`). Do đó attribute `quantitySum` nên dùng kiểu **Decimal** để đảm bảo chính xác. Nếu dùng **Integer**, Mendix sẽ truncate phần thập phân, có thể gây mất dữ liệu trong một số trường hợp.
+
+**`buckets[].avg_order.value` → EsAggBucket.avgOrderValue:**
+1. Click vào `avg_order` → chọn **Do not map** cho object wrapper
+2. Click vào `avg_order` → `value`
+3. Chọn attribute: `avgOrderValue` (Decimal)
 
 ### 2.4 Xác minh Import Mapping
 
@@ -255,12 +273,16 @@ JSON Structure                    Mendix NPE
       "buckets": [                → List<EsAggBucket>
         {
           "key": "Electronics",      .key = "Electronics"
+          "key_as_string": "Electronics", .keyAsString = "Electronics"
           "doc_count": 5000,          .docCount = 5000
           "total_revenue": {
             "value": 150000000000     .amountSum = 150000000000
           },
           "total_qty": {
             "value": 50000            .quantitySum = 50000
+          },
+          "avg_order": {
+            "value": 30000000         .avgOrderValue = 30000000
           }
         }
       ]
@@ -314,7 +336,7 @@ Ví dụ nội dung `esQueryBody`:
   "aggs": {
     "by_dimension": {
       "terms": {
-        "field": "category.keyword",
+        "field": "category_name",
         "size": 50
       },
       "aggs": {
@@ -334,7 +356,59 @@ Ví dụ nội dung `esQueryBody`:
 }
 ```
 
-### 3.5 Cấu hình HTTP Headers
+### 3.5 `.keyword` Sub-field Guidance cho ES Aggregations
+
+> **Quan trọng:** Khi dùng `terms` aggregation trong Elasticsearch, bạn **phải** dùng đúng field name tùy vào kiểu dữ liệu (mapping) của field đó trong ES index.
+
+#### Bảng tra cứu field name cho terms aggregation
+
+| Dimension Field | ES Type | Aggregate With |
+|---|---|---|
+| `category_name` | keyword | `category_name` (OK as-is) |
+| `product_name` | text + keyword | `product_name.keyword` (**must use .keyword**) |
+| `customer_name` | text + keyword | `customer_name.keyword` (**must use .keyword**) |
+| `store_name` | text + keyword | `store_name.keyword` (**must use .keyword**) |
+| `customer_segment` | keyword | `customer_segment` (OK as-is) |
+| `country_name` | keyword | `country_name` (OK as-is) |
+| `country_region` | keyword | `country_region` (OK as-is) |
+| `city_name` | keyword | `city_name` (OK as-is) |
+| `variant_sku` | keyword | `variant_sku` (OK as-is) |
+| `variant_color` | keyword | `variant_color` (OK as-is) |
+| `variant_size` | keyword | `variant_size` (OK as-is) |
+
+#### Giải thích
+
+- Các field có ES type là **keyword** (như `category_name`, `country_name`, `customer_segment`, ...) có thể dùng trực tiếp trong `terms` aggregation mà không cần suffix.
+- Các field có ES type là **text + keyword** (như `product_name`, `customer_name`, `store_name`) là multi-field. ES tạo ra 2 sub-field:
+  - `product_name` — kiểu `text`, dùng cho full-text search (analyzed).
+  - `product_name.keyword` — kiểu `keyword`, dùng cho aggregations và sorting (not analyzed).
+- **Nếu dùng `text` field trong `terms` aggregation**, ES sẽ trả lỗi:
+  ```
+  "Fielddata is disabled on text fields by default. Set fielddata=true on [product_name] in order to load fielddata in memory by uninverting the inverted index."
+  ```
+- **Giải pháp đúng:** Luôn thêm suffix `.keyword` cho các field text+keyword khi dùng trong aggregation:
+
+```json
+// SAI - sẽ gây lỗi Fielddata
+{
+  "aggs": {
+    "by_dimension": {
+      "terms": { "field": "product_name" }
+    }
+  }
+}
+
+// ĐÚNG - dùng .keyword suffix
+{
+  "aggs": {
+    "by_dimension": {
+      "terms": { "field": "product_name.keyword" }
+    }
+  }
+}
+```
+
+### 3.6 Cấu hình HTTP Headers
 
 **Tab: HTTP Headers**
 
@@ -350,7 +424,7 @@ Các header cần thiết:
 | `Content-Type` | `application/json` | Chỉ định body là JSON |
 | `Authorization` | *(nếu có)* | Basic auth hoặc API key nếu ES có bảo mật |
 
-### 3.6 Cấu hình Response
+### 3.7 Cấu hình Response
 
 **Tab: Response**
 
@@ -361,7 +435,7 @@ Các header cần thiết:
    - Đánh dấu checkbox **Store in variable**
 4. Tên biến kết quả: `esResponse` (kiểu `EsResponseWrapper`)
 
-### 3.7 Hoàn thiện Microflow
+### 3.8 Hoàn thiện Microflow
 
 Cấu trúc microflow hoàn chỉnh:
 
@@ -387,7 +461,7 @@ Cấu trúc microflow hoàn chỉnh:
 [End] → bucketList (List<EsAggBucket>)
 ```
 
-### 3.8 Error Handling
+### 3.9 Error Handling
 
 1. Click chuột phải vào **Call REST** activity
 2. Chọn **Set error handling**
@@ -470,7 +544,7 @@ Trong mọi ES Query DSL, luôn dùng tên `by_dimension` cho terms aggregation:
   "size": 0,
   "aggs": {
     "by_dimension": {
-      "terms": { "field": "category.keyword" }
+      "terms": { "field": "category_name" }
     }
   }
 }
@@ -480,7 +554,7 @@ Trong mọi ES Query DSL, luôn dùng tên `by_dimension` cho terms aggregation:
   "size": 0,
   "aggs": {
     "by_dimension": {
-      "terms": { "field": "region.keyword" }
+      "terms": { "field": "country_name" }
     }
   }
 }
@@ -490,7 +564,7 @@ Trong mọi ES Query DSL, luôn dùng tên `by_dimension` cho terms aggregation:
   "size": 0,
   "aggs": {
     "by_dimension": {
-      "terms": { "field": "product.keyword" }
+      "terms": { "field": "product_name.keyword" }
     }
   }
 }
@@ -565,4 +639,5 @@ Quy trình hoàn chỉnh để tích hợp Elasticsearch với Mendix:
 - [ ] Call REST trả về status 200 khi test
 - [ ] EsResponseWrapper object được tạo với `took` và `totalHits` đúng
 - [ ] List<EsAggBucket> có đủ số lượng buckets như mong đợi
-- [ ] Các giá trị `amountSum`, `quantitySum`, `docCount` khớp với dữ liệu trong ES
+- [ ] Các giá trị `amountSum`, `quantitySum`, `avgOrderValue`, `docCount` khớp với dữ liệu trong ES
+- [ ] Field names trong terms aggregation dùng đúng `.keyword` suffix (tham khảo bảng Section 3.5)

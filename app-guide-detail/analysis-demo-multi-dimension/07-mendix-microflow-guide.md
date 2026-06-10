@@ -51,16 +51,18 @@ OlapFilter (NPE)
 ├── drillDimension  : String
 ├── drillLevel      : Integer (default 0)
 ├── selectedKey     : String
-├── yearFilter      : String
+├── yearFilter      : Integer
 ├── quarterFilter   : String
 ├── monthFilter     : String
-├── categoryFilter  : String
-├── productFilter   : String
-├── customerFilter  : String
-├── segmentFilter   : String
-├── countryFilter   : String
-├── cityFilter      : String
-├── storeFilter     : String
+├── categoryFilter    : String
+├── productFilter     : String
+├── variantSkuFilter  : String
+├── customerFilter    : String
+├── segmentFilter     : String
+├── countryFilter     : String
+├── regionFilter      : String
+├── cityFilter        : String
+├── storeFilter       : String
 ├── dateFrom        : DateTime
 └── dateTo          : DateTime
 
@@ -90,7 +92,8 @@ EsResponseWrapper (NPE)
         ├── keyAsString  : String
         ├── docCount     : Integer
         ├── amountSum    : Decimal
-        └── quantitySum  : Integer
+        ├── quantitySum    : Decimal
+        └── avgOrderValue  : Decimal
 
 OlapConfig (NPE)
 ├── esBaseUrl    : String   (default: "http://localhost:9200")
@@ -363,10 +366,10 @@ if $currentBucket/keyAsString != empty then $currentBucket/keyAsString else $cur
 ```
 [Start] → [Set selectedKey] → [Increment drillLevel]
     → [Decision: drillDimension?]
-        ├── "product"  → [Decision: current level?] → Set categoryFilter / productFilter
+        ├── "product"  → [Decision: current level?] → Set categoryFilter / productFilter / variantSkuFilter
         ├── "time"     → [Decision: current level?] → Set yearFilter / quarterFilter / monthFilter
         ├── "customer" → [Decision: current level?] → Set segmentFilter
-        └── "geography"→ [Decision: current level?] → Set countryFilter / cityFilter
+        └── "geography"→ [Decision: current level?] → Set countryFilter / regionFilter / cityFilter
     → [Merge] → [Call OLAP_GetSalesData(olapFilter)]
     → [End: Return result]
 
@@ -447,6 +450,7 @@ Keo **Exclusive Split** vao nhanh `product`:
 |------------------------------|--------------|-------------------------------------------------------|
 | `$olapFilter/drillLevel = 1` | Level 0→1   | Set `categoryFilter = $selectedDimensionValue`        |
 | `$olapFilter/drillLevel = 2` | Level 1→2   | Set `productFilter = $selectedDimensionValue`         |
+| `$olapFilter/drillLevel = 3` | Level 2→3   | Set `variantSkuFilter = $selectedDimensionValue`      |
 | `else`                       | Other       | Khong lam gi (default)                                |
 
 **5b: Change Object cho level 0→1 (categoryFilter)**
@@ -462,6 +466,15 @@ Keo **Change Object**:
 - **Object**: `$olapFilter`
 - **Members to change**:
   - `productFilter` = `$selectedDimensionValue`
+
+> **Luu y**: ES field cho Level 1 la `product_name.keyword` (can `.keyword` suffix vi `product_name` la text field). Xem them Appendix C.
+
+**5d: Change Object cho level 2→3 (variantSkuFilter)**
+
+Keo **Change Object**:
+- **Object**: `$olapFilter`
+- **Members to change**:
+  - `variantSkuFilter` = `$selectedDimensionValue`
 
 ---
 
@@ -514,6 +527,8 @@ Keo **Exclusive Split** vao nhanh `customer`:
 - **Members to change**:
   - `segmentFilter` = `$selectedDimensionValue`
 
+> **Luu y**: Neu mo rong them Level 1→2 cho Customer (theo ten khach hang), ES field la `customer_name.keyword` (can `.keyword` suffix vi `customer_name` la text field). Xem them Appendix C.
+
 ---
 
 #### Buoc 8: Geography branch - Set filter
@@ -530,14 +545,16 @@ Keo **Exclusive Split** vao nhanh `geography`:
 | Condition                    | Caption      | Action                                                |
 |------------------------------|--------------|-------------------------------------------------------|
 | `$olapFilter/drillLevel = 1` | Level 0→1   | Set `countryFilter = $selectedDimensionValue`         |
-| `$olapFilter/drillLevel = 2` | Level 1→2   | Set `cityFilter = $selectedDimensionValue`            |
+| `$olapFilter/drillLevel = 2` | Level 1→2   | Set `regionFilter = $selectedDimensionValue`          |
+| `$olapFilter/drillLevel = 3` | Level 2→3   | Set `cityFilter = $selectedDimensionValue`            |
 
 **8b: Change Object cho tung level**
 
 | Level transition | Change Object member    | Value                        |
 |------------------|-------------------------|------------------------------|
 | 0→1              | `countryFilter`         | `$selectedDimensionValue`    |
-| 1→2              | `cityFilter`            | `$selectedDimensionValue`    |
+| 1→2              | `regionFilter`          | `$selectedDimensionValue`    |
+| 2→3              | `cityFilter`            | `$selectedDimensionValue`    |
 
 ---
 
@@ -592,10 +609,10 @@ $olapFilter/drillLevel
     ├── No (level = 0) → [Return empty list] (khong the roll up)
     └── Yes → [Decrement drillLevel]
         → [Decision: drillDimension?]
-            ├── "product"  → [Decision: new level?] → Clear productFilter / categoryFilter
+            ├── "product"  → [Decision: new level?] → Clear variantSkuFilter / productFilter / categoryFilter
             ├── "time"     → [Decision: new level?] → Clear monthFilter / quarterFilter / yearFilter
             ├── "customer" → [Decision: new level?] → Clear segmentFilter
-            └── "geography"→ [Decision: new level?] → Clear cityFilter / countryFilter
+            └── "geography"→ [Decision: new level?] → Clear cityFilter / regionFilter / countryFilter
         → [Clear selectedKey]
         → [Call OLAP_GetSalesData(olapFilter)]
         → [End: Return result]
@@ -660,10 +677,14 @@ Keo **Exclusive Split** vao nhanh `product`:
 
 | Condition (new level sau khi da giam) | Caption     | Action                                     |
 |---------------------------------------|-------------|--------------------------------------------|
+| `$olapFilter/drillLevel = 2`          | Was level 3 | Clear `variantSkuFilter` = `empty`         |
 | `$olapFilter/drillLevel = 1`          | Was level 2 | Clear `productFilter` = `empty`            |
 | `$olapFilter/drillLevel = 0`          | Was level 1 | Clear `categoryFilter` = `empty`           |
 
 **Change Object cho tung truong hop**:
+
+- **Level 3→2**:
+  - `variantSkuFilter` = `empty`
 
 - **Level 2→1**:
   - `productFilter` = `empty`
@@ -709,14 +730,16 @@ Keo **Exclusive Split** vao nhanh `time`:
 
 | Condition (new level)          | Action                             |
 |--------------------------------|------------------------------------|
-| `$olapFilter/drillLevel = 1`   | Clear `cityFilter` = `empty`       |
+| `$olapFilter/drillLevel = 2`   | Clear `cityFilter` = `empty`       |
+| `$olapFilter/drillLevel = 1`   | Clear `regionFilter` = `empty`     |
 | `$olapFilter/drillLevel = 0`   | Clear `countryFilter` = `empty`    |
 
 **Change Object**:
 
 | Level transition | Change Object member    | Value   |
 |------------------|-------------------------|---------|
-| 2→1              | `cityFilter`            | `empty` |
+| 3→2              | `cityFilter`            | `empty` |
+| 2→1              | `regionFilter`          | `empty` |
 | 1→0              | `countryFilter`         | `empty` |
 
 ---
@@ -970,13 +993,15 @@ Giong MF 1: Error handler → Log → Return `empty` list.
 | `yearFilter`       | `empty`        |
 | `quarterFilter`    | `empty`        |
 | `monthFilter`      | `empty`        |
-| `categoryFilter`   | `empty`        |
-| `productFilter`    | `empty`        |
-| `customerFilter`   | `empty`        |
-| `segmentFilter`    | `empty`        |
-| `countryFilter`    | `empty`        |
-| `cityFilter`       | `empty`        |
-| `storeFilter`      | `empty`        |
+| `categoryFilter`    | `empty`        |
+| `productFilter`     | `empty`        |
+| `variantSkuFilter`  | `empty`        |
+| `customerFilter`    | `empty`        |
+| `segmentFilter`     | `empty`        |
+| `countryFilter`     | `empty`        |
+| `regionFilter`      | `empty`        |
+| `cityFilter`        | `empty`        |
+| `storeFilter`       | `empty`        |
 
 3. Khong can commit (NPE)
 
@@ -1057,19 +1082,21 @@ Chi can 1 activity Create Object va 1 End Event. Thuong duoc goi tu page load ev
    - **Object**: `$olapFilter`
    - **Members to change** (click **New** de them tat ca):
 
-| Member           | Value    |
-|------------------|----------|
-| `yearFilter`     | `empty`  |
-| `quarterFilter`  | `empty`  |
-| `monthFilter`    | `empty`  |
-| `categoryFilter` | `empty`  |
-| `productFilter`  | `empty`  |
-| `customerFilter` | `empty`  |
-| `segmentFilter`  | `empty`  |
-| `countryFilter`  | `empty`  |
-| `cityFilter`     | `empty`  |
-| `storeFilter`    | `empty`  |
-| `selectedKey`    | `empty`  |
+| Member            | Value    |
+|-------------------|----------|
+| `yearFilter`      | `empty`  |
+| `quarterFilter`   | `empty`  |
+| `monthFilter`     | `empty`  |
+| `categoryFilter`  | `empty`  |
+| `productFilter`   | `empty`  |
+| `variantSkuFilter`| `empty`  |
+| `customerFilter`  | `empty`  |
+| `segmentFilter`   | `empty`  |
+| `countryFilter`   | `empty`  |
+| `regionFilter`    | `empty`  |
+| `cityFilter`      | `empty`  |
+| `storeFilter`     | `empty`  |
+| `selectedKey`     | `empty`  |
 
 > **Luu y**: Giu nguyen `dateFrom` va `dateTo` (chi clear cac dimension-specific filters).
 
@@ -1081,21 +1108,23 @@ Keo **1 Change Object** activity duy nhat:
 - **Object**: `$olapFilter`
 - **Members to change** (tat ca trong 1 activity):
 
-| Member             | Value             |
-|--------------------|-------------------|
-| `drillDimension`   | `$newDimension`   |
-| `drillLevel`       | `0`               |
-| `selectedKey`      | `empty`           |
-| `yearFilter`       | `empty`           |
-| `quarterFilter`    | `empty`           |
-| `monthFilter`      | `empty`           |
-| `categoryFilter`   | `empty`           |
-| `productFilter`    | `empty`           |
-| `customerFilter`   | `empty`           |
-| `segmentFilter`    | `empty`           |
-| `countryFilter`    | `empty`           |
-| `cityFilter`       | `empty`           |
-| `storeFilter`      | `empty`           |
+| Member              | Value             |
+|---------------------|-------------------|
+| `drillDimension`    | `$newDimension`   |
+| `drillLevel`        | `0`               |
+| `selectedKey`       | `empty`           |
+| `yearFilter`        | `empty`           |
+| `quarterFilter`     | `empty`           |
+| `monthFilter`       | `empty`           |
+| `categoryFilter`    | `empty`           |
+| `productFilter`     | `empty`           |
+| `variantSkuFilter`  | `empty`           |
+| `customerFilter`    | `empty`           |
+| `segmentFilter`     | `empty`           |
+| `countryFilter`     | `empty`           |
+| `regionFilter`      | `empty`           |
+| `cityFilter`        | `empty`           |
+| `storeFilter`       | `empty`           |
 
 ---
 
@@ -1165,22 +1194,24 @@ empty
    - **Object**: `$olapFilter`
    - **Members to change** (click **New** de them tat ca):
 
-| Member             | Value    |
-|--------------------|----------|
-| `drillLevel`       | `0`      |
-| `selectedKey`      | `empty`  |
-| `yearFilter`       | `empty`  |
-| `quarterFilter`    | `empty`  |
-| `monthFilter`      | `empty`  |
-| `categoryFilter`   | `empty`  |
-| `productFilter`    | `empty`  |
-| `customerFilter`   | `empty`  |
-| `segmentFilter`    | `empty`  |
-| `countryFilter`    | `empty`  |
-| `cityFilter`       | `empty`  |
-| `storeFilter`      | `empty`  |
-| `dateFrom`         | `empty`  |
-| `dateTo`           | `empty`  |
+| Member              | Value    |
+|---------------------|----------|
+| `drillLevel`        | `0`      |
+| `selectedKey`       | `empty`  |
+| `yearFilter`        | `empty`  |
+| `quarterFilter`     | `empty`  |
+| `monthFilter`       | `empty`  |
+| `categoryFilter`    | `empty`  |
+| `productFilter`     | `empty`  |
+| `variantSkuFilter`  | `empty`  |
+| `customerFilter`    | `empty`  |
+| `segmentFilter`     | `empty`  |
+| `countryFilter`     | `empty`  |
+| `regionFilter`      | `empty`  |
+| `cityFilter`        | `empty`  |
+| `storeFilter`       | `empty`  |
+| `dateFrom`          | `empty`  |
+| `dateTo`            | `empty`  |
 
 > **Luu y**: Trong MF nay, clear ca `dateFrom` va `dateTo` (reset hoan toan). Neu ban muon giu date range, bo 2 dong cuoi.
 
@@ -1356,24 +1387,28 @@ Thu tu nay dam bao cac dependency da san sang truoc khi tao microflow goi no:
 
 | Dimension  | Level 0 (Top)    | Level 1            | Level 2            | Level 3          |
 |------------|-------------------|--------------------|--------------------|-------------------|
-| product    | (tong hop)        | categoryFilter     | productFilter      | -                 |
+| product    | (tong hop)        | categoryFilter     | productFilter      | variantSkuFilter  |
 | time       | (tong hop)        | yearFilter         | quarterFilter      | monthFilter       |
 | customer   | (tong hop)        | segmentFilter      | -                  | -                 |
-| geography  | (tong hop)        | countryFilter      | cityFilter         | -                 |
+| geography  | (tong hop)        | countryFilter      | regionFilter       | cityFilter        |
 
 ## Phu luc C: Bang mapping ES field names
 
-| Filter Field (Mendix) | ES Field Name             | Type    |
-|------------------------|---------------------------|---------|
-| categoryFilter         | `category.keyword`        | keyword |
-| productFilter          | `product_name.keyword`    | keyword |
-| yearFilter             | `year`                    | integer |
-| quarterFilter          | `quarter`                 | keyword |
-| monthFilter            | `month`                   | keyword |
-| segmentFilter          | `customer_segment.keyword`| keyword |
-| countryFilter          | `country.keyword`         | keyword |
-| cityFilter             | `city.keyword`            | keyword |
-| storeFilter            | `store_name.keyword`      | keyword |
+| Filter Field (Mendix) | ES Field Name for Terms Agg   | Raw ES Type   | Ghi chu                                              |
+|------------------------|-------------------------------|---------------|------------------------------------------------------|
+| categoryFilter         | `category_name`               | keyword       | OK - khong can `.keyword` suffix                     |
+| productFilter          | `product_name.keyword`        | text+keyword  | **PHAI DUNG** `.keyword` suffix cho terms agg        |
+| variantSkuFilter       | `variant_sku`                 | keyword       | OK - khong can `.keyword` suffix                     |
+| yearFilter             | `year`                        | integer       | Dung cho term query (khong phai terms agg)           |
+| quarterFilter          | `quarter`                     | integer       | Dung cho term query (khong phai terms agg)           |
+| monthFilter            | `month`                       | integer       | Dung cho term query (khong phai terms agg)           |
+| segmentFilter          | `customer_segment`            | keyword       | OK - khong can `.keyword` suffix                     |
+| countryFilter          | `country_name`                | keyword       | OK - khong can `.keyword` suffix                     |
+| regionFilter           | `country_region`              | keyword       | OK - khong can `.keyword` suffix                     |
+| cityFilter             | `city_name`                   | keyword       | OK - khong can `.keyword` suffix                     |
+| storeFilter            | `store_name.keyword`          | text+keyword  | **PHAI DUNG** `.keyword` suffix cho terms agg        |
+
+> **Quy tac chung**: Cac field co type `text` trong ES mapping se co sub-field `.keyword` (duoc dinh nghia boi mapping). Khi dung cho `terms` aggregation hoac `term` query chinh xac, **phai** dung ten field kem `.keyword` suffix (vi du: `product_name.keyword`, `store_name.keyword`). Cac field da la `keyword` type thuoc tinh (vi du: `category_name`, `variant_sku`, `country_name`) khong can `.keyword` suffix.
 
 ---
 
