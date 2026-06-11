@@ -1,0 +1,107 @@
+[
+  {
+    "supplierCode": "TECH-VN",
+    "supplierName": "TechViet Electronics Co., Ltd.",
+    "contactEmail": "sales@techvietnam.vn",
+    "contactPhone": "+84-28-3822-1234",
+    "isActive": true
+  },
+  {
+    "supplierCode": "FASHION-HK",
+    "supplierName": "Hong Kong Fashion Trading Ltd.",
+    "contactEmail": "orders@hkfashion.com",
+    "contactPhone": "+852-2345-6789",
+    "isActive": true
+  },
+  {
+    "supplierCode": "FOOD-TH",
+    "supplierName": "Thai Food Export Co., Ltd.",
+    "contactEmail": "export@thaifood.co.th",
+    "contactPhone": "+66-2-345-6789",
+    "isActive": true
+  },
+  {
+    "supplierCode": "HOME-SG",
+    "supplierName": "Singapore Home Goods Pte Ltd",
+    "contactEmail": "b2b@sggoods.com.sg",
+    "contactPhone": "+65-6789-0123",
+    "isActive": true
+  },
+  {
+    "supplierCode": "SPORT-US",
+    "supplierName": "Pacific Sports Equipment Inc.",
+    "contactEmail": "wholesale@pacsports.com",
+    "contactPhone": "+1-310-555-0199",
+    "isActive": true
+  },
+  {
+    "supplierCode": "BOOK-UK",
+    "supplierName": "British Book Distributors Ltd.",
+    "contactEmail": "supply@bbdist.co.uk",
+    "contactPhone": "+44-20-7946-0958",
+    "isActive": true
+  },
+  {
+    "supplierCode": "TOY-JP",
+    "supplierName": "Nippon Toy Manufacturing Co.",
+    "contactEmail": "intl@niptoy.co.jp",
+    "contactPhone": "+81-3-1234-5678",
+    "isActive": true
+  },
+  {
+    "supplierCode": "BEAUTY-KR",
+    "supplierName": "Seoul Beauty Cosmetics Corp.",
+    "contactEmail": "global@seoulbeauty.kr",
+    "contactPhone": "+82-2-345-6789",
+    "isActive": true
+  },
+  {
+    "supplierCode": "AUTO-DE",
+    "supplierName": "German Auto Parts GmbH",
+    "contactEmail": "vertrieb@germanparts.de",
+    "contactPhone": "+49-89-123456",
+    "isActive": true
+  },
+  {
+    "supplierCode": "OFFICE-CN",
+    "supplierName": "Shenzhen Office Supply Ltd.",
+    "contactEmail": "export@szofficesupply.cn",
+    "contactPhone": "+86-755-8765-4321",
+    "isActive": true
+  },
+  {
+    "supplierCode": "GLOBAL-MY",
+    "supplierName": "Global Trading Malaysia Sdn Bhd",
+    "contactEmail": "trade@globalmy.com.my",
+    "contactPhone": "+60-3-8765-4321",
+    "isActive": true
+  },
+  {
+    "supplierCode": "GREEN-AU",
+    "supplierName": "Green Living Australia Pty Ltd",
+    "contactEmail": "wholesale@greenliving.au",
+    "contactPhone": "+61-2-9876-5432",
+    "isActive": true
+  },
+  {
+    "supplierCode": "DIGITAL-TW",
+    "supplierName": "Digital World Taiwan Corp.",
+    "contactEmail": "oem@digitalworld.tw",
+    "contactPhone": "+886-2-2345-6789",
+    "isActive": false
+  },
+  {
+    "supplierCode": "TEXTILE-IN",
+    "supplierName": "Mumbai Textile Exports Pvt Ltd",
+    "contactEmail": "export@mumbaitextile.in",
+    "contactPhone": "+91-22-3456-7890",
+    "isActive": true
+  },
+  {
+    "supplierCode": "ORGANIC-NZ",
+    "supplierName": "Organic Direct New Zealand Ltd",
+    "contactEmail": "supply@organicdirect.nz",
+    "contactPhone": "+64-9-345-6789",
+    "isActive": true
+  }
+]

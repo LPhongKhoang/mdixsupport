@@ -1,0 +1,52 @@
+[
+  {
+    "categoryName": "Electronics",
+    "description": "Consumer electronics, gadgets, and smart devices",
+    "isActive": true
+  },
+  {
+    "categoryName": "Clothing",
+    "description": "Apparel, fashion, and accessories for all ages",
+    "isActive": true
+  },
+  {
+    "categoryName": "Food & Beverages",
+    "description": "Food products, snacks, drinks, and beverages",
+    "isActive": true
+  },
+  {
+    "categoryName": "Home & Garden",
+    "description": "Home improvement, furniture, and garden supplies",
+    "isActive": true
+  },
+  {
+    "categoryName": "Sports & Outdoors",
+    "description": "Sports equipment, outdoor gear, and fitness accessories",
+    "isActive": true
+  },
+  {
+    "categoryName": "Books & Media",
+    "description": "Books, e-books, music, movies, and digital media",
+    "isActive": true
+  },
+  {
+    "categoryName": "Toys & Games",
+    "description": "Children toys, board games, and hobby supplies",
+    "isActive": true
+  },
+  {
+    "categoryName": "Health & Beauty",
+    "description": "Health care, personal care, cosmetics, and beauty products",
+    "isActive": true
+  },
+  {
+    "categoryName": "Automotive",
+    "description": "Car parts, accessories, and maintenance supplies",
+    "isActive": true
+  },
+  {
+    "categoryName": "Office Supplies",
+    "description": "Stationery, office furniture, and business supplies",
+    "isActive": true
+  }
+]

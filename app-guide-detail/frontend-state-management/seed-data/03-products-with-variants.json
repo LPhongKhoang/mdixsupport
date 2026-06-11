@@ -1,0 +1,5903 @@
+[
+  {
+    "productCode": "PRD-ELEC-0001",
+    "productName": "Wireless Bluetooth Headphones",
+    "description": "Premium over-ear wireless headphones with ANC",
+    "productMinPrice": 23.24,
+    "productMaxPrice": 216.38,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-10-04T07:08:00",
+    "updatedDate": "2025-11-20T10:08:00",
+    "createdBy": "admin",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Black - Standard",
+        "sku": "ELEC-0001-BLA-01",
+        "price": 59.24,
+        "remainingQuantity": 287,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0002",
+    "productName": "Smart Watch Pro",
+    "description": "Advanced fitness tracking smartwatch with AMOLED display",
+    "productMinPrice": 67.99,
+    "productMaxPrice": 252.28,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-01-01T07:28:00",
+    "updatedDate": "2026-02-07T15:28:00",
+    "createdBy": "admin",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "TECH-VN"
+    },
+    "variants": [
+      {
+        "variantName": "Navy - Standard",
+        "sku": "ELEC-0002-NAV-01",
+        "price": 122.92,
+        "remainingQuantity": 52,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "ELEC-0002-WHI-02",
+        "price": 100.81,
+        "remainingQuantity": 135,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver - Standard",
+        "sku": "ELEC-0002-SIL-03",
+        "price": 92.46,
+        "remainingQuantity": 472,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - Standard",
+        "sku": "ELEC-0002-GRA-04",
+        "price": 119.81,
+        "remainingQuantity": 453,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0003",
+    "productName": "USB-C Multiport Hub",
+    "description": "7-in-1 USB-C hub with HDMI, USB 3.0, SD card reader",
+    "productMinPrice": 57.72,
+    "productMaxPrice": 242.73,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-06-24T21:14:00",
+    "updatedDate": "2025-08-13T06:14:00",
+    "createdBy": "john.doe",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "DIGITAL-TW"
+    },
+    "variants": [
+      {
+        "variantName": "Green",
+        "sku": "ELEC-0003-GRE-01",
+        "price": 130.39,
+        "remainingQuantity": 181,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "ELEC-0003-BLU-02",
+        "price": 162.3,
+        "remainingQuantity": 36,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "ELEC-0003-BEI-03",
+        "price": 101.55,
+        "remainingQuantity": 236,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - Standard",
+        "sku": "ELEC-0003-GRA-04",
+        "price": 189.85,
+        "remainingQuantity": 112,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0004",
+    "productName": "Portable Bluetooth Speaker",
+    "description": "Waterproof IPX7 portable speaker with 20h battery",
+    "productMinPrice": 39.0,
+    "productMaxPrice": 238.03,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-06-29T07:52:00",
+    "updatedDate": "2025-07-01T17:52:00",
+    "createdBy": "admin",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Teal",
+        "sku": "ELEC-0004-TEA-01",
+        "price": 66.74,
+        "remainingQuantity": 452,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Teal",
+        "sku": "ELEC-0004-TEA-02",
+        "price": 31.2,
+        "remainingQuantity": 381,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown",
+        "sku": "ELEC-0004-BRO-03",
+        "price": 123.95,
+        "remainingQuantity": 298,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray",
+        "sku": "ELEC-0004-GRA-04",
+        "price": 127.57,
+        "remainingQuantity": 252,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "ELEC-0004-WHI-05",
+        "price": 112.67,
+        "remainingQuantity": 81,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0005",
+    "productName": "Wireless Charging Pad",
+    "description": "Fast wireless charger compatible with Qi-enabled devices",
+    "productMinPrice": 46.24,
+    "productMaxPrice": 90.22,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-12-13T19:29:00",
+    "updatedDate": "2026-01-16T03:29:00",
+    "createdBy": "admin",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Silver - Standard",
+        "sku": "ELEC-0005-SIL-01",
+        "price": 65.58,
+        "remainingQuantity": 222,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "ELEC-0005-RED-02",
+        "price": 103.45,
+        "remainingQuantity": 134,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown",
+        "sku": "ELEC-0005-BRO-03",
+        "price": 59.41,
+        "remainingQuantity": 320,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "ELEC-0005-GRE-04",
+        "price": 62.28,
+        "remainingQuantity": 191,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver - Standard",
+        "sku": "ELEC-0005-SIL-05",
+        "price": 104.89,
+        "remainingQuantity": 470,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0006",
+    "productName": "Mechanical Gaming Keyboard",
+    "description": "RGB mechanical keyboard with Cherry MX switches",
+    "productMinPrice": 59.32,
+    "productMaxPrice": 196.81,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-28T11:56:00",
+    "updatedDate": "2025-09-19T20:56:00",
+    "createdBy": "john.doe",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "TECH-VN"
+    },
+    "variants": [
+      {
+        "variantName": "Orange",
+        "sku": "ELEC-0006-ORA-01",
+        "price": 87.84,
+        "remainingQuantity": 392,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0007",
+    "productName": "4K Webcam Pro",
+    "description": "Ultra HD webcam with auto-focus and noise-cancelling mic",
+    "productMinPrice": 24.5,
+    "productMaxPrice": 159.06,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-09T05:16:00",
+    "updatedDate": "2026-04-12T00:16:00",
+    "createdBy": "john.doe",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "TECH-VN"
+    },
+    "variants": [
+      {
+        "variantName": "Gray",
+        "sku": "ELEC-0007-GRA-01",
+        "price": 75.05,
+        "remainingQuantity": 264,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink - Standard",
+        "sku": "ELEC-0007-PIN-02",
+        "price": 35.38,
+        "remainingQuantity": 301,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown - Standard",
+        "sku": "ELEC-0007-BRO-03",
+        "price": 19.6,
+        "remainingQuantity": 323,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0008",
+    "productName": "Noise Cancelling Earbuds",
+    "description": "True wireless earbuds with active noise cancellation",
+    "productMinPrice": 31.94,
+    "productMaxPrice": 261.13,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-11-17T02:32:00",
+    "updatedDate": "2025-12-02T10:32:00",
+    "createdBy": "john.doe",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "TECH-VN"
+    },
+    "variants": [
+      {
+        "variantName": "Beige",
+        "sku": "ELEC-0008-BEI-01",
+        "price": 167.47,
+        "remainingQuantity": 97,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White - Standard",
+        "sku": "ELEC-0008-WHI-02",
+        "price": 83.12,
+        "remainingQuantity": 239,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "ELEC-0008-GOL-03",
+        "price": 170.51,
+        "remainingQuantity": 50,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "ELEC-0008-BLA-04",
+        "price": 114.72,
+        "remainingQuantity": 127,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue - Standard",
+        "sku": "ELEC-0008-BLU-05",
+        "price": 85.25,
+        "remainingQuantity": 142,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0009",
+    "productName": "Smart Home Hub",
+    "description": "Central smart home controller with voice assistant integration",
+    "productMinPrice": 33.49,
+    "productMaxPrice": 266.61,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-01-13T17:06:00",
+    "updatedDate": "2026-01-17T13:06:00",
+    "createdBy": "admin",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "DIGITAL-TW"
+    },
+    "variants": [
+      {
+        "variantName": "Red",
+        "sku": "ELEC-0009-RED-01",
+        "price": 137.23,
+        "remainingQuantity": 462,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black - Standard",
+        "sku": "ELEC-0009-BLA-02",
+        "price": 26.79,
+        "remainingQuantity": 474,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0010",
+    "productName": "Portable Power Bank 20000mAh",
+    "description": "High-capacity portable charger with dual USB-C output",
+    "productMinPrice": 36.11,
+    "productMaxPrice": 219.36,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-12T21:45:00",
+    "updatedDate": "2026-04-13T01:45:00",
+    "createdBy": "john.doe",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "DIGITAL-TW"
+    },
+    "variants": [
+      {
+        "variantName": "Orange",
+        "sku": "ELEC-0010-ORA-01",
+        "price": 84.01,
+        "remainingQuantity": 299,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "ELEC-0010-PIN-02",
+        "price": 103.79,
+        "remainingQuantity": 491,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown - Standard",
+        "sku": "ELEC-0010-BRO-03",
+        "price": 66.86,
+        "remainingQuantity": 345,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold - Standard",
+        "sku": "ELEC-0010-GOL-04",
+        "price": 84.06,
+        "remainingQuantity": 126,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "ELEC-0010-BEI-05",
+        "price": 99.86,
+        "remainingQuantity": 298,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0011",
+    "productName": "Wireless Mouse Ergonomic",
+    "description": "Ergonomic wireless mouse with precision tracking sensor",
+    "productMinPrice": 53.69,
+    "productMaxPrice": 289.33,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-09-13T21:45:00",
+    "updatedDate": "2025-10-04T04:45:00",
+    "createdBy": "john.doe",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Navy",
+        "sku": "ELEC-0011-NAV-01",
+        "price": 137.22,
+        "remainingQuantity": 318,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "ELEC-0011-BEI-02",
+        "price": 42.95,
+        "remainingQuantity": 135,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "ELEC-0011-RED-03",
+        "price": 225.61,
+        "remainingQuantity": 189,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green - Standard",
+        "sku": "ELEC-0011-GRE-04",
+        "price": 199.34,
+        "remainingQuantity": 313,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-ELEC-0012",
+    "productName": "Tablet Stand Adjustable",
+    "description": "Aluminum adjustable stand for tablets and phones",
+    "productMinPrice": 54.14,
+    "productMaxPrice": 231.07,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-11T09:59:00",
+    "updatedDate": "2026-04-22T12:59:00",
+    "createdBy": "john.doe",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Electronics"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Teal - Standard",
+        "sku": "ELEC-0012-TEA-01",
+        "price": 100.65,
+        "remainingQuantity": 309,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0013",
+    "productName": "Cotton Crew Neck T-Shirt",
+    "description": "100% organic cotton classic fit t-shirt",
+    "productMinPrice": 34.83,
+    "productMaxPrice": 63.06,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-04-21T08:32:00",
+    "updatedDate": "2026-05-22T16:32:00",
+    "createdBy": "admin",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "FASHION-HK"
+    },
+    "variants": [
+      {
+        "variantName": "Black - XS",
+        "sku": "CLTH-0013-BLA-XS",
+        "price": 40.39,
+        "remainingQuantity": 134,
+        "color": "Black",
+        "size": "XS",
+        "isActive": true
+      },
+      {
+        "variantName": "Red - XXL",
+        "sku": "CLTH-0013-RED-XXL",
+        "price": 55.42,
+        "remainingQuantity": 287,
+        "color": "Red",
+        "size": "XXL",
+        "isActive": true
+      },
+      {
+        "variantName": "White - XXL",
+        "sku": "CLTH-0013-WHI-XXL",
+        "price": 66.75,
+        "remainingQuantity": 427,
+        "color": "White",
+        "size": "XXL",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy - XL",
+        "sku": "CLTH-0013-NAV-XL",
+        "price": 53.33,
+        "remainingQuantity": 21,
+        "color": "Navy",
+        "size": "XL",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0014",
+    "productName": "Slim Fit Denim Jeans",
+    "description": "Modern slim fit jeans with stretch denim",
+    "productMinPrice": 22.13,
+    "productMaxPrice": 97.78,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-06-21T11:13:00",
+    "updatedDate": "2025-08-03T18:13:00",
+    "createdBy": "jane.smith",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "TEXTILE-IN"
+    },
+    "variants": [
+      {
+        "variantName": "Red",
+        "sku": "CLTH-0014-RED-01",
+        "price": 24.69,
+        "remainingQuantity": 409,
+        "color": "Red",
+        "size": "XL",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver - Standard",
+        "sku": "CLTH-0014-SIL-02",
+        "price": 33.85,
+        "remainingQuantity": 473,
+        "color": "Silver",
+        "size": "XL",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "CLTH-0014-NAV-03",
+        "price": 50.55,
+        "remainingQuantity": 376,
+        "color": "Navy",
+        "size": "XL",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver - Standard",
+        "sku": "CLTH-0014-SIL-04",
+        "price": 39.28,
+        "remainingQuantity": 195,
+        "color": "Silver",
+        "size": "XL",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold - Standard",
+        "sku": "CLTH-0014-GOL-05",
+        "price": 37.4,
+        "remainingQuantity": 470,
+        "color": "Gold",
+        "size": "XL",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "CLTH-0014-PIN-06",
+        "price": 77.41,
+        "remainingQuantity": 114,
+        "color": "Pink",
+        "size": "XL",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "CLTH-0014-BLA-07",
+        "price": 36.56,
+        "remainingQuantity": 35,
+        "color": "Black",
+        "size": "XL",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver - Standard",
+        "sku": "CLTH-0014-SIL-08",
+        "price": 52.57,
+        "remainingQuantity": 431,
+        "color": "Silver",
+        "size": "XL",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0015",
+    "productName": "Running Sneakers Ultra",
+    "description": "Lightweight running shoes with cushioned sole",
+    "productMinPrice": 20.92,
+    "productMaxPrice": 37.71,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2025-10-12T05:37:00",
+    "updatedDate": "2025-10-28T06:37:00",
+    "createdBy": "system",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Green - Size 39",
+        "sku": "CLTH-0015-GRE-39",
+        "price": 31.45,
+        "remainingQuantity": 130,
+        "color": "Green",
+        "size": "39",
+        "isActive": true
+      },
+      {
+        "variantName": "Black - Size 44",
+        "sku": "CLTH-0015-BLA-44",
+        "price": 27.74,
+        "remainingQuantity": 275,
+        "color": "Black",
+        "size": "44",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy - Size 41",
+        "sku": "CLTH-0015-NAV-41",
+        "price": 25.96,
+        "remainingQuantity": 340,
+        "color": "Navy",
+        "size": "41",
+        "isActive": true
+      },
+      {
+        "variantName": "Red - Size 43",
+        "sku": "CLTH-0015-RED-43",
+        "price": 32.15,
+        "remainingQuantity": 460,
+        "color": "Red",
+        "size": "43",
+        "isActive": true
+      },
+      {
+        "variantName": "Red - Size 42",
+        "sku": "CLTH-0015-RED-42",
+        "price": 34.24,
+        "remainingQuantity": 356,
+        "color": "Red",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "Red - Size 40",
+        "sku": "CLTH-0015-RED-40",
+        "price": 28.71,
+        "remainingQuantity": 194,
+        "color": "Red",
+        "size": "40",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0016",
+    "productName": "Casual Oxford Shirt",
+    "description": "Button-down oxford shirt for casual and office wear",
+    "productMinPrice": 35.93,
+    "productMaxPrice": 62.24,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-19T09:25:00",
+    "updatedDate": "2026-04-23T09:25:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Navy - L",
+        "sku": "CLTH-0016-NAV-L",
+        "price": 55.67,
+        "remainingQuantity": 261,
+        "color": "Navy",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink - XXL",
+        "sku": "CLTH-0016-PIN-XXL",
+        "price": 35.45,
+        "remainingQuantity": 263,
+        "color": "Pink",
+        "size": "XXL",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy - XS",
+        "sku": "CLTH-0016-NAV-XS",
+        "price": 68.89,
+        "remainingQuantity": 344,
+        "color": "Navy",
+        "size": "XS",
+        "isActive": true
+      },
+      {
+        "variantName": "Green - S",
+        "sku": "CLTH-0016-GRE-S",
+        "price": 56.51,
+        "remainingQuantity": 23,
+        "color": "Green",
+        "size": "S",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue - L",
+        "sku": "CLTH-0016-BLU-L",
+        "price": 62.79,
+        "remainingQuantity": 233,
+        "color": "Blue",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - XXL",
+        "sku": "CLTH-0016-GRA-XXL",
+        "price": 60.69,
+        "remainingQuantity": 196,
+        "color": "Gray",
+        "size": "XXL",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink - L",
+        "sku": "CLTH-0016-PIN-L",
+        "price": 49.12,
+        "remainingQuantity": 2,
+        "color": "Pink",
+        "size": "L",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0017",
+    "productName": "Wool Blend Winter Jacket",
+    "description": "Insulated winter jacket with water-resistant shell",
+    "productMinPrice": 37.02,
+    "productMaxPrice": 66.24,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-05-23T16:29:00",
+    "updatedDate": "2026-05-27T09:29:00",
+    "createdBy": "admin",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "FASHION-HK"
+    },
+    "variants": [
+      {
+        "variantName": "Purple",
+        "sku": "CLTH-0017-PUR-01",
+        "price": 54.1,
+        "remainingQuantity": 386,
+        "color": "Purple",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Teal",
+        "sku": "CLTH-0017-TEA-02",
+        "price": 74.94,
+        "remainingQuantity": 218,
+        "color": "Teal",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "CLTH-0017-GOL-03",
+        "price": 46.96,
+        "remainingQuantity": 441,
+        "color": "Gold",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "CLTH-0017-PIN-04",
+        "price": 71.72,
+        "remainingQuantity": 141,
+        "color": "Pink",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver",
+        "sku": "CLTH-0017-SIL-05",
+        "price": 49.96,
+        "remainingQuantity": 225,
+        "color": "Silver",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "CLTH-0017-WHI-06",
+        "price": 43.76,
+        "remainingQuantity": 457,
+        "color": "White",
+        "size": "L",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0018",
+    "productName": "Athletic Shorts Quick-Dry",
+    "description": "Moisture-wicking athletic shorts for training",
+    "productMinPrice": 11.9,
+    "productMaxPrice": 36.7,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2025-12-14T22:09:00",
+    "updatedDate": "2026-01-29T04:09:00",
+    "createdBy": "system",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Gray - XS",
+        "sku": "CLTH-0018-GRA-XS",
+        "price": 17.43,
+        "remainingQuantity": 463,
+        "color": "Gray",
+        "size": "XS",
+        "isActive": true
+      },
+      {
+        "variantName": "Black - XL",
+        "sku": "CLTH-0018-BLA-XL",
+        "price": 16.6,
+        "remainingQuantity": 180,
+        "color": "Black",
+        "size": "XL",
+        "isActive": true
+      },
+      {
+        "variantName": "Green - L",
+        "sku": "CLTH-0018-GRE-L",
+        "price": 34.45,
+        "remainingQuantity": 214,
+        "color": "Green",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue - L",
+        "sku": "CLTH-0018-BLU-L",
+        "price": 17.81,
+        "remainingQuantity": 14,
+        "color": "Blue",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - M",
+        "sku": "CLTH-0018-GRA-M",
+        "price": 29.56,
+        "remainingQuantity": 370,
+        "color": "Gray",
+        "size": "M",
+        "isActive": true
+      },
+      {
+        "variantName": "Red - L",
+        "sku": "CLTH-0018-RED-L",
+        "price": 35.92,
+        "remainingQuantity": 273,
+        "color": "Red",
+        "size": "L",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0019",
+    "productName": "Leather Belt Classic",
+    "description": "Genuine leather belt with brushed metal buckle",
+    "productMinPrice": 41.65,
+    "productMaxPrice": 95.12,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-05-06T00:05:00",
+    "updatedDate": "2026-06-16T13:05:00",
+    "createdBy": "system",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "FASHION-HK"
+    },
+    "variants": [
+      {
+        "variantName": "Gray",
+        "sku": "CLTH-0019-GRA-01",
+        "price": 60.4,
+        "remainingQuantity": 450,
+        "color": "Gray",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - Standard",
+        "sku": "CLTH-0019-GRA-02",
+        "price": 86.8,
+        "remainingQuantity": 427,
+        "color": "Gray",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "CLTH-0019-WHI-03",
+        "price": 64.97,
+        "remainingQuantity": 487,
+        "color": "White",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy - Standard",
+        "sku": "CLTH-0019-NAV-04",
+        "price": 62.53,
+        "remainingQuantity": 20,
+        "color": "Navy",
+        "size": "L",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver - Standard",
+        "sku": "CLTH-0019-SIL-05",
+        "price": 67.12,
+        "remainingQuantity": 318,
+        "color": "Silver",
+        "size": "L",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0020",
+    "productName": "Yoga Leggings High-Waist",
+    "description": "Compression yoga leggings with hidden pocket",
+    "productMinPrice": 17.59,
+    "productMaxPrice": 63.37,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-29T18:13:00",
+    "updatedDate": "2025-08-28T16:13:00",
+    "createdBy": "jane.smith",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "FASHION-HK"
+    },
+    "variants": [
+      {
+        "variantName": "White - S",
+        "sku": "CLTH-0020-WHI-S",
+        "price": 42.68,
+        "remainingQuantity": 13,
+        "color": "White",
+        "size": "S",
+        "isActive": true
+      },
+      {
+        "variantName": "Green - XL",
+        "sku": "CLTH-0020-GRE-XL",
+        "price": 50.88,
+        "remainingQuantity": 203,
+        "color": "Green",
+        "size": "XL",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue - XS",
+        "sku": "CLTH-0020-BLU-XS",
+        "price": 45.58,
+        "remainingQuantity": 124,
+        "color": "Blue",
+        "size": "XS",
+        "isActive": true
+      },
+      {
+        "variantName": "White - XXL",
+        "sku": "CLTH-0020-WHI-XXL",
+        "price": 51.69,
+        "remainingQuantity": 307,
+        "color": "White",
+        "size": "XXL",
+        "isActive": true
+      },
+      {
+        "variantName": "White - XL",
+        "sku": "CLTH-0020-WHI-XL",
+        "price": 41.77,
+        "remainingQuantity": 219,
+        "color": "White",
+        "size": "XL",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy - XS",
+        "sku": "CLTH-0020-NAV-XS",
+        "price": 32.89,
+        "remainingQuantity": 434,
+        "color": "Navy",
+        "size": "XS",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - L",
+        "sku": "CLTH-0020-GRA-L",
+        "price": 32.81,
+        "remainingQuantity": 325,
+        "color": "Gray",
+        "size": "L",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0021",
+    "productName": "Canvas Sneakers Classic",
+    "description": "Low-top canvas sneakers in multiple colors",
+    "productMinPrice": 34.46,
+    "productMaxPrice": 77.77,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-02-23T20:17:00",
+    "updatedDate": "2026-04-04T13:17:00",
+    "createdBy": "system",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "TEXTILE-IN"
+    },
+    "variants": [
+      {
+        "variantName": "Red - Size 41",
+        "sku": "CLTH-0021-RED-41",
+        "price": 58.47,
+        "remainingQuantity": 451,
+        "color": "Red",
+        "size": "41",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue - Size 41",
+        "sku": "CLTH-0021-BLU-41",
+        "price": 67.97,
+        "remainingQuantity": 342,
+        "color": "Blue",
+        "size": "41",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue - Size 43",
+        "sku": "CLTH-0021-BLU-43",
+        "price": 47.24,
+        "remainingQuantity": 93,
+        "color": "Blue",
+        "size": "43",
+        "isActive": true
+      },
+      {
+        "variantName": "Red - Size 42",
+        "sku": "CLTH-0021-RED-42",
+        "price": 60.12,
+        "remainingQuantity": 359,
+        "color": "Red",
+        "size": "42",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0022",
+    "productName": "Merino Wool Sweater",
+    "description": "Soft merino wool crew neck sweater",
+    "productMinPrice": 29.01,
+    "productMaxPrice": 77.59,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-09-06T02:15:00",
+    "updatedDate": "2025-10-22T15:15:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "TEXTILE-IN"
+    },
+    "variants": [
+      {
+        "variantName": "Silver - Standard",
+        "sku": "CLTH-0022-SIL-01",
+        "price": 40.44,
+        "remainingQuantity": 124,
+        "color": "Silver",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "CLTH-0022-GRE-02",
+        "price": 47.22,
+        "remainingQuantity": 176,
+        "color": "Green",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray",
+        "sku": "CLTH-0022-GRA-03",
+        "price": 49.0,
+        "remainingQuantity": 232,
+        "color": "Gray",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "CLTH-0022-GRE-04",
+        "price": 46.22,
+        "remainingQuantity": 161,
+        "color": "Green",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "CLTH-0022-WHI-05",
+        "price": 73.35,
+        "remainingQuantity": 98,
+        "color": "White",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "CLTH-0022-BLU-06",
+        "price": 44.57,
+        "remainingQuantity": 389,
+        "color": "Blue",
+        "size": "42",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0023",
+    "productName": "Raincoat Waterproof",
+    "description": "Lightweight waterproof raincoat with hood",
+    "productMinPrice": 30.48,
+    "productMaxPrice": 109.21,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-09-08T09:14:00",
+    "updatedDate": "2025-10-01T14:14:00",
+    "createdBy": "john.doe",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Brown - Standard",
+        "sku": "CLTH-0023-BRO-01",
+        "price": 89.87,
+        "remainingQuantity": 385,
+        "color": "Brown",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink - Standard",
+        "sku": "CLTH-0023-PIN-02",
+        "price": 25.31,
+        "remainingQuantity": 245,
+        "color": "Pink",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "CLTH-0023-PIN-03",
+        "price": 76.13,
+        "remainingQuantity": 441,
+        "color": "Pink",
+        "size": "42",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-CLTH-0024",
+    "productName": "Formal Dress Pants",
+    "description": "Tailored fit dress pants with wrinkle-free fabric",
+    "productMinPrice": 13.11,
+    "productMaxPrice": 32.36,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-02-07T02:36:00",
+    "updatedDate": "2026-03-19T23:36:00",
+    "createdBy": "john.doe",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Clothing"
+    },
+    "supplier": {
+      "supplierCode": "TEXTILE-IN"
+    },
+    "variants": [
+      {
+        "variantName": "White",
+        "sku": "CLTH-0024-WHI-01",
+        "price": 23.11,
+        "remainingQuantity": 316,
+        "color": "White",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "CLTH-0024-BLU-02",
+        "price": 25.01,
+        "remainingQuantity": 152,
+        "color": "Blue",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "CLTH-0024-GOL-03",
+        "price": 23.1,
+        "remainingQuantity": 30,
+        "color": "Gold",
+        "size": "42",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "CLTH-0024-BEI-04",
+        "price": 19.3,
+        "remainingQuantity": 320,
+        "color": "Beige",
+        "size": "42",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0025",
+    "productName": "Organic Green Tea Collection",
+    "description": "Premium loose-leaf green tea sampler from highland farms",
+    "productMinPrice": 8.82,
+    "productMaxPrice": 16.66,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2025-10-01T05:35:00",
+    "updatedDate": "2025-10-05T10:35:00",
+    "createdBy": "system",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "FOOD-TH"
+    },
+    "variants": [
+      {
+        "variantName": "Black - Standard",
+        "sku": "FOOD-0025-BLA-01",
+        "price": 17.55,
+        "remainingQuantity": 232,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "FOOD-0025-WHI-02",
+        "price": 19.49,
+        "remainingQuantity": 320,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "FOOD-0025-BEI-03",
+        "price": 18.98,
+        "remainingQuantity": 278,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0026",
+    "productName": "Dark Chocolate Gift Box",
+    "description": "Artisan dark chocolate collection 70-85% cacao",
+    "productMinPrice": 17.25,
+    "productMaxPrice": 54.04,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-08-12T02:03:00",
+    "updatedDate": "2025-08-22T11:03:00",
+    "createdBy": "jane.smith",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "FOOD-TH"
+    },
+    "variants": [
+      {
+        "variantName": "Pink",
+        "sku": "FOOD-0026-PIN-01",
+        "price": 46.01,
+        "remainingQuantity": 256,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0027",
+    "productName": "Vietnamese Coffee Beans",
+    "description": "Robusta and Arabica blend medium roast coffee beans",
+    "productMinPrice": 13.86,
+    "productMaxPrice": 21.68,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-06-21T13:47:00",
+    "updatedDate": "2025-07-12T08:47:00",
+    "createdBy": "admin",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Beige",
+        "sku": "FOOD-0027-BEI-01",
+        "price": 27.83,
+        "remainingQuantity": 137,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige - Standard",
+        "sku": "FOOD-0027-BEI-02",
+        "price": 24.45,
+        "remainingQuantity": 333,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "FOOD-0027-PIN-03",
+        "price": 18.64,
+        "remainingQuantity": 325,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "FOOD-0027-GOL-04",
+        "price": 16.79,
+        "remainingQuantity": 170,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "FOOD-0027-NAV-05",
+        "price": 25.03,
+        "remainingQuantity": 355,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0028",
+    "productName": "Mixed Nuts Snack Pack",
+    "description": "Premium roasted mixed nuts with almonds, cashews, walnuts",
+    "productMinPrice": 9.34,
+    "productMaxPrice": 47.42,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-09T01:29:00",
+    "updatedDate": "2026-03-14T11:29:00",
+    "createdBy": "admin",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "ORGANIC-NZ"
+    },
+    "variants": [
+      {
+        "variantName": "Gold",
+        "sku": "FOOD-0028-GOL-01",
+        "price": 28.03,
+        "remainingQuantity": 211,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black - Standard",
+        "sku": "FOOD-0028-BLA-02",
+        "price": 24.0,
+        "remainingQuantity": 320,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "FOOD-0028-PIN-03",
+        "price": 17.35,
+        "remainingQuantity": 474,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "FOOD-0028-GRE-04",
+        "price": 23.11,
+        "remainingQuantity": 498,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "FOOD-0028-PUR-05",
+        "price": 12.74,
+        "remainingQuantity": 282,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0029",
+    "productName": "Honey Organic Raw",
+    "description": "Unfiltered raw organic honey from wildflower fields",
+    "productMinPrice": 15.15,
+    "productMaxPrice": 23.41,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-29T14:07:00",
+    "updatedDate": "2025-09-08T18:07:00",
+    "createdBy": "jane.smith",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "FOOD-TH"
+    },
+    "variants": [
+      {
+        "variantName": "Gold",
+        "sku": "FOOD-0029-GOL-01",
+        "price": 22.99,
+        "remainingQuantity": 74,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - Standard",
+        "sku": "FOOD-0029-GRA-02",
+        "price": 25.74,
+        "remainingQuantity": 69,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold - Standard",
+        "sku": "FOOD-0029-GOL-03",
+        "price": 28.24,
+        "remainingQuantity": 174,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Teal",
+        "sku": "FOOD-0029-TEA-04",
+        "price": 18.61,
+        "remainingQuantity": 371,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0030",
+    "productName": "Dried Fruit Medley",
+    "description": "Sun-dried tropical fruits: mango, pineapple, papaya",
+    "productMinPrice": 21.42,
+    "productMaxPrice": 46.72,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-05-04T15:55:00",
+    "updatedDate": "2026-05-14T05:55:00",
+    "createdBy": "jane.smith",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "ORGANIC-NZ"
+    },
+    "variants": [
+      {
+        "variantName": "Silver",
+        "sku": "FOOD-0030-SIL-01",
+        "price": 32.11,
+        "remainingQuantity": 96,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange - Standard",
+        "sku": "FOOD-0030-ORA-02",
+        "price": 37.74,
+        "remainingQuantity": 210,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "FOOD-0030-BLA-03",
+        "price": 40.62,
+        "remainingQuantity": 195,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray",
+        "sku": "FOOD-0030-GRA-04",
+        "price": 44.51,
+        "remainingQuantity": 77,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "FOOD-0030-PIN-05",
+        "price": 33.24,
+        "remainingQuantity": 169,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0031",
+    "productName": "Coconut Water Premium",
+    "description": "100% natural coconut water with no added sugar",
+    "productMinPrice": 22.23,
+    "productMaxPrice": 42.64,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-02-25T14:00:00",
+    "updatedDate": "2026-04-12T18:00:00",
+    "createdBy": "john.doe",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "FOOD-TH"
+    },
+    "variants": [
+      {
+        "variantName": "Silver",
+        "sku": "FOOD-0031-SIL-01",
+        "price": 34.27,
+        "remainingQuantity": 332,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "FOOD-0031-WHI-02",
+        "price": 47.23,
+        "remainingQuantity": 194,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "FOOD-0031-NAV-03",
+        "price": 43.5,
+        "remainingQuantity": 277,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "FOOD-0031-BLA-04",
+        "price": 31.96,
+        "remainingQuantity": 147,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0032",
+    "productName": "Instant Noodle Variety Pack",
+    "description": "Gourmet ramen noodle set with 6 regional flavors",
+    "productMinPrice": 19.43,
+    "productMaxPrice": 39.62,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-21T20:45:00",
+    "updatedDate": "2025-09-14T23:45:00",
+    "createdBy": "jane.smith",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "FOOD-TH"
+    },
+    "variants": [
+      {
+        "variantName": "Navy",
+        "sku": "FOOD-0032-NAV-01",
+        "price": 26.39,
+        "remainingQuantity": 74,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0033",
+    "productName": "Extra Virgin Olive Oil",
+    "description": "Cold-pressed premium olive oil from Mediterranean",
+    "productMinPrice": 14.69,
+    "productMaxPrice": 39.5,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-09-01T05:11:00",
+    "updatedDate": "2025-09-07T00:11:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "FOOD-TH"
+    },
+    "variants": [
+      {
+        "variantName": "Red - Standard",
+        "sku": "FOOD-0033-RED-01",
+        "price": 29.35,
+        "remainingQuantity": 341,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "FOOD-0033-BLA-02",
+        "price": 24.09,
+        "remainingQuantity": 279,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red - Standard",
+        "sku": "FOOD-0033-RED-03",
+        "price": 41.13,
+        "remainingQuantity": 153,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "FOOD-0033-PUR-04",
+        "price": 30.35,
+        "remainingQuantity": 154,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "FOOD-0033-BLU-05",
+        "price": 29.79,
+        "remainingQuantity": 195,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0034",
+    "productName": "Protein Energy Bar Box",
+    "description": "12-pack high protein energy bars, mixed flavors",
+    "productMinPrice": 10.9,
+    "productMaxPrice": 26.26,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-05-25T09:01:00",
+    "updatedDate": "2026-07-18T06:01:00",
+    "createdBy": "admin",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Orange",
+        "sku": "FOOD-0034-ORA-01",
+        "price": 24.1,
+        "remainingQuantity": 409,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "FOOD-0034-BLU-02",
+        "price": 18.77,
+        "remainingQuantity": 317,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "FOOD-0034-GRE-03",
+        "price": 23.74,
+        "remainingQuantity": 429,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "FOOD-0034-RED-04",
+        "price": 26.07,
+        "remainingQuantity": 158,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver",
+        "sku": "FOOD-0034-SIL-05",
+        "price": 22.29,
+        "remainingQuantity": 46,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0035",
+    "productName": "Sparkling Mineral Water",
+    "description": "Natural sparkling mineral water 24-can case",
+    "productMinPrice": 10.19,
+    "productMaxPrice": 29.73,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-09-11T04:50:00",
+    "updatedDate": "2025-10-15T15:50:00",
+    "createdBy": "jane.smith",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "ORGANIC-NZ"
+    },
+    "variants": [
+      {
+        "variantName": "Teal",
+        "sku": "FOOD-0035-TEA-01",
+        "price": 21.97,
+        "remainingQuantity": 382,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "FOOD-0035-GOL-02",
+        "price": 17.6,
+        "remainingQuantity": 72,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver",
+        "sku": "FOOD-0035-SIL-03",
+        "price": 27.02,
+        "remainingQuantity": 203,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-FOOD-0036",
+    "productName": "Spice Collection Gift Set",
+    "description": "12 exotic spices from around the world in gift box",
+    "productMinPrice": 11.05,
+    "productMaxPrice": 43.72,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-06-08T08:34:00",
+    "updatedDate": "2025-06-15T22:34:00",
+    "createdBy": "jane.smith",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Food & Beverages"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "White",
+        "sku": "FOOD-0036-WHI-01",
+        "price": 25.35,
+        "remainingQuantity": 482,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown",
+        "sku": "FOOD-0036-BRO-02",
+        "price": 28.73,
+        "remainingQuantity": 325,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "FOOD-0036-GOL-03",
+        "price": 30.74,
+        "remainingQuantity": 59,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0037",
+    "productName": "LED Desk Lamp Smart",
+    "description": "Dimmable LED desk lamp with USB charging port",
+    "productMinPrice": 10.36,
+    "productMaxPrice": 23.71,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-02-08T03:06:00",
+    "updatedDate": "2026-02-23T20:06:00",
+    "createdBy": "system",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "HOME-SG"
+    },
+    "variants": [
+      {
+        "variantName": "Gray",
+        "sku": "HOME-0037-GRA-01",
+        "price": 23.2,
+        "remainingQuantity": 335,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "HOME-0037-WHI-02",
+        "price": 22.13,
+        "remainingQuantity": 143,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "HOME-0037-BLA-03",
+        "price": 15.18,
+        "remainingQuantity": 120,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "HOME-0037-GOL-04",
+        "price": 23.9,
+        "remainingQuantity": 461,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "HOME-0037-PUR-05",
+        "price": 16.19,
+        "remainingQuantity": 62,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0038",
+    "productName": "Indoor Plant Pot Set",
+    "description": "Set of 3 ceramic plant pots with drainage",
+    "productMinPrice": 12.77,
+    "productMaxPrice": 41.86,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-04-24T19:01:00",
+    "updatedDate": "2026-04-28T05:01:00",
+    "createdBy": "john.doe",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "GREEN-AU"
+    },
+    "variants": [
+      {
+        "variantName": "Gold",
+        "sku": "HOME-0038-GOL-01",
+        "price": 16.27,
+        "remainingQuantity": 445,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0039",
+    "productName": "Bamboo Cutting Board",
+    "description": "Large bamboo cutting board with juice groove",
+    "productMinPrice": 25.09,
+    "productMaxPrice": 48.37,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-04-02T00:17:00",
+    "updatedDate": "2026-05-26T04:17:00",
+    "createdBy": "jane.smith",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "HOME-SG"
+    },
+    "variants": [
+      {
+        "variantName": "Purple",
+        "sku": "HOME-0039-PUR-01",
+        "price": 28.74,
+        "remainingQuantity": 403,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0040",
+    "productName": "Scented Candle Collection",
+    "description": "Set of 4 soy wax scented candles in glass jars",
+    "productMinPrice": 38.62,
+    "productMaxPrice": 50.04,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-10-14T01:08:00",
+    "updatedDate": "2025-11-30T14:08:00",
+    "createdBy": "admin",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "HOME-SG"
+    },
+    "variants": [
+      {
+        "variantName": "Silver",
+        "sku": "HOME-0040-SIL-01",
+        "price": 55.26,
+        "remainingQuantity": 113,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige - Standard",
+        "sku": "HOME-0040-BEI-02",
+        "price": 65.05,
+        "remainingQuantity": 266,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "HOME-0040-GRE-03",
+        "price": 58.64,
+        "remainingQuantity": 245,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "HOME-0040-GOL-04",
+        "price": 58.14,
+        "remainingQuantity": 465,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0041",
+    "productName": "Memory Foam Pillow",
+    "description": "Ergonomic memory foam pillow with cooling gel",
+    "productMinPrice": 11.82,
+    "productMaxPrice": 29.09,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-04-08T04:04:00",
+    "updatedDate": "2026-04-16T12:04:00",
+    "createdBy": "jane.smith",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "GREEN-AU"
+    },
+    "variants": [
+      {
+        "variantName": "Brown - Standard",
+        "sku": "HOME-0041-BRO-01",
+        "price": 21.21,
+        "remainingQuantity": 406,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange - Standard",
+        "sku": "HOME-0041-ORA-02",
+        "price": 26.34,
+        "remainingQuantity": 282,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange",
+        "sku": "HOME-0041-ORA-03",
+        "price": 23.15,
+        "remainingQuantity": 211,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "HOME-0041-NAV-04",
+        "price": 21.64,
+        "remainingQuantity": 160,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray",
+        "sku": "HOME-0041-GRA-05",
+        "price": 21.04,
+        "remainingQuantity": 351,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0042",
+    "productName": "Stainless Steel Water Bottle",
+    "description": "Double-wall insulated 750ml water bottle",
+    "productMinPrice": 11.49,
+    "productMaxPrice": 96.35,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-18T13:06:00",
+    "updatedDate": "2025-09-04T12:06:00",
+    "createdBy": "john.doe",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "GREEN-AU"
+    },
+    "variants": [
+      {
+        "variantName": "Brown",
+        "sku": "HOME-0042-BRO-01",
+        "price": 43.28,
+        "remainingQuantity": 447,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "HOME-0042-PUR-02",
+        "price": 48.31,
+        "remainingQuantity": 26,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "HOME-0042-GRE-03",
+        "price": 33.54,
+        "remainingQuantity": 108,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "HOME-0042-RED-04",
+        "price": 11.65,
+        "remainingQuantity": 432,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown",
+        "sku": "HOME-0042-BRO-05",
+        "price": 53.22,
+        "remainingQuantity": 413,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0043",
+    "productName": "Wall Art Canvas Print",
+    "description": "Modern abstract art canvas print 80x60cm",
+    "productMinPrice": 51.95,
+    "productMaxPrice": 149.66,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-04-15T19:43:00",
+    "updatedDate": "2026-05-27T12:43:00",
+    "createdBy": "jane.smith",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "GREEN-AU"
+    },
+    "variants": [
+      {
+        "variantName": "Green",
+        "sku": "HOME-0043-GRE-01",
+        "price": 68.78,
+        "remainingQuantity": 3,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "HOME-0043-RED-02",
+        "price": 91.39,
+        "remainingQuantity": 72,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0044",
+    "productName": "Cast Iron Skillet 12-inch",
+    "description": "Pre-seasoned cast iron frying pan",
+    "productMinPrice": 40.92,
+    "productMaxPrice": 53.68,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-02-27T06:24:00",
+    "updatedDate": "2026-03-25T20:24:00",
+    "createdBy": "jane.smith",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Silver",
+        "sku": "HOME-0044-SIL-01",
+        "price": 65.74,
+        "remainingQuantity": 79,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "HOME-0044-RED-02",
+        "price": 37.86,
+        "remainingQuantity": 226,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "HOME-0044-PUR-03",
+        "price": 58.3,
+        "remainingQuantity": 110,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0045",
+    "productName": "Towel Set Premium Cotton",
+    "description": "6-piece luxury bath towel set, 100% Egyptian cotton",
+    "productMinPrice": 13.92,
+    "productMaxPrice": 62.61,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-10-24T21:43:00",
+    "updatedDate": "2025-12-01T12:43:00",
+    "createdBy": "jane.smith",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Gray",
+        "sku": "HOME-0045-GRA-01",
+        "price": 12.21,
+        "remainingQuantity": 484,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "HOME-0045-BLU-02",
+        "price": 36.12,
+        "remainingQuantity": 61,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0046",
+    "productName": "Smart LED Light Strip",
+    "description": "5m RGB LED strip with app and voice control",
+    "productMinPrice": 33.86,
+    "productMaxPrice": 82.62,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-08-06T12:34:00",
+    "updatedDate": "2025-09-20T19:34:00",
+    "createdBy": "jane.smith",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "HOME-SG"
+    },
+    "variants": [
+      {
+        "variantName": "Gold",
+        "sku": "HOME-0046-GOL-01",
+        "price": 53.26,
+        "remainingQuantity": 39,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "HOME-0046-GOL-02",
+        "price": 51.41,
+        "remainingQuantity": 327,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - Standard",
+        "sku": "HOME-0046-GRA-03",
+        "price": 66.17,
+        "remainingQuantity": 87,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver",
+        "sku": "HOME-0046-SIL-04",
+        "price": 60.68,
+        "remainingQuantity": 185,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0047",
+    "productName": "Garden Tool Set",
+    "description": "8-piece stainless steel garden hand tool set with bag",
+    "productMinPrice": 30.71,
+    "productMaxPrice": 50.24,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-01-10T18:25:00",
+    "updatedDate": "2026-02-12T20:25:00",
+    "createdBy": "jane.smith",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "HOME-SG"
+    },
+    "variants": [
+      {
+        "variantName": "Navy",
+        "sku": "HOME-0047-NAV-01",
+        "price": 37.14,
+        "remainingQuantity": 271,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown - Standard",
+        "sku": "HOME-0047-BRO-02",
+        "price": 50.46,
+        "remainingQuantity": 490,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HOME-0048",
+    "productName": "Air Purifier HEPA",
+    "description": "Compact HEPA air purifier for rooms up to 30sqm",
+    "productMinPrice": 50.38,
+    "productMaxPrice": 81.64,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-08-14T08:12:00",
+    "updatedDate": "2025-08-26T03:12:00",
+    "createdBy": "admin",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Home & Garden"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Pink",
+        "sku": "HOME-0048-PIN-01",
+        "price": 82.48,
+        "remainingQuantity": 473,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Teal",
+        "sku": "HOME-0048-TEA-02",
+        "price": 82.25,
+        "remainingQuantity": 442,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "HOME-0048-PUR-03",
+        "price": 69.97,
+        "remainingQuantity": 323,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "HOME-0048-GRE-04",
+        "price": 72.92,
+        "remainingQuantity": 37,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0049",
+    "productName": "Yoga Mat Premium 6mm",
+    "description": "Non-slip TPE yoga mat with carrying strap",
+    "productMinPrice": 32.01,
+    "productMaxPrice": 45.39,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-12-06T09:04:00",
+    "updatedDate": "2026-01-16T11:04:00",
+    "createdBy": "system",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Brown",
+        "sku": "SPRT-0049-BRO-01",
+        "price": 45.24,
+        "remainingQuantity": 465,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver",
+        "sku": "SPRT-0049-SIL-02",
+        "price": 40.16,
+        "remainingQuantity": 256,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "SPRT-0049-RED-03",
+        "price": 48.83,
+        "remainingQuantity": 428,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "SPRT-0049-NAV-04",
+        "price": 38.35,
+        "remainingQuantity": 20,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "SPRT-0049-BLU-05",
+        "price": 57.31,
+        "remainingQuantity": 312,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0050",
+    "productName": "Resistance Bands Set",
+    "description": "5-piece resistance bands with handles and door anchor",
+    "productMinPrice": 26.92,
+    "productMaxPrice": 119.53,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-12-16T13:49:00",
+    "updatedDate": "2026-01-07T10:49:00",
+    "createdBy": "jane.smith",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "SPORT-US"
+    },
+    "variants": [
+      {
+        "variantName": "White",
+        "sku": "SPRT-0050-WHI-01",
+        "price": 41.91,
+        "remainingQuantity": 436,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "SPRT-0050-PUR-02",
+        "price": 50.47,
+        "remainingQuantity": 41,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "SPRT-0050-BEI-03",
+        "price": 76.08,
+        "remainingQuantity": 335,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0051",
+    "productName": "Camping Tent 4-Person",
+    "description": "Waterproof double-layer camping tent",
+    "productMinPrice": 42.43,
+    "productMaxPrice": 64.04,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-05-29T02:19:00",
+    "updatedDate": "2026-07-03T14:19:00",
+    "createdBy": "jane.smith",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "GREEN-AU"
+    },
+    "variants": [
+      {
+        "variantName": "White",
+        "sku": "SPRT-0051-WHI-01",
+        "price": 55.64,
+        "remainingQuantity": 185,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green - Standard",
+        "sku": "SPRT-0051-GRE-02",
+        "price": 61.02,
+        "remainingQuantity": 248,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue - Standard",
+        "sku": "SPRT-0051-BLU-03",
+        "price": 40.62,
+        "remainingQuantity": 432,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver - Standard",
+        "sku": "SPRT-0051-SIL-04",
+        "price": 76.53,
+        "remainingQuantity": 452,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown - Standard",
+        "sku": "SPRT-0051-BRO-05",
+        "price": 61.21,
+        "remainingQuantity": 67,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0052",
+    "productName": "Hiking Backpack 40L",
+    "description": "Water-resistant hiking backpack with rain cover",
+    "productMinPrice": 27.59,
+    "productMaxPrice": 52.19,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-05-21T19:51:00",
+    "updatedDate": "2026-07-18T00:51:00",
+    "createdBy": "admin",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "GREEN-AU"
+    },
+    "variants": [
+      {
+        "variantName": "Purple",
+        "sku": "SPRT-0052-PUR-01",
+        "price": 57.14,
+        "remainingQuantity": 385,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange",
+        "sku": "SPRT-0052-ORA-02",
+        "price": 32.06,
+        "remainingQuantity": 494,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver",
+        "sku": "SPRT-0052-SIL-03",
+        "price": 48.82,
+        "remainingQuantity": 347,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0053",
+    "productName": "Adjustable Dumbbell Set",
+    "description": "Adjustable dumbbell pair 5-25kg with rack",
+    "productMinPrice": 59.19,
+    "productMaxPrice": 110.74,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-10-23T12:32:00",
+    "updatedDate": "2025-11-26T01:32:00",
+    "createdBy": "john.doe",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "GREEN-AU"
+    },
+    "variants": [
+      {
+        "variantName": "Black",
+        "sku": "SPRT-0053-BLA-01",
+        "price": 112.23,
+        "remainingQuantity": 52,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange",
+        "sku": "SPRT-0053-ORA-02",
+        "price": 100.37,
+        "remainingQuantity": 390,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red - Standard",
+        "sku": "SPRT-0053-RED-03",
+        "price": 97.96,
+        "remainingQuantity": 223,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0054",
+    "productName": "Cycling Helmet Pro",
+    "description": "Lightweight aerodynamic cycling helmet with MIPS",
+    "productMinPrice": 57.21,
+    "productMaxPrice": 87.19,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-01-17T11:59:00",
+    "updatedDate": "2026-01-19T00:59:00",
+    "createdBy": "jane.smith",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "SPORT-US"
+    },
+    "variants": [
+      {
+        "variantName": "White",
+        "sku": "SPRT-0054-WHI-01",
+        "price": 73.81,
+        "remainingQuantity": 429,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange",
+        "sku": "SPRT-0054-ORA-02",
+        "price": 83.38,
+        "remainingQuantity": 146,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Teal",
+        "sku": "SPRT-0054-TEA-03",
+        "price": 79.27,
+        "remainingQuantity": 361,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "SPRT-0054-PIN-04",
+        "price": 47.37,
+        "remainingQuantity": 131,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0055",
+    "productName": "Swimming Goggles Anti-Fog",
+    "description": "Professional swimming goggles with UV protection",
+    "productMinPrice": 51.42,
+    "productMaxPrice": 110.81,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-04-08T16:27:00",
+    "updatedDate": "2026-04-16T01:27:00",
+    "createdBy": "admin",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "SPORT-US"
+    },
+    "variants": [
+      {
+        "variantName": "Gray",
+        "sku": "SPRT-0055-GRA-01",
+        "price": 71.23,
+        "remainingQuantity": 428,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Teal",
+        "sku": "SPRT-0055-TEA-02",
+        "price": 88.81,
+        "remainingQuantity": 294,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0056",
+    "productName": "Basketball Official Size",
+    "description": "Official size and weight indoor/outdoor basketball",
+    "productMinPrice": 45.36,
+    "productMaxPrice": 81.57,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-06-01T19:22:00",
+    "updatedDate": "2025-06-17T13:22:00",
+    "createdBy": "admin",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "SPORT-US"
+    },
+    "variants": [
+      {
+        "variantName": "Brown",
+        "sku": "SPRT-0056-BRO-01",
+        "price": 80.14,
+        "remainingQuantity": 10,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0057",
+    "productName": "Foam Roller High Density",
+    "description": "45cm high-density EVA foam roller for muscle recovery",
+    "productMinPrice": 53.41,
+    "productMaxPrice": 67.33,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-12-16T11:16:00",
+    "updatedDate": "2026-02-01T11:16:00",
+    "createdBy": "admin",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Orange",
+        "sku": "SPRT-0057-ORA-01",
+        "price": 61.19,
+        "remainingQuantity": 387,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy - Standard",
+        "sku": "SPRT-0057-NAV-02",
+        "price": 64.23,
+        "remainingQuantity": 329,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0058",
+    "productName": "Tennis Racket Carbon",
+    "description": "Carbon fiber tennis racket with shock absorber",
+    "productMinPrice": 51.18,
+    "productMaxPrice": 122.8,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-05-23T15:40:00",
+    "updatedDate": "2026-06-03T19:40:00",
+    "createdBy": "system",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "SPORT-US"
+    },
+    "variants": [
+      {
+        "variantName": "Blue - Standard",
+        "sku": "SPRT-0058-BLU-01",
+        "price": 45.72,
+        "remainingQuantity": 477,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "SPRT-0058-GRE-02",
+        "price": 116.31,
+        "remainingQuantity": 129,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "SPRT-0058-BLA-03",
+        "price": 59.1,
+        "remainingQuantity": 399,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0059",
+    "productName": "Insulated Water Bottle Sport",
+    "description": "750ml insulated sport bottle with one-hand cap",
+    "productMinPrice": 53.02,
+    "productMaxPrice": 92.89,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-08-03T11:27:00",
+    "updatedDate": "2025-09-28T23:27:00",
+    "createdBy": "system",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "SPORT-US"
+    },
+    "variants": [
+      {
+        "variantName": "Pink",
+        "sku": "SPRT-0059-PIN-01",
+        "price": 82.14,
+        "remainingQuantity": 136,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver - Standard",
+        "sku": "SPRT-0059-SIL-02",
+        "price": 73.01,
+        "remainingQuantity": 421,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-SPRT-0060",
+    "productName": "Jump Rope Speed Pro",
+    "description": "Adjustable speed jump rope with ball bearings",
+    "productMinPrice": 36.36,
+    "productMaxPrice": 75.27,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-11T10:42:00",
+    "updatedDate": "2025-07-29T19:42:00",
+    "createdBy": "system",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Sports & Outdoors"
+    },
+    "supplier": {
+      "supplierCode": "SPORT-US"
+    },
+    "variants": [
+      {
+        "variantName": "Navy",
+        "sku": "SPRT-0060-NAV-01",
+        "price": 76.55,
+        "remainingQuantity": 314,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - Standard",
+        "sku": "SPRT-0060-GRA-02",
+        "price": 86.99,
+        "remainingQuantity": 38,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "SPRT-0060-PUR-03",
+        "price": 60.09,
+        "remainingQuantity": 347,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "SPRT-0060-RED-04",
+        "price": 46.93,
+        "remainingQuantity": 400,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0061",
+    "productName": "Bestseller Fiction Box Set",
+    "description": "5 award-winning fiction novels box set",
+    "productMinPrice": 9.81,
+    "productMaxPrice": 25.86,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-04-27T11:23:00",
+    "updatedDate": "2026-05-22T05:23:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Navy",
+        "sku": "BOOK-0061-NAV-01",
+        "price": 11.37,
+        "remainingQuantity": 187,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray",
+        "sku": "BOOK-0061-GRA-02",
+        "price": 18.37,
+        "remainingQuantity": 13,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange - Standard",
+        "sku": "BOOK-0061-ORA-03",
+        "price": 21.21,
+        "remainingQuantity": 60,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0062",
+    "productName": "Programming Guide Python",
+    "description": "Comprehensive Python programming guide 3rd edition",
+    "productMinPrice": 48.3,
+    "productMaxPrice": 121.66,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-09-18T19:18:00",
+    "updatedDate": "2025-11-02T10:18:00",
+    "createdBy": "john.doe",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Red",
+        "sku": "BOOK-0062-RED-01",
+        "price": 59.87,
+        "remainingQuantity": 349,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "BOOK-0062-GOL-02",
+        "price": 100.57,
+        "remainingQuantity": 281,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown - Standard",
+        "sku": "BOOK-0062-BRO-03",
+        "price": 54.09,
+        "remainingQuantity": 363,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Teal",
+        "sku": "BOOK-0062-TEA-04",
+        "price": 55.34,
+        "remainingQuantity": 114,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0063",
+    "productName": "Business Strategy Collection",
+    "description": "4 essential business strategy books",
+    "productMinPrice": 59.23,
+    "productMaxPrice": 140.52,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-09-30T15:01:00",
+    "updatedDate": "2025-10-24T08:01:00",
+    "createdBy": "system",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "BOOK-UK"
+    },
+    "variants": [
+      {
+        "variantName": "Teal - Standard",
+        "sku": "BOOK-0063-TEA-01",
+        "price": 109.05,
+        "remainingQuantity": 368,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "BOOK-0063-PIN-02",
+        "price": 132.33,
+        "remainingQuantity": 37,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "BOOK-0063-RED-03",
+        "price": 104.3,
+        "remainingQuantity": 348,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown",
+        "sku": "BOOK-0063-BRO-04",
+        "price": 137.77,
+        "remainingQuantity": 327,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige - Standard",
+        "sku": "BOOK-0063-BEI-05",
+        "price": 126.17,
+        "remainingQuantity": 466,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0064",
+    "productName": "Cookbook Asian Cuisine",
+    "description": "250 authentic Asian recipes with full-color photos",
+    "productMinPrice": 51.23,
+    "productMaxPrice": 107.86,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-11-03T05:10:00",
+    "updatedDate": "2025-11-24T03:10:00",
+    "createdBy": "jane.smith",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "BOOK-UK"
+    },
+    "variants": [
+      {
+        "variantName": "Blue",
+        "sku": "BOOK-0064-BLU-01",
+        "price": 69.13,
+        "remainingQuantity": 155,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "BOOK-0064-BEI-02",
+        "price": 68.19,
+        "remainingQuantity": 482,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige - Standard",
+        "sku": "BOOK-0064-BEI-03",
+        "price": 97.67,
+        "remainingQuantity": 309,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0065",
+    "productName": "Children Storybook Bundle",
+    "description": "10 classic children storybooks collection",
+    "productMinPrice": 51.81,
+    "productMaxPrice": 112.54,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-06-15T02:02:00",
+    "updatedDate": "2025-08-14T22:02:00",
+    "createdBy": "jane.smith",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Gray",
+        "sku": "BOOK-0065-GRA-01",
+        "price": 71.58,
+        "remainingQuantity": 279,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "BOOK-0065-GRE-02",
+        "price": 61.1,
+        "remainingQuantity": 413,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "BOOK-0065-PUR-03",
+        "price": 87.38,
+        "remainingQuantity": 80,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "BOOK-0065-PIN-04",
+        "price": 74.05,
+        "remainingQuantity": 73,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "BOOK-0065-NAV-05",
+        "price": 91.81,
+        "remainingQuantity": 176,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0066",
+    "productName": "Science Fiction Trilogy",
+    "description": "Complete science fiction trilogy in hardcover",
+    "productMinPrice": 14.8,
+    "productMaxPrice": 58.15,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-15T03:20:00",
+    "updatedDate": "2026-03-30T17:20:00",
+    "createdBy": "system",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "White - Standard",
+        "sku": "BOOK-0066-WHI-01",
+        "price": 51.44,
+        "remainingQuantity": 214,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "BOOK-0066-BLU-02",
+        "price": 49.25,
+        "remainingQuantity": 478,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0067",
+    "productName": "Photography Art Book",
+    "description": "World photography award collection coffee table book",
+    "productMinPrice": 17.87,
+    "productMaxPrice": 42.21,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-02-19T14:31:00",
+    "updatedDate": "2026-04-16T23:31:00",
+    "createdBy": "admin",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Pink",
+        "sku": "BOOK-0067-PIN-01",
+        "price": 23.16,
+        "remainingQuantity": 25,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "BOOK-0067-GRE-02",
+        "price": 40.83,
+        "remainingQuantity": 240,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "BOOK-0067-GRE-03",
+        "price": 37.43,
+        "remainingQuantity": 451,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "BOOK-0067-GRE-04",
+        "price": 34.9,
+        "remainingQuantity": 205,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "BOOK-0067-BLA-05",
+        "price": 25.11,
+        "remainingQuantity": 37,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0068",
+    "productName": "Self-Help Productivity",
+    "description": "Bestselling productivity and habit building guide",
+    "productMinPrice": 34.22,
+    "productMaxPrice": 113.02,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-10-22T19:43:00",
+    "updatedDate": "2025-11-30T22:43:00",
+    "createdBy": "admin",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Silver",
+        "sku": "BOOK-0068-SIL-01",
+        "price": 62.84,
+        "remainingQuantity": 73,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "BOOK-0068-BLU-02",
+        "price": 40.92,
+        "remainingQuantity": 19,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "BOOK-0068-RED-03",
+        "price": 82.93,
+        "remainingQuantity": 76,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0069",
+    "productName": "History Encyclopedia",
+    "description": "Illustrated world history encyclopedia",
+    "productMinPrice": 25.05,
+    "productMaxPrice": 90.23,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-08-23T12:39:00",
+    "updatedDate": "2025-10-09T21:39:00",
+    "createdBy": "system",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "BOOK-UK"
+    },
+    "variants": [
+      {
+        "variantName": "Gold - Standard",
+        "sku": "BOOK-0069-GOL-01",
+        "price": 30.36,
+        "remainingQuantity": 213,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "BOOK-0069-BEI-02",
+        "price": 79.67,
+        "remainingQuantity": 322,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "BOOK-0069-BLA-03",
+        "price": 44.36,
+        "remainingQuantity": 497,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver",
+        "sku": "BOOK-0069-SIL-04",
+        "price": 23.87,
+        "remainingQuantity": 245,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0070",
+    "productName": "Vinyl Record Classics",
+    "description": "Greatest hits vinyl record compilation",
+    "productMinPrice": 35.26,
+    "productMaxPrice": 110.17,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2025-12-12T04:52:00",
+    "updatedDate": "2026-01-24T11:52:00",
+    "createdBy": "admin",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "BOOK-UK"
+    },
+    "variants": [
+      {
+        "variantName": "Pink",
+        "sku": "BOOK-0070-PIN-01",
+        "price": 53.55,
+        "remainingQuantity": 210,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0071",
+    "productName": "Language Learning Set Japanese",
+    "description": "Japanese language learning book + audio CD set",
+    "productMinPrice": 53.39,
+    "productMaxPrice": 129.62,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-02T22:08:00",
+    "updatedDate": "2025-08-05T04:08:00",
+    "createdBy": "system",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Red",
+        "sku": "BOOK-0071-RED-01",
+        "price": 92.61,
+        "remainingQuantity": 346,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver",
+        "sku": "BOOK-0071-SIL-02",
+        "price": 114.24,
+        "remainingQuantity": 135,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "BOOK-0071-BEI-03",
+        "price": 107.58,
+        "remainingQuantity": 152,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-BOOK-0072",
+    "productName": "Graphic Novel Collection",
+    "description": "Award-winning graphic novel anthology",
+    "productMinPrice": 56.96,
+    "productMaxPrice": 155.36,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-10-26T22:13:00",
+    "updatedDate": "2025-12-10T20:13:00",
+    "createdBy": "system",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Books & Media"
+    },
+    "supplier": {
+      "supplierCode": "BOOK-UK"
+    },
+    "variants": [
+      {
+        "variantName": "Teal",
+        "sku": "BOOK-0072-TEA-01",
+        "price": 103.4,
+        "remainingQuantity": 293,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "BOOK-0072-PUR-02",
+        "price": 123.02,
+        "remainingQuantity": 176,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver",
+        "sku": "BOOK-0072-SIL-03",
+        "price": 69.89,
+        "remainingQuantity": 365,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "BOOK-0072-WHI-04",
+        "price": 79.9,
+        "remainingQuantity": 245,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue - Standard",
+        "sku": "BOOK-0072-BLU-05",
+        "price": 126.04,
+        "remainingQuantity": 356,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0073",
+    "productName": "Building Blocks 1000pc",
+    "description": "1000-piece creative building blocks set compatible",
+    "productMinPrice": 15.14,
+    "productMaxPrice": 80.55,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-28T07:15:00",
+    "updatedDate": "2026-04-01T04:15:00",
+    "createdBy": "john.doe",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "White",
+        "sku": "TOYS-0073-WHI-01",
+        "price": 35.66,
+        "remainingQuantity": 394,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0074",
+    "productName": "Board Game Strategy Set",
+    "description": "Award-winning strategy board game for 2-6 players",
+    "productMinPrice": 8.27,
+    "productMaxPrice": 67.8,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-08-20T13:41:00",
+    "updatedDate": "2025-10-19T04:41:00",
+    "createdBy": "john.doe",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "TOY-JP"
+    },
+    "variants": [
+      {
+        "variantName": "Green",
+        "sku": "TOYS-0074-GRE-01",
+        "price": 32.47,
+        "remainingQuantity": 293,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "TOYS-0074-BLU-02",
+        "price": 44.94,
+        "remainingQuantity": 467,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Teal - Standard",
+        "sku": "TOYS-0074-TEA-03",
+        "price": 33.51,
+        "remainingQuantity": 470,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0075",
+    "productName": "Remote Control Car 4WD",
+    "description": "1:16 scale 4WD RC car with rechargeable battery",
+    "productMinPrice": 59.85,
+    "productMaxPrice": 105.58,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-02-09T05:59:00",
+    "updatedDate": "2026-03-28T14:59:00",
+    "createdBy": "admin",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "TOY-JP"
+    },
+    "variants": [
+      {
+        "variantName": "Beige - Standard",
+        "sku": "TOYS-0075-BEI-01",
+        "price": 106.22,
+        "remainingQuantity": 328,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown",
+        "sku": "TOYS-0075-BRO-02",
+        "price": 95.68,
+        "remainingQuantity": 258,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink - Standard",
+        "sku": "TOYS-0075-PIN-03",
+        "price": 98.74,
+        "remainingQuantity": 374,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink",
+        "sku": "TOYS-0075-PIN-04",
+        "price": 82.19,
+        "remainingQuantity": 172,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver - Standard",
+        "sku": "TOYS-0075-SIL-05",
+        "price": 86.53,
+        "remainingQuantity": 312,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0076",
+    "productName": "Wooden Puzzle 3D",
+    "description": "3D wooden mechanical puzzle - working clock",
+    "productMinPrice": 54.65,
+    "productMaxPrice": 139.08,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-02-19T10:05:00",
+    "updatedDate": "2026-03-17T07:05:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "OFFICE-CN"
+    },
+    "variants": [
+      {
+        "variantName": "Teal - Standard",
+        "sku": "TOYS-0076-TEA-01",
+        "price": 61.89,
+        "remainingQuantity": 385,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "TOYS-0076-GRE-02",
+        "price": 89.43,
+        "remainingQuantity": 5,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "TOYS-0076-GRE-03",
+        "price": 83.16,
+        "remainingQuantity": 60,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0077",
+    "productName": "Science Experiment Kit",
+    "description": "Chemistry and physics experiment kit for ages 8+",
+    "productMinPrice": 23.95,
+    "productMaxPrice": 70.44,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-02-13T22:49:00",
+    "updatedDate": "2026-03-05T20:49:00",
+    "createdBy": "jane.smith",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Blue - Standard",
+        "sku": "TOYS-0077-BLU-01",
+        "price": 23.12,
+        "remainingQuantity": 382,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "TOYS-0077-BEI-02",
+        "price": 60.73,
+        "remainingQuantity": 387,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown",
+        "sku": "TOYS-0077-BRO-03",
+        "price": 61.6,
+        "remainingQuantity": 348,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver",
+        "sku": "TOYS-0077-SIL-04",
+        "price": 54.77,
+        "remainingQuantity": 270,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange",
+        "sku": "TOYS-0077-ORA-05",
+        "price": 49.77,
+        "remainingQuantity": 424,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0078",
+    "productName": "Plush Toy Collection",
+    "description": "Set of 5 premium stuffed animals",
+    "productMinPrice": 54.95,
+    "productMaxPrice": 83.14,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-02T04:10:00",
+    "updatedDate": "2026-03-22T20:10:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "OFFICE-CN"
+    },
+    "variants": [
+      {
+        "variantName": "Teal",
+        "sku": "TOYS-0078-TEA-01",
+        "price": 89.75,
+        "remainingQuantity": 262,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0079",
+    "productName": "Art Supplies Kit Deluxe",
+    "description": "150-piece art set with paints, brushes, canvases",
+    "productMinPrice": 31.75,
+    "productMaxPrice": 46.95,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-01-23T21:51:00",
+    "updatedDate": "2026-02-12T20:51:00",
+    "createdBy": "jane.smith",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Beige - Standard",
+        "sku": "TOYS-0079-BEI-01",
+        "price": 46.96,
+        "remainingQuantity": 277,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "TOYS-0079-BLA-02",
+        "price": 41.85,
+        "remainingQuantity": 16,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0080",
+    "productName": "Magnetic Building Tiles",
+    "description": "120-piece magnetic building tiles STEM toy",
+    "productMinPrice": 29.26,
+    "productMaxPrice": 108.47,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-04-25T23:41:00",
+    "updatedDate": "2026-05-22T10:41:00",
+    "createdBy": "system",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Gray - Standard",
+        "sku": "TOYS-0080-GRA-01",
+        "price": 98.43,
+        "remainingQuantity": 68,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "TOYS-0080-PUR-02",
+        "price": 57.11,
+        "remainingQuantity": 201,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown - Standard",
+        "sku": "TOYS-0080-BRO-03",
+        "price": 97.7,
+        "remainingQuantity": 387,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "TOYS-0080-BLA-04",
+        "price": 65.28,
+        "remainingQuantity": 217,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0081",
+    "productName": "Drone Mini Camera",
+    "description": "Mini foldable drone with 1080p camera and GPS",
+    "productMinPrice": 27.72,
+    "productMaxPrice": 58.39,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-01-22T11:09:00",
+    "updatedDate": "2026-02-08T17:09:00",
+    "createdBy": "admin",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "OFFICE-CN"
+    },
+    "variants": [
+      {
+        "variantName": "Beige",
+        "sku": "TOYS-0081-BEI-01",
+        "price": 47.13,
+        "remainingQuantity": 105,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White - Standard",
+        "sku": "TOYS-0081-WHI-02",
+        "price": 32.99,
+        "remainingQuantity": 360,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold - Standard",
+        "sku": "TOYS-0081-GOL-03",
+        "price": 50.04,
+        "remainingQuantity": 119,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown - Standard",
+        "sku": "TOYS-0081-BRO-04",
+        "price": 47.3,
+        "remainingQuantity": 257,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0082",
+    "productName": "Card Game Party Pack",
+    "description": "5 popular card games bundle for parties",
+    "productMinPrice": 20.18,
+    "productMaxPrice": 112.66,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-22T10:36:00",
+    "updatedDate": "2026-04-30T07:36:00",
+    "createdBy": "john.doe",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Purple",
+        "sku": "TOYS-0082-PUR-01",
+        "price": 36.96,
+        "remainingQuantity": 285,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "TOYS-0082-BEI-02",
+        "price": 79.08,
+        "remainingQuantity": 218,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0083",
+    "productName": "Robot Building Kit",
+    "description": "Programmable robot building kit with sensors",
+    "productMinPrice": 33.77,
+    "productMaxPrice": 131.28,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-04-26T21:24:00",
+    "updatedDate": "2026-06-16T13:24:00",
+    "createdBy": "system",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "OFFICE-CN"
+    },
+    "variants": [
+      {
+        "variantName": "Green",
+        "sku": "TOYS-0083-GRE-01",
+        "price": 84.53,
+        "remainingQuantity": 434,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "TOYS-0083-BLU-02",
+        "price": 97.24,
+        "remainingQuantity": 468,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-TOYS-0084",
+    "productName": "Dollhouse Wooden Deluxe",
+    "description": "Fully furnished wooden dollhouse with accessories",
+    "productMinPrice": 37.24,
+    "productMaxPrice": 134.34,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-13T16:08:00",
+    "updatedDate": "2026-04-06T23:08:00",
+    "createdBy": "jane.smith",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Toys & Games"
+    },
+    "supplier": {
+      "supplierCode": "TOY-JP"
+    },
+    "variants": [
+      {
+        "variantName": "Gold",
+        "sku": "TOYS-0084-GOL-01",
+        "price": 91.77,
+        "remainingQuantity": 26,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "TOYS-0084-GRE-02",
+        "price": 57.94,
+        "remainingQuantity": 37,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "TOYS-0084-BLU-03",
+        "price": 87.56,
+        "remainingQuantity": 111,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Pink - Standard",
+        "sku": "TOYS-0084-PIN-04",
+        "price": 91.08,
+        "remainingQuantity": 465,
+        "color": "Pink",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0085",
+    "productName": "Vitamin C Serum Premium",
+    "description": "20% Vitamin C facial serum with hyaluronic acid",
+    "productMinPrice": 19.01,
+    "productMaxPrice": 46.11,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-31T23:48:00",
+    "updatedDate": "2025-08-31T06:48:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "BEAUTY-KR"
+    },
+    "variants": [
+      {
+        "variantName": "Brown",
+        "sku": "HLTH-0085-BRO-01",
+        "price": 27.58,
+        "remainingQuantity": 332,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "HLTH-0085-NAV-02",
+        "price": 34.95,
+        "remainingQuantity": 238,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0086",
+    "productName": "Sunscreen SPF50+ Lotion",
+    "description": "Broad spectrum SPF50+ sunscreen 200ml",
+    "productMinPrice": 49.75,
+    "productMaxPrice": 124.77,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2025-11-11T06:23:00",
+    "updatedDate": "2025-12-01T19:23:00",
+    "createdBy": "john.doe",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "BEAUTY-KR"
+    },
+    "variants": [
+      {
+        "variantName": "Green",
+        "sku": "HLTH-0086-GRE-01",
+        "price": 98.56,
+        "remainingQuantity": 151,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0087",
+    "productName": "Essential Oils Gift Set",
+    "description": "6-piece pure essential oils collection",
+    "productMinPrice": 18.2,
+    "productMaxPrice": 48.9,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-19T07:31:00",
+    "updatedDate": "2026-04-24T03:31:00",
+    "createdBy": "jane.smith",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "BEAUTY-KR"
+    },
+    "variants": [
+      {
+        "variantName": "Orange",
+        "sku": "HLTH-0087-ORA-01",
+        "price": 27.87,
+        "remainingQuantity": 407,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy - Standard",
+        "sku": "HLTH-0087-NAV-02",
+        "price": 38.14,
+        "remainingQuantity": 469,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Teal",
+        "sku": "HLTH-0087-TEA-03",
+        "price": 29.97,
+        "remainingQuantity": 17,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "HLTH-0087-GOL-04",
+        "price": 46.26,
+        "remainingQuantity": 391,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0088",
+    "productName": "Electric Toothbrush Sonic",
+    "description": "Sonic electric toothbrush with 4 brush heads",
+    "productMinPrice": 29.44,
+    "productMaxPrice": 115.27,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-09-27T02:45:00",
+    "updatedDate": "2025-10-06T02:45:00",
+    "createdBy": "system",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "BEAUTY-KR"
+    },
+    "variants": [
+      {
+        "variantName": "Beige",
+        "sku": "HLTH-0088-BEI-01",
+        "price": 102.73,
+        "remainingQuantity": 337,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0089",
+    "productName": "Face Sheet Mask Pack",
+    "description": "20-sheet Korean face mask variety pack",
+    "productMinPrice": 8.82,
+    "productMaxPrice": 66.72,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-12-28T00:01:00",
+    "updatedDate": "2026-01-30T23:01:00",
+    "createdBy": "jane.smith",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "GREEN-AU"
+    },
+    "variants": [
+      {
+        "variantName": "Gold",
+        "sku": "HLTH-0089-GOL-01",
+        "price": 35.22,
+        "remainingQuantity": 91,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "HLTH-0089-WHI-02",
+        "price": 23.2,
+        "remainingQuantity": 317,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown - Standard",
+        "sku": "HLTH-0089-BRO-03",
+        "price": 29.54,
+        "remainingQuantity": 40,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "HLTH-0089-NAV-04",
+        "price": 21.06,
+        "remainingQuantity": 356,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue - Standard",
+        "sku": "HLTH-0089-BLU-05",
+        "price": 29.85,
+        "remainingQuantity": 439,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0090",
+    "productName": "Hair Care Argan Oil Set",
+    "description": "Shampoo + conditioner + serum argan oil set",
+    "productMinPrice": 47.5,
+    "productMaxPrice": 65.92,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-12-12T12:35:00",
+    "updatedDate": "2026-01-11T13:35:00",
+    "createdBy": "john.doe",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Gold",
+        "sku": "HLTH-0090-GOL-01",
+        "price": 77.26,
+        "remainingQuantity": 439,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "HLTH-0090-WHI-02",
+        "price": 74.52,
+        "remainingQuantity": 461,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "HLTH-0090-GOL-03",
+        "price": 63.79,
+        "remainingQuantity": 473,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "HLTH-0090-WHI-04",
+        "price": 60.16,
+        "remainingQuantity": 336,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0091",
+    "productName": "Body Lotion Moisturizing",
+    "description": "400ml moisturizing body lotion with shea butter",
+    "productMinPrice": 17.33,
+    "productMaxPrice": 103.87,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-06-09T06:37:00",
+    "updatedDate": "2025-06-19T04:37:00",
+    "createdBy": "admin",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "BEAUTY-KR"
+    },
+    "variants": [
+      {
+        "variantName": "Beige - Standard",
+        "sku": "HLTH-0091-BEI-01",
+        "price": 59.12,
+        "remainingQuantity": 459,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown",
+        "sku": "HLTH-0091-BRO-02",
+        "price": 45.91,
+        "remainingQuantity": 352,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0092",
+    "productName": "Supplement Multivitamin",
+    "description": "90-day supply adult multivitamin softgels",
+    "productMinPrice": 12.08,
+    "productMaxPrice": 89.17,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-11-25T01:06:00",
+    "updatedDate": "2025-12-22T08:06:00",
+    "createdBy": "jane.smith",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Black",
+        "sku": "HLTH-0092-BLA-01",
+        "price": 48.0,
+        "remainingQuantity": 116,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "HLTH-0092-NAV-02",
+        "price": 21.68,
+        "remainingQuantity": 299,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "HLTH-0092-PUR-03",
+        "price": 42.73,
+        "remainingQuantity": 126,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0093",
+    "productName": "Makeup Brush Set Pro",
+    "description": "15-piece professional makeup brush set with case",
+    "productMinPrice": 11.82,
+    "productMaxPrice": 45.94,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-12-12T22:50:00",
+    "updatedDate": "2026-01-22T02:50:00",
+    "createdBy": "jane.smith",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "White - Standard",
+        "sku": "HLTH-0093-WHI-01",
+        "price": 19.52,
+        "remainingQuantity": 138,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0094",
+    "productName": "Hand Cream Collection",
+    "description": "5 luxury hand creams in assorted scents",
+    "productMinPrice": 14.89,
+    "productMaxPrice": 41.76,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-01-16T17:35:00",
+    "updatedDate": "2026-02-18T06:35:00",
+    "createdBy": "admin",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "BEAUTY-KR"
+    },
+    "variants": [
+      {
+        "variantName": "White",
+        "sku": "HLTH-0094-WHI-01",
+        "price": 38.03,
+        "remainingQuantity": 6,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "HLTH-0094-GRE-02",
+        "price": 36.29,
+        "remainingQuantity": 286,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Teal",
+        "sku": "HLTH-0094-TEA-03",
+        "price": 22.71,
+        "remainingQuantity": 350,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - Standard",
+        "sku": "HLTH-0094-GRA-04",
+        "price": 20.29,
+        "remainingQuantity": 74,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White - Standard",
+        "sku": "HLTH-0094-WHI-05",
+        "price": 20.81,
+        "remainingQuantity": 400,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0095",
+    "productName": "Lip Balm Natural Set",
+    "description": "Organic lip balm set in 6 fruit flavors",
+    "productMinPrice": 26.78,
+    "productMaxPrice": 121.76,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-04-17T15:38:00",
+    "updatedDate": "2026-05-26T21:38:00",
+    "createdBy": "john.doe",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "BEAUTY-KR"
+    },
+    "variants": [
+      {
+        "variantName": "Gray",
+        "sku": "HLTH-0095-GRA-01",
+        "price": 80.33,
+        "remainingQuantity": 168,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-HLTH-0096",
+    "productName": "Massage Gun Portable",
+    "description": "Mini percussion massage gun with 4 heads",
+    "productMinPrice": 25.41,
+    "productMaxPrice": 108.8,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-04-30T19:08:00",
+    "updatedDate": "2026-05-20T05:08:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Health & Beauty"
+    },
+    "supplier": {
+      "supplierCode": "GREEN-AU"
+    },
+    "variants": [
+      {
+        "variantName": "Red",
+        "sku": "HLTH-0096-RED-01",
+        "price": 72.58,
+        "remainingQuantity": 355,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "HLTH-0096-PUR-02",
+        "price": 49.32,
+        "remainingQuantity": 192,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Green",
+        "sku": "HLTH-0096-GRE-03",
+        "price": 34.42,
+        "remainingQuantity": 288,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-AUTO-0097",
+    "productName": "Car Phone Mount Magnetic",
+    "description": "Universal magnetic car phone holder dashboard mount",
+    "productMinPrice": 38.8,
+    "productMaxPrice": 97.91,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-05-16T17:01:00",
+    "updatedDate": "2026-07-16T16:01:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Automotive"
+    },
+    "supplier": {
+      "supplierCode": "AUTO-DE"
+    },
+    "variants": [
+      {
+        "variantName": "Gold",
+        "sku": "AUTO-0097-GOL-01",
+        "price": 91.49,
+        "remainingQuantity": 209,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "AUTO-0097-PUR-02",
+        "price": 63.49,
+        "remainingQuantity": 337,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "AUTO-0097-RED-03",
+        "price": 65.38,
+        "remainingQuantity": 306,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-AUTO-0098",
+    "productName": "Dash Camera 4K",
+    "description": "4K dash camera with night vision and GPS",
+    "productMinPrice": 38.28,
+    "productMaxPrice": 96.37,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-05-21T13:34:00",
+    "updatedDate": "2026-05-24T00:34:00",
+    "createdBy": "admin",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Automotive"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Purple",
+        "sku": "AUTO-0098-PUR-01",
+        "price": 52.57,
+        "remainingQuantity": 288,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "AUTO-0098-PUR-02",
+        "price": 68.51,
+        "remainingQuantity": 494,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-AUTO-0099",
+    "productName": "Car Vacuum Cleaner Portable",
+    "description": "12V portable car vacuum with HEPA filter",
+    "productMinPrice": 13.51,
+    "productMaxPrice": 32.38,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-09-22T16:47:00",
+    "updatedDate": "2025-10-26T09:47:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Automotive"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Gray",
+        "sku": "AUTO-0099-GRA-01",
+        "price": 28.53,
+        "remainingQuantity": 77,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "AUTO-0099-NAV-02",
+        "price": 22.2,
+        "remainingQuantity": 471,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White - Standard",
+        "sku": "AUTO-0099-WHI-03",
+        "price": 28.39,
+        "remainingQuantity": 159,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-AUTO-0100",
+    "productName": "Tire Inflator Digital",
+    "description": "Portable digital tire inflator with auto shut-off",
+    "productMinPrice": 31.68,
+    "productMaxPrice": 60.3,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-02-03T11:30:00",
+    "updatedDate": "2026-02-10T01:30:00",
+    "createdBy": "system",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Automotive"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Green - Standard",
+        "sku": "AUTO-0100-GRE-01",
+        "price": 46.48,
+        "remainingQuantity": 175,
+        "color": "Green",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-AUTO-0101",
+    "productName": "Car Seat Cover Leather",
+    "description": "Full set PU leather car seat covers universal fit",
+    "productMinPrice": 13.69,
+    "productMaxPrice": 95.69,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-10-03T16:11:00",
+    "updatedDate": "2025-11-07T21:11:00",
+    "createdBy": "system",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Automotive"
+    },
+    "supplier": {
+      "supplierCode": "TECH-VN"
+    },
+    "variants": [
+      {
+        "variantName": "Silver",
+        "sku": "AUTO-0101-SIL-01",
+        "price": 29.69,
+        "remainingQuantity": 221,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - Standard",
+        "sku": "AUTO-0101-GRA-02",
+        "price": 35.5,
+        "remainingQuantity": 303,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-AUTO-0102",
+    "productName": "LED Headlight Bulbs H11",
+    "description": "H11 LED headlight bulbs 6000K white pair",
+    "productMinPrice": 28.22,
+    "productMaxPrice": 101.65,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-09-14T08:48:00",
+    "updatedDate": "2025-10-29T10:48:00",
+    "createdBy": "john.doe",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Automotive"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Blue",
+        "sku": "AUTO-0102-BLU-01",
+        "price": 56.98,
+        "remainingQuantity": 270,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "AUTO-0102-PUR-02",
+        "price": 46.64,
+        "remainingQuantity": 58,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "AUTO-0102-NAV-03",
+        "price": 42.31,
+        "remainingQuantity": 344,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-AUTO-0103",
+    "productName": "Jumper Cable Heavy Duty",
+    "description": "6-gauge heavy duty jumper cables 16ft",
+    "productMinPrice": 49.63,
+    "productMaxPrice": 142.31,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-03-30T02:43:00",
+    "updatedDate": "2026-04-07T12:43:00",
+    "createdBy": "jane.smith",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Automotive"
+    },
+    "supplier": {
+      "supplierCode": "TECH-VN"
+    },
+    "variants": [
+      {
+        "variantName": "Navy",
+        "sku": "AUTO-0103-NAV-01",
+        "price": 84.24,
+        "remainingQuantity": 70,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Beige",
+        "sku": "AUTO-0103-BEI-02",
+        "price": 72.39,
+        "remainingQuantity": 355,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-AUTO-0104",
+    "productName": "Car Organizer Trunk",
+    "description": "Foldable trunk organizer with multiple compartments",
+    "productMinPrice": 56.4,
+    "productMaxPrice": 81.99,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-08-25T15:18:00",
+    "updatedDate": "2025-09-02T20:18:00",
+    "createdBy": "system",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Automotive"
+    },
+    "supplier": {
+      "supplierCode": "TECH-VN"
+    },
+    "variants": [
+      {
+        "variantName": "Black",
+        "sku": "AUTO-0104-BLA-01",
+        "price": 63.67,
+        "remainingQuantity": 287,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Brown",
+        "sku": "AUTO-0104-BRO-02",
+        "price": 75.44,
+        "remainingQuantity": 363,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "AUTO-0104-GOL-03",
+        "price": 67.58,
+        "remainingQuantity": 407,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-AUTO-0105",
+    "productName": "Windshield Wiper Blades",
+    "description": "All-season silicone wiper blades set of 2",
+    "productMinPrice": 23.19,
+    "productMaxPrice": 57.93,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2026-03-03T09:10:00",
+    "updatedDate": "2026-04-21T23:10:00",
+    "createdBy": "system",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Automotive"
+    },
+    "supplier": {
+      "supplierCode": "AUTO-DE"
+    },
+    "variants": [
+      {
+        "variantName": "White - Standard",
+        "sku": "AUTO-0105-WHI-01",
+        "price": 50.35,
+        "remainingQuantity": 277,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "AUTO-0105-GOL-02",
+        "price": 46.64,
+        "remainingQuantity": 111,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - Standard",
+        "sku": "AUTO-0105-GRA-03",
+        "price": 54.3,
+        "remainingQuantity": 152,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gold",
+        "sku": "AUTO-0105-GOL-04",
+        "price": 35.96,
+        "remainingQuantity": 418,
+        "color": "Gold",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "AUTO-0105-WHI-05",
+        "price": 59.48,
+        "remainingQuantity": 121,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-AUTO-0106",
+    "productName": "OBD2 Scanner Bluetooth",
+    "description": "Bluetooth OBD2 diagnostic scanner with app",
+    "productMinPrice": 50.16,
+    "productMaxPrice": 113.07,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-11-27T22:39:00",
+    "updatedDate": "2026-01-07T11:39:00",
+    "createdBy": "john.doe",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Automotive"
+    },
+    "supplier": {
+      "supplierCode": "AUTO-DE"
+    },
+    "variants": [
+      {
+        "variantName": "Silver - Standard",
+        "sku": "AUTO-0106-SIL-01",
+        "price": 63.69,
+        "remainingQuantity": 275,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Red",
+        "sku": "AUTO-0106-RED-02",
+        "price": 83.99,
+        "remainingQuantity": 136,
+        "color": "Red",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-OFFC-0107",
+    "productName": "Ergonomic Office Chair",
+    "description": "Mesh ergonomic office chair with lumbar support",
+    "productMinPrice": 24.68,
+    "productMaxPrice": 53.46,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-19T04:48:00",
+    "updatedDate": "2025-09-07T17:48:00",
+    "createdBy": "jane.smith",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Office Supplies"
+    },
+    "supplier": {
+      "supplierCode": "HOME-SG"
+    },
+    "variants": [
+      {
+        "variantName": "Blue - Standard",
+        "sku": "OFFC-0107-BLU-01",
+        "price": 31.66,
+        "remainingQuantity": 431,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "OFFC-0107-PUR-02",
+        "price": 33.15,
+        "remainingQuantity": 321,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-OFFC-0108",
+    "productName": "Standing Desk Electric",
+    "description": "Electric height adjustable standing desk 120x60cm",
+    "productMinPrice": 11.25,
+    "productMaxPrice": 18.89,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-18T12:32:00",
+    "updatedDate": "2025-09-03T20:32:00",
+    "createdBy": "jane.smith",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Office Supplies"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Navy",
+        "sku": "OFFC-0108-NAV-01",
+        "price": 22.85,
+        "remainingQuantity": 47,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange",
+        "sku": "OFFC-0108-ORA-02",
+        "price": 20.25,
+        "remainingQuantity": 435,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "OFFC-0108-WHI-03",
+        "price": 18.7,
+        "remainingQuantity": 422,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Blue",
+        "sku": "OFFC-0108-BLU-04",
+        "price": 16.24,
+        "remainingQuantity": 280,
+        "color": "Blue",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-OFFC-0109",
+    "productName": "Monitor Stand Riser",
+    "description": "Adjustable monitor stand riser with USB ports",
+    "productMinPrice": 5.87,
+    "productMaxPrice": 40.7,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2025-11-23T21:48:00",
+    "updatedDate": "2025-11-26T22:48:00",
+    "createdBy": "system",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Office Supplies"
+    },
+    "supplier": {
+      "supplierCode": "HOME-SG"
+    },
+    "variants": [
+      {
+        "variantName": "Teal",
+        "sku": "OFFC-0109-TEA-01",
+        "price": 11.72,
+        "remainingQuantity": 490,
+        "color": "Teal",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-OFFC-0110",
+    "productName": "Desk Organizer Set",
+    "description": "5-piece bamboo desk organizer set",
+    "productMinPrice": 7.45,
+    "productMaxPrice": 36.55,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2025-08-07T20:19:00",
+    "updatedDate": "2025-08-18T04:19:00",
+    "createdBy": "jane.smith",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Office Supplies"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Navy",
+        "sku": "OFFC-0110-NAV-01",
+        "price": 17.5,
+        "remainingQuantity": 320,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-OFFC-0111",
+    "productName": "Wireless Presenter Remote",
+    "description": "USB wireless presenter with laser pointer",
+    "productMinPrice": 18.97,
+    "productMaxPrice": 50.4,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2026-01-06T20:05:00",
+    "updatedDate": "2026-02-20T23:05:00",
+    "createdBy": "system",
+    "changedBy": "admin",
+    "category": {
+      "categoryName": "Office Supplies"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Beige - Standard",
+        "sku": "OFFC-0111-BEI-01",
+        "price": 31.17,
+        "remainingQuantity": 356,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Navy",
+        "sku": "OFFC-0111-NAV-02",
+        "price": 45.19,
+        "remainingQuantity": 67,
+        "color": "Navy",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-OFFC-0112",
+    "productName": "Filing Cabinet Mobile",
+    "description": "3-drawer mobile filing cabinet with lock",
+    "productMinPrice": 4.56,
+    "productMaxPrice": 22.97,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-23T03:20:00",
+    "updatedDate": "2025-08-15T12:20:00",
+    "createdBy": "john.doe",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Office Supplies"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Brown",
+        "sku": "OFFC-0112-BRO-01",
+        "price": 12.67,
+        "remainingQuantity": 179,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-OFFC-0113",
+    "productName": "Whiteboard Magnetic 90x60",
+    "description": "Magnetic whiteboard with marker tray and magnets",
+    "productMinPrice": 7.69,
+    "productMaxPrice": 38.88,
+    "quickNote": "",
+    "status": "Inactive",
+    "createdDate": "2025-12-28T19:43:00",
+    "updatedDate": "2026-01-26T01:43:00",
+    "createdBy": "admin",
+    "changedBy": "john.doe",
+    "category": {
+      "categoryName": "Office Supplies"
+    },
+    "supplier": {
+      "supplierCode": "HOME-SG"
+    },
+    "variants": [
+      {
+        "variantName": "Beige",
+        "sku": "OFFC-0113-BEI-01",
+        "price": 16.28,
+        "remainingQuantity": 405,
+        "color": "Beige",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-OFFC-0114",
+    "productName": "Sticky Notes Mega Pack",
+    "description": "12-pack sticky notes in assorted colors and sizes",
+    "productMinPrice": 8.45,
+    "productMaxPrice": 36.01,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-10-06T17:38:00",
+    "updatedDate": "2025-11-14T16:38:00",
+    "createdBy": "admin",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Office Supplies"
+    },
+    "supplier": {
+      "supplierCode": "OFFICE-CN"
+    },
+    "variants": [
+      {
+        "variantName": "Brown",
+        "sku": "OFFC-0114-BRO-01",
+        "price": 13.32,
+        "remainingQuantity": 330,
+        "color": "Brown",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "OFFC-0114-BLA-02",
+        "price": 22.79,
+        "remainingQuantity": 197,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-OFFC-0115",
+    "productName": "Ballpoint Pens Box 50",
+    "description": "50-piece premium ballpoint pens blue ink",
+    "productMinPrice": 8.3,
+    "productMaxPrice": 35.63,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-07-07T16:56:00",
+    "updatedDate": "2025-07-08T03:56:00",
+    "createdBy": "john.doe",
+    "changedBy": "mike.wilson",
+    "category": {
+      "categoryName": "Office Supplies"
+    },
+    "supplier": {
+      "supplierCode": "OFFICE-CN"
+    },
+    "variants": [
+      {
+        "variantName": "Gray",
+        "sku": "OFFC-0115-GRA-01",
+        "price": 25.4,
+        "remainingQuantity": 488,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Silver - Standard",
+        "sku": "OFFC-0115-SIL-02",
+        "price": 16.77,
+        "remainingQuantity": 110,
+        "color": "Silver",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Black",
+        "sku": "OFFC-0115-BLA-03",
+        "price": 26.75,
+        "remainingQuantity": 146,
+        "color": "Black",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Purple",
+        "sku": "OFFC-0115-PUR-04",
+        "price": 23.76,
+        "remainingQuantity": 205,
+        "color": "Purple",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "White",
+        "sku": "OFFC-0115-WHI-05",
+        "price": 17.16,
+        "remainingQuantity": 42,
+        "color": "White",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "productCode": "PRD-OFFC-0116",
+    "productName": "Shredder Cross-Cut",
+    "description": "12-sheet cross-cut paper shredder with bin",
+    "productMinPrice": 4.74,
+    "productMaxPrice": 41.97,
+    "quickNote": "",
+    "status": "Active",
+    "createdDate": "2025-08-19T17:20:00",
+    "updatedDate": "2025-09-14T11:20:00",
+    "createdBy": "admin",
+    "changedBy": "jane.smith",
+    "category": {
+      "categoryName": "Office Supplies"
+    },
+    "supplier": {
+      "supplierCode": "GLOBAL-MY"
+    },
+    "variants": [
+      {
+        "variantName": "Orange",
+        "sku": "OFFC-0116-ORA-01",
+        "price": 9.23,
+        "remainingQuantity": 473,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Gray - Standard",
+        "sku": "OFFC-0116-GRA-02",
+        "price": 14.85,
+        "remainingQuantity": 341,
+        "color": "Gray",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange",
+        "sku": "OFFC-0116-ORA-03",
+        "price": 5.18,
+        "remainingQuantity": 70,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      },
+      {
+        "variantName": "Orange - Standard",
+        "sku": "OFFC-0116-ORA-04",
+        "price": 15.85,
+        "remainingQuantity": 264,
+        "color": "Orange",
+        "size": "",
+        "isActive": true
+      }
+    ]
+  }
+]
