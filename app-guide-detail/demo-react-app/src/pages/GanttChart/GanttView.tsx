@@ -2,6 +2,7 @@ import { useCallback } from 'react'
 import { Gantt, ViewMode } from 'gantt-task-react'
 import type { Task } from 'gantt-task-react'
 import 'gantt-task-react/dist/index.css'
+import { CustomTaskListHeader, CustomTaskListTable } from './TaskList'
 
 interface GanttViewProps {
   tasks: Task[]
@@ -42,7 +43,9 @@ export default function GanttView({ tasks, onTasksChange }: GanttViewProps) {
         viewMode={ViewMode.Month}
         onDateChange={handleDateChange}
         onExpanderClick={handleExpanderClick}
-        listCellWidth="320px"
+        TaskListHeader={CustomTaskListHeader}
+        TaskListTable={CustomTaskListTable}
+        listCellWidth="380px"
         headerHeight={50}
         rowHeight={45}
         columnWidth={80}
