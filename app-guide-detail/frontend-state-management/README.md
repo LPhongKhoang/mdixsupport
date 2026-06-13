@@ -58,6 +58,8 @@ Guide thực tiễn này hướng dẫn cách xây dựng giao diện **Product 
 
 ## Danh sách file hướng dẫn
 
+### Part 1: Domain Model & Frontend (Files 01-08)
+
 | # | File | Nội dung |
 |---|------|----------|
 | 01 | [01-domain-model.md](01-domain-model.md) | Persistent Entities (Product, Category, Supplier, ProductVariant) + Non-Persistent Entity (ProductFilterContext, ProductEditProxy) |
@@ -68,6 +70,26 @@ Guide thực tiễn này hướng dẫn cách xây dựng giao diện **Product 
 | 06 | [06-create-product-modal.md](06-create-product-modal.md) | Popup Page Create New Product — Auto-generated Code, Filter Keep |
 | 07 | [07-state-management-patterns.md](07-state-management-patterns.md) | NPE Context Pattern — Filter State, Refresh Strategy, Data Flow |
 | 08 | [08-complete-page-structure.md](08-complete-page-structure.md) | Full Page Layout Reference — Widget Tree, Testing Checklist |
+
+### Part 2: Backend & Implementation (Files 09-14)
+
+| # | File | Nội dung |
+|---|------|----------|
+| 09 | [09-backend-overview.md](09-backend-overview.md) | Backend architecture, module structure, entity strategy (PE vs NPE vs View Entity) |
+| 10 | [10-oql-view-entity.md](10-oql-view-entity.md) | OQL View Entity `ProductSummaryView`, OQL Retrieve cho aggregated data |
+| 11 | [11-microflow-detail.md](11-microflow-detail.md) | Step-by-step microflow implementation (6 microflows với Studio Pro instructions) |
+| 12 | [12-java-action.md](12-java-action.md) | Java Action `JA_GenerateProductCode` — unique code generation, OQL API reference |
+| 13 | [13-fe-be-data-flow.md](13-fe-be-data-flow.md) | Complete FE↔BE communication patterns (6 patterns + sequence diagrams) |
+| 14 | [14-build-and-test.md](14-build-and-test.md) | Build order, 50+ integration test cases, debugging, performance tuning |
+
+### Seed Data
+
+| File | Mô tả |
+|------|-------|
+| [seed-data/01-categories.json](seed-data/01-categories.json) | 10 categories |
+| [seed-data/02-suppliers.json](seed-data/02-suppliers.json) | 15 suppliers |
+| [seed-data/03-products-with-variants.json](seed-data/03-products-with-variants.json) | 116 products + 385 variants (nested JSON) |
+| [seed-data/README-import-guide.md](seed-data/README-import-guide.md) | Import Mapping guide + REST import instructions |
 
 ## Thứ tự thực hiện
 
