@@ -1,0 +1,340 @@
+// ============================================================================
+// Prisma Schema — Production Planning & Resource Allocation System
+// Version: 1.0 | Date: 2026-06-13
+// ============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// ENUMS
+// ============================================================================
+
+enum UserRole {
+  admin
+  planner
+  viewer
+}
+
+enum UserStatus {
+  active
+  inactive
+}
+
+enum EntityStatus {
+  active
+  inactive
+  archived
+}
+
+enum SimulationStatus {
+  draft
+  active
+  completed
+  cancelled
+  archived
+}
+
+enum ProductNodeType {
+  area      // Product Area (Level 1)
+  family    // Product Family (Level 2)
+  product   // Product (Level 3)
+  task      // Task (Level 4)
+  subtask   // SubTask (Level 5+)
+}
+
+enum FactorType {
+  block
+  function
+  activity
+  detail
+}
+
+enum DeptType {
+  site
+  team
+  group
+  part
+}
+
+enum PlanItemStatus {
+  planned
+  in_progress
+  completed
+  cancelled
+}
+
+// ============================================================================
+// USER MANAGEMENT
+// ============================================================================
+
+model User {
+  id        String     @id @default(uuid()) @db.Uuid
+  name      String     @db.VarChar(255)
+  email     String     @unique @db.VarChar(255)
+  role      UserRole
+  avatarUrl String?    @map("avatar_url") @db.VarChar(500)
+  status    UserStatus @default(active)
+  createdAt DateTime   @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt DateTime   @updatedAt @map("updated_at") @db.Timestamp(6)
+
+  // Relations
+  simulations         Simulation[]
+  simulationRevisions SimulationRevision[]
+  productLines        ProductLine[]
+  auditLogs           AuditLog[]
+
+  @@map("users")
+}
+
+// ============================================================================
+// PRODUCT HIERARCHY
+// ============================================================================
+
+/// Dòng sản phẩm (VD: Samsung Electronics, Apple Products)
+model ProductLine {
+  id          String       @id @default(uuid()) @db.Uuid
+  name        String       @db.VarChar(255)
+  code        String       @unique @db.VarChar(50)
+  description String?      @db.Text
+  status      EntityStatus @default(active)
+  createdById String?      @map("created_by") @db.Uuid
+  createdAt   DateTime     @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt   DateTime     @updatedAt @map("updated_at") @db.Timestamp(6)
+
+  // Relations
+  createdBy User         ? @relation(fields: [createdById], references: [id])
+  nodes     ProductNode[]
+  simulations Simulation[]
+
+  @@map("product_lines")
+}
+
+/// Node phân cấp sản phẩm — sử dụng Adjacency List pattern
+/// Hierarchy: area(L1) → family(L2) → product(L3) → task(L4) → subtask(L5)
+model ProductNode {
+  id             String         @id @default(uuid()) @db.Uuid
+  productLineId  String         @map("product_line_id") @db.Uuid
+  name           String         @db.VarChar(255)
+  nodeType       ProductNodeType @map("node_type")
+  level          Int
+  parentId       String?        @map("parent_id") @db.Uuid
+  sortOrder      Int            @default(0) @map("sort_order")
+  metadata       Json?          // Extended data: specs, notes, etc.
+  status         EntityStatus   @default(active)
+  createdAt      DateTime       @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt      DateTime       @updatedAt @map("updated_at") @db.Timestamp(6)
+
+  // Relations
+  productLine   ProductLine   @relation(fields: [productLineId], references: [id])
+  parent        ProductNode?  @relation("ProductNodeTree", fields: [parentId], references: [id])
+  children      ProductNode[] @relation("ProductNodeTree")
+  planItems     SimulationPlanItem[]
+
+  @@index([productLineId], map: "idx_product_nodes_line")
+  @@index([parentId], map: "idx_product_nodes_parent")
+  @@index([nodeType, level], map: "idx_product_nodes_type_level")
+  @@map("product_nodes")
+}
+
+// ============================================================================
+// MASTER FACTOR ITEMS (Công đoạn mẫu)
+// ============================================================================
+
+/// Cây công đoạn chuẩn: Block → Function → Activity → Detail
+/// Có thể có nhiều level cho mỗi type (Block L1, Block L2, Function L1, ...)
+model MasterFactorItem {
+  id          String     @id @default(uuid()) @db.Uuid
+  name        String     @db.VarChar(255)
+  factorType  FactorType @map("factor_type")
+  level       Int
+  parentId    String?    @map("parent_id") @db.Uuid
+  sortOrder   Int        @default(0) @map("sort_order")
+  description String?    @db.Text
+  colorCode   String?    @map("color_code") @db.VarChar(7) // #RRGGBB
+  status      EntityStatus @default(active)
+  createdAt   DateTime   @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt   DateTime   @updatedAt @map("updated_at") @db.Timestamp(6)
+
+  // Relations
+  parent    MasterFactorItem?  @relation("FactorItemTree", fields: [parentId], references: [id])
+  children  MasterFactorItem[] @relation("FactorItemTree")
+  planItems SimulationPlanItem[]
+
+  @@map("master_factor_items")
+}
+
+// ============================================================================
+// DEPARTMENT (Tổ chức / Phòng ban)
+// ============================================================================
+
+/// Cây tổ chức: Site → Team → Group → Part
+/// Mỗi đơn vị có headcount (nhân lực có sẵn)
+model Department {
+  id          String     @id @default(uuid()) @db.Uuid
+  name        String     @db.VarChar(255)
+  deptType    DeptType   @map("dept_type")
+  level       Int
+  parentId    String?    @map("parent_id") @db.Uuid
+  headcount   Int        @default(0) // Available headcount
+  sortOrder   Int        @default(0) @map("sort_order")
+  description String?    @db.Text
+  status      EntityStatus @default(active)
+  createdAt   DateTime   @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt   DateTime   @updatedAt @map("updated_at") @db.Timestamp(6)
+
+  // Relations
+  parent      Department?  @relation("DepartmentTree", fields: [parentId], references: [id])
+  children    Department[] @relation("DepartmentTree")
+  allocations ResourceAllocation[]
+
+  @@index([parentId], map: "idx_departments_parent")
+  @@index([deptType], map: "idx_departments_type")
+  @@map("departments")
+}
+
+// ============================================================================
+// SIMULATION (Kế hoạch)
+// ============================================================================
+
+/// Kế hoạch lập bởi Planner cho một Product Line
+/// Mỗi simulation có nhiều revision, có thể clone từ simulation khác
+model Simulation {
+  id               String           @id @default(uuid()) @db.Uuid
+  productLineId    String           @map("product_line_id") @db.Uuid
+  name             String           @db.VarChar(255)
+  description      String?          @db.Text
+  status           SimulationStatus @default(draft)
+  currentRevision  Int              @default(0) @map("current_revision")
+  clonedFromId     String?          @map("cloned_from_id") @db.Uuid
+  createdById      String           @map("created_by") @db.Uuid
+  createdAt        DateTime         @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt        DateTime         @updatedAt @map("updated_at") @db.Timestamp(6)
+
+  // Relations
+  productLine ProductLine        @relation(fields: [productLineId], references: [id])
+  clonedFrom  Simulation?        @relation("SimulationClone", fields: [clonedFromId], references: [id])
+  clones      Simulation[]       @relation("SimulationClone")
+  createdBy   User               @relation(fields: [createdById], references: [id])
+  revisions   SimulationRevision[]
+
+  @@index([productLineId], map: "idx_simulations_product_line")
+  @@index([createdById], map: "idx_simulations_created_by")
+  @@index([status], map: "idx_simulations_status")
+  @@map("simulations")
+}
+
+/// Lịch sử chỉnh sửa — mỗi lần sửa tạo revision mới (append-only)
+model SimulationRevision {
+  id              String   @id @default(uuid()) @db.Uuid
+  simulationId    String   @map("simulation_id") @db.Uuid
+  revisionNumber  Int      @map("revision_number")
+  name            String?  @db.VarChar(255) // e.g., "v2 - Adjusted Q3"
+  changeDescription String? @map("change_description") @db.Text
+  createdById     String   @map("created_by") @db.Uuid
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt       DateTime @updatedAt @map("updated_at") @db.Timestamp(6)
+
+  // Relations
+  simulation Simulation          @relation(fields: [simulationId], references: [id])
+  createdBy  User                @relation(fields: [createdById], references: [id])
+  planItems  SimulationPlanItem[]
+
+  @@unique([simulationId, revisionNumber])
+  @@map("simulation_revisions")
+}
+
+// ============================================================================
+// SIMULATION PLAN ITEMS (Công đoạn trong kế hoạch)
+// ============================================================================
+
+/// Mỗi record = 1 công đoạn được gán cho 1 node sản phẩm trong 1 revision
+/// Đây là bảng trung tâm — kết nối Product × Factor × Timeline × Resources
+model SimulationPlanItem {
+  id             String         @id @default(uuid()) @db.Uuid
+  revisionId     String         @map("revision_id") @db.Uuid
+  productNodeId  String         @map("product_node_id") @db.Uuid
+  factorItemId   String?        @map("factor_item_id") @db.Uuid // nullable = custom factor
+  factorName     String         @map("factor_name") @db.VarChar(255) // snapshot name
+  factorType     FactorType     @map("factor_type")
+  level          Int
+  parentId       String?        @map("parent_id") @db.Uuid // self-ref for hierarchy
+  startDate      DateTime       @map("start_date") @db.Date
+  endDate        DateTime       @map("end_date") @db.Date
+  progress       Decimal        @default(0) @db.Decimal(5, 4) // 0.0000 → 1.0000
+  milestone      Boolean        @default(false)
+  notes          String?        @db.Text
+  sortOrder      Int            @default(0) @map("sort_order")
+  status         PlanItemStatus @default(planned)
+  createdAt      DateTime       @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt      DateTime       @updatedAt @map("updated_at") @db.Timestamp(6)
+
+  // Relations
+  revision    SimulationRevision  @relation(fields: [revisionId], references: [id])
+  productNode ProductNode         @relation(fields: [productNodeId], references: [id])
+  factorItem  MasterFactorItem?   @relation(fields: [factorItemId], references: [id])
+  parent      SimulationPlanItem? @relation("PlanItemTree", fields: [parentId], references: [id])
+  children    SimulationPlanItem[] @relation("PlanItemTree")
+  allocations ResourceAllocation[]
+
+  @@index([revisionId], map: "idx_plan_items_revision")
+  @@index([productNodeId], map: "idx_plan_items_product_node")
+  @@index([factorItemId], map: "idx_plan_items_factor")
+  @@index([parentId], map: "idx_plan_items_parent")
+  @@index([startDate, endDate], map: "idx_plan_items_dates")
+  @@map("simulation_plan_items")
+}
+
+// ============================================================================
+// RESOURCE ALLOCATIONS (Phân bổ nguồn lực)
+// ============================================================================
+
+/// Mỗi plan item có thể nhận nhân lực từ nhiều department
+/// Unique: (plan_item_id, department_id) — 1 department chỉ phân bổ 1 lần/item
+model ResourceAllocation {
+  id              String   @id @default(uuid()) @db.Uuid
+  planItemId      String   @map("plan_item_id") @db.Uuid
+  departmentId    String   @map("department_id") @db.Uuid
+  allocatedCount  Decimal  @default(0) @map("allocated_count") @db.Decimal(8, 2) // supports 0.5 FTE
+  role            String?  @db.VarChar(100) // e.g., "Developer", "Tester"
+  notes           String?  @db.Text
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamp(6)
+  updatedAt       DateTime @updatedAt @map("updated_at") @db.Timestamp(6)
+
+  // Relations
+  planItem    SimulationPlanItem @relation(fields: [planItemId], references: [id])
+  department  Department         @relation(fields: [departmentId], references: [id])
+
+  @@unique([planItemId, departmentId])
+  @@index([planItemId], map: "idx_allocations_plan_item")
+  @@index([departmentId], map: "idx_allocations_department")
+  @@map("resource_allocations")
+}
+
+// ============================================================================
+// AUDIT LOG (Nhật ký thao tác)
+// ============================================================================
+
+model AuditLog {
+  id         String   @id @default(uuid()) @db.Uuid
+  userId     String   @map("user_id") @db.Uuid
+  action     String   @db.VarChar(50) // create, update, delete, clone
+  entityType String   @map("entity_type") @db.VarChar(50)
+  entityId   String   @map("entity_id") @db.Uuid
+  changes    Json?    // { before: {...}, after: {...} }
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamp(6)
+
+  // Relations
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([entityType, entityId], map: "idx_audit_entity")
+  @@index([userId], map: "idx_audit_user")
+  @@index([createdAt], map: "idx_audit_created")
+  @@map("audit_logs")
+}
