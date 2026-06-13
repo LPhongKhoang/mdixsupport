@@ -82,10 +82,3 @@ export interface DashboardData {
   topProducts: TopProductData[]
   crossTab: CrossTabRow[]
 }
-
-// Aliases for component prop compatibility
-export type { CategoryData as CategoryChartData }
-export type { SegmentData as SegmentChartData }
-export type { CountryData as CountryChartData }
-export type { TrendData as MonthlyTrendData }
-export type { TopProductData as TopProductChartData }
