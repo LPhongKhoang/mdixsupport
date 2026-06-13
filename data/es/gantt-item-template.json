@@ -1,0 +1,145 @@
+[
+  {
+    "itemId": "1",
+    "name": "Iphone",
+    "nodeType": "product area",
+    "level": 1,
+    "parentId": null,
+    "startDate": "2024-01-01",
+    "endDate": "2024-01-15",
+    "progress": 0.5,
+    "notes": ""
+  },
+  {
+    "itemId": "1.1",
+    "name": "Iphone 17",
+    "nodeType": "product family",
+    "level": 2,
+    "parentId": "1",
+    "startDate": "2024-01-01",
+    "endDate": "2024-01-10",
+    "progress": 0.7,
+    "notes": "Esta es la subtarea 1.1"
+  },
+  {
+    "itemId": "1.1.1",
+    "name": "Iphone 17 Korea Edition",
+    "nodeType": "product",
+    "level": 3,
+    "parentId": "1.1",
+    "startDate": "2024-01-01",
+    "endDate": "2024-01-05",
+    "progress": 0.9,
+    "notes": "Esta es la subtarea 1.1.1"
+  },
+  {
+    "itemId": "1.1.2",
+    "name": "Iphone 17 Japan Edition",
+    "nodeType": "product",
+    "level": 3,
+    "parentId": "1.1",
+    "startDate": "2024-01-05",
+    "endDate": "2024-01-10",
+    "progress": 0.6,
+    "notes": "Esta es la subtarea 1.1.2"
+  },
+  {
+    "itemId": "1.2",
+    "name": "Iphone 17 Pro",
+    "nodeType": "product family",
+    "level": 2,
+    "parentId": "1",
+    "startDate": "2024-01-05",
+    "endDate": "2024-01-15",
+    "progress": 0.3,
+    "notes": "Esta es la subtarea 1.2"
+  },
+  {
+    "itemId": "1.2.1",
+    "name": "Iphone 17 Pro Korea Edition",
+    "nodeType": "product",
+    "level": 3,
+    "parentId": "1.2",
+    "startDate": "2024-01-05",
+    "endDate": "2024-01-10",
+    "progress": 0.4,
+    "notes": "Esta es la subtarea 1.2.1"
+  },
+  {
+    "itemId": "1.2.1.a",
+    "name": "Screen Protector",
+    "nodeType": "task",
+    "level": 4,
+    "parentId": "1.2.1",
+    "startDate": "2024-01-05",
+    "endDate": "2024-01-10",
+    "progress": 0.4,
+    "notes": "Esta es la subtarea 1.2.1.a"
+  },
+  {
+    "itemId": "1.2.2",
+    "name": "Iphone 17 Pro Japan Edition",
+    "nodeType": "product",
+    "level": 3,
+    "parentId": "1.2",
+    "startDate": "2024-01-10",
+    "endDate": "2024-01-15",
+    "progress": 0.2,
+    "notes": "Esta es la subtarea 1.2.2"
+  },
+  {
+    "itemId": "1.2.2",
+    "name": "Iphone 17 Pro Japan Edition",
+    "nodeType": "product",
+    "level": 3,
+    "parentId": "1.2",
+    "startDate": "2024-01-10",
+    "endDate": "2024-01-15",
+    "progress": 0.2,
+    "notes": "Esta es la subtarea 1.2.2"
+  },
+  {
+    "itemId": "2",
+    "name": "Macbook",
+    "nodeType": "product area",
+    "level": 1,
+    "parentId": null,
+    "startDate": "2024-01-10",
+    "endDate": "2024-01-20",
+    "progress": 0.3,
+    "notes": "Esta es la tarea 2"
+  },
+  {
+    "itemId": "2.1",
+    "name": "Macbook Air",
+    "nodeType": "product family",
+    "level": 2,
+    "parentId": "2",
+    "startDate": "2024-01-10",
+    "endDate": "2024-01-15",
+    "progress": 0.5,
+    "notes": "Esta es la subtarea 2.1"
+  },
+  {
+    "itemId": "2.1.1",
+    "name": "Macbook Air Korea Edition",
+    "nodeType": "product",
+    "level": 3,
+    "parentId": "2.1",
+    "startDate": "2024-01-10",
+    "endDate": "2024-01-12",
+    "progress": 0.7,
+    "notes": "Esta es la subtarea 2.1.1"
+  },
+  {
+    "itemId": "2.1.2",
+    "name": "Macbook Air Japan Edition",
+    "nodeType": "product",
+    "level": 3,
+    "parentId": "2.1",
+    "startDate": "2024-01-12",
+    "endDate": "2024-01-15",
+    "progress": 0.3,
+    "notes": "Esta es la subtarea 2.1.2"
+  }
+]
