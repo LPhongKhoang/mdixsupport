@@ -65,6 +65,8 @@ This guide answers all of that, end-to-end, in **Mendix Studio Pro v10**, follow
 
 > If you can model and CRUD these eight relationships, you can model essentially any business domain in Mendix.
 
+> **Many-to-many gets a full treatment in [ch. 10](10-many-to-many-relationships.md)**, including three additional M:N relationships — bare (`Product↔Tag`, `User↔Product` favorites) and junction-with-attributes (`Supplier↔Product` via `ProductSupplier`).
+
 ## Chapter list
 
 | # | File | What you learn |
@@ -78,6 +80,7 @@ This guide answers all of that, end-to-end, in **Mendix Studio Pro v10**, follow
 | 07 | [07-advanced-relationship-patterns.md](07-advanced-relationship-patterns.md) | Deep-copy a graph, **denormalization** for performance, audit logging across relationships, stock reservation (optionality + validation). |
 | 08 | [08-pages-and-ui-for-relationships.md](08-pages-and-ui-for-relationships.md) | Reference Selector, Reference Set Selector, nested Data Views, Association-source grids, popup forms for related entities. |
 | 09 | [09-best-practices-checklist.md](09-best-practices-checklist.md) | Naming, security/access rules, performance, transaction & commit discipline, full testing checklist. |
+| 10 | [10-many-to-many-relationships.md](10-many-to-many-relationships.md) | **Many-to-many, complete:** bare reference-set vs junction-with-attributes, decision matrix, +3 new M:N relationships (`Product↔Tag`, `User↔Product` favorites, `Supplier↔Product` via `ProductSupplier`). |
 
 ## Suggested learning path
 
@@ -85,6 +88,8 @@ This guide answers all of that, end-to-end, in **Mendix Studio Pro v10**, follow
 01 concepts ──► 02 build model ──► 03 CREATE ──► 04 READ
                                                       │
    09 best practices ◄── 08 UI ◄── 07 advanced ◄── 06 DELETE ◄── 05 UPDATE
+                                                      │
+                                          10 many-to-many (deep dive)
 ```
 
 Each chapter assumes the previous one's model exists. Steps that repeat (e.g. "create an entity") are written out in full the first time and referenced afterwards.

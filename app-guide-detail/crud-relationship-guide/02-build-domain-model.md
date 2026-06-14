@@ -284,4 +284,6 @@ While building, set module security to allow full access for the **Administrator
 
 ✅ You now have a complete relationship-rich domain model.
 
+> 📘 **Need many-to-many?** Chapter [10-many-to-many-relationships.md](10-many-to-many-relationships.md) extends this model with `Tag`, `ProductSupplier` and two bare M:N associations (`Product_Tags`, `User_FavoriteProducts`). Build those on top of what you have here.
+
 **Next:** [03-create-operations.md](03-create-operations.md) — insert data across every relationship type.

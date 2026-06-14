@@ -198,6 +198,8 @@ This is the translation table relational designers need.
 
 > **Key mental model:** Mendix *has no "many-to-many with attributes" as a single construct*. When a relationship needs data on the link (e.g. quantity, price), you create a **full entity** (`OrderItem`) and put two one-to-many associations on it. That entity *is* the relationship.
 
+> 📘 **Many-to-many is covered in depth in [ch. 10](10-many-to-many-relationships.md)** — both the bare reference-set strategy and the junction-with-attributes strategy, with a decision matrix.
+
 ---
 
 ## 10. Access rules (security)
