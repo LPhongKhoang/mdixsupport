@@ -68,7 +68,7 @@ Drag **Entity** from the **Toolbox** onto the canvas for each one, then right-cl
 | `categoryName` | String (200) | ✅ | — | |
 | `description` | String (500) | | | |
 | `isActive` | Boolean | ✅ | `true` | |
-| `createdAt` | Date and time | ✅ | `[%CurrentDateTime%] |`
+| `createdAt` | Date and time | ✅ | `[%CurrentDateTime%]` |
 
 ### 3.3 `Supplier`
 | Attribute | Type | Required | Default | Notes |
