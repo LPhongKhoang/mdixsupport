@@ -1,8 +1,8 @@
 // ============================================================
-// CSS Positioning playground — controls → live preview → generated CSS.
-//
-// One controlled element (#movable) inside a positioning-context stage.
-// Modes: Free Play + Challenges. Presets + reset. Vanilla JS.
+// CSS Positioning playground — the playground-specific logic.
+// The shared engine (playground.js) handles mode, the challenges card,
+// the toolbar, and the copy button. This file supplies the positioning
+// config: one controlled element (#movable) inside a positioning stage.
 // ============================================================
 (function () {
     'use strict';
@@ -10,20 +10,7 @@
     // ---- DOM refs ----
     const movable = document.getElementById('movable');
     const codeEl = document.getElementById('cssCode');
-    const copyBtn = document.getElementById('copyCode');
-    const resetBtn = document.getElementById('resetBtn');
-
     const controls = Array.from(document.querySelectorAll('[data-control]'));
-    const modeBtns = Array.from(document.querySelectorAll('[data-mode]'));
-    const presetBtns = Array.from(document.querySelectorAll('[data-preset]'));
-
-    const cardEl = document.getElementById('challengeCard');
-    const progressEl = document.getElementById('challengeProgress');
-    const statusEl = document.getElementById('challengeStatus');
-    const titleEl = document.getElementById('challengeTitle');
-    const goalEl = document.getElementById('challengeGoal');
-    const prevBtn = document.getElementById('prevChallenge');
-    const nextBtn = document.getElementById('nextChallenge');
 
     // ---- defaults (offsets empty = auto) ----
     const defaults = {
@@ -112,11 +99,6 @@
         },
     ];
 
-    // ---- state ----
-    let mode = 'free';
-    let challengeIndex = 0;
-    const solvedSet = new Set();
-
     // ---- helpers ----
     function readControls() {
         const c = {};
@@ -132,7 +114,7 @@
         return v === '' ? 'auto' : v + 'px';
     }
 
-    // ---- apply + generated CSS ----
+    // ---- apply + generated CSS (no challenge check — engine does that) ----
     function apply() {
         const c = readControls();
         movable.style.position = c.position;
@@ -142,7 +124,6 @@
         movable.style.left = toCss(c.left);
         movable.style.zIndex = c.zIndex;
         renderCode();
-        checkChallenge();
     }
     function renderCode() {
         const c = readControls();
@@ -157,7 +138,7 @@
             '}';
     }
 
-    // ---- presets / reset ----
+    // ---- presets / reset (no challenge check — engine does that) ----
     function applyPreset(name) {
         const p = PRESETS[name];
         if (!p) return;
@@ -166,10 +147,9 @@
     }
     function resetAll() {
         Object.keys(defaults).forEach(function (prop) { setControl(prop, defaults[prop]); });
-        apply();
     }
 
-    // ---- challenges ----
+    // ---- challenge target resolution ----
     function targetValue(t) {
         const ctrl = controls.find(function (c) { return c.dataset.control === t.prop; });
         return ctrl ? ctrl.value : undefined;
@@ -178,77 +158,19 @@
         const v = targetValue(t);
         return t.test ? t.test(v) : String(v) === String(t.value);
     }
-    function checkChallenge() {
-        if (mode !== 'challenge') return;
-        const ch = CHALLENGES[challengeIndex];
-        const remaining = ch.target.filter(function (t) { return !isSatisfied(t); });
-        const solved = remaining.length === 0;
-        if (solved) solvedSet.add(challengeIndex);
-        statusEl.textContent = solved
-            ? '✓ Solved!'
-            : remaining.length + ' propert' + (remaining.length === 1 ? 'y' : 'ies') + ' to go';
-        statusEl.classList.toggle('is-solved', solved);
-        cardEl.classList.toggle('is-solved', solved);
-        progressEl.textContent =
-            'Challenge ' + (challengeIndex + 1) + ' / ' + CHALLENGES.length +
-            '  ·  Solved ' + solvedSet.size + '/' + CHALLENGES.length;
-    }
-    function showChallenge(i) {
-        challengeIndex = Math.max(0, Math.min(i, CHALLENGES.length - 1));
-        resetAll();
-        const ch = CHALLENGES[challengeIndex];
-        titleEl.textContent = 'Challenge ' + (challengeIndex + 1) + ': ' + ch.title;
-        goalEl.textContent = ch.goal;
-        apply();
-    }
-    function setMode(m) {
-        mode = m;
-        modeBtns.forEach(function (b) { b.classList.toggle('is-active', b.dataset.mode === m); });
-        cardEl.hidden = (m !== 'challenge');
-        if (m === 'challenge') showChallenge(challengeIndex);
-    }
 
-    // ---- events ----
+    // ---- wire to the engine ----
+    const engine = createPlayground({
+        challenges: CHALLENGES,
+        isSatisfied: isSatisfied,
+        apply: apply,
+        reset: resetAll,
+        applyPreset: applyPreset,
+    });
+
+    // ---- events: controls ----
     controls.forEach(function (ctrl) {
-        ctrl.addEventListener('change', apply);
-        ctrl.addEventListener('input', apply);
+        ctrl.addEventListener('change', function () { apply(); engine.check(); });
+        ctrl.addEventListener('input', function () { apply(); engine.check(); });
     });
-    modeBtns.forEach(function (b) {
-        b.addEventListener('click', function () { setMode(b.dataset.mode); });
-    });
-    presetBtns.forEach(function (b) {
-        b.addEventListener('click', function () { applyPreset(b.dataset.preset); });
-    });
-    if (resetBtn) resetBtn.addEventListener('click', resetAll);
-    if (prevBtn) prevBtn.addEventListener('click', function () { showChallenge(challengeIndex - 1); });
-    if (nextBtn) nextBtn.addEventListener('click', function () { showChallenge(challengeIndex + 1); });
-
-    // ---- copy button (with file:// fallback) ----
-    function copyText(text) {
-        if (navigator.clipboard && window.isSecureContext) {
-            return navigator.clipboard.writeText(text);
-        }
-        return new Promise(function (resolve, reject) {
-            const ta = document.createElement('textarea');
-            ta.value = text;
-            ta.style.position = 'fixed';
-            ta.style.opacity = '0';
-            document.body.appendChild(ta);
-            ta.select();
-            try { document.execCommand('copy'); resolve(); } catch (e) { reject(e); }
-            finally { document.body.removeChild(ta); }
-        });
-    }
-    if (copyBtn) {
-        copyBtn.addEventListener('click', function () {
-            copyText(codeEl.textContent).then(function () {
-                const orig = copyBtn.textContent;
-                copyBtn.textContent = 'Copied!';
-                setTimeout(function () { copyBtn.textContent = orig; }, 1200);
-            });
-        });
-    }
-
-    // ---- init ----
-    apply();
 })();

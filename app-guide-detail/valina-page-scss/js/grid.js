@@ -1,12 +1,7 @@
 // ============================================================
-// CSS Grid playground — controls → live preview → generated CSS.
-//
-// Modes:
-//   • Free Play    — pure sandbox
-//   • Challenges   — 8 guided levels with live pass/fail feedback
-//
-// Plus one-click layout presets and a full reset.
-// Vanilla JS, no dependencies. Mirrors the flex playground's design.
+// CSS Grid playground — the playground-specific logic.
+// The shared engine (playground.js) handles mode, the challenges card,
+// the toolbar, and the copy button. This file supplies the grid config.
 // ============================================================
 (function () {
     'use strict';
@@ -16,25 +11,12 @@
     const codeEl = document.getElementById('cssCode');
     const countEl = document.getElementById('itemCount');
     const selectedLabel = document.getElementById('selectedLabel');
-    const copyBtn = document.getElementById('copyCode');
     const addBtn = document.getElementById('addItem');
     const removeBtn = document.getElementById('removeItem');
-    const resetBtn = document.getElementById('resetBtn');
 
     const containerControls = Array.from(document.querySelectorAll('[data-container]'));
     const itemControls = Array.from(document.querySelectorAll('[data-item]'));
     const valueSpans = Array.from(document.querySelectorAll('[data-for]'));
-    const modeBtns = Array.from(document.querySelectorAll('[data-mode]'));
-    const presetBtns = Array.from(document.querySelectorAll('[data-preset]'));
-
-    // challenge-card refs
-    const cardEl = document.getElementById('challengeCard');
-    const progressEl = document.getElementById('challengeProgress');
-    const statusEl = document.getElementById('challengeStatus');
-    const titleEl = document.getElementById('challengeTitle');
-    const goalEl = document.getElementById('challengeGoal');
-    const prevBtn = document.getElementById('prevChallenge');
-    const nextBtn = document.getElementById('nextChallenge');
 
     // ---- defaults ----
     const DEFAULT_ITEM_COUNT = 6;
@@ -61,7 +43,7 @@
         '#16a085', '#8e44ad', '#d35400', '#27ae60',
     ];
 
-    // ---- presets (container-only quick layouts) ----
+    // ---- presets ----
     const PRESETS = {
         cols2: { gridTemplateColumns: 'repeat(2, 1fr)' },
         cols3: { gridTemplateColumns: 'repeat(3, 1fr)' },
@@ -122,9 +104,6 @@
     let itemCount = DEFAULT_ITEM_COUNT;
     let selectedIndex = null;
     const itemStyles = {};
-    let mode = 'free';
-    let challengeIndex = 0;
-    const solvedSet = new Set();
 
     // ---- helpers ----
     function readContainer() {
@@ -184,7 +163,7 @@
         paintItems();
         syncItemControls();
         renderCode();
-        checkChallenge();
+        engine.check();
     }
     function syncItemControls() {
         if (selectedIndex === null) {
@@ -210,7 +189,6 @@
         preview.style.alignContent = c.alignContent;
         preview.style.gridAutoFlow = c.gridAutoFlow;
         renderCode();
-        checkChallenge();
     }
     function renderCode() {
         const c = readContainer();
@@ -239,7 +217,7 @@
         codeEl.textContent = css;
     }
 
-    // ---- presets ----
+    // ---- presets / reset (no challenge check — engine does that) ----
     function applyPreset(name) {
         const p = PRESETS[name];
         if (!p) return;
@@ -247,8 +225,6 @@
         updateValueSpans();
         applyContainer();
     }
-
-    // ---- reset ----
     function resetAll() {
         Object.keys(containerDefaults).forEach(function (prop) {
             setContainerControl(prop, containerDefaults[prop]);
@@ -260,10 +236,9 @@
         buildItems();
         syncItemControls();
         updateValueSpans();
-        applyContainer();
     }
 
-    // ---- challenges ----
+    // ---- challenge target resolution ----
     function targetValue(t) {
         if (t.type === 'item') {
             return getItemStyle(t.item)[t.prop];
@@ -271,44 +246,25 @@
         const ctrl = containerControls.find(function (c) { return c.dataset.container === t.prop; });
         return ctrl ? ctrl.value : undefined;
     }
-    function isTargetSatisfied(t) {
+    function isSatisfied(t) {
         const v = targetValue(t);
         return t.test ? t.test(v) : String(v) === String(t.value);
     }
-    function checkChallenge() {
-        if (mode !== 'challenge') return;
-        const ch = CHALLENGES[challengeIndex];
-        const remaining = ch.target.filter(function (t) { return !isTargetSatisfied(t); });
-        const solved = remaining.length === 0;
-        if (solved) solvedSet.add(challengeIndex);
-        statusEl.textContent = solved
-            ? '✓ Solved!'
-            : remaining.length + ' propert' + (remaining.length === 1 ? 'y' : 'ies') + ' to go';
-        statusEl.classList.toggle('is-solved', solved);
-        cardEl.classList.toggle('is-solved', solved);
-        progressEl.textContent =
-            'Challenge ' + (challengeIndex + 1) + ' / ' + CHALLENGES.length +
-            '  ·  Solved ' + solvedSet.size + '/' + CHALLENGES.length;
-    }
-    function showChallenge(i) {
-        challengeIndex = Math.max(0, Math.min(i, CHALLENGES.length - 1));
-        resetAll();
-        const ch = CHALLENGES[challengeIndex];
-        titleEl.textContent = 'Challenge ' + (challengeIndex + 1) + ': ' + ch.title;
-        goalEl.textContent = ch.goal;
-        applyContainer();
-    }
-    function setMode(m) {
-        mode = m;
-        modeBtns.forEach(function (b) { b.classList.toggle('is-active', b.dataset.mode === m); });
-        cardEl.hidden = (m !== 'challenge');
-        if (m === 'challenge') showChallenge(challengeIndex);
-    }
+
+    // ---- wire to the engine ----
+    let engine;
+    engine = createPlayground({
+        challenges: CHALLENGES,
+        isSatisfied: isSatisfied,
+        apply: applyContainer,
+        reset: resetAll,
+        applyPreset: applyPreset,
+    });
 
     // ---- events: container controls ----
     containerControls.forEach(function (ctrl) {
-        ctrl.addEventListener('change', function () { updateValueSpans(); applyContainer(); });
-        ctrl.addEventListener('input', function () { updateValueSpans(); applyContainer(); });
+        ctrl.addEventListener('change', function () { updateValueSpans(); applyContainer(); engine.check(); });
+        ctrl.addEventListener('input', function () { updateValueSpans(); applyContainer(); engine.check(); });
     });
 
     // ---- events: item controls ----
@@ -319,7 +275,7 @@
             paintItems();
             updateValueSpans();
             renderCode();
-            checkChallenge();
+            engine.check();
         };
         ctrl.addEventListener('change', handler);
         ctrl.addEventListener('input', handler);
@@ -331,7 +287,7 @@
             itemCount++;
             countEl.textContent = String(itemCount);
             buildItems();
-            checkChallenge();
+            engine.check();
         }
     });
     removeBtn.addEventListener('click', function () {
@@ -341,51 +297,7 @@
             countEl.textContent = String(itemCount);
             buildItems();
             syncItemControls();
-            checkChallenge();
+            engine.check();
         }
     });
-
-    // ---- events: toolbar ----
-    modeBtns.forEach(function (b) {
-        b.addEventListener('click', function () { setMode(b.dataset.mode); });
-    });
-    presetBtns.forEach(function (b) {
-        b.addEventListener('click', function () { applyPreset(b.dataset.preset); });
-    });
-    if (resetBtn) resetBtn.addEventListener('click', resetAll);
-    if (prevBtn) prevBtn.addEventListener('click', function () { showChallenge(challengeIndex - 1); });
-    if (nextBtn) nextBtn.addEventListener('click', function () { showChallenge(challengeIndex + 1); });
-
-    // ---- copy button (with file:// fallback) ----
-    function copyText(text) {
-        if (navigator.clipboard && window.isSecureContext) {
-            return navigator.clipboard.writeText(text);
-        }
-        return new Promise(function (resolve, reject) {
-            const ta = document.createElement('textarea');
-            ta.value = text;
-            ta.style.position = 'fixed';
-            ta.style.opacity = '0';
-            document.body.appendChild(ta);
-            ta.select();
-            try { document.execCommand('copy'); resolve(); } catch (e) { reject(e); }
-            finally { document.body.removeChild(ta); }
-        });
-    }
-    if (copyBtn) {
-        copyBtn.addEventListener('click', function () {
-            copyText(codeEl.textContent).then(function () {
-                const orig = copyBtn.textContent;
-                copyBtn.textContent = 'Copied!';
-                setTimeout(function () { copyBtn.textContent = orig; }, 1200);
-            });
-        });
-    }
-
-    // ---- init ----
-    countEl.textContent = String(itemCount);
-    buildItems();
-    syncItemControls();
-    updateValueSpans();
-    applyContainer();
 })();
