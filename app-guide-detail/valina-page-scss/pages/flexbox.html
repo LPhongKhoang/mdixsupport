@@ -19,6 +19,40 @@
                 when you like what you see.
             </p>
 
+            <div class="toolbar">
+                <div class="toolbar__group" role="group" aria-label="Mode">
+                    <button class="toolbar__btn is-active" data-mode="free" type="button">🎮 Free Play</button>
+                    <button class="toolbar__btn" data-mode="challenge" type="button">🎯 Challenges</button>
+                </div>
+
+                <div class="toolbar__group" role="group" aria-label="Presets">
+                    <span class="toolbar__label">Presets</span>
+                    <button class="toolbar__btn" data-preset="centered" type="button">Centered</button>
+                    <button class="toolbar__btn" data-preset="navbar" type="button">Navbar</button>
+                    <button class="toolbar__btn" data-preset="stacked" type="button">Stacked</button>
+                    <button class="toolbar__btn" data-preset="grid" type="button">Card grid</button>
+                    <button class="toolbar__btn" data-preset="spaced" type="button">Space evenly</button>
+                    <button class="toolbar__btn" data-preset="reverse" type="button">Reverse row</button>
+                </div>
+
+                <span class="toolbar__spacer"></span>
+
+                <button class="toolbar__btn toolbar__btn--danger" id="resetBtn" type="button">↺ Reset</button>
+            </div>
+
+            <div class="challenge" id="challengeCard" hidden>
+                <div class="challenge__head">
+                    <span class="challenge__progress" id="challengeProgress">Challenge 1 / 8</span>
+                    <span class="challenge__status" id="challengeStatus"></span>
+                </div>
+                <h3 class="challenge__title" id="challengeTitle"></h3>
+                <p class="challenge__goal" id="challengeGoal"></p>
+                <div class="challenge__actions">
+                    <button id="prevChallenge" type="button">◀ Prev</button>
+                    <button id="nextChallenge" type="button">Next ▶</button>
+                </div>
+            </div>
+
             <div class="playground">
                 <!-- ============ CONTROLS ============ -->
                 <section class="playground__controls">
