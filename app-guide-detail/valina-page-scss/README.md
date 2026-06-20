@@ -23,6 +23,7 @@ pages/                  One HTML file per learning app
   flexbox.html            → Learn CSS Flex playground
   grid.html               → Learn CSS Grid playground
   positioning.html        → Learn CSS Positioning playground
+  centering.html          → Learn CSS Centering playground
 scss/                   Stylesheet sources (compiled to css/)
   style.scss              entry — @uses the partials below
   _variables.scss         design tokens (colors, sizes)
@@ -31,12 +32,14 @@ scss/                   Stylesheet sources (compiled to css/)
   _toolbar.scss           shared toolbar + challenges card styles
   _grid.scss              grid playground styles
   _positioning.scss       positioning playground styles
+  _centering.scss         centering playground styles
 css/                    Compiled output (committed) + source maps
 js/
   sidebar.js            shared sidebar (single source of truth for the menu)
   flexbox.js            flex playground logic
   grid.js               grid playground logic
   positioning.js        positioning playground logic
+  centering.js          centering playground logic
 ```
 
 ## The app shell

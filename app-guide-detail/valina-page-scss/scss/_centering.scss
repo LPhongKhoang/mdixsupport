@@ -1,0 +1,58 @@
+@use "variables" as *;
+
+// ============================================================
+// CSS Centering playground (technique-driven, per the CSS-Tricks
+// complete guide). Shares .controls / .toolbar / .chrome styles.
+// ============================================================
+
+// The container we center within (must have a set height for vertical
+// centering to mean anything — as the guide notes).
+.center-stage {
+    position: relative; // containing block for absolute techniques
+    height: 280px;
+    padding: 0;
+    background-color: repeating-linear-gradient(
+        45deg,
+        #f8fafc,
+        #f8fafc 10px,
+        #eef2f7 10px,
+        #eef2f7 20px
+    );
+    border: 2px dashed $preview-border;
+    border-radius: $radius;
+    overflow: hidden;
+}
+
+// The element being centered. Per-technique display/position/margin/
+// transform are applied live by JS.
+.center-target {
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: $radius-sm;
+    padding: 16px 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+// "When to use this" explanation card.
+.tech-info {
+    margin-top: 12px;
+    padding: 12px 14px;
+    background-color: #f1f5f9;
+    border-left: 4px solid $primary-color;
+    border-radius: $radius-sm;
+
+    &__title {
+        margin: 0 0 4px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #1e293b;
+    }
+
+    &__when {
+        margin: 0;
+        font-size: 0.82rem;
+        line-height: 1.45;
+        color: #475569;
+    }
+}

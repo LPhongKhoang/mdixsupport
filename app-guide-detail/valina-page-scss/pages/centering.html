@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS Centering</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../" data-page="centering">
+    <div class="app">
+        <aside class="sidebar" data-sidebar></aside>
+
+        <main class="main">
+            <h1>Learn CSS Centering</h1>
+            <p>
+                Centering in CSS is easy once you know which technique fits the
+                situation. Pick an axis and a method — each comes straight from the
+                <a href="https://css-tricks.com/centering-css-complete-guide/" target="_blank" rel="noopener">CSS-Tricks complete guide</a>,
+                with a live preview, the exact CSS, and a note on when to use it.
+            </p>
+
+            <div class="toolbar">
+                <div class="toolbar__group" role="group" aria-label="Mode">
+                    <button class="toolbar__btn is-active" data-mode="free" type="button">🎮 Free Play</button>
+                    <button class="toolbar__btn" data-mode="challenge" type="button">🎯 Challenges</button>
+                </div>
+
+                <div class="toolbar__group" role="group" aria-label="Presets">
+                    <span class="toolbar__label">Quick</span>
+                    <button class="toolbar__btn" data-preset="flex" type="button">Flexbox</button>
+                    <button class="toolbar__btn" data-preset="grid" type="button">Grid</button>
+                    <button class="toolbar__btn" data-preset="translate" type="button">Translate</button>
+                    <button class="toolbar__btn" data-preset="margin" type="button">Margin auto</button>
+                </div>
+
+                <span class="toolbar__spacer"></span>
+
+                <button class="toolbar__btn toolbar__btn--danger" id="resetBtn" type="button">↺ Reset</button>
+            </div>
+
+            <div class="challenge" id="challengeCard" hidden>
+                <div class="challenge__head">
+                    <span class="challenge__progress" id="challengeProgress">Challenge 1 / 8</span>
+                    <span class="challenge__status" id="challengeStatus"></span>
+                </div>
+                <h3 class="challenge__title" id="challengeTitle"></h3>
+                <p class="challenge__goal" id="challengeGoal"></p>
+                <div class="challenge__actions">
+                    <button id="prevChallenge" type="button">◀ Prev</button>
+                    <button id="nextChallenge" type="button">Next ▶</button>
+                </div>
+            </div>
+
+            <div class="playground">
+                <!-- ============ CONTROLS ============ -->
+                <section class="playground__controls">
+                    <div class="controls">
+                        <div class="controls__group">
+                            <h2 class="controls__group-title">Scenario</h2>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="axis">Center…</label>
+                                <select id="axis">
+                                    <option value="horizontal">Horizontally</option>
+                                    <option value="vertical">Vertically</option>
+                                    <option value="both">Both (H + V)</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="technique">Technique</label>
+                                <select id="technique"></select>
+                            </div>
+
+                            <div class="tech-info">
+                                <h3 class="tech-info__title" id="techTitle"></h3>
+                                <p class="tech-info__when" id="techWhen"></p>
+                            </div>
+
+                            <p class="controls__hint">
+                                These techniques center a box. For centering raw text you can also
+                                use equal padding, the <code>line-height</code> trick (single line),
+                                or the ghost-element method.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============ PREVIEW ============ -->
+                <section class="playground__stage">
+                    <h2 class="stage__title">Live preview</h2>
+                    <p class="stage__hint">The blue box is the element being centered inside the dashed container.</p>
+                    <div class="center-stage" id="centerStage">
+                        <div class="center-target" id="centerTarget">Centered</div>
+                    </div>
+                </section>
+
+                <!-- ============ CODE ============ -->
+                <section class="playground__code">
+                    <div class="code-panel">
+                        <div class="code-panel__head">
+                            <h2 class="code-panel__title">Generated CSS</h2>
+                            <button class="code-panel__copy" id="copyCode" type="button">Copy</button>
+                        </div>
+                        <pre class="code-panel__code" id="cssCode"></pre>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/centering.js"></script>
+</body>
+</html>

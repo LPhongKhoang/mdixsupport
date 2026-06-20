@@ -405,6 +405,45 @@
   margin-bottom: 0;
 }
 
+.center-stage {
+  position: relative;
+  height: 280px;
+  padding: 0;
+  background-color: repeating-linear-gradient(45deg, #f8fafc, #f8fafc 10px, #eef2f7 10px, #eef2f7 20px);
+  border: 2px dashed #94a3b8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.center-target {
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 6px;
+  padding: 16px 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tech-info {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background-color: #f1f5f9;
+  border-left: 4px solid #3498db;
+  border-radius: 6px;
+}
+.tech-info__title {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+.tech-info__when {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #475569;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;

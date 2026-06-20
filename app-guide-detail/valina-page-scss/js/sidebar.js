@@ -25,6 +25,7 @@
         { key: 'flex', label: 'Learn CSS Flex', href: 'pages/flexbox.html' },
         { key: 'grid', label: 'Learn CSS Grid', href: 'pages/grid.html' },
         { key: 'positioning', label: 'Learn CSS Positioning', href: 'pages/positioning.html' },
+        { key: 'centering', label: 'Learn CSS Centering', href: 'pages/centering.html' },
     ];
 
     var mount = document.querySelector('[data-sidebar]');
