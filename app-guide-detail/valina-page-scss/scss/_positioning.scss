@@ -1,0 +1,68 @@
+@use "variables" as *;
+
+// ============================================================
+// CSS Positioning playground.
+// Shares the .controls / .toolbar / .chrome styles with the other
+// playgrounds (defined in _flexbox.scss and _toolbar.scss).
+// ============================================================
+
+// The positioning context / containing block.
+// `transform` makes the stage the containing block for `fixed` too,
+// so a fixed element stays inside the preview instead of escaping to
+// the viewport (noted in the UI for learners).
+.pos-stage {
+    position: relative;
+    transform: translateZ(0);
+    overflow: auto;
+    height: 380px;
+    padding: 16px;
+    background-color: repeating-linear-gradient(
+        45deg,
+        #f8fafc,
+        #f8fafc 10px,
+        #eef2f7 10px,
+        #eef2f7 20px
+    );
+    border: 2px dashed $preview-border;
+    border-radius: $radius;
+}
+
+// Normal-flow sibling blocks — context to show how the movable
+// element enters / leaves the flow.
+.pos-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin-bottom: 12px;
+    background-color: #cbd5e1;
+    color: #1e293b;
+    border-radius: $radius-sm;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+// The element we position.
+.movable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: $radius-sm;
+    font-weight: 700;
+    text-align: center;
+}
+
+// 2x2 grid of offset inputs.
+.offset-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    .controls__field {
+        margin-bottom: 0;
+    }
+}

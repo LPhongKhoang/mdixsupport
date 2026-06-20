@@ -24,6 +24,7 @@
         { key: 'home', label: 'Home', href: 'index.html' },
         { key: 'flex', label: 'Learn CSS Flex', href: 'pages/flexbox.html' },
         { key: 'grid', label: 'Learn CSS Grid', href: 'pages/grid.html' },
+        { key: 'positioning', label: 'Learn CSS Positioning', href: 'pages/positioning.html' },
     ];
 
     var mount = document.querySelector('[data-sidebar]');

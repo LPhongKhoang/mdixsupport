@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS Positioning</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../" data-page="positioning">
+    <div class="app">
+        <aside class="sidebar" data-sidebar></aside>
+
+        <main class="main">
+            <h1>Learn CSS Positioning</h1>
+            <p>
+                Position the blue box with the controls and see how each
+                <code>position</code> value changes the rules: stay in flow
+                (<code>static</code>/<code>relative</code>), leave it
+                (<code>absolute</code>/<code>fixed</code>), or stick on scroll
+                (<code>sticky</code>). The generated CSS updates on the right.
+            </p>
+
+            <div class="toolbar">
+                <div class="toolbar__group" role="group" aria-label="Mode">
+                    <button class="toolbar__btn is-active" data-mode="free" type="button">🎮 Free Play</button>
+                    <button class="toolbar__btn" data-mode="challenge" type="button">🎯 Challenges</button>
+                </div>
+
+                <div class="toolbar__group" role="group" aria-label="Presets">
+                    <span class="toolbar__label">Presets</span>
+                    <button class="toolbar__btn" data-preset="relative" type="button">Relative</button>
+                    <button class="toolbar__btn" data-preset="pinTL" type="button">Top-left</button>
+                    <button class="toolbar__btn" data-preset="pinBR" type="button">Bottom-right</button>
+                    <button class="toolbar__btn" data-preset="fill" type="button">Fill</button>
+                    <button class="toolbar__btn" data-preset="sticky" type="button">Sticky</button>
+                    <button class="toolbar__btn" data-preset="raise" type="button">Raise</button>
+                </div>
+
+                <span class="toolbar__spacer"></span>
+
+                <button class="toolbar__btn toolbar__btn--danger" id="resetBtn" type="button">↺ Reset</button>
+            </div>
+
+            <div class="challenge" id="challengeCard" hidden>
+                <div class="challenge__head">
+                    <span class="challenge__progress" id="challengeProgress">Challenge 1 / 8</span>
+                    <span class="challenge__status" id="challengeStatus"></span>
+                </div>
+                <h3 class="challenge__title" id="challengeTitle"></h3>
+                <p class="challenge__goal" id="challengeGoal"></p>
+                <div class="challenge__actions">
+                    <button id="prevChallenge" type="button">◀ Prev</button>
+                    <button id="nextChallenge" type="button">Next ▶</button>
+                </div>
+            </div>
+
+            <div class="playground">
+                <!-- ============ CONTROLS ============ -->
+                <section class="playground__controls">
+                    <div class="controls">
+                        <div class="controls__group">
+                            <h2 class="controls__group-title">The movable box</h2>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="position">position</label>
+                                <select id="position" data-control="position">
+                                    <option value="static" selected>static</option>
+                                    <option value="relative">relative</option>
+                                    <option value="absolute">absolute</option>
+                                    <option value="fixed">fixed</option>
+                                    <option value="sticky">sticky</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <span class="controls__label">offsets <span class="controls__hint">(blank = auto, in px)</span></span>
+                                <div class="offset-grid">
+                                    <div class="controls__field">
+                                        <label class="controls__label" for="top">top</label>
+                                        <input type="number" id="top" data-control="top" placeholder="auto" min="-100" max="400" step="5">
+                                    </div>
+                                    <div class="controls__field">
+                                        <label class="controls__label" for="right">right</label>
+                                        <input type="number" id="right" data-control="right" placeholder="auto" min="-100" max="400" step="5">
+                                    </div>
+                                    <div class="controls__field">
+                                        <label class="controls__label" for="bottom">bottom</label>
+                                        <input type="number" id="bottom" data-control="bottom" placeholder="auto" min="-100" max="400" step="5">
+                                    </div>
+                                    <div class="controls__field">
+                                        <label class="controls__label" for="left">left</label>
+                                        <input type="number" id="left" data-control="left" placeholder="auto" min="-100" max="400" step="5">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="zIndex">z-index</label>
+                                <input type="number" id="zIndex" data-control="zIndex" value="0" min="-5" max="20" step="1">
+                            </div>
+
+                            <p class="controls__hint">
+                                Tip: <code>absolute</code>/<code>fixed</code> here anchor to the
+                                dashed stage (it's the containing block). Offsets only apply to
+                                positioned values, not <code>static</code>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============ PREVIEW ============ -->
+                <section class="playground__stage">
+                    <h2 class="stage__title">Live preview</h2>
+                    <p class="stage__hint">Scroll inside the box to see <code>sticky</code> in action.</p>
+                    <div class="pos-stage" id="posStage">
+                        <div class="pos-block">Block A — normal flow</div>
+                        <div class="movable" id="movable">Move me</div>
+                        <div class="pos-block">Block B — normal flow</div>
+                        <div class="pos-block">Block C — normal flow</div>
+                        <div class="pos-block">Block D — normal flow</div>
+                    </div>
+                </section>
+
+                <!-- ============ CODE ============ -->
+                <section class="playground__code">
+                    <div class="code-panel">
+                        <div class="code-panel__head">
+                            <h2 class="code-panel__title">Generated CSS</h2>
+                            <button class="code-panel__copy" id="copyCode" type="button">Copy</button>
+                        </div>
+                        <pre class="code-panel__code" id="cssCode"></pre>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/positioning.js"></script>
+</body>
+</html>
