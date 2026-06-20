@@ -23,6 +23,7 @@
     var NAV = [
         { key: 'home', label: 'Home', href: 'index.html' },
         { key: 'flex', label: 'Learn CSS Flex', href: 'pages/flexbox.html' },
+        { key: 'grid', label: 'Learn CSS Grid', href: 'pages/grid.html' },
     ];
 
     var mount = document.querySelector('[data-sidebar]');

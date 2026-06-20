@@ -21,15 +21,19 @@ both work; the sidebar is JS-rendered so it needs no server).
 index.html              Home page (sidebar + welcome)
 pages/                  One HTML file per learning app
   flexbox.html            → Learn CSS Flex playground
+  grid.html               → Learn CSS Grid playground
 scss/                   Stylesheet sources (compiled to css/)
   style.scss              entry — @uses the partials below
   _variables.scss         design tokens (colors, sizes)
   _shell.scss             shared app shell: sidebar + main
-  _flexbox.scss           flex playground styles
+  _flexbox.scss           flex playground styles (+ shared .controls)
+  _toolbar.scss           shared toolbar + challenges card styles
+  _grid.scss              grid playground styles
 css/                    Compiled output (committed) + source maps
 js/
   sidebar.js            shared sidebar (single source of truth for the menu)
   flexbox.js            flex playground logic
+  grid.js               grid playground logic
 ```
 
 ## The app shell

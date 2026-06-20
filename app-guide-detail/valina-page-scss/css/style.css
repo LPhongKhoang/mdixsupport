@@ -332,6 +332,33 @@
   background-color: #e2e8f0;
 }
 
+.grid-preview {
+  display: grid;
+  min-height: 340px;
+  padding: 16px;
+  background-color: repeating-linear-gradient(45deg, #f8fafc, #f8fafc 10px, #eef2f7 10px, #eef2f7 20px);
+  border: 2px dashed #94a3b8;
+  border-radius: 8px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 16px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+.grid-item.is-selected {
+  outline: 3px solid #ef4444;
+  outline-offset: 2px;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;

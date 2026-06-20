@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS Grid</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../" data-page="grid">
+    <div class="app">
+        <aside class="sidebar" data-sidebar></aside>
+
+        <main class="main">
+            <h1>Learn CSS Grid</h1>
+            <p>
+                Change any property on the left and watch the boxes snap into a grid.
+                The exact CSS you're building updates on the right — copy it when you
+                like what you see.
+            </p>
+
+            <div class="toolbar">
+                <div class="toolbar__group" role="group" aria-label="Mode">
+                    <button class="toolbar__btn is-active" data-mode="free" type="button">🎮 Free Play</button>
+                    <button class="toolbar__btn" data-mode="challenge" type="button">🎯 Challenges</button>
+                </div>
+
+                <div class="toolbar__group" role="group" aria-label="Presets">
+                    <span class="toolbar__label">Presets</span>
+                    <button class="toolbar__btn" data-preset="cols2" type="button">2 cols</button>
+                    <button class="toolbar__btn" data-preset="cols3" type="button">3 cols</button>
+                    <button class="toolbar__btn" data-preset="cols4" type="button">4 cols</button>
+                    <button class="toolbar__btn" data-preset="sidebar" type="button">Sidebar</button>
+                    <button class="toolbar__btn" data-preset="cards" type="button">Auto cards</button>
+                    <button class="toolbar__btn" data-preset="centered" type="button">Centered</button>
+                </div>
+
+                <span class="toolbar__spacer"></span>
+
+                <button class="toolbar__btn toolbar__btn--danger" id="resetBtn" type="button">↺ Reset</button>
+            </div>
+
+            <div class="challenge" id="challengeCard" hidden>
+                <div class="challenge__head">
+                    <span class="challenge__progress" id="challengeProgress">Challenge 1 / 8</span>
+                    <span class="challenge__status" id="challengeStatus"></span>
+                </div>
+                <h3 class="challenge__title" id="challengeTitle"></h3>
+                <p class="challenge__goal" id="challengeGoal"></p>
+                <div class="challenge__actions">
+                    <button id="prevChallenge" type="button">◀ Prev</button>
+                    <button id="nextChallenge" type="button">Next ▶</button>
+                </div>
+            </div>
+
+            <div class="playground">
+                <!-- ============ CONTROLS ============ -->
+                <section class="playground__controls">
+                    <div class="controls">
+
+                        <div class="controls__group">
+                            <h2 class="controls__group-title">Container</h2>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="gridTemplateColumns">grid-template-columns</label>
+                                <select id="gridTemplateColumns" data-container="gridTemplateColumns">
+                                    <option value="repeat(2, 1fr)">repeat(2, 1fr)</option>
+                                    <option value="repeat(3, 1fr)" selected>repeat(3, 1fr)</option>
+                                    <option value="repeat(4, 1fr)">repeat(4, 1fr)</option>
+                                    <option value="1fr 2fr 1fr">1fr 2fr 1fr</option>
+                                    <option value="200px 1fr">200px 1fr</option>
+                                    <option value="200px 1fr 200px">200px 1fr 200px</option>
+                                    <option value="repeat(3, minmax(100px, 1fr))">repeat(3, minmax(100px, 1fr))</option>
+                                    <option value="repeat(auto-fit, minmax(120px, 1fr))">repeat(auto-fit, minmax(120px, 1fr))</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="gridTemplateRows">grid-template-rows</label>
+                                <select id="gridTemplateRows" data-container="gridTemplateRows">
+                                    <option value="auto" selected>auto</option>
+                                    <option value="repeat(2, 1fr)">repeat(2, 1fr)</option>
+                                    <option value="repeat(3, 100px)">repeat(3, 100px)</option>
+                                    <option value="100px 200px">100px 200px</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="gap">gap
+                                    <span class="controls__value" data-for="gap">12px</span>
+                                </label>
+                                <input type="range" id="gap" min="0" max="40" step="2" value="12" data-container="gap">
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="justifyItems">justify-items</label>
+                                <select id="justifyItems" data-container="justifyItems">
+                                    <option value="stretch" selected>stretch</option>
+                                    <option value="start">start</option>
+                                    <option value="end">end</option>
+                                    <option value="center">center</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="alignItems">align-items</label>
+                                <select id="alignItems" data-container="alignItems">
+                                    <option value="stretch" selected>stretch</option>
+                                    <option value="start">start</option>
+                                    <option value="end">end</option>
+                                    <option value="center">center</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="justifyContent">justify-content
+                                    <span class="controls__hint">(needs fixed-width tracks)</span>
+                                </label>
+                                <select id="justifyContent" data-container="justifyContent">
+                                    <option value="start" selected>start</option>
+                                    <option value="end">end</option>
+                                    <option value="center">center</option>
+                                    <option value="space-between">space-between</option>
+                                    <option value="space-around">space-around</option>
+                                    <option value="space-evenly">space-evenly</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="alignContent">align-content</label>
+                                <select id="alignContent" data-container="alignContent">
+                                    <option value="start" selected>start</option>
+                                    <option value="end">end</option>
+                                    <option value="center">center</option>
+                                    <option value="stretch">stretch</option>
+                                    <option value="space-between">space-between</option>
+                                    <option value="space-around">space-around</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="gridAutoFlow">grid-auto-flow</label>
+                                <select id="gridAutoFlow" data-container="gridAutoFlow">
+                                    <option value="row" selected>row</option>
+                                    <option value="column">column</option>
+                                    <option value="row dense">row dense</option>
+                                    <option value="column dense">column dense</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label">items</label>
+                                <div class="controls__counter">
+                                    <button id="removeItem" type="button" aria-label="remove item">−</button>
+                                    <span id="itemCount">6</span>
+                                    <button id="addItem" type="button" aria-label="add item">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="controls__group">
+                            <h2 class="controls__group-title">Selected item</h2>
+                            <p class="controls__hint" id="selectedLabel">None selected — click a box below to edit its item properties.</p>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="gridColumn">grid-column</label>
+                                <select id="gridColumn" data-item="gridColumn">
+                                    <option value="auto" selected>auto</option>
+                                    <option value="span 2">span 2</option>
+                                    <option value="span 3">span 3</option>
+                                    <option value="1 / -1">1 / -1 (full width)</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="gridRow">grid-row</label>
+                                <select id="gridRow" data-item="gridRow">
+                                    <option value="auto" selected>auto</option>
+                                    <option value="span 2">span 2</option>
+                                    <option value="span 3">span 3</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="justifySelf">justify-self</label>
+                                <select id="justifySelf" data-item="justifySelf">
+                                    <option value="auto" selected>auto</option>
+                                    <option value="start">start</option>
+                                    <option value="end">end</option>
+                                    <option value="center">center</option>
+                                    <option value="stretch">stretch</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="alignSelf">align-self</label>
+                                <select id="alignSelf" data-item="alignSelf">
+                                    <option value="auto" selected>auto</option>
+                                    <option value="start">start</option>
+                                    <option value="end">end</option>
+                                    <option value="center">center</option>
+                                    <option value="stretch">stretch</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============ PREVIEW ============ -->
+                <section class="playground__stage">
+                    <h2 class="stage__title">Live preview</h2>
+                    <p class="stage__hint">Click any box to select it, then edit its item properties above.</p>
+                    <div class="grid-preview" id="gridPreview"></div>
+                </section>
+
+                <!-- ============ CODE ============ -->
+                <section class="playground__code">
+                    <div class="code-panel">
+                        <div class="code-panel__head">
+                            <h2 class="code-panel__title">Generated CSS</h2>
+                            <button class="code-panel__copy" id="copyCode" type="button">Copy</button>
+                        </div>
+                        <pre class="code-panel__code" id="cssCode"></pre>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/grid.js"></script>
+</body>
+</html>
