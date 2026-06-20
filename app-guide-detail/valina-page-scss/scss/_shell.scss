@@ -1,0 +1,60 @@
+@use "variables" as *;
+
+// ============================================================
+// App shell — sidebar + main. (The shell itself is a flexbox
+// layout — fitting, since this app is about learning flex.)
+// ============================================================
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: $sidebar-width;
+  flex-shrink: 0;
+  background-color: $sidebar-bg;
+  color: $sidebar-text;
+
+  &__brand {
+    padding: 22px 20px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  &__nav {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+  }
+
+  &__link {
+    display: block;
+    padding: 12px 20px;
+    color: $sidebar-text;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &:hover {
+      background-color: $sidebar-hover-bg;
+      color: #ffffff;
+    }
+
+    &.is-active {
+      background-color: $sidebar-active-bg;
+      color: #ffffff;
+      border-left-color: #ffffff;
+    }
+  }
+}
+
+.main {
+  flex: 1;
+  min-width: 0; // allow children (e.g. wide playground) to scroll, not blow out flex
+  padding: 32px;
+  background-color: $main-bg;
+  overflow: auto;
+}

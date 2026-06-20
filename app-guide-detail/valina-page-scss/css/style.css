@@ -1,0 +1,223 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background-color: #1e293b;
+  color: #cbd5e1;
+}
+.sidebar__brand {
+  padding: 22px 20px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.sidebar__nav {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+.sidebar__link {
+  display: block;
+  padding: 12px 20px;
+  color: #cbd5e1;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.sidebar__link:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+.sidebar__link.is-active {
+  background-color: #3498db;
+  color: #ffffff;
+  border-left-color: #ffffff;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+  background-color: #f8fafc;
+  overflow: auto;
+}
+
+.playground {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+.playground__controls, .playground__code {
+  width: 280px;
+  flex-shrink: 0;
+}
+.playground__stage {
+  flex: 1;
+  min-width: 320px;
+}
+
+.controls {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+}
+.controls__group + .controls__group {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed #e2e8f0;
+}
+.controls__group-title {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+}
+.controls__field {
+  margin-bottom: 12px;
+}
+.controls__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  color: #334155;
+}
+.controls__hint {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: #94a3b8;
+}
+.controls__value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  color: #2980b9;
+}
+.controls select,
+.controls input[type=range],
+.controls input[type=number] {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: #fff;
+  font-size: 0.85rem;
+}
+.controls__counter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.controls__counter button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+}
+.controls__counter button:hover {
+  background-color: #e2e8f0;
+}
+.controls__counter span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.stage__title {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: #334155;
+}
+.stage__hint {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.flex-preview {
+  display: flex;
+  min-height: 320px;
+  padding: 16px;
+  background-color: repeating-linear-gradient(45deg, #f8fafc, #f8fafc 10px, #eef2f7 10px, #eef2f7 20px);
+  border: 2px dashed #94a3b8;
+  border-radius: 8px;
+}
+
+.flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 16px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+.flex-item.is-selected {
+  outline: 3px solid #ef4444;
+  outline-offset: 2px;
+}
+
+.code-panel__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.code-panel__title {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+}
+.code-panel__copy {
+  padding: 4px 10px;
+  border: 1px solid #e2e8f0;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.code-panel__copy:hover {
+  background-color: #e2e8f0;
+}
+.code-panel__code {
+  margin: 0;
+  padding: 16px;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,211 @@
+@use "variables" as *;
+
+// ============================================================
+// The CSS Flex interactive playground
+// ============================================================
+
+.playground {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+
+  &__controls,
+  &__code {
+    width: 280px;
+    flex-shrink: 0;
+  }
+
+  &__stage {
+    flex: 1;
+    min-width: 320px;
+  }
+}
+
+// ---- Controls panel ----
+
+.controls {
+  background-color: $surface;
+  border: 1px solid $border-color;
+  border-radius: $radius;
+  padding: 16px;
+
+  &__group {
+    & + & {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px dashed $border-color;
+    }
+  }
+
+  &__group-title {
+    margin: 0 0 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #64748b;
+  }
+
+  &__field {
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    color: #334155;
+  }
+
+  &__hint {
+    margin: 0 0 12px;
+    font-size: 0.78rem;
+    font-style: italic;
+    color: #94a3b8;
+  }
+
+  &__value {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.78rem;
+    color: $primary-dark;
+  }
+
+  select,
+  input[type="range"],
+  input[type="number"] {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid $border-color;
+    border-radius: $radius-sm;
+    background-color: #fff;
+    font-size: 0.85rem;
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    button {
+      width: 30px;
+      height: 30px;
+      border: 1px solid $border-color;
+      background-color: #fff;
+      border-radius: $radius-sm;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+
+      &:hover {
+        background-color: $border-color;
+      }
+    }
+
+    span {
+      min-width: 20px;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+}
+
+// ---- Preview stage ----
+
+.stage {
+  &__title {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+    color: #334155;
+  }
+
+  &__hint {
+    margin: 0 0 12px;
+    font-size: 0.8rem;
+    color: #94a3b8;
+  }
+}
+
+.flex-preview {
+  display: flex; // overridden live by JS
+  min-height: 320px;
+  padding: 16px;
+  background-color: repeating-linear-gradient(
+      45deg,
+      #f8fafc,
+      #f8fafc 10px,
+      #eef2f7 10px,
+      #eef2f7 20px
+    );
+  border: 2px dashed $preview-border;
+  border-radius: $radius;
+}
+
+.flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 16px;
+  border-radius: $radius-sm;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+
+  &.is-selected {
+    outline: 3px solid $item-selected-outline;
+    outline-offset: 2px;
+  }
+}
+
+// ---- Code panel ----
+
+.code-panel {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #64748b;
+  }
+
+  &__copy {
+    padding: 4px 10px;
+    border: 1px solid $border-color;
+    background-color: #fff;
+    border-radius: $radius-sm;
+    font-size: 0.75rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $border-color;
+    }
+  }
+
+  &__code {
+    margin: 0;
+    padding: 16px;
+    background-color: $code-bg;
+    color: $code-text;
+    border-radius: $radius;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: auto;
+  }
+}

@@ -4,17 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Frontend styling</title>
+    <title>Learn Frontend Styling</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Learn Frontend Styling</h1>
-        <p>This is a sample page demonstrating the use of SCSS in a vanilla HTML page.</p>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="sidebar__brand">📚 Learn Frontend</div>
+            <ul class="sidebar__nav">
+                <li><a class="sidebar__link is-active" href="index.html">Home</a></li>
+                <li><a class="sidebar__link" href="pages/flexbox.html">Learn CSS Flex</a></li>
+            </ul>
+        </aside>
 
+        <main class="main">
+            <h1>Learn Frontend Styling</h1>
+            <p>Interactive playgrounds to learn frontend concepts by playing with them.</p>
+            <p>Pick a topic from the sidebar to get started. Currently available:</p>
+
+            <ul>
+                <li>
+                    <a href="pages/flexbox.html"><strong>Learn CSS Flex</strong></a> —
+                    a live flexbox playground: tweak every flex property and watch the
+                    layout (and the CSS code) update in real time.
+                </li>
+            </ul>
+        </main>
     </div>
 </body>
 </html>

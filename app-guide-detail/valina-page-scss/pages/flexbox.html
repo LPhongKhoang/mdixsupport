@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS Flex</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="sidebar__brand">📚 Learn Frontend</div>
+            <ul class="sidebar__nav">
+                <li><a class="sidebar__link" href="../index.html">Home</a></li>
+                <li><a class="sidebar__link is-active" href="flexbox.html">Learn CSS Flex</a></li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <h1>Learn CSS Flex</h1>
+            <p>
+                Change any property on the left and watch the colored boxes respond
+                instantly. The exact CSS you're building updates on the right — copy it
+                when you like what you see.
+            </p>
+
+            <div class="playground">
+                <!-- ============ CONTROLS ============ -->
+                <section class="playground__controls">
+                    <div class="controls">
+
+                        <div class="controls__group">
+                            <h2 class="controls__group-title">Container</h2>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="flexDirection">flex-direction</label>
+                                <select id="flexDirection" data-container="flexDirection">
+                                    <option value="row">row</option>
+                                    <option value="row-reverse">row-reverse</option>
+                                    <option value="column">column</option>
+                                    <option value="column-reverse">column-reverse</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="justifyContent">justify-content</label>
+                                <select id="justifyContent" data-container="justifyContent">
+                                    <option value="flex-start">flex-start</option>
+                                    <option value="flex-end">flex-end</option>
+                                    <option value="center">center</option>
+                                    <option value="space-between">space-between</option>
+                                    <option value="space-around">space-around</option>
+                                    <option value="space-evenly">space-evenly</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="alignItems">align-items</label>
+                                <select id="alignItems" data-container="alignItems">
+                                    <option value="stretch">stretch</option>
+                                    <option value="flex-start">flex-start</option>
+                                    <option value="flex-end">flex-end</option>
+                                    <option value="center">center</option>
+                                    <option value="baseline">baseline</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="flexWrap">flex-wrap</label>
+                                <select id="flexWrap" data-container="flexWrap">
+                                    <option value="nowrap">nowrap</option>
+                                    <option value="wrap">wrap</option>
+                                    <option value="wrap-reverse">wrap-reverse</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="alignContent">align-content
+                                    <span class="controls__hint">(needs wrap + extra height)</span>
+                                </label>
+                                <select id="alignContent" data-container="alignContent">
+                                    <option value="stretch">stretch</option>
+                                    <option value="flex-start">flex-start</option>
+                                    <option value="flex-end">flex-end</option>
+                                    <option value="center">center</option>
+                                    <option value="space-between">space-between</option>
+                                    <option value="space-around">space-around</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="gap">gap
+                                    <span class="controls__value" data-for="gap">0px</span>
+                                </label>
+                                <input type="range" id="gap" min="0" max="48" step="2" value="0" data-container="gap">
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label">items</label>
+                                <div class="controls__counter">
+                                    <button id="removeItem" type="button" aria-label="remove item">−</button>
+                                    <span id="itemCount">4</span>
+                                    <button id="addItem" type="button" aria-label="add item">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="controls__group">
+                            <h2 class="controls__group-title">Selected item</h2>
+                            <p class="controls__hint" id="selectedLabel">None selected — click a box below to edit its item properties.</p>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="flexGrow">flex-grow
+                                    <span class="controls__value" data-for="flexGrow">0</span>
+                                </label>
+                                <input type="range" id="flexGrow" min="0" max="4" step="0.5" value="0" data-item="flexGrow">
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="flexShrink">flex-shrink
+                                    <span class="controls__value" data-for="flexShrink">1</span>
+                                </label>
+                                <input type="range" id="flexShrink" min="0" max="3" step="0.5" value="1" data-item="flexShrink">
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="flexBasis">flex-basis</label>
+                                <select id="flexBasis" data-item="flexBasis">
+                                    <option value="auto">auto</option>
+                                    <option value="0">0</option>
+                                    <option value="content">content</option>
+                                    <option value="50px">50px</option>
+                                    <option value="100px">100px</option>
+                                    <option value="150px">150px</option>
+                                    <option value="200px">200px</option>
+                                    <option value="25%">25%</option>
+                                    <option value="50%">50%</option>
+                                </select>
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="order">order
+                                    <span class="controls__value" data-for="order">0</span>
+                                </label>
+                                <input type="range" id="order" min="-3" max="5" step="1" value="0" data-item="order">
+                            </div>
+
+                            <div class="controls__field">
+                                <label class="controls__label" for="alignSelf">align-self</label>
+                                <select id="alignSelf" data-item="alignSelf">
+                                    <option value="auto">auto</option>
+                                    <option value="flex-start">flex-start</option>
+                                    <option value="flex-end">flex-end</option>
+                                    <option value="center">center</option>
+                                    <option value="stretch">stretch</option>
+                                    <option value="baseline">baseline</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- ============ PREVIEW ============ -->
+                <section class="playground__stage">
+                    <h2 class="stage__title">Live preview</h2>
+                    <p class="stage__hint">Click any box to select it, then edit its item properties above.</p>
+                    <div class="flex-preview" id="flexPreview"></div>
+                </section>
+
+                <!-- ============ CODE ============ -->
+                <section class="playground__code">
+                    <div class="code-panel">
+                        <div class="code-panel__head">
+                            <h2 class="code-panel__title">Generated CSS</h2>
+                            <button class="code-panel__copy" id="copyCode" type="button">Copy</button>
+                        </div>
+                        <pre class="code-panel__code" id="cssCode"></pre>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/flexbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+// ============================================================
+// Design tokens — shared across all pages
+// (explicit hex values instead of color functions, to keep
+//  things simple and avoid sass:color module lookups)
+// ============================================================
+
+// Brand / accent
+$primary-color: #3498db;
+$primary-dark: #2980b9;
+$primary-light: #5dade2;
+
+// Surfaces
+$sidebar-bg: #1e293b;
+$sidebar-text: #cbd5e1;
+$sidebar-hover-bg: rgba(255, 255, 255, 0.06);
+$sidebar-active-bg: #3498db;
+$main-bg: #f8fafc;
+$surface: #ffffff;
+$border-color: #e2e8f0;
+
+// Code panel
+$code-bg: #0f172a;
+$code-text: #e2e8f0;
+
+// Playground
+$item-selected-outline: #ef4444;
+$preview-border: #94a3b8;
+
+// Layout
+$sidebar-width: 240px;
+$radius: 8px;
+$radius-sm: 6px;
