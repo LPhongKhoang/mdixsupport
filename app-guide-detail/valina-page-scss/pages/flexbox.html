@@ -7,15 +7,9 @@
     <title>Learn CSS Flex</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body data-root="../" data-page="flex">
     <div class="app">
-        <aside class="sidebar">
-            <div class="sidebar__brand">📚 Learn Frontend</div>
-            <ul class="sidebar__nav">
-                <li><a class="sidebar__link" href="../index.html">Home</a></li>
-                <li><a class="sidebar__link is-active" href="flexbox.html">Learn CSS Flex</a></li>
-            </ul>
-        </aside>
+        <aside class="sidebar" data-sidebar></aside>
 
         <main class="main">
             <h1>Learn CSS Flex</h1>
@@ -183,6 +177,7 @@
         </main>
     </div>
 
+    <script src="../js/sidebar.js"></script>
     <script src="../js/flexbox.js"></script>
 </body>
 </html>
