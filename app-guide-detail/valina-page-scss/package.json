@@ -1,0 +1,16 @@
+{
+  "name": "valina-page-scss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass scss:css",
+    "watch-css": "sass --watch scss:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}
