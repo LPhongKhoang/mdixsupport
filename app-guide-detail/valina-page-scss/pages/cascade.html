@@ -115,11 +115,26 @@
                     <iframe class="cl-preview" id="previewFrame" title="Live cascade preview"></iframe>
 
                     <div class="cl-breakdown" style="margin-top:12px;">
-                        <h2 class="cl-breakdown__title">Why? — Cascade breakdown</h2>
+                        <div class="cl-breakdown__head">
+                            <h2 class="cl-breakdown__title">Why? — Cascade breakdown</h2>
+                            <button class="cl-sim__toggle" id="walkBtn" type="button">▶ Walk the cascade</button>
+                        </div>
                         <p class="cl-breakdown__hint">
                             All matching rules, sorted by true cascade priority:
                             importance → layer → specificity → source order. Winner on top.
                         </p>
+
+                        <div class="cl-sim" id="simBar" hidden>
+                            <div class="cl-sim__progress" id="simStepLabel">Step 1 of 4</div>
+                            <div class="cl-sim__title" id="simTitle"></div>
+                            <div class="cl-sim__explain" id="simExplain"></div>
+                            <div class="cl-sim__actions">
+                                <button id="simPrev" type="button">◀ Back</button>
+                                <button id="simNext" type="button">▶ Begin</button>
+                                <button id="simExit" type="button">Exit walk-through</button>
+                            </div>
+                        </div>
+
                         <div id="breakdown"></div>
                     </div>
                 </section>

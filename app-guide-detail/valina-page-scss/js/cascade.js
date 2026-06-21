@@ -28,6 +28,16 @@
     const addRuleBtn    = document.getElementById('addRuleBtn');
     const importantView = document.getElementById('importantView');
 
+    // ---- simulator refs ----
+    const walkBtn = document.getElementById('walkBtn');
+    const simBar = document.getElementById('simBar');
+    const simStepLabel = document.getElementById('simStepLabel');
+    const simTitle = document.getElementById('simTitle');
+    const simExplain = document.getElementById('simExplain');
+    const simPrev = document.getElementById('simPrev');
+    const simNext = document.getElementById('simNext');
+    const simExit = document.getElementById('simExit');
+
     // ---- color-normalization probe (named colors → rgb for compare) ----
     const probe = document.createElement('div');
     probe.style.display = 'none';
@@ -291,6 +301,9 @@
     ];
 
     const state = { layers: [], rules: [] };
+
+    // simulator state: step 0 = intro, 1-4 = after each cascade filter
+    const simState = { active: false, step: 0, steps: [], elim: new Map() };
     let idCounter = 0;
     function assignIds() {
         state.rules.forEach(function (r, i) { r.id = 'r' + (++idCounter); r.order = i; });
@@ -308,6 +321,7 @@
         });
         // a rule may reference a layer not in the list → keep as-is; rank treats unknown as un-layered
         assignIds();
+        simState.step = 0; // restart the walk-through on a fresh scenario
     }
 
     // ============================================================
@@ -383,33 +397,179 @@
         return 'earlier in source order';
     }
 
+    // ============================================================
+    // Cascade simulator — decompose the winner into the browser's
+    // ordered steps (importance → layers → specificity → order),
+    // recording which step each candidate is eliminated at.
+    // ============================================================
+    function specGT(a, b) {
+        return a[0] > b[0] || (a[0] === b[0] && (a[1] > b[1] || (a[1] === b[1] && a[2] > b[2])));
+    }
+    function specEQ(a, b) { return a[0] === b[0] && a[1] === b[1] && a[2] === b[2]; }
+    function plural(n) { return n === 1 ? '' : 's'; }
+
+    function computeCascadeSteps(list) {
+        const elim = new Map();
+        const steps = [];
+        let pool = list.slice();
+
+        // Step 1 — importance (rank[0])
+        let maxImp = 0;
+        pool.forEach(function (c) { if (c.rank[0] > maxImp) maxImp = c.rank[0]; });
+        let cut = pool.filter(function (c) { return c.rank[0] < maxImp; });
+        cut.forEach(function (c) { elim.set(c, 1); });
+        pool = pool.filter(function (c) { return c.rank[0] === maxImp; });
+        steps.push({ n: 1, title: 'Importance & origin', cut: cut, pool: pool.slice(), isImp: maxImp === 1 });
+
+        // Step 2 — layers (rank[1])
+        let maxLS = -Infinity;
+        pool.forEach(function (c) { if (c.rank[1] > maxLS) maxLS = c.rank[1]; });
+        cut = pool.filter(function (c) { return c.rank[1] < maxLS; });
+        cut.forEach(function (c) { elim.set(c, 2); });
+        pool = pool.filter(function (c) { return c.rank[1] === maxLS; });
+        steps.push({ n: 2, title: 'Cascade layers', cut: cut, pool: pool.slice(), isImp: maxImp === 1 });
+
+        // Step 3 — specificity (rank[2,3,4])
+        let maxSpec = [0, 0, 0];
+        pool.forEach(function (c) { const s = [c.rank[2], c.rank[3], c.rank[4]]; if (specGT(s, maxSpec)) maxSpec = s; });
+        cut = pool.filter(function (c) { const s = [c.rank[2], c.rank[3], c.rank[4]]; return !specEQ(s, maxSpec); });
+        cut.forEach(function (c) { elim.set(c, 3); });
+        pool = pool.filter(function (c) { const s = [c.rank[2], c.rank[3], c.rank[4]]; return specEQ(s, maxSpec); });
+        steps.push({ n: 3, title: 'Specificity', cut: cut, pool: pool.slice(), maxSpec: maxSpec });
+
+        // Step 4 — source order (rank[5])
+        let maxOrder = -1;
+        pool.forEach(function (c) { if (c.rank[5] > maxOrder) maxOrder = c.rank[5]; });
+        const winner = pool.filter(function (c) { return c.rank[5] === maxOrder; })[0] || null;
+        cut = pool.filter(function (c) { return c.rank[5] < maxOrder; });
+        cut.forEach(function (c) { elim.set(c, 4); });
+        steps.push({ n: 4, title: 'Source order', cut: cut, pool: winner ? [winner] : [], winner: winner });
+
+        return { steps: steps, elim: elim };
+    }
+
+    function selDesc(c) {
+        const v = c.rule.special === 'revert-layer' ? 'revert-layer' : c.rule.color;
+        return '<code>' + esc(c.rule.selector) + '</code> (' + esc(v) + ')';
+    }
+    function stepExplanation(st) {
+        const cutN = st.cut.length, poolN = st.pool.length;
+        if (st.n === 1) {
+            if (st.isImp) {
+                return 'The cascade weighs <strong>importance</strong> first. <code>!important</code> beats normal, so '
+                    + (cutN ? cutN + ' normal rule' + plural(cutN) + ' ' + (cutN === 1 ? 'is' : 'are') + ' set aside. ' : '')
+                    + '<strong>' + poolN + '</strong> !important rule' + plural(poolN) + ' continue.';
+            }
+            return 'The cascade weighs <strong>importance</strong> first. No <code>!important</code> rules here, so nothing is cut — normal styles all move on.';
+        }
+        if (st.n === 2) {
+            if (!poolN) return 'No rules remain to filter by layer.';
+            const layer = st.pool[0].rule.layer;
+            const lp = st.isImp
+                ? (layer === 'un-layered'
+                    ? 'un-layered <code>!important</code> is the <em>weakest</em> of the important layers'
+                    : 'important layers run in <strong>reverse</strong> — the lowest layer (<code>' + esc(layer) + '</code>) wins')
+                : (layer === 'un-layered'
+                    ? '<strong>un-layered</strong> styles outrank every layer'
+                    : 'the highest-priority layer is <code>' + esc(layer) + '</code>');
+            return 'Next, <strong>layers</strong> are resolved by priority: ' + lp + '. '
+                + (cutN ? cutN + ' rule' + plural(cutN) + ' in lower-priority layers eliminated. ' : '')
+                + '<strong>' + poolN + '</strong> remain.';
+        }
+        if (st.n === 3) {
+            if (!poolN) return 'No rules remain to filter by specificity.';
+            const sp = st.pool[0].spec;
+            if (cutN === 0) return 'Only one rule is left, so <strong>specificity</strong> has no tie to break (' + sp.join(', ') + ').';
+            return 'Within a layer, the most <strong>specific</strong> selector wins. Survivors share (' + sp.join(', ') + '); '
+                + cutN + ' lower-specificity rule' + plural(cutN) + ' eliminated.';
+        }
+        // n === 4
+        if (!st.winner) return 'No winner could be determined.';
+        if (cutN === 0) return 'No tie remains, so <strong>source order</strong> isn’t needed. Winner: ' + selDesc(st.winner) + '.';
+        return 'When specificity ties, the rule written <strong>later</strong> wins. → Winner: ' + selDesc(st.winner) + '.';
+    }
+    function formatIntro(steps) {
+        const total = steps[0].pool.length + steps[0].cut.length;
+        if (!total) return 'No rule matches <code>#intro</code>, so there is nothing to resolve.';
+        return 'The browser resolves this conflict in <strong>four ordered steps</strong>: '
+            + 'importance → layers → specificity → source order. '
+            + 'Press <strong>Next</strong> to apply each filter until one rule remains.';
+    }
+    function renderSimBar() {
+        const s = simState;
+        if (!s.steps.length) return;
+        if (s.step === 0) {
+            simStepLabel.textContent = 'Start';
+            simTitle.textContent = 'Walk the cascade, step by step';
+            simExplain.innerHTML = formatIntro(s.steps);
+            simNext.textContent = '▶ Begin';
+            simPrev.disabled = true;
+        } else {
+            const st = s.steps[s.step - 1];
+            simStepLabel.textContent = 'Step ' + s.step + ' of 4';
+            simTitle.textContent = st.n + '. ' + st.title;
+            simExplain.innerHTML = stepExplanation(st);
+            simNext.textContent = s.step >= 4 ? '↺ Restart' : (s.step === 3 ? 'Reveal winner ▶' : 'Next ▶');
+            simPrev.disabled = false;
+        }
+    }
+
+    // ---- shared row markup ----
+    function swatchBgFor(rule) {
+        return rule.color === 'revert-layer'
+            ? 'repeating-linear-gradient(45deg,#cbd5e1,#cbd5e1 3px,#fff 3px,#fff 6px)'
+            : rule.color;
+    }
+    function rowMarkup(c, cls, reasonHTML) {
+        return (
+            '<div class="' + cls + '">' +
+            '<span class="cl-rule-row__swatch" style="background:' + esc(swatchBgFor(c.rule)) + '"></span>' +
+            '<span class="cl-rule-row__sel">' + esc(c.rule.selector) + '</span>' +
+            '<span class="cl-rule-row__layer">' + esc(c.rule.layer) + '</span>' +
+            (c.rule.important ? '<span class="cl-rule-row__imp">!important</span>' : '') +
+            '<span class="cl-rule-row__reason">' + reasonHTML + '</span>' +
+            '</div>'
+        );
+    }
+
     function renderBreakdown(matching, winner) {
         const nonMatching = state.rules.filter(function (r) { return !matchesTarget(r.selector); });
-
         let html = '';
-        matching.forEach(function (c) {
-            const w = c === winner;
-            html +=
-                '<div class="cl-rule-row' + (w ? ' cl-rule-row--winner' : '') + '">' +
-                '<span class="cl-rule-row__swatch" style="background:' + esc(c.rule.color === 'revert-layer' ? 'repeating-linear-gradient(45deg,#cbd5e1,#cbd5e1 3px,#fff 3px,#fff 6px)' : c.rule.color) + '"></span>' +
-                '<span class="cl-rule-row__sel">' + esc(c.rule.selector) + '</span>' +
-                '<span class="cl-rule-row__layer">' + esc(c.rule.layer) + '</span>' +
-                (c.rule.important ? '<span class="cl-rule-row__imp">!important</span>' : '') +
-                '<span class="cl-rule-row__reason">' + reasonFor(c, winner) + '</span>' +
-                '</div>';
-        });
-        if (!matching.length) {
-            html += '<p style="margin:0;font-size:0.8rem;color:#94a3b8;">No rule matches <code>#intro</code> — it inherits.</p>';
+
+        if (simState.active) {
+            const res = computeCascadeSteps(matching);
+            simState.steps = res.steps;
+            simState.elim = res.elim;
+            if (!matching.length) {
+                html += '<p class="cl-empty">No rule matches <code>#intro</code> — there is nothing to resolve.</p>';
+            }
+            matching.forEach(function (c) {
+                const es = simState.elim.get(c);            // 1-4, or undefined = winner
+                const isWinner = (es === undefined);
+                const eliminated = !isWinner && es <= simState.step;
+                const revealed = isWinner && simState.step === 4;
+                let cls = 'cl-rule-row', tag;
+                if (revealed) { cls += ' cl-rule-row--winner'; tag = '<span class="cl-rule-row__badge">WINS</span>'; }
+                else if (eliminated) { cls += ' cl-rule-row--elim'; tag = '<span class="cl-rule-row__cut">✗ step ' + es + '</span>'; }
+                else { cls += ' cl-rule-row--alive'; tag = '<span class="cl-rule-row__running">in the running</span>'; }
+                html += rowMarkup(c, cls, tag);
+            });
+        } else {
+            matching.forEach(function (c) {
+                const w = c === winner;
+                html += rowMarkup(c, 'cl-rule-row' + (w ? ' cl-rule-row--winner' : ''), reasonFor(c, winner));
+            });
+            if (!matching.length) {
+                html += '<p class="cl-empty">No rule matches <code>#intro</code> — it inherits.</p>';
+            }
         }
+
         nonMatching.forEach(function (r) {
-            html +=
-                '<div class="cl-rule-row cl-rule-row--nomatch">' +
-                '<span class="cl-rule-row__swatch" style="background:' + esc(r.color === 'revert-layer' ? '#e2e8f0' : r.color) + '"></span>' +
-                '<span class="cl-rule-row__sel">' + esc(r.selector) + '</span>' +
-                '<span class="cl-rule-row__reason">selector doesn\'t match</span>' +
-                '</div>';
+            html += rowMarkup({ rule: r }, 'cl-rule-row cl-rule-row--nomatch', 'selector doesn’t match');
         });
         breakdownEl.innerHTML = html;
+
+        if (simState.active) renderSimBar();
     }
 
     function countInLayer(layer) {
@@ -583,6 +743,32 @@
     });
 
     importantView.addEventListener('change', function () { renderLayerStack(); });
+
+    // ---- cascade simulator controls ----
+    walkBtn.addEventListener('click', function () {
+        simState.active = !simState.active;
+        simState.step = 0;
+        walkBtn.textContent = simState.active ? '✓ Exit walk-through' : '▶ Walk the cascade';
+        walkBtn.classList.toggle('is-active', simState.active);
+        simBar.hidden = !simState.active;
+        renderDerived();
+    });
+    simNext.addEventListener('click', function () {
+        simState.step = simState.step >= 4 ? 0 : simState.step + 1;
+        renderDerived();
+    });
+    simPrev.addEventListener('click', function () {
+        simState.step = Math.max(0, simState.step - 1);
+        renderDerived();
+    });
+    simExit.addEventListener('click', function () {
+        simState.active = false;
+        simState.step = 0;
+        walkBtn.textContent = '▶ Walk the cascade';
+        walkBtn.classList.remove('is-active');
+        simBar.hidden = true;
+        renderDerived();
+    });
 
     // ============================================================
     // Shared-engine config
