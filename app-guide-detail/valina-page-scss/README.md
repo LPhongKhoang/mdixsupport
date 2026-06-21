@@ -35,9 +35,12 @@ scss/                   Stylesheet sources (compiled to css/)
   _positioning.scss       positioning playground styles
   _centering.scss         centering playground styles
   _cascade.scss           cascade-layers playground styles
+  _infotips.scss          shared property tooltips (flex/grid/positioning)
 css/                    Compiled output (committed) + source maps
 js/
   sidebar.js            shared sidebar (single source of truth for the menu)
+  playground.js         shared playground engine (mode/challenges/presets/copy)
+  infotips.js           shared property tooltips (hover any property label)
   flexbox.js            flex playground logic
   grid.js               grid playground logic
   positioning.js        positioning playground logic
@@ -115,3 +118,8 @@ That's it — the new item appears in the sidebar on every page automatically.
   real CSS) plus a cascade breakdown show which rule wins and why. Scenarios
   and challenges come straight from the CSS-Tricks guide (un-layered wins,
   `!important` reverses layer order, grouped layers beat specificity, etc.).
+- Property tooltips: in the flex, grid, and positioning playgrounds, hover
+  (or focus, or click) the small ⓘ next to any property label for a concise
+  explanation of what it does and its common values. Powered by the shared
+  `infotips.js`, which auto-attaches to any `.controls__label` whose text is a
+  known CSS property — so adding controls to those pages gets tooltips for free.

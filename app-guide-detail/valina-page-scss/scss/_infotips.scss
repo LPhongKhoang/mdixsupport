@@ -1,0 +1,70 @@
+@use "variables" as *;
+
+// ============================================================
+// Shared property tooltips (see js/infotips.js).
+// One ⓘ per known CSS-property label; hovers/focuses/clicks to
+// reveal a short explanation. Used by the flex / grid / positioning
+// playgrounds (centering has its own technique card).
+// ============================================================
+
+.info-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    border: 1px solid #94a3b8;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #64748b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1;
+    cursor: help;
+    transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+
+    &:hover,
+    &:focus {
+        border-color: $primary-color;
+        color: $primary-dark;
+        background-color: #eaf4fb;
+        outline: none;
+    }
+}
+
+.info-tip {
+    position: fixed;
+    z-index: 1000;
+    max-width: 300px;
+    padding: 10px 12px;
+    background-color: $code-bg;
+    color: $code-text;
+    border-radius: $radius;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    font-size: 0.8rem;
+    line-height: 1.45;
+    font-family: Arial, sans-serif;
+    pointer-events: none; // never steal the hover from the icon
+
+    code {
+        background-color: rgba(255, 255, 255, 0.12);
+        padding: 1px 4px;
+        border-radius: 3px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.76rem;
+        color: #f8fafc;
+    }
+
+    b {
+        color: #ffffff;
+    }
+}
