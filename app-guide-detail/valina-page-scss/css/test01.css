@@ -56,5 +56,52 @@ body .container > .task-detail-container .row-1_right .icon {
   border-radius: 50%;
   margin-left: 10px;
 }
+body {
+  /* Hidden backdrop by default */
+}
+body .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dim page content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none; /* Make clicks pass through when hidden */
+  transition: opacity 0.3s ease;
+}
+body {
+  /* Revealed state when URL hash matches element ID */
+}
+body .modal-overlay:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+body {
+  /* Inside pop-up content window */
+}
+body .modal-box {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+body {
+  /* Close icon styling */
+}
+body .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #333;
+}
 
 /*# sourceMappingURL=test01.css.map */
