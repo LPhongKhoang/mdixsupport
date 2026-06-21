@@ -1,0 +1,411 @@
+@use "variables" as *;
+
+// ============================================================
+// CSS Cascade Layers playground (per the CSS-Tricks guide).
+//
+// Unlike the layout playgrounds, this one is about *which rule
+// wins* for a single target element — and *why*. The teaching
+// centerpiece is the cascade breakdown (`.cl-breakdown`).
+// Shares .controls / .toolbar / .challenge / .code-panel styles.
+// All classes are `cl-` prefixed to avoid clashing with the rest
+// of the app.
+// ============================================================
+
+// The three-column playground layout lives in _flexbox.scss
+// (.playground). The cascade playground widens the controls and
+// code columns a touch because they hold editor lists.
+
+.cl-controls,
+.cl-code {
+    width: 340px;
+}
+
+// ---------- Layer stack ----------
+
+.cl-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cl-stack__hint {
+    margin: 0 0 8px;
+    font-size: 0.78rem;
+    font-style: italic;
+    color: #94a3b8;
+}
+
+.cl-layer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border: 1px solid $border-color;
+    border-radius: $radius-sm;
+    background-color: #fff;
+    font-size: 0.85rem;
+
+    &--unlayered {
+        border-color: $primary-color;
+        background-color: #eaf4fb;
+    }
+
+    &--reversed-note {
+        font-size: 0.72rem;
+        color: #b45309;
+        font-style: italic;
+    }
+
+    &__name {
+        flex: 1;
+        font-weight: 700;
+        color: #1e293b;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.82rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__rank {
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #94a3b8;
+    }
+
+    &__count {
+        font-size: 0.72rem;
+        color: #64748b;
+    }
+
+    &__btns {
+        display: flex;
+        gap: 2px;
+
+        button {
+            width: 24px;
+            height: 24px;
+            border: 1px solid $border-color;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.7rem;
+            line-height: 1;
+            color: #475569;
+
+            &:hover {
+                background-color: $border-color;
+            }
+
+            &:disabled {
+                opacity: 0.35;
+                cursor: default;
+            }
+        }
+    }
+}
+
+.cl-stack__add {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+
+    input {
+        flex: 1;
+        min-width: 0;
+        padding: 6px 8px;
+        border: 1px solid $border-color;
+        border-radius: $radius-sm;
+        font-size: 0.82rem;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    button {
+        padding: 6px 10px;
+        border: 1px solid $primary-color;
+        background-color: $primary-color;
+        color: #fff;
+        border-radius: $radius-sm;
+        font-size: 0.8rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $primary-dark;
+        }
+    }
+}
+
+// ---------- Rules editor ----------
+
+.cl-rules {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cl-rule {
+    border: 1px solid $border-color;
+    border-radius: $radius-sm;
+    padding: 8px;
+    background-color: #fbfcfe;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &__selector {
+        flex: 1;
+        min-width: 0;
+        padding: 5px 7px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.82rem;
+
+        &.is-nomatch {
+            border-color: #f0b429;
+            background-color: #fffbeb;
+        }
+    }
+
+    &__color {
+        width: 34px;
+        height: 30px;
+        padding: 2px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+    }
+
+    &__del {
+        width: 28px;
+        height: 28px;
+        border: 1px solid #f5b7b1;
+        background-color: #fff;
+        border-radius: 4px;
+        color: #e74c3c;
+        cursor: pointer;
+        font-size: 0.85rem;
+        line-height: 1;
+
+        &:hover {
+            background-color: #fdecea;
+        }
+    }
+
+    &__meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 6px;
+        font-size: 0.74rem;
+        color: #64748b;
+    }
+
+    &__layer {
+        padding: 3px 5px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        font-size: 0.76rem;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        background-color: #fff;
+    }
+
+    &__spec {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.74rem;
+        color: #64748b;
+        background-color: #f1f5f9;
+        padding: 1px 6px;
+        border-radius: 999px;
+    }
+
+    &__match {
+        font-size: 0.72rem;
+
+        &.is-yes { color: #2ecc71; font-weight: 700; }
+        &.is-no { color: #b45309; }
+    }
+
+    &__imp {
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
+        margin-left: auto;
+        cursor: pointer;
+        user-select: none;
+
+        input { cursor: pointer; }
+
+        &.is-on {
+            color: #e74c3c;
+            font-weight: 700;
+        }
+    }
+}
+
+.cl-rule-add {
+    margin-top: 4px;
+    padding: 8px;
+    border: 1px dashed $border-color;
+    border-radius: $radius-sm;
+    background-color: #fff;
+    color: $primary-dark;
+    font-size: 0.82rem;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+        background-color: #f1f5f9;
+    }
+}
+
+// ---------- Result + breakdown (center stage) ----------
+
+.cl-winner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    background-color: $surface;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    margin-bottom: 12px;
+}
+
+.cl-winner__swatch {
+    width: 44px;
+    height: 44px;
+    border-radius: $radius-sm;
+    border: 2px solid rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
+}
+
+.cl-winner__text {
+    &-label {
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #94a3b8;
+        margin: 0;
+    }
+
+    &-value {
+        margin: 2px 0 0;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1e293b;
+    }
+
+    &-rule {
+        margin: 2px 0 0;
+        font-size: 0.8rem;
+        color: #475569;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+}
+
+// The real, isolated rendering of the target element.
+.cl-preview {
+    width: 100%;
+    height: 130px;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    background-color: #fff;
+}
+
+.cl-breakdown {
+    background-color: $surface;
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    padding: 12px;
+
+    &__title {
+        margin: 0 0 4px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #64748b;
+    }
+
+    &__hint {
+        margin: 0 0 10px;
+        font-size: 0.78rem;
+        font-style: italic;
+        color: #94a3b8;
+    }
+}
+
+.cl-rule-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 9px;
+    border-radius: $radius-sm;
+    border: 1px solid transparent;
+    font-size: 0.82rem;
+
+    & + & {
+        margin-top: 4px;
+    }
+
+    &--winner {
+        border-color: #2ecc71;
+        background-color: #f0fdf4;
+    }
+
+    &--nomatch {
+        opacity: 0.55;
+    }
+
+    &__swatch {
+        width: 18px;
+        height: 18px;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        flex-shrink: 0;
+    }
+
+    &__sel {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        color: #1e293b;
+    }
+
+    &__layer {
+        font-size: 0.72rem;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        color: #64748b;
+        background-color: #f1f5f9;
+        padding: 1px 6px;
+        border-radius: 999px;
+    }
+
+    &__imp {
+        font-size: 0.7rem;
+        color: #e74c3c;
+        font-weight: 700;
+    }
+
+    &__reason {
+        margin-left: auto;
+        font-size: 0.74rem;
+        color: #94a3b8;
+        text-align: right;
+        font-style: italic;
+    }
+
+    &__badge {
+        font-size: 0.68rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #2ecc71;
+    }
+}

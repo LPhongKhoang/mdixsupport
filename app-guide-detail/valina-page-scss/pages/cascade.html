@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS Cascade Layers</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-root="../" data-page="cascade">
+    <div class="app">
+        <aside class="sidebar" data-sidebar></aside>
+
+        <main class="main">
+            <h1>Learn CSS Cascade Layers</h1>
+            <p>
+                Cascade layers (<code>@layer</code>) let you decide which styles win
+                based on <em>where they come from</em> — not by fighting specificity wars.
+                The big idea: every rule below competes for the <strong>color</strong> of one
+                paragraph. Tweak the layer order and the rules, then read the
+                <strong>cascade breakdown</strong> to see exactly which one wins — and why.
+                Based on the
+                <a href="https://css-tricks.com/css-cascade-layers/" target="_blank" rel="noopener">CSS-Tricks Cascade Layers Guide</a>.
+            </p>
+
+            <div class="toolbar">
+                <div class="toolbar__group" role="group" aria-label="Mode">
+                    <button class="toolbar__btn is-active" data-mode="free" type="button">🎮 Free Play</button>
+                    <button class="toolbar__btn" data-mode="challenge" type="button">🎯 Challenges</button>
+                </div>
+
+                <div class="toolbar__group" role="group" aria-label="Scenarios">
+                    <span class="toolbar__label">Scenarios</span>
+                    <button class="toolbar__btn" data-preset="unlayered" type="button">Un-layered wins</button>
+                    <button class="toolbar__btn" data-preset="important" type="button">!important reverses</button>
+                    <button class="toolbar__btn" data-preset="grouped" type="button">Grouped layers</button>
+                    <button class="toolbar__btn" data-preset="itcss" type="button">ITCSS stack</button>
+                    <button class="toolbar__btn" data-preset="revert" type="button">revert-layer</button>
+                </div>
+
+                <span class="toolbar__spacer"></span>
+
+                <button class="toolbar__btn toolbar__btn--danger" id="resetBtn" type="button">↺ Reset</button>
+            </div>
+
+            <div class="challenge" id="challengeCard" hidden>
+                <div class="challenge__head">
+                    <span class="challenge__progress" id="challengeProgress">Challenge 1 / 5</span>
+                    <span class="challenge__status" id="challengeStatus"></span>
+                </div>
+                <h3 class="challenge__title" id="challengeTitle"></h3>
+                <p class="challenge__goal" id="challengeGoal"></p>
+                <div class="challenge__actions">
+                    <button id="prevChallenge" type="button">◀ Prev</button>
+                    <button id="nextChallenge" type="button">Next ▶</button>
+                </div>
+            </div>
+
+            <div class="playground">
+                <!-- ============ CONTROLS ============ -->
+                <section class="playground__controls cl-controls">
+                    <div class="controls">
+                        <!-- Layer order -->
+                        <div class="controls__group">
+                            <h2 class="controls__group-title">1 · Layer order</h2>
+                            <p class="cl-stack__hint">
+                                Bottom = lowest priority, top = highest.
+                                The pinned <strong>un-layered</strong> box always wins
+                                (over normal layered styles).
+                            </p>
+                            <div class="cl-stack" id="layerStack"></div>
+                            <div class="cl-stack__add">
+                                <input id="newLayerName" type="text" placeholder="new layer name" autocomplete="off">
+                                <button id="addLayerBtn" type="button">+ Layer</button>
+                            </div>
+                            <label class="controls__field" style="display:flex;align-items:center;gap:6px;margin-top:10px;margin-bottom:0;cursor:pointer;">
+                                <input id="importantView" type="checkbox">
+                                <span style="font-size:0.8rem;color:#334155;">
+                                    Show <code>!important</code> order (reversed)
+                                </span>
+                            </label>
+                        </div>
+
+                        <!-- Rules -->
+                        <div class="controls__group">
+                            <h2 class="controls__group-title">2 · Rules competing for <code>#intro</code></h2>
+                            <div class="cl-rules" id="rulesList"></div>
+                            <button class="cl-rule-add" id="addRuleBtn" type="button">+ Add a rule</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ============ STAGE ============ -->
+                <section class="playground__stage">
+                    <h2 class="stage__title">The result</h2>
+                    <p class="stage__hint">
+                        The paragraph below is rendered live in an isolated frame using
+                        the exact generated CSS — so the color you see is the real cascade winner.
+                    </p>
+
+                    <div class="cl-winner" id="winnerCard">
+                        <div class="cl-winner__swatch" id="winnerSwatch"></div>
+                        <div class="cl-winner__text">
+                            <p class="cl-winner__text-label">Winning color</p>
+                            <p class="cl-winner__text-value" id="winnerValue">—</p>
+                            <p class="cl-winner__text-rule" id="winnerRule"></p>
+                        </div>
+                    </div>
+
+                    <iframe class="cl-preview" id="previewFrame" title="Live cascade preview"></iframe>
+
+                    <div class="cl-breakdown" style="margin-top:12px;">
+                        <h2 class="cl-breakdown__title">Why? — Cascade breakdown</h2>
+                        <p class="cl-breakdown__hint">
+                            All matching rules, sorted by true cascade priority:
+                            importance → layer → specificity → source order. Winner on top.
+                        </p>
+                        <div id="breakdown"></div>
+                    </div>
+                </section>
+
+                <!-- ============ CODE ============ -->
+                <section class="playground__code cl-code">
+                    <div class="code-panel">
+                        <div class="code-panel__head">
+                            <h2 class="code-panel__title">Generated CSS</h2>
+                            <button class="code-panel__copy" id="copyCode" type="button">Copy</button>
+                        </div>
+                        <pre class="code-panel__code" id="cssCode"></pre>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/playground.js"></script>
+    <script src="../js/cascade.js"></script>
+</body>
+</html>

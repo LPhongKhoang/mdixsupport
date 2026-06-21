@@ -26,6 +26,7 @@
         { key: 'grid', label: 'Learn CSS Grid', href: 'pages/grid.html' },
         { key: 'positioning', label: 'Learn CSS Positioning', href: 'pages/positioning.html' },
         { key: 'centering', label: 'Learn CSS Centering', href: 'pages/centering.html' },
+        { key: 'cascade', label: 'Learn CSS Cascade Layers', href: 'pages/cascade.html' },
     ];
 
     var mount = document.querySelector('[data-sidebar]');

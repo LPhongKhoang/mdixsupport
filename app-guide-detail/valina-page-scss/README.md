@@ -24,6 +24,7 @@ pages/                  One HTML file per learning app
   grid.html               → Learn CSS Grid playground
   positioning.html        → Learn CSS Positioning playground
   centering.html          → Learn CSS Centering playground
+  cascade.html            → Learn CSS Cascade Layers playground
 scss/                   Stylesheet sources (compiled to css/)
   style.scss              entry — @uses the partials below
   _variables.scss         design tokens (colors, sizes)
@@ -33,6 +34,7 @@ scss/                   Stylesheet sources (compiled to css/)
   _grid.scss              grid playground styles
   _positioning.scss       positioning playground styles
   _centering.scss         centering playground styles
+  _cascade.scss           cascade-layers playground styles
 css/                    Compiled output (committed) + source maps
 js/
   sidebar.js            shared sidebar (single source of truth for the menu)
@@ -40,6 +42,7 @@ js/
   grid.js               grid playground logic
   positioning.js        positioning playground logic
   centering.js          centering playground logic
+  cascade.js            cascade-layers playground logic
 ```
 
 ## The app shell
@@ -106,3 +109,9 @@ That's it — the new item appears in the sidebar on every page automatically.
 - The flex playground: change any property in the left panel to see the
   colored boxes (and the generated CSS on the right) update live. Click a box
   to edit its per-item properties.
+- The cascade-layers playground: a single `<p id="intro">` is fought over by
+  several rules. Reorder `@layer`s, assign rules to layers, toggle
+  `!important`, and the live result (rendered in an isolated iframe with the
+  real CSS) plus a cascade breakdown show which rule wins and why. Scenarios
+  and challenges come straight from the CSS-Tricks guide (un-layered wins,
+  `!important` reverses layer order, grouped layers beat specificity, etc.).
